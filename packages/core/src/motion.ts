@@ -91,6 +91,11 @@ export function sampleMotion(motion: Motion, t: number): Partial<Record<Prop, nu
   return out;
 }
 
+/** Every moving part of an icon `t` milliseconds after the trigger: a pose for `renderBody`. */
+export function motionPose(motions: readonly Motion[], t: number): Record<string, Partial<Record<Prop, number>>> {
+  return Object.fromEntries(motions.map((m) => [m.part, sampleMotion(m, t)]));
+}
+
 /** How long an icon's whole gesture lasts, in milliseconds (`Infinity` if a part loops). */
 export function gestureDuration(motions: readonly Motion[]): number {
   return motions.reduce((max, m) => Math.max(max, motionEnd(m)), 0);

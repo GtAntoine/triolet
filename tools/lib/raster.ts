@@ -8,9 +8,10 @@ export interface Raster {
   pixels: Uint8Array;
 }
 
-function render(svg: string, size: number, background?: string) {
+function render(svg: string, size: number, background?: string, text = false) {
   // Icons hold no text: without the scan of system fonts the comparison of five icons takes 0.3 s, not 8.
-  return new Resvg(svg, { fitTo: { mode: 'width', value: size }, font: { loadSystemFonts: false }, ...(background ? { background } : {}) }).render();
+  // Control sheets do have captions, and ask for the fonts.
+  return new Resvg(svg, { fitTo: { mode: 'width', value: size }, font: { loadSystemFonts: text }, ...(background ? { background } : {}) }).render();
 }
 
 export function rasterize(svg: string, size: number, background?: string): Raster {
@@ -18,8 +19,9 @@ export function rasterize(svg: string, size: number, background?: string): Raste
   return { width: image.width, height: image.height, pixels: new Uint8Array(image.pixels) };
 }
 
-export function png(svg: string, size: number, background?: string): Buffer {
-  return render(svg, size, background).asPng();
+/** PNG bytes. `text: true` loads the system fonts, for SVG that has captions. */
+export function png(svg: string, size: number, background?: string, text = false): Buffer {
+  return render(svg, size, background, text).asPng();
 }
 
 export interface Difference {

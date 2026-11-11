@@ -17,7 +17,10 @@
     "spike:web": "node tools/spike-web.ts",
     "ratio": "node tools/ratio.ts",
     "spike:web:check": "node tools/spike-web.ts && node tools/spike-web-check.ts",
-    "spike:native:assets": "node tools/spike-native-assets.ts"
+    "spike:native:assets": "node tools/spike-native-assets.ts",
+    "icon:new": "node tools/icon-new.ts",
+    "icon:check": "node tools/icon-check.ts",
+    "icon:sheet": "node tools/icon-sheet.ts"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

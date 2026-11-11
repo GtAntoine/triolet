@@ -11,8 +11,8 @@
  * needs its own.
  */
 import { deriveTheme, privateVar, type Theme, type ThemeKey } from './colors.ts';
-import { rectRadii } from './geometry.ts';
-import { GRID, type IconModel, type Layer, type Node, type Role, type Shape } from './model.ts';
+import { pathLength, rectRadii } from './geometry.ts';
+import { GRID, REST, type IconModel, type Layer, type Node, type Prop, type Role, type Shape } from './model.ts';
 import { RELIEFS, RELIEF_REACH, layerHidden, layerRelief, type ReliefKey, type Tier } from './relief.ts';
 
 export interface RenderOptions {
@@ -26,7 +26,15 @@ export interface RenderOptions {
   filters?: 'own' | 'shared';
   /** Suffix that makes the ids of this instance unique in the page. */
   uid?: string;
+  /**
+   * Freezes moving parts in a pose: the value of each animated property, by part (see
+   * `motionPose`). For still images of a gesture; the result has no need of the stylesheet.
+   */
+  pose?: Pose;
 }
+
+/** The animated values of each moving part at one moment. */
+export type Pose = Record<string, Partial<Record<Prop, number>>>;
 
 export interface SvgOptions extends RenderOptions {
   /** Width and height, in pixels. Left out: the SVG has no size of its own. */
@@ -127,7 +135,7 @@ export function usedReliefs(model: IconModel, tier: Tier = 'relief', small = fal
   return (Object.keys(RELIEFS) as ReliefKey[]).filter((key) => used.has(key));
 }
 
-function shapeMarkup(shape: Shape, colors: 'vars' | Theme, inherited: Role | null, drawable: boolean): string {
+function shapeMarkup(shape: Shape, colors: 'vars' | Theme, inherited: Role | null, drawable: boolean, drawnTo?: number): string {
   const attrs: string[] = [];
   switch (shape.kind) {
     case 'rect': {
@@ -155,7 +163,14 @@ function shapeMarkup(shape: Shape, colors: 'vars' | Theme, inherited: Role | nul
     if (cap !== 'butt') attrs.push('stroke-linecap="round"');
     if (dash) attrs.push(`stroke-dasharray="${num(dash[0])} ${num(dash[1])}"`);
     if (dashOffset) attrs.push(`stroke-dashoffset="${num(dashOffset)}"`);
-    if (drawable && shape.kind === 'path' && shape.fill === false) attrs.push('pathLength="1" class="tri-draw"');
+    if (drawable && shape.kind === 'path' && shape.fill === false) {
+      if (drawnTo === undefined) attrs.push('pathLength="1" class="tri-draw"');
+      else if (drawnTo < 1) {
+        // A still image: the dash is measured, so it needs neither pathLength nor the stylesheet.
+        const length = pathLength(shape.d);
+        attrs.push(`stroke-dasharray="${num(length)} ${num(length)}" stroke-dashoffset="${num(length * (1 - drawnTo))}"`);
+      }
+    }
   }
   if (shape.rotate) attrs.push(`transform="rotate(${shape.rotate.map(num).join(' ')})"`);
   return `<${shape.kind} ${attrs.join(' ')}/>`;
@@ -188,35 +203,61 @@ export function renderBody(model: IconModel, options: RenderOptions = {}): strin
   if (filters === 'own') for (const key of usedReliefs(model, tier, small)) defs.push(filterMarkup(key, colors, uid));
   let clips = 0;
 
-  const layerMarkup = (layer: Layer, partName: string | null, drawable: boolean): string => {
+  const pose = options.pose;
+  /** The attributes that freeze a part in its pose. */
+  const posed = (name: string): string[] => {
+    const values = pose?.[name];
+    const motion = model.motion.find((m) => m.part === name);
+    if (!values || !motion) return [];
+    const v = { ...REST, ...values };
+    const [px, py] = motion.pivot;
+    const sx = v.scale * v.scaleX;
+    const sy = v.scale * v.scaleY;
+    const steps: string[] = [];
+    if (v.x || v.y) steps.push(`translate(${num(v.x)} ${num(v.y)})`);
+    if (v.rotate || v.skewY || sx !== 1 || sy !== 1) {
+      steps.push(`translate(${num(px)} ${num(py)})`);
+      if (v.rotate) steps.push(`rotate(${num(v.rotate)})`);
+      if (v.skewY) steps.push(`skewY(${num(v.skewY)})`);
+      if (sx !== 1 || sy !== 1) steps.push(`scale(${num(sx)} ${num(sy)})`);
+      steps.push(`translate(${num(-px)} ${num(-py)})`);
+    }
+    const attrs: string[] = [];
+    if (steps.length) attrs.push(`transform="${steps.join(' ')}"`);
+    if (v.opacity !== 1) attrs.push(`opacity="${num(v.opacity)}"`);
+    return attrs;
+  };
+
+  const layerMarkup = (layer: Layer, partName: string | null, drawable: boolean, drawnTo?: number): string => {
     if (layerHidden(layer, tier, small)) return '';
     const key = layerRelief(layer, tier);
     const roles = new Set(layer.shapes.filter((s) => s.fill !== false).map((s) => s.role));
     const shared = roles.size === 1 && layer.shapes.length > 1 ? [...roles][0]! : null;
     const attrs: string[] = [];
-    if (partName) attrs.push(`class="${classOf(partName)}"`);
+    if (partName) attrs.push(`class="${classOf(partName)}"`, ...posed(partName));
     if (shared) attrs.push(`fill="${paint(shared, colors)}"`);
     if (key) attrs.push(`filter="url(#${filterId(key, filters === 'own' ? uid : '')})"`);
-    const inner = layer.shapes.map((s) => shapeMarkup(s, colors, shared, drawable)).join('');
+    const inner = layer.shapes.map((s) => shapeMarkup(s, colors, shared, drawable, drawnTo)).join('');
     return attrs.length ? `<g ${attrs.join(' ')}>${inner}</g>` : inner;
   };
 
-  const walk = (nodes: Node[], drawable: boolean): string =>
+  const walk = (nodes: Node[], drawable: boolean, drawnTo?: number): string =>
     nodes
       .map((node): string => {
-        if (node.type === 'layer') return layerMarkup(node, null, drawable);
+        if (node.type === 'layer') return layerMarkup(node, null, drawable, drawnTo);
         if (node.type === 'clip') {
           const id = `tri-clip-${model.name}-${clips++}${uid ? `-${uid}` : ''}`;
           defs.push(`<clipPath id="${id}">${node.clip.map(clipShapeMarkup).join('')}</clipPath>`);
-          return `<g clip-path="url(#${id})">${walk(node.children, drawable)}</g>`;
+          return `<g clip-path="url(#${id})">${walk(node.children, drawable, drawnTo)}</g>`;
         }
         const partDrawable = drawable || drawn.has(node.name);
+        const partDrawnTo = pose ? (pose[node.name]?.draw ?? drawnTo ?? 1) : undefined;
         // A part made of one layer puts its class on the layer's own group.
         const only = node.children.length === 1 ? node.children[0]! : null;
         if (only?.type === 'layer' && !layerHidden(only, tier, small)) {
-          return layerMarkup(only, node.name, partDrawable);
+          return layerMarkup(only, node.name, partDrawable, partDrawnTo);
         }
-        return `<g class="${classOf(node.name)}">${walk(node.children, partDrawable)}</g>`;
+        return `<g ${[`class="${classOf(node.name)}"`, ...posed(node.name)].join(' ')}>${walk(node.children, partDrawable, partDrawnTo)}</g>`;
       })
       .join('');
 
@@ -257,7 +298,7 @@ export function sharedFilters(colors: 'vars' | Theme = 'vars'): string {
 export const SHARED_DEFS_STYLE = 'position:absolute;width:0;height:0;overflow:hidden';
 
 /** A standalone file: literal colours, its own filters, nothing else needed. */
-export function renderStaticSvg(model: IconModel, theme: Theme = DEFAULTS, tier: Tier = 'relief'): string {
-  const body = renderBody(model, { colors: theme, tier, uid: model.name });
+export function renderStaticSvg(model: IconModel, theme: Theme = DEFAULTS, tier: Tier = 'relief', pose?: Pose): string {
+  const body = renderBody(model, { colors: theme, tier, uid: model.name, pose });
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${GRID} ${GRID}">${body}</svg>\n`;
 }

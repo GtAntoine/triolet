@@ -205,6 +205,29 @@ export function flattenPath(d: string): Point[] {
   return points;
 }
 
+/** Length of a path, in grid units (jumps between sub-paths not counted). */
+export function pathLength(d: string): number {
+  let length = 0;
+  let from: Point | null = null;
+  for (const seg of parsePath(d)) {
+    if (seg.cmd === 'M') {
+      from = seg.to;
+      continue;
+    }
+    const start: Point = from ?? seg.from;
+    // Flatten this one segment, starting where the pen is.
+    const points = flattenPath(`M${start[0]} ${start[1]}${seg.cmd}${seg.args.join(' ')}`);
+    let previous = start;
+    for (const point of points.slice(1)) {
+      length += Math.hypot(point[0] - previous[0], point[1] - previous[1]);
+      previous = point;
+    }
+    if (seg.cmd === 'Z') length += Math.hypot(seg.to[0] - previous[0], seg.to[1] - previous[1]);
+    from = seg.to;
+  }
+  return length;
+}
+
 /** The radii a rounded rectangle really gets (SVG rule: each one capped at half its side). */
 export function rectRadii(shape: { w: number; h: number; r: number }): [rx: number, ry: number] {
   return [Math.min(shape.r, shape.w / 2), Math.min(shape.r, shape.h / 2)];
