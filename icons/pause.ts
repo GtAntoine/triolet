@@ -7,7 +7,7 @@ export default icon({
   gesture: 'The two bars rise one after the other.',
   draw: [
     raised(circle(48, 48, 35, 'main')),
-    inset(circle(48, 48, 27, 'base')),
+    inset(circle(48, 48, 29, 'base')),
     part('bar-1', raised.small(rect(36, 34, 9, 28, 4.5, 'accent'))),
     part('bar-2', raised.small(rect(51, 34, 9, 28, 4.5, 'accent'))),
   ],

@@ -10,7 +10,7 @@
       "effect": "raised",
       "size": "small",
       "shapes": [
-        { "kind": "path", "d": "M33 30L37 21A4 4 0 0 1 41 18H55A4 4 0 0 1 59 21L63 30Z", "role": "base" }
+        { "kind": "path", "d": "M33 30L37 21A4 4 0 0 1 41 18H55A4 4 0 0 1 59 21L63 30Z", "role": "main" }
       ],
       "weight": "minor"
     },
@@ -18,7 +18,7 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "rect", "x": 12, "y": 28, "w": 72, "h": 50, "r": 10, "role": "main" }
+        { "kind": "rect", "x": 12, "y": 28, "w": 72, "h": 50, "r": 10, "role": "base" }
       ],
       "weight": "major"
     },
@@ -31,16 +31,16 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "circle", "cx": 48, "cy": 54, "r": 17, "role": "base" }
+            { "kind": "circle", "cx": 48, "cy": 54, "r": 17, "role": "main" }
           ],
           "weight": "major"
         },
         {
           "type": "layer",
           "effect": "inset",
-          "tone": "dark",
+          "tone": "light",
           "shapes": [
-            { "kind": "circle", "cx": 48, "cy": 54, "r": 10, "role": "main" }
+            { "kind": "circle", "cx": 48, "cy": 54, "r": 9, "role": "soft" }
           ],
           "weight": "minor"
         }

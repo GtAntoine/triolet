@@ -7,7 +7,7 @@ export default icon({
   gesture: 'The triangle pushes forward.',
   draw: [
     raised(circle(48, 48, 35, 'main')),
-    inset(circle(48, 48, 27, 'base')),
+    inset(circle(48, 48, 29, 'base')),
     part('triangle', raised.small(path('M42 36L60 48L42 60Z', 'accent', { outline: 6 }))),
   ],
   motion: {

@@ -18,7 +18,7 @@
       "effect": "inset",
       "tone": "light",
       "shapes": [
-        { "kind": "circle", "cx": 48, "cy": 48, "r": 27, "role": "base" }
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 29, "role": "base" }
       ],
       "weight": "major"
     },

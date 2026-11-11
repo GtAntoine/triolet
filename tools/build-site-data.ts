@@ -9,19 +9,12 @@ import { join } from 'node:path';
 import { gestureDuration, renderStaticSvg } from '@triolet/core';
 import { checkIcon } from './lib/check.ts';
 import { ROOT, loadIcons } from './lib/icons.ts';
-
-const RESERVED = new Set(
-  'break case catch class const continue debugger default delete do else enum export extends false finally for function if implements import in instanceof interface let new null package private protected public return static super switch this throw true try typeof var void while with yield await'.split(
-    ' ',
-  ),
-);
-const camelRaw = (name: string) => name.replace(/-([a-z0-9])/g, (_, c: string) => c.toUpperCase());
+import { jsName, reactName } from './lib/names.ts';
 
 const icons = await loadIcons();
 const data = icons.map((model) => {
   const report = checkIcon(model, icons);
   const duration = gestureDuration(model.motion);
-  const camel = camelRaw(model.name);
   return {
     name: model.name,
     category: model.category,
@@ -34,8 +27,8 @@ const data = icons.map((model) => {
     parts: model.motion.map((m) => ({ name: m.part, tracks: Object.keys(m.tracks), duration: m.duration, delay: m.delay })),
     ratio: report.ratio,
     box: report.footprint.box,
-    js: RESERVED.has(camel) ? `${camel}Icon` : camel,
-    react: camel.replace(/^./, (c) => c.toUpperCase()),
+    js: jsName(model.name),
+    react: reactName(model.name),
     svg: renderStaticSvg(model).trim(),
   };
 });

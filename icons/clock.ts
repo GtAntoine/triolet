@@ -7,7 +7,7 @@ export default icon({
   gesture: 'Time flies: the hour hand goes once around while the minute hand goes twelve times.',
   draw: [
     raised(circle(48, 48, 35, 'main')),
-    inset(circle(48, 48, 27, 'base')),
+    inset(circle(48, 48, 29, 'base')),
     part('minute-hand', plain(stroke('M48 48V29', 'main', 5))),
     part('hour-hand', plain(stroke('M48 48L60 55', 'accent', 5))),
     plain(circle(48, 48, 4, 'main')),

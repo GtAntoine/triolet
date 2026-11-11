@@ -10,7 +10,7 @@ export default icon({
   draw: [
     raised.small(pins.flatMap((p) => [stroke(`M${p} 12V84`, 'main', 5), stroke(`M12 ${p}H84`, 'main', 5)])),
     raised(rect(22, 22, 52, 52, 10, 'base')),
-    inset(rect(33, 33, 30, 30, 6, 'main')),
+    inset(rect(33, 33, 30, 30, 6, 'soft')),
     part('core', inset(circle(48, 48, 6, 'accent'))),
   ],
   motion: {

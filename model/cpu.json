@@ -66,9 +66,9 @@
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "dark",
+      "tone": "light",
       "shapes": [
-        { "kind": "rect", "x": 33, "y": 33, "w": 30, "h": 30, "r": 6, "role": "main" }
+        { "kind": "rect", "x": 33, "y": 33, "w": 30, "h": 30, "r": 6, "role": "soft" }
       ],
       "weight": "major"
     },

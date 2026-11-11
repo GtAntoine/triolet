@@ -33,10 +33,10 @@
           "type": "layer",
           "effect": "raised",
           "shapes": [
-            { "kind": "path", "d": "M59.8 19.2L75.1 32.0L49.4 62.7L34.1 49.8Z", "role": "main" },
+            { "kind": "path", "d": "M59.8 19.2L75.1 32.0L49.4 62.7L34.1 49.8Z", "role": "base" },
+            { "kind": "path", "d": "M59.8 19.2L75.1 32.0L70.6 37.4L55.3 24.5Z", "role": "main" },
             { "kind": "path", "d": "M67.5 10.0L82.8 22.9L75.1 32.0L59.8 19.2Z", "role": "accent" },
-            { "kind": "path", "d": "M34.1 49.8L49.4 62.7L28.9 71.6Z", "role": "base" },
-            { "kind": "path", "d": "M30.7 64.0L36.0 68.5L28.9 71.6Z", "role": "main" }
+            { "kind": "path", "d": "M34.1 49.8L49.4 62.7L28.9 71.6Z", "role": "main" }
           ],
           "weight": "major"
         }

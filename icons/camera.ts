@@ -7,9 +7,9 @@ export default icon({
   gesture: 'The lens closes in and the flash goes off.',
   draw: [
     // The viewfinder hump, behind the body.
-    raised.small(path('M33 30L37 21A4 4 0 0 1 41 18H55A4 4 0 0 1 59 21L63 30Z', 'base')),
-    raised(rect(12, 28, 72, 50, 10, 'main')),
-    part('lens', raised.small(circle(48, 54, 17, 'base')), inset(circle(48, 54, 10, 'main'))),
+    raised.small(path('M33 30L37 21A4 4 0 0 1 41 18H55A4 4 0 0 1 59 21L63 30Z', 'main')),
+    raised(rect(12, 28, 72, 50, 10, 'base')),
+    part('lens', raised.small(circle(48, 54, 17, 'main')), inset(circle(48, 54, 9, 'soft'))),
     part('flash', inset(circle(71, 40, 4.5, 'accent'))),
   ],
   motion: {

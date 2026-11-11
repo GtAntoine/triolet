@@ -37,7 +37,7 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "circle", "cx": 41, "cy": 41, "r": 18, "role": "soft" }
+            { "kind": "circle", "cx": 41, "cy": 41, "r": 20, "role": "soft" }
           ],
           "weight": "major"
         }

@@ -11,7 +11,7 @@ export default icon({
       // The handle is behind the rim.
       raised.small(stroke('M59 59L77 77', 'accent', 10)),
       raised(circle(41, 41, 27, 'main')),
-      inset(circle(41, 41, 18, 'soft')),
+      inset(circle(41, 41, 20, 'soft')),
     ),
   ],
   motion: {

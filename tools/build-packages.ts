@@ -13,16 +13,10 @@ import { cpSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { baseCss, iconCss, type IconModel } from '@triolet/core';
 import { ROOT, loadIcons } from './lib/icons.ts';
+import { jsName, reactName } from './lib/names.ts';
 
-/** Words that cannot name an export: an icon called `package` is exported as `packageIcon`. */
-const RESERVED = new Set(
-  'break case catch class const continue debugger default delete do else enum export extends false finally for function if implements import in instanceof interface let new null package private protected public return static super switch this throw true try typeof var void while with yield await'.split(
-    ' ',
-  ),
-);
-const camelRaw = (name: string) => name.replace(/-([a-z0-9])/g, (_, c: string) => c.toUpperCase());
-const camel = (name: string) => (RESERVED.has(camelRaw(name)) ? `${camelRaw(name)}Icon` : camelRaw(name));
-const pascal = (name: string) => camelRaw(name).replace(/^./, (c) => c.toUpperCase());
+const camel = jsName;
+const pascal = reactName;
 const header = (name: string) => `// Generated from icons/${name}.ts by tools/build-packages.ts. Do not edit.\n`;
 
 function writeDir(dir: string, files: Map<string, string>): void {
