@@ -1,0 +1,68 @@
+{
+  "name": "arrow-down",
+  "category": "arrows",
+  "keywords": ["arrow", "down", "bottom", "fall", "decrease", "scroll down", "bas", "descendre"],
+  "aliases": [],
+  "gesture": "The arrow pushes down and comes back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 30V66M32 52L48 68L64 52",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 29V33",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [32, 29, 32, 39] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [48, 48.5],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

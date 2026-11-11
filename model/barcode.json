@@ -1,0 +1,106 @@
+{
+  "name": "barcode",
+  "category": "commerce",
+  "keywords": ["barcode", "scan", "product", "code", "stock", "checkout", "code-barres", "scanner"],
+  "aliases": [],
+  "gesture": "The scanning beam sweeps the bars.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 22, "w": 72, "h": 52, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 21, "y": 32, "w": 5, "h": 32, "r": 2, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 32, "w": 8, "h": 32, "r": 2, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 42, "y": 32, "w": 4, "h": 32, "r": 2, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 50, "y": 32, "w": 7, "h": 32, "r": 2, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 61, "y": 32, "w": 4, "h": 32, "r": 2, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 69, "y": 32, "w": 6, "h": 32, "r": 2, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "beam",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M16 48H80",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "beam": { "box": [16, 48, 64, 0] }
+  },
+  "motion": [
+    {
+      "part": "beam",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.4, -12], [0.7, 2], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

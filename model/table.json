@@ -1,0 +1,93 @@
+{
+  "name": "table",
+  "category": "data",
+  "keywords": ["table", "grid", "spreadsheet", "cells", "rows", "columns", "tableau", "grille"],
+  "aliases": [],
+  "gesture": "One cell of the table lights up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 18, "w": 72, "h": 62, "r": 10, "role": "base" },
+        { "kind": "path", "d": "M22 18H74A10 10 0 0 1 84 28V36H12V28A10 10 0 0 1 22 18Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 19, "y": 43, "w": 17, "h": 11, "r": 3, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "cell",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 39.5, "y": 43, "w": 17, "h": 11, "r": 3, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 60, "y": 43, "w": 17, "h": 11, "r": 3, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 19, "y": 59, "w": 17, "h": 11, "r": 3, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 39.5, "y": 59, "w": 17, "h": 11, "r": 3, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 60, "y": 59, "w": 17, "h": 11, "r": 3, "role": "soft" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "cell": { "box": [39.5, 43, 17, 11] }
+  },
+  "motion": [
+    {
+      "part": "cell",
+      "pivot": [48, 48.5],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

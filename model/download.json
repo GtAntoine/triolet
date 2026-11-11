@@ -1,0 +1,77 @@
+{
+  "name": "download",
+  "category": "arrows",
+  "keywords": ["download", "save", "import", "get", "file", "receive", "télécharger", "enregistrer"],
+  "aliases": [],
+  "gesture": "The arrow drops into the tray.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M14 56H82V72A10 10 0 0 1 72 82H24A10 10 0 0 1 14 72Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 65, "w": 40, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 14V48M34 36L48 50L62 36",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 13V17",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [34, 13, 28, 37] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [48, 31.5],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

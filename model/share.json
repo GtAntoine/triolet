@@ -1,0 +1,101 @@
+{
+  "name": "share",
+  "category": "interface",
+  "keywords": ["share", "network", "send", "social", "connect", "spread", "partager", "diffuser"],
+  "aliases": [],
+  "gesture": "The three points light up one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M26 48L68 24M26 48L68 72",
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 7 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "node-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 26, "cy": 48, "r": 12, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "node-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 68, "cy": 24, "r": 12, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "node-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 68, "cy": 72, "r": 9.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "node-1": { "box": [14, 36, 24, 24] },
+    "node-2": { "box": [56, 12, 24, 24] },
+    "node-3": { "box": [58.5, 62.5, 19, 19] }
+  },
+  "motion": [
+    {
+      "part": "node-1",
+      "pivot": [26, 48],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    },
+    {
+      "part": "node-2",
+      "pivot": [68, 24],
+      "duration": 400,
+      "delay": 130,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    },
+    {
+      "part": "node-3",
+      "pivot": [68, 72],
+      "duration": 400,
+      "delay": 260,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

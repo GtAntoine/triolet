@@ -1,0 +1,92 @@
+{
+  "name": "rocket",
+  "category": "work",
+  "keywords": ["rocket", "launch", "startup", "fast", "boost", "release", "fusée", "lancement"],
+  "aliases": [],
+  "gesture": "The rocket lifts off and its flame flickers.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "rocket",
+      "children": [
+        {
+          "type": "part",
+          "name": "flame",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "raised",
+              "size": "small",
+              "shapes": [
+                { "kind": "path", "d": "M40 64H56C56 74 52 82 48 87C44 82 40 74 40 64Z", "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M33 46L20 61V72L33 66Z",
+              "role": "main",
+              "stroke": { "width": 3 }
+            },
+            {
+              "kind": "path",
+              "d": "M63 46L76 61V72L63 66Z",
+              "role": "main",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M48 9C60 19 64 35 64 51V66H32V51C32 35 36 19 48 9Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 37, "r": 7.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "flame": { "box": [40, 64, 16, 23] },
+    "rocket": { "box": [20, 9, 56, 78] }
+  },
+  "motion": [
+    {
+      "part": "flame",
+      "pivot": [48, 64],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleY": [[0, 1], [0.25, 1.3], [0.5, 0.8], [0.75, 1.2], [1, 1]] }
+    },
+    {
+      "part": "rocket",
+      "pivot": [48, 48],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

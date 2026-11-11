@@ -1,0 +1,65 @@
+{
+  "name": "tag",
+  "category": "commerce",
+  "keywords": ["tag", "price", "label", "sale", "discount", "category", "étiquette", "prix"],
+  "aliases": [],
+  "gesture": "The tag swings from its hole.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "tag",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M14 44L42 16H70A8 8 0 0 1 78 24V52L50 80A8 8 0 0 1 38.7 80L14 55.3A8 8 0 0 1 14 44Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 62, "cy": 32, "r": 6.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 29, "y": 49.5, "w": 26, "h": 7, "r": 3.5, "role": "main", "rotate": [-45, 42, 53] }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 25, "y": 40.5, "w": 18, "h": 7, "r": 3.5, "role": "main", "rotate": [-45, 34, 44] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "tag": { "box": [11.66, 16, 66.34, 66.34] }
+  },
+  "motion": [
+    {
+      "part": "tag",
+      "pivot": [62, 32],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, 9], [0.5, -6], [0.75, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

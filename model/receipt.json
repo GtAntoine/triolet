@@ -1,0 +1,127 @@
+{
+  "name": "receipt",
+  "category": "finance",
+  "keywords": ["receipt", "invoice", "bill", "ticket", "purchase", "total", "reçu", "facture"],
+  "aliases": [],
+  "gesture": "The lines print one after the other, the total last.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M24 14H72V80L64 75L56 80L48 75L40 80L32 75L24 80Z",
+          "role": "base",
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 22, "w": 34, "h": 7, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 35, "w": 24, "h": 6, "r": 3, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 46, "w": 30, "h": 6, "r": 3, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 45, "y": 59, "w": 20, "h": 8, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line-1": { "box": [31, 22, 34, 7] },
+    "line-2": { "box": [31, 35, 24, 6] },
+    "line-3": { "box": [31, 46, 30, 6] },
+    "line-4": { "box": [45, 59, 20, 8] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [31, 25.5],
+      "duration": 350,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [31, 38],
+      "duration": 350,
+      "delay": 90,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-3",
+      "pivot": [31, 49],
+      "duration": 350,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-4",
+      "pivot": [45, 63],
+      "duration": 350,
+      "delay": 270,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

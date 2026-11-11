@@ -1,0 +1,111 @@
+{
+  "name": "send",
+  "category": "communication",
+  "keywords": ["send", "paper plane", "message", "submit", "deliver", "email", "envoyer", "avion"],
+  "aliases": [],
+  "gesture": "The paper plane takes off and its trail follows.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "trail-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 66L30 56",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "trail-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M30 80L38 72",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "plane",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M84 14L12 40L42 54Z",
+              "role": "base",
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "path",
+              "d": "M84 14L42 54L56 82Z",
+              "role": "main",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "trail-1": { "box": [20, 56, 10, 10] },
+    "trail-2": { "box": [30, 72, 8, 8] },
+    "plane": { "box": [12, 14, 72, 68] }
+  },
+  "motion": [
+    {
+      "part": "trail-1",
+      "pivot": [25, 61],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "x": [[0, -6], [1, 0]], "y": [[0, 6], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "trail-2",
+      "pivot": [34, 76],
+      "duration": 400,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "x": [[0, -6], [1, 0]], "y": [[0, 6], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "plane",
+      "pivot": [48, 48],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.4, 8], [0.7, 3], [1, 0]], "y": [[0, 0], [0.4, -8], [0.7, -3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

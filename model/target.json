@@ -1,0 +1,96 @@
+{
+  "name": "target",
+  "category": "work",
+  "keywords": ["target", "goal", "aim", "objective", "focus", "bullseye", "cible", "objectif"],
+  "aliases": [],
+  "gesture": "The dart flies in and the bullseye pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 46, "cy": 50, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 46, "cy": 50, "r": 23, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 46, "cy": 50, "r": 13, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "bullseye",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 46, "cy": 50, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dart",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M49 47L74 22M66 18V30H78",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bullseye": { "box": [40, 44, 12, 12] },
+    "dart": { "box": [49, 18, 29, 29] }
+  },
+  "motion": [
+    {
+      "part": "bullseye",
+      "pivot": [46, 50],
+      "duration": 400,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    },
+    {
+      "part": "dart",
+      "pivot": [63.5, 32.5],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 10], [1, 0]], "y": [[0, -10], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

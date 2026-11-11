@@ -1,0 +1,58 @@
+{
+  "name": "lightbulb",
+  "category": "work",
+  "keywords": ["lightbulb", "idea", "light", "tip", "insight", "innovation", "ampoule", "idée"],
+  "aliases": [],
+  "gesture": "The bulb lights up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 38, "y": 62, "w": 20, "h": 12, "r": 3, "role": "main" },
+        { "kind": "rect", "x": 42, "y": 74, "w": 12, "h": 8, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 38, "r": 25, "role": "base" },
+        { "kind": "rect", "x": 38, "y": 54, "w": 20, "h": 12, "r": 3, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "glow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 38, "r": 8, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "glow": { "box": [40, 30, 16, 16] }
+  },
+  "motion": [
+    {
+      "part": "glow",
+      "pivot": [48, 38],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.6], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

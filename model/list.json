@@ -1,0 +1,124 @@
+{
+  "name": "list",
+  "category": "interface",
+  "keywords": ["list", "items", "menu", "bullets", "tasks", "lines", "liste", "éléments"],
+  "aliases": [],
+  "gesture": "The lines write themselves one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 16, "w": 68, "h": 64, "r": 11, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 28, "cy": 33.5, "r": 4.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 28, "cy": 49.5, "r": 4.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 28, "cy": 65.5, "r": 4.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 38, "y": 30, "w": 34, "h": 7, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 38, "y": 46, "w": 26, "h": 7, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 38, "y": 62, "w": 34, "h": 7, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line-1": { "box": [38, 30, 34, 7] },
+    "line-2": { "box": [38, 46, 26, 7] },
+    "line-3": { "box": [38, 62, 34, 7] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [38, 33.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [38, 49.5],
+      "duration": 400,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-3",
+      "pivot": [38, 65.5],
+      "duration": 400,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

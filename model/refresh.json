@@ -1,0 +1,68 @@
+{
+  "name": "refresh",
+  "category": "arrows",
+  "keywords": ["refresh", "reload", "sync", "update", "retry", "rotate", "actualiser", "recharger"],
+  "aliases": [],
+  "gesture": "The arrow goes once around.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M63 37A18.5 18.5 0 1 0 66 52",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            },
+            {
+              "kind": "path",
+              "d": "M56 27L68 28L67 40Z",
+              "role": "main",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 53, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [29.49, 27, 41.51, 39.3] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}

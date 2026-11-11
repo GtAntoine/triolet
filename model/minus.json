@@ -1,0 +1,78 @@
+{
+  "name": "minus",
+  "category": "interface",
+  "keywords": ["minus", "remove", "less", "subtract", "reduce", "collapse", "moins", "retirer"],
+  "aliases": [],
+  "gesture": "The bar stretches out, then the dot pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 28, "w": 72, "h": 40, "r": 20, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M29 48H56",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 48, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [29, 48, 27, 0] },
+    "dot": { "box": [65.5, 43.5, 9, 9] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [29, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [70, 48],
+      "duration": 400,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

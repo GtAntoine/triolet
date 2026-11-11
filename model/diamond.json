@@ -1,0 +1,98 @@
+{
+  "name": "diamond",
+  "category": "commerce",
+  "keywords": ["diamond", "gem", "jewel", "premium", "value", "luxury", "diamant", "joyau"],
+  "aliases": [],
+  "gesture": "A sparkle turns on the gem.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M30 24H66L82 42L48 82L14 42Z",
+          "role": "base",
+          "stroke": { "width": 4 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M37 42H59L48 68Z",
+          "role": "main",
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M33 28H63L70 37H26Z",
+          "role": "soft",
+          "stroke": { "width": 2 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "sparkle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M72.0 10.0L75.2 17.6L83.4 18.3L77.2 23.7L79.1 31.7L72.0 27.5L64.9 31.7L66.8 23.7L60.6 18.3L68.8 17.6Z",
+              "role": "gap",
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M72.0 12.0L74.6 18.4L81.5 18.9L76.3 23.4L77.9 30.1L72.0 26.5L66.1 30.1L67.7 23.4L62.5 18.9L69.4 18.4Z",
+              "role": "accent",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sparkle": { "box": [60.6, 10, 22.8, 21.7] }
+  },
+  "motion": [
+    {
+      "part": "sparkle",
+      "pivot": [72, 20.85],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,63 @@
+{
+  "name": "briefcase",
+  "category": "work",
+  "keywords": ["briefcase", "work", "job", "business", "office", "career", "mallette", "travail"],
+  "aliases": [],
+  "gesture": "The clasp of the briefcase snaps.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M36 32V25A6 6 0 0 1 42 19H54A6 6 0 0 1 60 25V32",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 30, "w": 72, "h": 50, "r": 11, "role": "base" },
+        { "kind": "rect", "x": 12, "y": 48, "w": 72, "h": 9, "r": 0, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "clasp",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 41, "y": 44, "w": 14, "h": 17, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "clasp": { "box": [41, 44, 14, 17] }
+  },
+  "motion": [
+    {
+      "part": "clasp",
+      "pivot": [48, 52.5],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

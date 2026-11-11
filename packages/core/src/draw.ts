@@ -67,8 +67,10 @@ export function path(d: string, role: Role, options?: ShapeOptions): PathShape {
 }
 
 /** A line: a path that is stroked, not filled, with round ends and joins. */
-export function stroke(d: string, role: Role, width: number): PathShape {
-  return { kind: 'path', d, role, fill: false, stroke: { width } };
+export function stroke(d: string, role: Role, width: number, options?: Pick<ShapeOptions, 'rotate'>): PathShape {
+  const shape: PathShape = { kind: 'path', d, role, fill: false, stroke: { width } };
+  if (options?.rotate) shape.rotate = options.rotate;
+  return shape;
 }
 
 export interface RingOptions {

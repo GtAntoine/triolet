@@ -1,0 +1,91 @@
+{
+  "name": "link",
+  "category": "interface",
+  "keywords": ["link", "url", "chain", "connect", "hyperlink", "attach", "lien", "chaîne"],
+  "aliases": [],
+  "gesture": "The two links pull apart and join again.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "link-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M25 49H45A12 12 0 0 1 45 73H25A12 12 0 0 1 25 49Z",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 },
+              "rotate": [-45, 35, 61]
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "link-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M51 23H71A12 12 0 0 1 71 47H51A12 12 0 0 1 51 23Z",
+              "role": "mid",
+              "fill": false,
+              "stroke": { "width": 8 },
+              "rotate": [-45, 61, 35]
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M41 55L55 41",
+          "role": "accent",
+          "fill": false,
+          "stroke": { "width": 8 }
+        }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "link-1": { "box": [15.93, 41.93, 38.14, 38.14] },
+    "link-2": { "box": [41.93, 15.93, 38.14, 38.14] }
+  },
+  "motion": [
+    {
+      "part": "link-1",
+      "pivot": [35, 61],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, -4], [1, 0]], "y": [[0, 0], [0.5, 4], [1, 0]] }
+    },
+    {
+      "part": "link-2",
+      "pivot": [61, 35],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 4], [1, 0]], "y": [[0, 0], [0.5, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

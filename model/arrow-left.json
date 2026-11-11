@@ -1,0 +1,68 @@
+{
+  "name": "arrow-left",
+  "category": "arrows",
+  "keywords": ["arrow", "left", "back", "previous", "return", "undo", "précédent", "gauche"],
+  "aliases": [],
+  "gesture": "The arrow pushes back and comes back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M66 48H30M44 32L28 48L44 64",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M63 48H67",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [28, 32, 39, 32] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [47.5, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

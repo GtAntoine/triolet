@@ -1,0 +1,18 @@
+import { circle, icon, inset, part, path, pill, pop, raised, stagger } from '@triolet/core';
+
+export default icon({
+  name: 'crown',
+  category: 'social',
+  keywords: ['crown', 'king', 'queen', 'premium', 'vip', 'royal', 'couronne', 'reine'],
+  gesture: 'The three jewels shine one after the other.',
+  draw: [
+    raised(path('M16 34L32 50L48 26L64 50L80 34L74 70H22Z', 'main', { outline: 5 })),
+    raised.small(pill(18, 66, 60, 12, 'base')),
+    part('jewel-1', inset(circle(30, 72, 3.5, 'main'))),
+    part('jewel-2', inset(circle(48, 72, 4.5, 'accent'))),
+    part('jewel-3', inset(circle(66, 72, 3.5, 'main'))),
+  ],
+  motion: {
+    ...stagger(['jewel-1', 'jewel-2', 'jewel-3'], pop({ scale: 1.5, duration: 400 }), 120),
+  },
+});

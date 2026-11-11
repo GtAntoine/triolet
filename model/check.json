@@ -1,0 +1,78 @@
+{
+  "name": "check",
+  "category": "interface",
+  "keywords": ["check", "done", "ok", "valid", "confirm", "success", "valider", "coche"],
+  "aliases": [],
+  "gesture": "The check draws itself, then the dot pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 17, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M31 49L43 61L65 36",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 66, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [31, 36, 34, 25] },
+    "dot": { "box": [61.5, 61.5, 9, 9] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 48.5],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [66, 66],
+      "duration": 400,
+      "delay": 400,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

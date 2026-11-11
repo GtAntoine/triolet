@@ -1,0 +1,117 @@
+{
+  "name": "building",
+  "category": "places",
+  "keywords": ["building", "office", "company", "tower", "city", "business", "immeuble", "bureau"],
+  "aliases": [],
+  "gesture": "The windows light up floor by floor.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 12, "w": 44, "h": 70, "r": 7, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "floor-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 34, "y": 22, "w": 11, "h": 9, "r": 3, "role": "main" },
+            { "kind": "rect", "x": 51, "y": 22, "w": 11, "h": 9, "r": 3, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "floor-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 34, "y": 36, "w": 11, "h": 9, "r": 3, "role": "main" },
+            { "kind": "rect", "x": 51, "y": 36, "w": 11, "h": 9, "r": 3, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "floor-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 34, "y": 50, "w": 11, "h": 9, "r": 3, "role": "main" },
+            { "kind": "rect", "x": 51, "y": 50, "w": 11, "h": 9, "r": 3, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "path", "d": "M42 82V72A6 6 0 0 1 54 72V82Z", "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 79, "w": 68, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "floor-1": { "box": [34, 22, 28, 9] },
+    "floor-2": { "box": [34, 36, 28, 9] },
+    "floor-3": { "box": [34, 50, 28, 9] }
+  },
+  "motion": [
+    {
+      "part": "floor-1",
+      "pivot": [48, 26.5],
+      "duration": 350,
+      "delay": 260,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    },
+    {
+      "part": "floor-2",
+      "pivot": [48, 40.5],
+      "duration": 350,
+      "delay": 130,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    },
+    {
+      "part": "floor-3",
+      "pivot": [48, 54.5],
+      "duration": 350,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

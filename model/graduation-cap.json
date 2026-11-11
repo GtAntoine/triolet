@@ -1,0 +1,72 @@
+{
+  "name": "graduation-cap",
+  "category": "education",
+  "keywords": ["graduation", "education", "school", "student", "degree", "learn", "diplôme", "école"],
+  "aliases": [],
+  "gesture": "The tassel swings from the corner of the cap.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M27 46V62C27 71 69 71 69 62V46L48 56Z",
+          "role": "base",
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 24L82 40L48 56L14 40Z",
+          "role": "main",
+          "stroke": { "width": 4 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "tassel",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M82 40V58",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            { "kind": "circle", "cx": 82, "cy": 62, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "tassel": { "box": [77.5, 40, 9, 26.5] }
+  },
+  "motion": [
+    {
+      "part": "tassel",
+      "pivot": [82, 40],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, 14], [0.5, -10], [0.75, 5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

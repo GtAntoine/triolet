@@ -1,0 +1,90 @@
+{
+  "name": "banknote",
+  "category": "finance",
+  "keywords": ["banknote", "money", "cash", "bill", "payment", "currency", "billet", "argent"],
+  "aliases": [],
+  "gesture": "The note slides off the pile and its seal pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 22, "w": 70, "h": 42, "r": 8, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "note",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 10, "y": 32, "w": 70, "h": 42, "r": 8, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 20, "cy": 42, "r": 3.5, "role": "mid" },
+            { "kind": "circle", "cx": 70, "cy": 64, "r": 3.5, "role": "mid" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 45, "cy": 53, "r": 11, "role": "soft" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "part",
+          "name": "seal",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "inset",
+              "tone": "dark",
+              "shapes": [
+                { "kind": "circle", "cx": 45, "cy": 53, "r": 5.5, "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "seal": { "box": [39.5, 47.5, 11, 11] },
+    "note": { "box": [10, 32, 70, 42] }
+  },
+  "motion": [
+    {
+      "part": "seal",
+      "pivot": [45, 53],
+      "duration": 400,
+      "delay": 250,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "note",
+      "pivot": [45, 53],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, -4], [1, 0]], "y": [[0, 0], [0.5, 4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

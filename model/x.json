@@ -1,0 +1,78 @@
+{
+  "name": "x",
+  "category": "interface",
+  "keywords": ["close", "cancel", "remove", "cross", "dismiss", "exit", "fermer", "annuler"],
+  "aliases": [],
+  "gesture": "The cross turns into place, then the dot pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 17, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M35 37L59 61M59 37L35 61",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 30, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [35, 37, 24, 24] },
+    "dot": { "box": [61.5, 25.5, 9, 9] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [47, 49],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, -90], [1, 0]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [66, 30],
+      "duration": 400,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

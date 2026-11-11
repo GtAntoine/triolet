@@ -1,0 +1,62 @@
+{
+  "name": "shopping-bag",
+  "category": "commerce",
+  "keywords": ["bag", "shopping", "purchase", "store", "buy", "order", "sac", "achats"],
+  "aliases": [],
+  "gesture": "The bag swings from its handles.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "bag",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M21 34H75L80 77A7 7 0 0 1 73 85H23A7 7 0 0 1 16 77Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 44V30A12 12 0 0 1 60 30V44",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 64, "r": 6.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bag": { "box": [15.93, 18, 64.14, 67] }
+  },
+  "motion": [
+    {
+      "part": "bag",
+      "pivot": [48, 18],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, 7], [0.5, -5], [0.75, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,111 @@
+{
+  "name": "crown",
+  "category": "social",
+  "keywords": ["crown", "king", "queen", "premium", "vip", "royal", "couronne", "reine"],
+  "aliases": [],
+  "gesture": "The three jewels shine one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M16 34L32 50L48 26L64 50L80 34L74 70H22Z",
+          "role": "main",
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 66, "w": 60, "h": 12, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "jewel-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 30, "cy": 72, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "jewel-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 72, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "jewel-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 72, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "jewel-1": { "box": [26.5, 68.5, 7, 7] },
+    "jewel-2": { "box": [43.5, 67.5, 9, 9] },
+    "jewel-3": { "box": [62.5, 68.5, 7, 7] }
+  },
+  "motion": [
+    {
+      "part": "jewel-1",
+      "pivot": [30, 72],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.5], [1, 1]] }
+    },
+    {
+      "part": "jewel-2",
+      "pivot": [48, 72],
+      "duration": 400,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.5], [1, 1]] }
+    },
+    {
+      "part": "jewel-3",
+      "pivot": [66, 72],
+      "duration": 400,
+      "delay": 240,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.5], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

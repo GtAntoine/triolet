@@ -1,0 +1,97 @@
+{
+  "name": "trophy",
+  "category": "social",
+  "keywords": ["trophy", "award", "winner", "cup", "prize", "champion", "trophée", "récompense"],
+  "aliases": [],
+  "gesture": "The cup jumps and its star turns.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 70, "w": 40, "h": 14, "r": 5, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "cup",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M30 22H20V27A12 12 0 0 0 32 39M66 22H76V27A12 12 0 0 1 64 39",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            },
+            { "kind": "rect", "x": 44, "y": 52, "w": 8, "h": 20, "r": 0, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M28 14H68V34A20 20 0 0 1 28 34Z",
+              "role": "main",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "part",
+          "name": "star",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "inset",
+              "tone": "dark",
+              "shapes": [
+                {
+                  "kind": "path",
+                  "d": "M48.0 23.5L50.4 28.8L56.1 29.4L51.8 33.2L53.0 38.9L48.0 36.0L43.0 38.9L44.2 33.2L39.9 29.4L45.6 28.8Z",
+                  "role": "accent",
+                  "stroke": { "width": 2 }
+                }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "star": { "box": [39.9, 23.5, 16.2, 15.4] },
+    "cup": { "box": [20, 14, 56, 58] }
+  },
+  "motion": [
+    {
+      "part": "star",
+      "pivot": [48, 32],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    },
+    {
+      "part": "cup",
+      "pivot": [48, 43],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -6], [0.55, 0], [0.75, -1.875], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

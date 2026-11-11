@@ -1,0 +1,71 @@
+{
+  "name": "paperclip",
+  "category": "interface",
+  "keywords": ["paperclip", "attachment", "attach", "file", "clip", "document", "trombone", "pièce jointe"],
+  "aliases": [],
+  "gesture": "The clip slides onto the sheet.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 24, "w": 56, "h": 62, "r": 9, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 52, "w": 36, "h": 7, "r": 3.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 66, "w": 22, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "clip",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M58 14V38A9 9 0 0 1 40 38V18A5.5 5.5 0 0 1 51 18V36",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "clip": { "box": [40, 12.5, 18, 34.5] }
+  },
+  "motion": [
+    {
+      "part": "clip",
+      "pivot": [49, 29.75],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

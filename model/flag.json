@@ -1,0 +1,63 @@
+{
+  "name": "flag",
+  "category": "interface",
+  "keywords": ["flag", "report", "mark", "country", "milestone", "goal", "drapeau", "signaler"],
+  "aliases": [],
+  "gesture": "The flag ripples in the wind.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M22 16V84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        },
+        { "kind": "circle", "cx": 22, "cy": 13, "r": 5, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "cloth",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M26 20C38 14 50 28 64 22C70 20 76 20 82 22V54C76 52 70 52 64 54C50 60 38 46 26 52Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 53, "cy": 37, "r": 8, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "cloth": { "box": [26, 18.48, 56, 37.04] }
+  },
+  "motion": [
+    {
+      "part": "cloth",
+      "pivot": [26, 37],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "skewY": [[0, 0], [0.25, -9], [0.6, 6], [1, 0]], "scaleX": [[0, 1], [0.25, 0.92], [0.6, 0.96], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

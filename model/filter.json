@@ -1,0 +1,61 @@
+{
+  "name": "filter",
+  "category": "interface",
+  "keywords": ["filter", "funnel", "sort", "refine", "narrow", "search", "filtrer", "entonnoir"],
+  "aliases": [],
+  "gesture": "A drop falls from the funnel, twice.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M16 18H80L57 46V66L39 72V46Z",
+          "role": "base",
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 25, "y": 20, "w": 46, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "drop",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 82, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "drop": { "box": [43, 77, 10, 10] }
+  },
+  "motion": [
+    {
+      "part": "drop",
+      "pivot": [48, 82],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, -9], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

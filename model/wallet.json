@@ -1,0 +1,57 @@
+{
+  "name": "wallet",
+  "category": "finance",
+  "keywords": ["wallet", "money", "payment", "purse", "cash", "balance", "portefeuille", "argent"],
+  "aliases": [],
+  "gesture": "The clasp of the wallet opens and snaps back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 24, "w": 72, "h": 54, "r": 12, "role": "base" },
+        { "kind": "path", "d": "M24 24H72A12 12 0 0 1 84 36V40H12V36A12 12 0 0 1 24 24Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "clasp",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 56, "y": 47, "w": 30, "h": 20, "r": 10, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 68, "cy": 57, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "clasp": { "box": [56, 47, 30, 20] }
+  },
+  "motion": [
+    {
+      "part": "clasp",
+      "pivot": [71, 57],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}
