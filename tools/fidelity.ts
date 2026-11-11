@@ -11,8 +11,10 @@ import { ORIGINAL_THEME, renderStaticSvg } from '@triolet/core';
 import { ROOT, loadIcons } from './lib/icons.ts';
 import { compare, png, rasterize } from './lib/raster.ts';
 
-/** Icons redrawn on purpose since the port (proportions): not expected to match. */
-export const RETOUCHED: readonly string[] = [];
+/** Icons changed on purpose since the port, and why: these are not expected to match. */
+export const RETOUCHED: Record<string, string> = {
+  agenda: 'the clock hand is now two pieces, hour and minute (7 pixels differ where they meet)',
+};
 
 const SIZE = 96;
 /** Largest channel gap still counted as identical (rounding of a blur). */
@@ -38,7 +40,7 @@ export async function fidelity(): Promise<Fidelity[]> {
     const reference = rasterize(readFileSync(file, 'utf8'), SIZE);
     const port = rasterize(renderStaticSvg(model, ORIGINAL_THEME), SIZE);
     const { differing, worst } = compare(reference, port);
-    const status = RETOUCHED.includes(model.name) ? 'retouched' : worst <= TOLERANCE ? 'same' : 'differs';
+    const status = model.name in RETOUCHED ? 'retouched' : worst <= TOLERANCE ? 'same' : 'differs';
     out.push({ name: model.name, status, differing, worst });
   }
   return out;
@@ -47,7 +49,8 @@ export async function fidelity(): Promise<Fidelity[]> {
 if (import.meta.main) {
   const results = await fidelity();
   for (const r of results) {
-    const detail = r.status === 'new' ? 'no reference' : `${r.differing} px differ, worst gap ${r.worst}/255`;
+    const why = r.status === 'retouched' ? ` (${RETOUCHED[r.name]})` : '';
+    const detail = r.status === 'new' ? 'no reference' : `${r.differing} px differ, worst gap ${r.worst}/255${why}`;
     console.log(`${r.status.padEnd(9)} ${r.name.padEnd(26)} ${detail}`);
   }
   if (process.argv.includes('--sheet')) {

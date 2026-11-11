@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Triolet",
+    "slug": "triolet-example",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": { "supportsTablet": true },
+    "android": {}
+  }
+}

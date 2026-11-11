@@ -232,7 +232,7 @@ function report() {
     add('Own filters follow the block, shared ones do not', a !== b ? 'yes: they differ' : 'no: same colour', a !== b);
   }
   add('prefers-reduced-motion', matchMedia('(prefers-reduced-motion: reduce)').matches ? 'reduce (nothing should move)' : 'no-preference');
-  const hand = document.querySelector('#motion .triolet-agenda .tri-hand');
+  const hand = document.querySelector('#motion .triolet-agenda .tri-hour-hand');
   add('Pivot of the clock hand (transform-origin)', getComputedStyle(hand).transformOrigin, getComputedStyle(hand).transformOrigin === '68px 67px');
   document.querySelector('#results tbody').innerHTML = rows.map(([q, a, ok]) =>
     '<tr><th>' + q + '</th><td>' + a + '</td><td class="' + (ok === undefined ? '' : ok ? 'ok' : 'ko') + '">' + (ok === undefined ? '' : ok ? 'OK' : 'FAIL') + '</td></tr>').join('');

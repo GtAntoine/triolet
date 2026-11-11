@@ -3,7 +3,7 @@
   "category": "time",
   "keywords": ["calendar", "schedule", "clock", "event", "date", "time", "calendrier", "horaire"],
   "aliases": [],
-  "gesture": "The hand goes once around the clock.",
+  "gesture": "Time flies: the hour hand goes once around the clock while the minute hand goes twelve times.",
   "nodes": [
     {
       "type": "layer",
@@ -105,7 +105,7 @@
     },
     {
       "type": "part",
-      "name": "hand",
+      "name": "minute-hand",
       "children": [
         {
           "type": "layer",
@@ -113,7 +113,27 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M68 58V67L74 71",
+              "d": "M68 67V58",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 3.4 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "hour-hand",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M68 67L74 71",
               "role": "on",
               "fill": false,
               "stroke": { "width": 3.4 }
@@ -125,13 +145,23 @@
     }
   ],
   "parts": {
-    "hand": { "box": [68, 58, 6, 13] }
+    "minute-hand": { "box": [68, 58, 0, 9] },
+    "hour-hand": { "box": [68, 67, 6, 4] }
   },
   "motion": [
     {
-      "part": "hand",
+      "part": "minute-hand",
       "pivot": [68, 67],
-      "duration": 1000,
+      "duration": 1800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 4320]] }
+    },
+    {
+      "part": "hour-hand",
+      "pivot": [68, 67],
+      "duration": 1800,
       "delay": 0,
       "iterations": 1,
       "ease": "inOut",
