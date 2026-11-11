@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <defs><filter id="agora-relief-0" filterUnits="userSpaceOnUse" x="-8" y="-8" width="112" height="112" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="flou"/><feOffset in="flou" dx="1.4" dy="1.4" result="bas"/><feFlood flood-color="#9DA3AB" flood-opacity="0.75"/><feComposite in2="bas" operator="in" result="ombre"/><feOffset in="flou" dx="-1.4" dy="-1.4" result="haut"/><feFlood flood-color="#FFFFFF" flood-opacity="1.0"/><feComposite in2="haut" operator="in" result="lumiere"/><feMerge><feMergeNode in="ombre"/><feMergeNode in="lumiere"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <g fill="#D3DCE4" filter="url(#agora-relief-0)"><circle cx="24" cy="57" r="6.5"/><path d="M12 85V81A12 12 0 0 1 36 81V85Z"/></g>
+  <g fill="#D3DCE4" filter="url(#agora-relief-0)"><circle cx="72" cy="57" r="6.5"/><path d="M60 85V81A12 12 0 0 1 84 81V85Z"/></g>
+  <g fill="#1D4A68" filter="url(#agora-relief-0)"><circle cx="48" cy="52" r="8.5"/><path d="M31 86V81A17 17 0 0 1 65 81V86Z"/></g>
+  <g class="p-bulle p-bulle-1" fill="#1D4A68" filter="url(#agora-relief-0)"><path d="M22 10H42A8 8 0 0 1 50 18V26A8 8 0 0 1 42 34H30L22 40V33.6A8 8 0 0 1 14 26V18A8 8 0 0 1 22 10Z"/></g>
+  <g class="p-bulle p-bulle-2">
+  <g fill="#EE4B3B" filter="url(#agora-relief-0)"><path d="M54 12H76A8 8 0 0 1 84 20V30A8 8 0 0 1 76 38H62L54 44V37.6A8 8 0 0 1 46 30V20A8 8 0 0 1 54 12Z"/></g>
+  <circle cx="57" cy="25" r="2.6" fill="#FFFFFF"/><circle cx="65" cy="25" r="2.6" fill="#FFFFFF"/><circle cx="73" cy="25" r="2.6" fill="#FFFFFF"/>
+  </g>
+</svg>

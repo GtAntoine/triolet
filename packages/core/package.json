@@ -1,0 +1,10 @@
+{
+  "name": "@triolet/core",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Triolet's icon model, drawing language, colour derivation, motion and renderers",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

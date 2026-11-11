@@ -1,0 +1,76 @@
+{
+  "name": "voter",
+  "category": "civic",
+  "keywords": ["vote", "ballot", "election", "poll", "urn", "urne", "bulletin", "scrutin"],
+  "aliases": [],
+  "gesture": "The ballot drops into the box, then a new one comes up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 44, "w": 60, "h": 40, "r": 8, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 35, "w": 68, "h": 15, "r": 7, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 31, "y": 39.5, "w": 34, "h": 6, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "rect", "x": 0, "y": 0, "w": 96, "h": 42.5, "r": 0, "role": "base" }
+      ],
+      "children": [
+        {
+          "type": "part",
+          "name": "ballot",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "raised",
+              "size": "small",
+              "shapes": [
+                { "kind": "rect", "x": 38, "y": 12, "w": 20, "h": 36, "r": 3, "role": "accent", "rotate": [18, 48, 30] }
+              ],
+              "weight": "major"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "ballot": { "box": [33.72, 10.58, 28.57, 38.84] }
+  },
+  "motion": [
+    {
+      "part": "ballot",
+      "pivot": [48.01, 30],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": {
+        "x": [[0, 0], [0.5, 3], [0.51, 3], [0.52, -2], [1, 0]],
+        "y": [[0, 0], [0.5, 15], [0.51, 15], [0.52, -6], [1, 0]],
+        "opacity": [[0, 1], [0.5, 1], [0.51, 0], [0.52, 0], [1, 1]]
+      }
+    }
+  ],
+  "idle": false
+}

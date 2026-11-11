@@ -1,0 +1,142 @@
+{
+  "name": "agenda",
+  "category": "time",
+  "keywords": ["calendar", "schedule", "clock", "event", "date", "time", "calendrier", "horaire"],
+  "aliases": [],
+  "gesture": "The hand goes once around the clock.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 18, "w": 62, "h": 60, "r": 12, "role": "base" },
+        { "kind": "path", "d": "M24 18H62A12 12 0 0 1 74 30V35H12V30A12 12 0 0 1 24 18Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 28.7, "y": 10, "w": 7, "h": 17, "r": 8.5, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 50.3, "y": 10, "w": 7, "h": 17, "r": 8.5, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 27, "cy": 49, "r": 5.5, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 42, "cy": 49, "r": 5.5, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 57, "cy": 49, "r": 5.5, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 27, "cy": 64, "r": 5.5, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 42, "cy": 64, "r": 5.5, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 57, "cy": 64, "r": 5.5, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        { "kind": "circle", "cx": 68, "cy": 67, "r": 19, "role": "gap" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 68, "cy": 67, "r": 16, "role": "accent" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "hand",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M68 58V67L74 71",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 3.4 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "hand": { "box": [68, 58, 6, 13] }
+  },
+  "motion": [
+    {
+      "part": "hand",
+      "pivot": [68, 67],
+      "duration": 1000,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}
