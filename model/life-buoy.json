@@ -1,0 +1,64 @@
+{
+  "name": "life-buoy",
+  "category": "people",
+  "keywords": ["support", "help", "lifebuoy", "rescue", "assistance", "care", "bouée", "aide"],
+  "aliases": ["support"],
+  "gesture": "The lifebuoy turns a quarter of a turn into place.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "buoy",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 48,
+              "cy": 48,
+              "r": 25,
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 18 }
+            },
+            {
+              "kind": "circle",
+              "cx": 48,
+              "cy": 48,
+              "r": 25,
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 18, "cap": "butt", "dash": [19.63, 19.63], "dashOffset": 9.82 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 13, "role": "soft" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "buoy": { "box": [23, 23, 50, 50] }
+  },
+  "motion": [
+    {
+      "part": "buoy",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, -90], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

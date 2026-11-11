@@ -13,7 +13,7 @@ import { compare, png, rasterize } from './lib/raster.ts';
 
 /** Icons changed on purpose since the port, and why: these are not expected to match. */
 export const RETOUCHED: Record<string, string> = {
-  agenda: 'the clock hand is now two pieces, hour and minute (7 pixels differ where they meet)',
+  'calendar-clock': 'the clock hand is now two pieces, hour and minute (7 pixels differ where they meet)',
 };
 
 const SIZE = 96;

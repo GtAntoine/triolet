@@ -1,0 +1,95 @@
+{
+  "name": "outbox",
+  "category": "data",
+  "keywords": ["export", "download", "upload", "share", "outbox", "tray", "sortie", "exporter"],
+  "aliases": ["export"],
+  "gesture": "The sheet comes out of the tray and the arrow goes up.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "sheet",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 12, "w": 36, "h": 46, "r": 6, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 37, "y": 21, "w": 22, "h": 5, "r": 2.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 37, "y": 30, "w": 16, "h": 5, "r": 2.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M12 50H30L35 60H61L66 50H84V74A10 10 0 0 1 74 84H22A10 10 0 0 1 12 74Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M78 40V14M70 22L78 14L86 22",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sheet": { "box": [30, 12, 36, 46] },
+    "arrow": { "box": [70, 14, 16, 26] }
+  },
+  "motion": [
+    {
+      "part": "sheet",
+      "pivot": [48, 35],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    },
+    {
+      "part": "arrow",
+      "pivot": [78, 27],
+      "duration": 500,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

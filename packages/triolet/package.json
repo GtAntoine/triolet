@@ -4,17 +4,41 @@
   "private": true,
   "description": "Animated icons in three colours: SVG, CSS motion, no dependency",
   "type": "module",
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "exports": {
-    ".": { "types": "./dist/triolet/src/index.d.ts", "default": "./dist/triolet/src/index.js" },
-    "./runtime": { "types": "./dist/triolet/src/runtime.d.ts", "default": "./dist/triolet/src/runtime.js" },
-    "./core": { "types": "./dist/core/src/index.d.ts", "default": "./dist/core/src/index.js" },
-    "./icons/*": { "types": "./dist/triolet/src/icons/*.d.ts", "default": "./dist/triolet/src/icons/*.js" },
+    ".": {
+      "types": "./dist/triolet/src/index.d.ts",
+      "default": "./dist/triolet/src/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/triolet/src/runtime.d.ts",
+      "default": "./dist/triolet/src/runtime.js"
+    },
+    "./core": {
+      "types": "./dist/core/src/index.d.ts",
+      "default": "./dist/core/src/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/triolet/src/icons/*.d.ts",
+      "default": "./dist/triolet/src/icons/*.js"
+    },
     "./triolet.css": "./dist/triolet.css",
     "./svg/*": "./svg/*"
   },
-  "files": ["dist", "svg"],
+  "files": [
+    "dist",
+    "svg"
+  ],
   "scripts": {
     "build": "node ../../tools/build-packages.ts triolet"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GtAntoine/triolet.git",
+    "directory": "packages/triolet"
+  },
+  "homepage": "https://gtantoine.github.io/triolet/"
 }

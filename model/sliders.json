@@ -1,0 +1,113 @@
+{
+  "name": "sliders",
+  "category": "settings",
+  "keywords": ["settings", "sliders", "adjust", "preferences", "controls", "tune", "paramètres", "réglages"],
+  "aliases": ["parametrage"],
+  "gesture": "The three sliders adjust themselves and come back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 17, "w": 72, "h": 12, "r": 6, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "knob-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 36, "cy": 23, "r": 10, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 41, "w": 72, "h": 12, "r": 6, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "knob-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 64, "cy": 47, "r": 10, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 65, "w": 72, "h": 12, "r": 6, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "knob-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 44, "cy": 71, "r": 10, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "knob-1": { "box": [26, 13, 20, 20] },
+    "knob-2": { "box": [54, 37, 20, 20] },
+    "knob-3": { "box": [34, 61, 20, 20] }
+  },
+  "motion": [
+    {
+      "part": "knob-1",
+      "pivot": [36, 23],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 20], [1, 0]] }
+    },
+    {
+      "part": "knob-2",
+      "pivot": [64, 47],
+      "duration": 900,
+      "delay": 80,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, -22], [1, 0]] }
+    },
+    {
+      "part": "knob-3",
+      "pivot": [44, 71],
+      "duration": 900,
+      "delay": 160,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 18], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

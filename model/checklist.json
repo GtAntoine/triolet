@@ -1,0 +1,162 @@
+{
+  "name": "checklist",
+  "category": "tasks",
+  "keywords": ["progress", "steps", "checklist", "tracking", "status", "timeline", "étapes", "avancement"],
+  "aliases": ["suivi"],
+  "gesture": "The check draws itself, the current step pops and the lines write themselves.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 26, "cy": 26, "r": 10, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "check",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M21.5 26.3l3.2 3.2 6-6.4",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 26, "cy": 48, "r": 10, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 26, "cy": 70, "r": 10, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 44, "y": 22, "w": 36, "h": 8, "r": 4, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 44, "y": 44, "w": 36, "h": 8, "r": 4, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 44, "y": 66, "w": 36, "h": 8, "r": 4, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "check": { "box": [21.5, 23.1, 9.2, 6.4] },
+    "dot": { "box": [16, 38, 20, 20] },
+    "line-1": { "box": [44, 22, 36, 8] },
+    "line-2": { "box": [44, 44, 36, 8] },
+    "line-3": { "box": [44, 66, 36, 8] }
+  },
+  "motion": [
+    {
+      "part": "check",
+      "pivot": [26.1, 26.3],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [26, 48],
+      "duration": 450,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "line-1",
+      "pivot": [44, 26],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [44, 48],
+      "duration": 400,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-3",
+      "pivot": [44, 70],
+      "duration": 400,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

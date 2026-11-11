@@ -10,7 +10,7 @@ import { png } from './lib/raster.ts';
 
 const dir = join(ROOT, 'examples/expo/assets/reference');
 mkdirSync(dir, { recursive: true });
-for (const name of ['agenda', 'voter']) {
+for (const name of ['calendar-clock', 'ballot-box']) {
   writeFileSync(join(dir, `${name}.png`), png(renderStaticSvg(await loadIcon(name)), 450));
 }
 console.log(`Reference images written to ${dir}`);

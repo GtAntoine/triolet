@@ -13,11 +13,11 @@ import { useFrameCallback, useSharedValue } from 'react-native-reanimated';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 // Reanimated 4 moved "run on the JS thread" to react-native-worklets.
 import { scheduleOnRN } from 'react-native-worklets';
-import agendaModel from '../../model/agenda.json';
-import alertesModel from '../../model/alertes.json';
-import demarchesModel from '../../model/demarches.json';
-import suiviModel from '../../model/suivi.json';
-import voterModel from '../../model/voter.json';
+import agendaModel from '../../model/calendar-clock.json';
+import alertesModel from '../../model/bell-ring.json';
+import demarchesModel from '../../model/file-text.json';
+import suiviModel from '../../model/checklist.json';
+import voterModel from '../../model/ballot-box.json';
 import type { ThemeInput } from '../../packages/core/src/colors.ts';
 import type { IconModel } from '../../packages/core/src/model.ts';
 import { TrioletIcon, type TrioletIconHandle } from './src/skia/TrioletIcon';
@@ -27,8 +27,8 @@ const voter = voterModel as unknown as IconModel;
 const ICONS = [agenda, alertesModel, demarchesModel, suiviModel, voter] as unknown as IconModel[];
 
 const REFERENCE = {
-  agenda: require('./assets/reference/agenda.png'),
-  voter: require('./assets/reference/voter.png'),
+  agenda: require('./assets/reference/calendar-clock.png'),
+  voter: require('./assets/reference/ballot-box.png'),
 } as const;
 
 // A browser allows about sixteen WebGL contexts and each Skia canvas is one: the web preview,

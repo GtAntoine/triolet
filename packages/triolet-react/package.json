@@ -6,10 +6,18 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
-    "./icons/*": { "types": "./dist/icons/*.d.ts", "default": "./dist/icons/*.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.d.ts",
+      "default": "./dist/icons/*.js"
+    }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node ../../tools/build-packages.ts triolet-react"
   },
@@ -24,5 +32,12 @@
     "@types/react-dom": "^19.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GtAntoine/triolet.git",
+    "directory": "packages/triolet-react"
+  },
+  "homepage": "https://gtantoine.github.io/triolet/"
 }

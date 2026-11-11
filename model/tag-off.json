@@ -1,0 +1,88 @@
+{
+  "name": "tag-off",
+  "category": "security",
+  "keywords": ["no resale", "price tag", "forbidden", "not for sale", "privacy", "ban", "étiquette", "interdit"],
+  "aliases": ["aucune-revente"],
+  "gesture": "The no-entry sign closes on the price tag.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M14 44L42 16H70A8 8 0 0 1 78 24V52L50 80A8 8 0 0 1 38.7 80L14 55.3A8 8 0 0 1 14 44Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 62, "cy": 32, "r": 6, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 31, "y": 50, "w": 22, "h": 6, "r": 3, "role": "mid", "rotate": [-45, 42, 53] }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "ban",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 67, "cy": 67, "r": 21, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 67,
+              "cy": 67,
+              "r": 14.5,
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M56.7 77.3L77.3 56.7",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "ban": { "box": [46, 46, 42, 42] }
+  },
+  "motion": [
+    {
+      "part": "ban",
+      "pivot": [67, 67],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

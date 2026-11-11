@@ -38,7 +38,7 @@ const shared = (m: IconModel, size: number) => renderSvg(m, { size, filters: 'sh
 const SIZES = [96, 64, 48, 40, 39, 32, 24, 23, 20, 16];
 
 // The tier rows and the trigger buttons are shown for the five icons the spike started with.
-const FIRST = ['agenda', 'voter', 'demarches', 'alertes', 'suivi'].map(get);
+const FIRST = ['calendar-clock', 'ballot-box', 'file-text', 'bell-ring', 'checklist'].map(get);
 const tierRows = FIRST
   .map((m) => {
     const row = (label: string, pick: (size: number) => Tier) =>
@@ -125,16 +125,16 @@ body.dark .ok { color: #58d68d; } body.dark .ko { color: #ff7a6b; }
 <p>Each dashed block sets its own <code>--triolet-*</code>. On the left of each block the icon has its own filters; on the right it uses the filters shared by the page. Expected: the flat colours follow the block in both; the relief shadow of the shared one keeps the page colours (a filter reads its colours where it is defined).</p>
 <div>
   <div class="block" style="--triolet-base:#EEF2EA; --triolet-main:#1F5A3D; --triolet-accent:#E8A13A">
-    <figure>${own(get('agenda'), 96)}<figcaption>own</figcaption></figure>
-    <figure>${shared(get('agenda'), 96)}<figcaption>shared</figcaption></figure>
+    <figure>${own(get('calendar-clock'), 96)}<figcaption>own</figcaption></figure>
+    <figure>${shared(get('calendar-clock'), 96)}<figcaption>shared</figcaption></figure>
   </div>
   <div class="block" style="--triolet-base:#3A2230; --triolet-main:#F2C6D8; --triolet-accent:#FFD166">
-    <figure>${own(get('voter'), 96)}<figcaption>own</figcaption></figure>
-    <figure>${shared(get('voter'), 96)}<figcaption>shared</figcaption></figure>
+    <figure>${own(get('ballot-box'), 96)}<figcaption>own</figcaption></figure>
+    <figure>${shared(get('ballot-box'), 96)}<figcaption>shared</figcaption></figure>
   </div>
   <div class="block">
-    <figure>${own(get('demarches'), 96)}<figcaption>own, page colours</figcaption></figure>
-    <figure>${shared(get('demarches'), 96)}<figcaption>shared, page colours</figcaption></figure>
+    <figure>${own(get('file-text'), 96)}<figcaption>own, page colours</figcaption></figure>
+    <figure>${shared(get('file-text'), 96)}<figcaption>shared, page colours</figcaption></figure>
   </div>
 </div>
 
@@ -234,7 +234,7 @@ function report() {
     add('Own filters follow the block, shared ones do not', a !== b ? 'yes: they differ' : 'no: same colour', a !== b);
   }
   add('prefers-reduced-motion', matchMedia('(prefers-reduced-motion: reduce)').matches ? 'reduce (nothing should move)' : 'no-preference');
-  const hand = document.querySelector('#motion .triolet-agenda .tri-hour-hand');
+  const hand = document.querySelector('#motion .triolet-calendar-clock .tri-hour-hand');
   add('Pivot of the clock hand (transform-origin)', getComputedStyle(hand).transformOrigin, getComputedStyle(hand).transformOrigin === '68px 67px');
   document.querySelector('#results tbody').innerHTML = rows.map(([q, a, ok]) =>
     '<tr><th>' + q + '</th><td>' + a + '</td><td class="' + (ok === undefined ? '' : ok ? 'ok' : 'ko') + '">' + (ok === undefined ? '' : ok ? 'OK' : 'FAIL') + '</td></tr>').join('');

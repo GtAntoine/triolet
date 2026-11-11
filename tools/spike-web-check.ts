@@ -67,7 +67,7 @@ async function run(name: string, type: BrowserType): Promise<Check[]> {
 
     // The relief is painted from the custom property: a point 1.6 units under the calendar,
     // where the shadow is at about half its strength.
-    const agenda = page.locator('#motion .triolet-agenda');
+    const agenda = page.locator('#motion .triolet-calendar-clock');
     const box = (await agenda.boundingBox())!;
     const unit = box.width / 96;
     const at = { x: Math.round(box.x + 40 * unit), y: Math.round(box.y + 79.6 * unit) };
@@ -94,7 +94,7 @@ async function run(name: string, type: BrowserType): Promise<Check[]> {
     ]);
 
     // Hover.
-    const bell = '#motion .triolet-alertes';
+    const bell = '#motion .triolet-bell-ring';
     checks.push(['At rest nothing is animating', String((await running(page, 'body')).length), (await running(page, 'body')).length === 0]);
     await page.hover(bell);
     const hovered = await running(page, bell);

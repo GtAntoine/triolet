@@ -1,0 +1,88 @@
+{
+  "name": "file-text",
+  "category": "documents",
+  "keywords": ["document", "file", "form", "paperwork", "page", "formulaire", "dossier"],
+  "aliases": ["demarches"],
+  "gesture": "The two lines write themselves, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M31 14H60L80 34V70A13 13 0 0 1 67 83H31A13 13 0 0 1 18 70V27A13 13 0 0 1 31 14Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "corner",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M60 14L80 34H65A5 5 0 0 1 60 29Z", "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 50, "w": 26, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 64, "w": 40, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "corner": { "box": [60, 14, 20, 20] },
+    "line-1": { "box": [30, 50, 26, 9] },
+    "line-2": { "box": [30, 64, 40, 9] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [30, 54.5],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [30, 68.5],
+      "duration": 450,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

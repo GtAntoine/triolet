@@ -1,0 +1,135 @@
+{
+  "name": "bell-ring",
+  "category": "notifications",
+  "keywords": ["bell", "alert", "notification", "ring", "alarm", "cloche", "alerte", "sonnerie"],
+  "aliases": ["alertes"],
+  "gesture": "The bell rings from its top and the sound waves leave on both sides.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "bell",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 46, "cy": 17, "r": 4.5, "role": "main" },
+            { "kind": "circle", "cx": 46, "cy": 75, "r": 7.5, "role": "main" },
+            {
+              "kind": "path",
+              "d": "M46 20C34 20 28 30 28 42V56L20 66V71H72V66L64 56V42C64 30 58 20 46 20Z",
+              "role": "main",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "waves-left",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M10 40L16 43",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "path",
+              "d": "M8 54H15",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "path",
+              "d": "M10 68L16 65",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "waves-right",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M82 42L76 45",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "path",
+              "d": "M84 56H77",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "path",
+              "d": "M82 69L76 66",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bell": { "box": [20, 12.5, 52, 70] },
+    "waves-left": { "box": [8, 40, 8, 28] },
+    "waves-right": { "box": [76, 42, 8, 27] }
+  },
+  "motion": [
+    {
+      "part": "bell",
+      "pivot": [46, 12.5],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.15, 14], [0.35, -11], [0.55, 7], [0.75, -4], [1, 0]] }
+    },
+    {
+      "part": "waves-left",
+      "pivot": [12, 54],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "outSoft",
+      "tracks": { "x": [[0, 4], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "waves-right",
+      "pivot": [80, 55.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "outSoft",
+      "tracks": { "x": [[0, -4], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

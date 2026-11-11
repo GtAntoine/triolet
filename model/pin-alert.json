@@ -1,0 +1,89 @@
+{
+  "name": "pin-alert",
+  "category": "places",
+  "keywords": ["report", "pin", "location", "issue", "alert", "map", "signalement", "repère", "lieu"],
+  "aliases": ["signalement"],
+  "gesture": "The pin plants itself and the alert badge lights up.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "pin",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M44 86C38 78 20 60 20 41A24 24 0 0 1 68 41C68 60 50 78 44 86Z", "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 44, "cy": 41, "r": 9.5, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 21, "r": 16, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 21, "r": 13, "role": "accent" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "rect", "x": 67.3, "y": 12.5, "w": 3.4, "h": 10.5, "r": 1.7, "role": "on" },
+            { "kind": "circle", "cx": 69, "cy": 27.8, "r": 2, "role": "on" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "pin": { "box": [20, 17, 48, 69] },
+    "badge": { "box": [53, 5, 32, 32] }
+  },
+  "motion": [
+    {
+      "part": "pin",
+      "pivot": [44, 51.5],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -8], [0.55, 0], [0.75, -2.5], [1, 0]] }
+    },
+    {
+      "part": "badge",
+      "pivot": [69, 21],
+      "duration": 450,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

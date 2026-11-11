@@ -37,21 +37,21 @@ test('the footprint check singles out what is drawn outside the keyline shapes',
   assert.equal(insideKeylines(12, 14), false, 'a corner of the grid');
   const icons = await loadIcons();
   const find = (name: string) => icons.find((icon) => icon.name === name)!;
-  assert.equal(footprint(find('support')).outside, 0, 'a round icon 68 across sits inside the circle');
-  assert.deepEqual(footprint(find('paiement')).box, [12, 22, 72, 52]);
-  assert.match(judgeFootprint(footprint(find('cloisonnement'))).join('\n'), /outside the keyline shapes[\s\S]*off centre by 0 across and 10 down/);
+  assert.equal(footprint(find('life-buoy')).outside, 0, 'a round icon 68 across sits inside the circle');
+  assert.deepEqual(footprint(find('credit-card')).box, [12, 22, 72, 52]);
+  assert.match(judgeFootprint(footprint(find('compartments'))).join('\n'), /outside the keyline shapes[\s\S]*off centre by 0 across and 10 down/);
 });
 
 test('a new fault in the colours is an error, a known one a warning', async () => {
   const { checkIcon, KNOWN_COLOUR_FAULTS } = await import('../lib/check.ts');
   const icons = await loadIcons();
-  const support = icons.find((icon) => icon.name === 'support')!;
-  assert.ok(KNOWN_COLOUR_FAULTS.includes('support'));
+  const support = icons.find((icon) => icon.name === 'life-buoy')!;
+  assert.ok(KNOWN_COLOUR_FAULTS.includes('life-buoy'));
   assert.equal(checkIcon(support, icons).errors.length, 0);
   // The same drawing under a new name has no excuse.
   const copy = { ...support, name: 'buoy' };
   assert.match(checkIcon(copy, [...icons, copy]).errors.join('\n'), /accent covers 42.1 %, more than 20 %/);
   // And a name already taken is refused.
-  const clash = { ...icons.find((icon) => icon.name === 'voter')!, aliases: ['agenda'] };
-  assert.match(checkIcon(clash, icons).errors.join('\n'), /"agenda" is already the name or an alias of "agenda"/);
+  const clash = { ...icons.find((icon) => icon.name === 'ballot-box')!, aliases: ['calendar-clock'] };
+  assert.match(checkIcon(clash, icons).errors.join('\n'), /"calendar-clock" is already the name or an alias of "calendar-clock"/);
 });
