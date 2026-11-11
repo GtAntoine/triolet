@@ -1,0 +1,55 @@
+{
+  "name": "music",
+  "category": "media",
+  "keywords": ["music", "note", "song", "audio", "melody", "sound", "musique", "chanson"],
+  "aliases": [],
+  "gesture": "The note jumps to the beat.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "note",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M41 61V32L63 27V56",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            },
+            { "kind": "circle", "cx": 34, "cy": 61, "r": 8, "role": "main" },
+            { "kind": "circle", "cx": 56, "cy": 56, "r": 8, "role": "accent" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "note": { "box": [26, 27, 38, 42] }
+  },
+  "motion": [
+    {
+      "part": "note",
+      "pivot": [45, 48],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -7], [0.55, 0], [0.75, -2.1875], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

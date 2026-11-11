@@ -1,0 +1,71 @@
+{
+  "name": "user",
+  "category": "people",
+  "keywords": ["user", "person", "account", "profile", "member", "avatar", "utilisateur", "compte"],
+  "aliases": [],
+  "gesture": "The head nods and the badge pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M16 80V76A32 28 0 0 1 80 76V80A5 5 0 0 1 75 85H21A5 5 0 0 1 16 80Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 63, "cy": 70, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "head",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 31, "r": 17, "role": "base" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "badge": { "box": [58, 65, 10, 10] },
+    "head": { "box": [31, 14, 34, 34] }
+  },
+  "motion": [
+    {
+      "part": "badge",
+      "pivot": [63, 70],
+      "duration": 400,
+      "delay": 250,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "head",
+      "pivot": [48, 48],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.3333333333333333, -8], [0.6666666666666666, 6], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

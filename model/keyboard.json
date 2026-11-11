@@ -1,0 +1,137 @@
+{
+  "name": "keyboard",
+  "category": "devices",
+  "keywords": ["keyboard", "type", "keys", "input", "shortcut", "typing", "clavier", "touches"],
+  "aliases": [],
+  "gesture": "A key is pressed.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 24, "w": 76, "h": 48, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 32, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30.2, "y": 32, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 42.4, "y": 32, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 54.6, "y": 32, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 66.8, "y": 32, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 44.5, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30.2, "y": 44.5, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 42.4, "y": 44.5, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "key",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 54.6, "y": 44.5, "w": 9.5, "h": 9, "r": 3, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 66.8, "y": 44.5, "w": 9.5, "h": 9, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 57, "w": 40, "h": 8, "r": 4, "role": "mid" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "key": { "box": [54.6, 44.5, 9.5, 9] }
+  },
+  "motion": [
+    {
+      "part": "key",
+      "pivot": [59.35, 49],
+      "duration": 350,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.35, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,74 @@
+{
+  "name": "bookmark",
+  "category": "interface",
+  "keywords": ["bookmark", "save", "keep", "read later", "favourite", "ribbon", "signet", "marque-page"],
+  "aliases": [],
+  "gesture": "The ribbon slides down to mark the page.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 16, "w": 60, "h": 68, "r": 9, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 34, "w": 22, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 48, "w": 34, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 62, "w": 26, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "ribbon",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M56 10H70V42L63 36L56 42Z", "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "ribbon": { "box": [56, 10, 14, 32] }
+  },
+  "motion": [
+    {
+      "part": "ribbon",
+      "pivot": [63, 26],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.45, 6], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

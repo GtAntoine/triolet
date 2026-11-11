@@ -1,0 +1,69 @@
+{
+  "name": "umbrella",
+  "category": "weather",
+  "keywords": ["umbrella", "rain", "weather", "protection", "insurance", "cover", "parapluie", "pluie"],
+  "aliases": [],
+  "gesture": "The umbrella sways in the wind, held by its handle.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "umbrella",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 44V72A7 7 0 0 1 34 72",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 11V16",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M12 48A36 34 0 0 1 84 48Q72 40 60 48Q48 40 36 48Q24 40 12 48Z", "role": "main" },
+            { "kind": "path", "d": "M48 14C43 23 41 35 41 45.4Q48 42 55 45.4C55 35 53 23 48 14Z", "role": "accent" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "umbrella": { "box": [12, 11, 72, 68] }
+  },
+  "motion": [
+    {
+      "part": "umbrella",
+      "pivot": [41, 79],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, -9], [0.5, 6], [0.75, -3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

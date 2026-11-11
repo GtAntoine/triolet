@@ -1,0 +1,106 @@
+{
+  "name": "battery",
+  "category": "devices",
+  "keywords": ["battery", "charge", "power", "energy", "level", "low", "batterie", "énergie"],
+  "aliases": [],
+  "gesture": "The battery fills up cell by cell.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 76, "y": 40, "w": 10, "h": 16, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 28, "w": 68, "h": 40, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "cell-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 17, "y": 35, "w": 15, "h": 26, "r": 4, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "cell-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 36.5, "y": 35, "w": 15, "h": 26, "r": 4, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "cell-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 56, "y": 35, "w": 15, "h": 26, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "cell-1": { "box": [17, 35, 15, 26] },
+    "cell-2": { "box": [36.5, 35, 15, 26] },
+    "cell-3": { "box": [56, 35, 15, 26] }
+  },
+  "motion": [
+    {
+      "part": "cell-1",
+      "pivot": [24.5, 61],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    },
+    {
+      "part": "cell-2",
+      "pivot": [44, 61],
+      "duration": 400,
+      "delay": 140,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    },
+    {
+      "part": "cell-3",
+      "pivot": [63.5, 61],
+      "duration": 400,
+      "delay": 280,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

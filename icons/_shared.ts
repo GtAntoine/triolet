@@ -31,3 +31,27 @@ export function flag(x: number, y: number): DrawNode[] {
     ),
   ];
 }
+
+/** A heart 38 wide and 28 high, its middle at (48, 23): scale and move it with `resize`. */
+export const HEART = 'M48 38C35 30 29 24 29 17.5A9.5 9.5 0 0 1 48 14A9.5 9.5 0 0 1 67 17.5C67 24 61 30 48 38Z';
+
+/** A five-pointed star as path data. Give the shape an `outline` to round its points. */
+export function starPath(cx: number, cy: number, outer: number, inner: number): string {
+  const points: string[] = [];
+  for (let i = 0; i < 10; i++) {
+    const radius = i % 2 === 0 ? outer : inner;
+    const angle = (Math.PI / 5) * i - Math.PI / 2;
+    points.push(`${(cx + radius * Math.cos(angle)).toFixed(1)} ${(cy + radius * Math.sin(angle)).toFixed(1)}`);
+  }
+  return `M${points.join('L')}Z`;
+}
+
+/** A regular polygon as path data, its first corner at the top. */
+export function polygonPath(cx: number, cy: number, radius: number, sides: number, turn = 0): string {
+  const points: string[] = [];
+  for (let i = 0; i < sides; i++) {
+    const angle = ((Math.PI * 2) / sides) * i - Math.PI / 2 + (turn * Math.PI) / 180;
+    points.push(`${(cx + radius * Math.cos(angle)).toFixed(1)} ${(cy + radius * Math.sin(angle)).toFixed(1)}`);
+  }
+  return `M${points.join('L')}Z`;
+}

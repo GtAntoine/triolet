@@ -1,0 +1,84 @@
+{
+  "name": "star",
+  "category": "social",
+  "keywords": ["star", "favourite", "favorite", "rating", "review", "best", "étoile", "favori"],
+  "aliases": [],
+  "gesture": "The small star turns once on itself.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M45.0 23.0L53.2 41.7L73.5 43.7L58.3 57.3L62.6 77.3L45.0 67.0L27.4 77.3L31.7 57.3L16.5 43.7L36.8 41.7Z",
+          "role": "base",
+          "stroke": { "width": 7 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M45.0 38.0L49.1 47.3L59.3 48.4L51.7 55.2L53.8 65.1L45.0 60.0L36.2 65.1L38.3 55.2L30.7 48.4L40.9 47.3Z",
+          "role": "main",
+          "stroke": { "width": 4 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sparkle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M71.0 14.0L74.8 22.7L84.3 23.7L77.2 30.0L79.2 39.3L71.0 34.5L62.8 39.3L64.8 30.0L57.7 23.7L67.2 22.7Z",
+              "role": "gap",
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M71.0 16.0L74.2 23.6L82.4 24.3L76.2 29.7L78.1 37.7L71.0 33.5L63.9 37.7L65.8 29.7L59.6 24.3L67.8 23.6Z",
+              "role": "accent",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sparkle": { "box": [57.7, 14, 26.6, 25.3] }
+  },
+  "motion": [
+    {
+      "part": "sparkle",
+      "pivot": [71, 26.65],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}

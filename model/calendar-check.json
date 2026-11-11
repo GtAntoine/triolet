@@ -1,0 +1,88 @@
+{
+  "name": "calendar-check",
+  "category": "time",
+  "keywords": ["calendar", "date", "done", "event", "confirmed", "booked", "agenda", "validé"],
+  "aliases": [],
+  "gesture": "The check badge pops on the calendar.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 20, "w": 64, "h": 60, "r": 12, "role": "base" },
+        { "kind": "path", "d": "M28 20H68A12 12 0 0 1 80 32V38H16V32A12 12 0 0 1 28 20Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 48, "w": 28, "h": 7, "r": 3.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 61, "w": 18, "h": 7, "r": 3.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 66, "r": 17, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 66, "r": 14, "role": "accent" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M59.5 66.5L64.5 71.5L73 62",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "badge": { "box": [49, 49, 34, 34] }
+  },
+  "motion": [
+    {
+      "part": "badge",
+      "pivot": [66, 66],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

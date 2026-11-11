@@ -1,0 +1,99 @@
+{
+  "name": "clock",
+  "category": "time",
+  "keywords": ["clock", "time", "hour", "watch", "schedule", "duration", "horloge", "heure"],
+  "aliases": [],
+  "gesture": "Time flies: the hour hand goes once around while the minute hand goes twelve times.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 27, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "minute-hand",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 48V29",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "hour-hand",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 48L60 55",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "minute-hand": { "box": [48, 29, 0, 19] },
+    "hour-hand": { "box": [48, 48, 12, 7] }
+  },
+  "motion": [
+    {
+      "part": "minute-hand",
+      "pivot": [48, 48],
+      "duration": 1800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 4320]] }
+    },
+    {
+      "part": "hour-hand",
+      "pivot": [48, 48],
+      "duration": 1800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}

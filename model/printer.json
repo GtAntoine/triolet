@@ -1,0 +1,90 @@
+{
+  "name": "printer",
+  "category": "devices",
+  "keywords": ["printer", "print", "paper", "document", "office", "copy", "imprimante", "imprimer"],
+  "aliases": [],
+  "gesture": "The printed sheet comes out.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 12, "w": 44, "h": 30, "r": 6, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 34, "w": 72, "h": 36, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 58, "w": 48, "h": 6, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 72, "cy": 45, "r": 4.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "rect", "x": 0, "y": 61, "w": 96, "h": 35, "r": 0, "role": "base" }
+      ],
+      "children": [
+        {
+          "type": "part",
+          "name": "sheet",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "raised",
+              "size": "small",
+              "shapes": [
+                { "kind": "rect", "x": 28, "y": 60, "w": 40, "h": 26, "r": 4, "role": "base" }
+              ],
+              "weight": "major"
+            },
+            {
+              "type": "layer",
+              "effect": "inset",
+              "tone": "light",
+              "shapes": [
+                { "kind": "rect", "x": 35, "y": 70, "w": 26, "h": 5, "r": 2.5, "role": "mid" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sheet": { "box": [28, 60, 40, 26] }
+  },
+  "motion": [
+    {
+      "part": "sheet",
+      "pivot": [48, 73],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, -16], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

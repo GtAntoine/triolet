@@ -1,0 +1,98 @@
+{
+  "name": "server",
+  "category": "devices",
+  "keywords": ["server", "hosting", "rack", "datacenter", "backend", "infrastructure", "serveur", "hébergement"],
+  "aliases": [],
+  "gesture": "The lights of the two racks blink in turn.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 16, "w": 68, "h": 28, "r": 9, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 26, "w": 28, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "light-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 68, "cy": 30, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 52, "w": 68, "h": 28, "r": 9, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 62, "w": 28, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "light-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 68, "cy": 66, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "light-1": { "box": [63, 25, 10, 10] },
+    "light-2": { "box": [63, 61, 10, 10] }
+  },
+  "motion": [
+    {
+      "part": "light-1",
+      "pivot": [68, 30],
+      "duration": 350,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    },
+    {
+      "part": "light-2",
+      "pivot": [68, 66],
+      "duration": 350,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,64 @@
+{
+  "name": "settings",
+  "category": "interface",
+  "keywords": ["settings", "gear", "cog", "preferences", "options", "configuration", "paramètres", "réglages"],
+  "aliases": [],
+  "gesture": "The gear turns a quarter of a turn.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "gear",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 25, "role": "main" },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [0, 48, 48] },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [45, 48, 48] },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [90, 48, 48] },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [135, 48, 48] },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [180, 48, 48] },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [225, 48, 48] },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [270, 48, 48] },
+            { "kind": "rect", "x": 42, "y": 12, "w": 12, "h": 16, "r": 4, "role": "main", "rotate": [315, 48, 48] }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 11, "role": "base" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "gear": { "box": [12, 12, 72, 72] }
+  },
+  "motion": [
+    {
+      "part": "gear",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, -90], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

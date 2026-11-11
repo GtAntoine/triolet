@@ -1,0 +1,81 @@
+{
+  "name": "globe",
+  "category": "places",
+  "keywords": ["globe", "world", "earth", "internet", "language", "international", "monde", "planète"],
+  "aliases": [],
+  "gesture": "The globe turns a little and the place lights up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "children": [
+        {
+          "type": "part",
+          "name": "land",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "inset",
+              "tone": "dark",
+              "shapes": [
+                { "kind": "path", "d": "M30 22C40 17 50 24 48 34C47 40 40 40 40 48C40 58 34 65 26 59C17 52 19 30 30 22Z", "role": "main" },
+                { "kind": "path", "d": "M58 45C66 41 75 47 73 57C71 67 62 73 56 67C52 63 52 49 58 45Z", "role": "main" }
+              ],
+              "weight": "major"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "place",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 62, "cy": 30, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "land": { "box": [20.33, 20.36, 52.94, 49.03] },
+    "place": { "box": [57, 25, 10, 10] }
+  },
+  "motion": [
+    {
+      "part": "land",
+      "pivot": [46.8, 44.88],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, -7], [1, 0]] }
+    },
+    {
+      "part": "place",
+      "pivot": [62, 30],
+      "duration": 450,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

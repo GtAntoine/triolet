@@ -1,0 +1,117 @@
+{
+  "name": "phone",
+  "category": "communication",
+  "keywords": ["phone", "call", "telephone", "contact", "ring", "dial", "téléphone", "appel"],
+  "aliases": [],
+  "gesture": "The handset rings and the waves leave.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "handset",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 37C37 50 46 59 59 60",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 9 }
+            },
+            { "kind": "rect", "x": 26, "y": 26, "w": 16, "h": 17, "r": 6, "role": "main", "rotate": [-12, 34, 34] },
+            { "kind": "rect", "x": 52, "y": 52, "w": 17, "h": 16, "r": 6, "role": "main", "rotate": [-12, 60, 60] }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "wave-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54 33A10 10 0 0 1 63 42",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "wave-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M56 22A21 21 0 0 1 74 40",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "handset": { "box": [25.63, 25.63, 43.72, 42.74] },
+    "wave-1": { "box": [54, 33, 9, 9] },
+    "wave-2": { "box": [56, 22, 18, 18] }
+  },
+  "motion": [
+    {
+      "part": "handset",
+      "pivot": [47.49, 47],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, -9], [0.4, 7], [0.6, -5], [0.8, 3], [1, 0]] }
+    },
+    {
+      "part": "wave-1",
+      "pivot": [58.5, 37.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "x": [[0, -3], [1, 0]], "y": [[0, 3], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "wave-2",
+      "pivot": [65, 31],
+      "duration": 400,
+      "delay": 140,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "x": [[0, -3], [1, 0]], "y": [[0, 3], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

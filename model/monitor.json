@@ -1,0 +1,115 @@
+{
+  "name": "monitor",
+  "category": "devices",
+  "keywords": ["monitor", "screen", "desktop", "computer", "display", "pc", "écran", "ordinateur"],
+  "aliases": [],
+  "gesture": "The lines appear on the screen one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 42, "y": 62, "w": 12, "h": 16, "r": 2, "role": "main" },
+        { "kind": "rect", "x": 30, "y": 76, "w": 36, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 14, "w": 76, "h": 52, "r": 9, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 20, "w": 64, "h": 40, "r": 5, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 23, "y": 27, "w": 24, "h": 7, "r": 3.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 23, "y": 39, "w": 44, "h": 6, "r": 3, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 23, "y": 49, "w": 32, "h": 6, "r": 3, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line-1": { "box": [23, 27, 24, 7] },
+    "line-2": { "box": [23, 39, 44, 6] },
+    "line-3": { "box": [23, 49, 32, 6] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [23, 30.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [23, 42],
+      "duration": 400,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-3",
+      "pivot": [23, 52],
+      "duration": 400,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

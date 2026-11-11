@@ -1,0 +1,71 @@
+{
+  "name": "image",
+  "category": "media",
+  "keywords": ["image", "picture", "photo", "gallery", "landscape", "media", "illustration", "paysage"],
+  "aliases": [],
+  "gesture": "The sun rises over the mountains.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 18, "w": 72, "h": 60, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 26, "w": 56, "h": 44, "r": 5, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "rect", "x": 20, "y": 26, "w": 56, "h": 44, "r": 5, "role": "main" }
+      ],
+      "children": [
+        {
+          "type": "part",
+          "name": "sun",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "plain",
+              "shapes": [
+                { "kind": "circle", "cx": 60, "cy": 39, "r": 6, "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        { "kind": "path", "d": "M21 69L37 48L47 59L54 52L75 69Z", "role": "base" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "sun": { "box": [54, 33, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "sun",
+      "pivot": [60, 39],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 16], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

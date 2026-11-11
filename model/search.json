@@ -1,0 +1,62 @@
+{
+  "name": "search",
+  "category": "interface",
+  "keywords": ["search", "find", "magnifier", "magnifying glass", "look up", "zoom", "recherche", "loupe"],
+  "aliases": [],
+  "gesture": "The magnifier looks around and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "magnifier",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M59 59L77 77",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 10 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 41, "cy": 41, "r": 27, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 41, "cy": 41, "r": 18, "role": "soft" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "magnifier": { "box": [14, 14, 63, 63] }
+  },
+  "motion": [
+    {
+      "part": "magnifier",
+      "pivot": [45.5, 45.5],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.3, -5], [0.65, 4], [1, 0]], "y": [[0, 0], [0.3, -4], [0.65, -5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

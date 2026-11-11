@@ -1,0 +1,61 @@
+{
+  "name": "play",
+  "category": "media",
+  "keywords": ["play", "start", "video", "music", "run", "launch", "lecture", "démarrer"],
+  "aliases": [],
+  "gesture": "The triangle pushes forward.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 27, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "triangle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M42 36L60 48L42 60Z",
+              "role": "accent",
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "triangle": { "box": [42, 36, 18, 24] }
+  },
+  "motion": [
+    {
+      "part": "triangle",
+      "pivot": [51, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,94 @@
+{
+  "name": "headphones",
+  "category": "media",
+  "keywords": ["headphones", "audio", "listen", "music", "headset", "support", "casque", "écouter"],
+  "aliases": [],
+  "gesture": "The two ear cups pulse with the sound.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M21 54V46A27 27 0 0 1 75 46V54",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "cup-left",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 12, "y": 50, "w": 20, "h": 32, "r": 9, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 22, "cy": 66, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "cup-right",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 64, "y": 50, "w": 20, "h": 32, "r": 9, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 74, "cy": 66, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "cup-left": { "box": [12, 50, 20, 32] },
+    "cup-right": { "box": [64, 50, 20, 32] }
+  },
+  "motion": [
+    {
+      "part": "cup-left",
+      "pivot": [22, 66],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    },
+    {
+      "part": "cup-right",
+      "pivot": [74, 66],
+      "duration": 450,
+      "delay": 150,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

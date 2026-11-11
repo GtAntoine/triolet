@@ -1,0 +1,71 @@
+{
+  "name": "pencil",
+  "category": "interface",
+  "keywords": ["pencil", "edit", "write", "draw", "compose", "modify", "crayon", "modifier"],
+  "aliases": [],
+  "gesture": "The pencil writes a line.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "line",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M16 82H44",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "pencil",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M59.8 19.2L75.1 32.0L49.4 62.7L34.1 49.8Z", "role": "main" },
+            { "kind": "path", "d": "M67.5 10.0L82.8 22.9L75.1 32.0L59.8 19.2Z", "role": "accent" },
+            { "kind": "path", "d": "M34.1 49.8L49.4 62.7L28.9 71.6Z", "role": "base" },
+            { "kind": "path", "d": "M30.7 64.0L36.0 68.5L28.9 71.6Z", "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line": { "box": [16, 82, 28, 0] },
+    "pencil": { "box": [28.9, 10, 53.9, 61.6] }
+  },
+  "motion": [
+    {
+      "part": "line",
+      "pivot": [30, 82],
+      "duration": 500,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "pencil",
+      "pivot": [55.85, 40.8],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.35, 8], [0.6, 14], [1, 0]], "y": [[0, 0], [0.35, 0], [0.6, 2], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

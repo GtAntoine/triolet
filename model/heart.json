@@ -1,0 +1,67 @@
+{
+  "name": "heart",
+  "category": "social",
+  "keywords": ["heart", "love", "like", "favourite", "favorite", "care", "coeur", "aimer"],
+  "aliases": [],
+  "gesture": "The small heart beats twice.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M44 70.25C21.25 56.25 10.75 45.75 10.75 34.38A16.63 16.63 0 0 1 44 28.25A16.63 16.63 0 0 1 77.25 34.38C77.25 45.75 66.75 56.25 44 70.25Z",
+          "role": "main"
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "beat",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M67 80.7C54.26 72.86 48.38 66.98 48.38 60.61A9.31 9.31 0 0 1 67 57.18A9.31 9.31 0 0 1 85.62 60.61C85.62 66.98 79.74 72.86 67 80.7Z",
+              "role": "gap"
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M67 77.7C56.86 71.46 52.18 66.78 52.18 61.71A7.41 7.41 0 0 1 67 58.98A7.41 7.41 0 0 1 81.82 61.71C81.82 66.78 77.14 71.46 67 77.7Z",
+              "role": "accent"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "beat": { "box": [48.22, 49.43, 37.55, 31.27] }
+  },
+  "motion": [
+    {
+      "part": "beat",
+      "pivot": [67, 65.07],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scale": [[0, 1], [0.2, 1.22], [0.4, 1], [0.6, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,106 @@
+{
+  "name": "cpu",
+  "category": "devices",
+  "keywords": ["cpu", "chip", "processor", "hardware", "computing", "ai", "processeur", "puce"],
+  "aliases": [],
+  "gesture": "The core of the chip lights up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M34 12V84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        },
+        {
+          "kind": "path",
+          "d": "M12 34H84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        },
+        {
+          "kind": "path",
+          "d": "M48 12V84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        },
+        {
+          "kind": "path",
+          "d": "M12 48H84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        },
+        {
+          "kind": "path",
+          "d": "M62 12V84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        },
+        {
+          "kind": "path",
+          "d": "M12 62H84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 33, "y": 33, "w": 30, "h": 30, "r": 6, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "core",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "core": { "box": [42, 42, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "core",
+      "pivot": [48, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.5], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

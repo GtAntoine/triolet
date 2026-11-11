@@ -1,0 +1,64 @@
+{
+  "name": "video",
+  "category": "media",
+  "keywords": ["video", "camera", "film", "record", "movie", "call", "vidéo", "caméra"],
+  "aliases": [],
+  "gesture": "The recording light blinks twice.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M60 42L80 31A3 3 0 0 1 84 34V62A3 3 0 0 1 80 65L60 54Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 26, "w": 52, "h": 44, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 52, "w": 32, "h": 8, "r": 4, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "light",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 27, "cy": 39, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "light": { "box": [22, 34, 10, 10] }
+  },
+  "motion": [
+    {
+      "part": "light",
+      "pivot": [27, 39],
+      "duration": 350,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

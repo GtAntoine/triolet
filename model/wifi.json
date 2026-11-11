@@ -1,0 +1,129 @@
+{
+  "name": "wifi",
+  "category": "devices",
+  "keywords": ["wifi", "wireless", "network", "internet", "signal", "connection", "réseau", "connexion"],
+  "aliases": [],
+  "gesture": "The signal builds up from the dot, wave after wave.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "wave-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M16 36A45 45 0 0 1 80 36",
+              "role": "mid",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "wave-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M27 48A30 30 0 0 1 69 48",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "wave-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M38 60A15 15 0 0 1 58 60",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 72, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "wave-3": { "box": [16, 22.64, 64, 13.36] },
+    "wave-2": { "box": [27, 39.42, 42, 8.58] },
+    "wave-1": { "box": [38, 56.18, 20, 3.82] },
+    "dot": { "box": [42, 66, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "wave-3",
+      "pivot": [48, 29.32],
+      "duration": 400,
+      "delay": 380,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 5], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "wave-2",
+      "pivot": [48, 43.71],
+      "duration": 400,
+      "delay": 250,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 5], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "wave-1",
+      "pivot": [48, 58.09],
+      "duration": 400,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 5], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [48, 72],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

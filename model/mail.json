@@ -1,0 +1,72 @@
+{
+  "name": "mail",
+  "category": "communication",
+  "keywords": ["mail", "email", "envelope", "letter", "message", "inbox", "courrier", "enveloppe"],
+  "aliases": [],
+  "gesture": "The envelope lifts and its seal pops.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "envelope",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 12, "y": 24, "w": 72, "h": 50, "r": 10, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M22 24H74A10 10 0 0 1 82 29L53 52A8 8 0 0 1 43 52L14 29A10 10 0 0 1 22 24Z", "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "part",
+          "name": "seal",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "raised",
+              "size": "small",
+              "shapes": [
+                { "kind": "circle", "cx": 48, "cy": 53, "r": 6.5, "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "seal": { "box": [41.5, 46.5, 13, 13] },
+    "envelope": { "box": [12, 24, 72, 50] }
+  },
+  "motion": [
+    {
+      "part": "seal",
+      "pivot": [48, 53],
+      "duration": 450,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "envelope",
+      "pivot": [48, 49],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -5], [0.7, 0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

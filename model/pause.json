@@ -1,0 +1,81 @@
+{
+  "name": "pause",
+  "category": "media",
+  "keywords": ["pause", "stop", "hold", "wait", "break", "media", "suspendre", "arrêt"],
+  "aliases": [],
+  "gesture": "The two bars rise one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 27, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "bar-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 34, "w": 9, "h": 28, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 34, "w": 9, "h": 28, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar-1": { "box": [36, 34, 9, 28] },
+    "bar-2": { "box": [51, 34, 9, 28] }
+  },
+  "motion": [
+    {
+      "part": "bar-1",
+      "pivot": [40.5, 62],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.3], [1, 1]] }
+    },
+    {
+      "part": "bar-2",
+      "pivot": [55.5, 62],
+      "duration": 450,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.3], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

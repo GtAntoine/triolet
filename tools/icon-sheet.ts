@@ -4,6 +4,7 @@
  *   pnpm icon:sheet bell          out/sheets/bell.png
  *   pnpm icon:sheet bell cart     one sheet each
  *   pnpm icon:sheet --all         out/sheets/_all.png, every icon at 96 and 24 px
+ *   pnpm icon:sheet --group a b   out/sheets/_group.png: these icons at rest, at 24 px, in mid-gesture
  *
  * A sheet shows the icon at every size (the relief changes at 40 and 24 px), on a dark
  * surface, flat, then its gesture as eight frames, then its three colours measured.
@@ -134,6 +135,27 @@ function contactSheet(icons: IconModel[]): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" viewBox="0 0 ${WIDTH} ${height}"><rect width="${WIDTH}" height="${height}" fill="${LIGHT.surface}"/>${parts.join('')}</svg>`;
 }
 
+/** A few icons side by side: at rest, at 24 px, and in the middle of their gesture. */
+function groupSheet(group: IconModel[]): string {
+  const columns = 6;
+  const cellW = WIDTH / columns;
+  const cellH = 150;
+  const parts = group.map((model, i) => {
+    const x = (i % columns) * cellW + 12;
+    const y = Math.floor(i / columns) * cellH + 14;
+    const duration = gestureDuration(model.motion);
+    const span = Number.isFinite(duration) ? duration : Math.max(...model.motion.map((m) => m.delay + m.duration));
+    return (
+      place(model, x, y, 84, LIGHT) +
+      place(model, x + 90, y + 60, 24, LIGHT) +
+      place(model, x + 116, y + 24, 60, LIGHT, 'relief', motionPose(model.motion, span * 0.4)) +
+      text(x, y + 84 + 26, model.name, { size: 12 })
+    );
+  });
+  const height = Math.ceil(group.length / columns) * cellH + 14;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" viewBox="0 0 ${WIDTH} ${height}"><rect width="${WIDTH}" height="${height}" fill="${LIGHT.surface}"/>${parts.join('')}</svg>`;
+}
+
 const args = process.argv.slice(2);
 const icons = await loadIcons();
 const dir = join(ROOT, 'out/sheets');
@@ -145,6 +167,14 @@ if (args.includes('--all')) {
   console.log(file);
 }
 const names = args.filter((a) => !a.startsWith('--'));
+if (args.includes('--group')) {
+  // `--group a b c`: one sheet for these icons together, out/sheets/_group.png.
+  const group = names.map((name) => icons.find((m) => m.name === name)).filter((m): m is IconModel => m !== undefined);
+  const file = join(dir, '_group.png');
+  writeFileSync(file, png(groupSheet(group), WIDTH, undefined, true));
+  console.log(file);
+  process.exit(0);
+}
 if (names.length === 0 && !args.includes('--all')) {
   console.error('Usage: pnpm icon:sheet <name> [<name>…]   or   pnpm icon:sheet --all');
   process.exit(1);

@@ -1,0 +1,90 @@
+{
+  "name": "camera",
+  "category": "media",
+  "keywords": ["camera", "photo", "picture", "snapshot", "lens", "shoot", "appareil photo", "photographie"],
+  "aliases": [],
+  "gesture": "The lens closes in and the flash goes off.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "path", "d": "M33 30L37 21A4 4 0 0 1 41 18H55A4 4 0 0 1 59 21L63 30Z", "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 28, "w": 72, "h": 50, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "lens",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 54, "r": 17, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 54, "r": 10, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "flash",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 71, "cy": 40, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "lens": { "box": [31, 37, 34, 34] },
+    "flash": { "box": [66.5, 35.5, 9, 9] }
+  },
+  "motion": [
+    {
+      "part": "lens",
+      "pivot": [48, 54],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.1], [1, 1]] }
+    },
+    {
+      "part": "flash",
+      "pivot": [71, 40],
+      "duration": 300,
+      "delay": 150,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,96 @@
+{
+  "name": "radio",
+  "category": "media",
+  "keywords": ["radio", "broadcast", "fm", "station", "tuner", "podcast", "diffusion", "antenne"],
+  "aliases": [],
+  "gesture": "The aerial swings and the dial lights up.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "aerial",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M28 34L56 14",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 32, "w": 72, "h": 48, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 34, "cy": 56, "r": 14, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 56, "y": 62, "w": 20, "h": 7, "r": 3.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "dial",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 47, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "aerial": { "box": [28, 14, 28, 20] },
+    "dial": { "box": [60, 41, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "aerial",
+      "pivot": [28, 34],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.3333333333333333, 10], [0.6666666666666666, -6], [1, 0]] }
+    },
+    {
+      "part": "dial",
+      "pivot": [66, 47],
+      "duration": 400,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

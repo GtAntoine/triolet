@@ -1,0 +1,55 @@
+{
+  "name": "folder",
+  "category": "documents",
+  "keywords": ["folder", "directory", "files", "documents", "organise", "storage", "dossier", "répertoire"],
+  "aliases": [],
+  "gesture": "The front of the folder dips open and closes.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M12 30A6 6 0 0 1 18 24H36L43 31H78A6 6 0 0 1 84 37V72A6 6 0 0 1 78 78H18A6 6 0 0 1 12 72Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "front",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 12, "y": 38, "w": 72, "h": 40, "r": 7, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 22, "y": 48, "w": 22, "h": 8, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "front": { "box": [12, 38, 72, 40] }
+  },
+  "motion": [
+    {
+      "part": "front",
+      "pivot": [48, 58],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

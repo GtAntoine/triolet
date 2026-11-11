@@ -1,0 +1,85 @@
+{
+  "name": "cloud",
+  "category": "weather",
+  "keywords": ["cloud", "weather", "sky", "storage", "online", "sync", "nuage", "météo"],
+  "aliases": [],
+  "gesture": "The sun comes out and the cloud drifts.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "sun",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 30, "r": 11, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48.480000000000004, "cy": 47.44, "r": 10.08, "role": "main" },
+        { "kind": "circle", "cx": 61.44, "cy": 40.24, "r": 13.68, "role": "main" },
+        { "kind": "circle", "cx": 74.4, "cy": 48.88, "r": 8.64, "role": "main" },
+        { "kind": "rect", "x": 48.480000000000004, "y": 47.44, "w": 25.919999999999998, "h": 10.08, "r": 5.04, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "front",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 25.2, "cy": 60.1, "r": 14.700000000000001, "role": "base" },
+            { "kind": "circle", "cx": 44.1, "cy": 49.6, "r": 19.95, "role": "base" },
+            { "kind": "circle", "cx": 63, "cy": 62.2, "r": 12.600000000000001, "role": "base" },
+            {
+              "kind": "rect",
+              "x": 25.2,
+              "y": 60.1,
+              "w": 37.800000000000004,
+              "h": 14.700000000000001,
+              "r": 7.3500000000000005,
+              "role": "base"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sun": { "box": [59, 19, 22, 22] },
+    "front": { "box": [10.5, 29.65, 65.1, 45.15] }
+  },
+  "motion": [
+    {
+      "part": "sun",
+      "pivot": [70, 30],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    },
+    {
+      "part": "front",
+      "pivot": [43.05, 52.22],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

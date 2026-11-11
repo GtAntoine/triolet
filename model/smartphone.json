@@ -1,0 +1,83 @@
+{
+  "name": "smartphone",
+  "category": "devices",
+  "keywords": ["smartphone", "phone", "mobile", "device", "app", "screen", "téléphone", "portable"],
+  "aliases": [],
+  "gesture": "A notification slides down on the screen.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 10, "w": 44, "h": 76, "r": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 31, "y": 17, "w": 34, "h": 56, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "notification",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 24, "w": 24, "h": 9, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 36, "y": 40, "w": 24, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 36, "y": 51, "w": 16, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 42, "y": 77, "w": 12, "h": 4, "r": 2, "role": "mainLight" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "notification": { "box": [36, 24, 24, 9] }
+  },
+  "motion": [
+    {
+      "part": "notification",
+      "pivot": [48, 28.5],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, -8], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

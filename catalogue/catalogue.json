@@ -1,0 +1,5588 @@
+[
+ {
+  "name": "archive",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "arrow-left",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "arrow-right",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "banknote",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "bell",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "bookmark",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "box",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "briefcase",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "building",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "cake",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "calendar",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "camera",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "chart-bar",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "chart-pie",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "check",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "clipboard",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "clock",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "cloud",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "cpu",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "credit-card",
+  "sets": 5,
+  "category": "other",
+  "drawn": true,
+  "lot": 0
+ },
+ {
+  "name": "database",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "eye",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "filter",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "flag",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "flame",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "flask",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "folder",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "gift",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "globe",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "graduation-cap",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "heart",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "home",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "image",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "key",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "lightbulb",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "link",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "lock",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "mail",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "mic",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "minus",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "monitor",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "moon",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "music",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "paintbrush",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "palette",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "paperclip",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "pause",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "pencil",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "phone",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "play",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "plus",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "printer",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "puzzle",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "qr-code",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "radio",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "refresh",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "rocket",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "scissors",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "search",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "send",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "settings",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "share",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "shield",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "shopping-bag",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "shopping-cart",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "smartphone",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "star",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "tag",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "thumbs-up",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "tool",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "trash",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "trophy",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "truck",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "user",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "users",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "video",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "volume",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "wallet",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "x",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "zap",
+  "sets": 5,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "alert-triangle",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "ambulance",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "anchor",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "arrow-down",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "arrow-up",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "asterisk",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "backpack",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "backspace",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "barcode",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "battery",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "bed",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "bluetooth",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "bomb",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "book",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "calculator",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "chef-hat",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "chevron-left",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "chevron-right",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "circle",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "code",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "coffee",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "cookie",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "copyright",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "crop",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "crown",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "diamond",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "divide",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "download",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "drone",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "egg",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "file",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "files",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "gavel",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "gif",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "hand",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "headphones",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "help-circle",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "hexagon",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "hourglass",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 1
+ },
+ {
+  "name": "inbox",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "info",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "keyboard",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "list",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "map",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "message",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "moped",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "mosque",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "mouse",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "newspaper",
+  "sets": 4,
+  "category": "other",
+  "drawn": true,
+  "lot": 0
+ },
+ {
+  "name": "pentagon",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "picture-in-picture",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "pill",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "power",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "receipt",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "repeat",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "rss",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "scale",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "scan",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "scooter",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "server",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "shopping-basket",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "signature",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "skull",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "sliders",
+  "sets": 4,
+  "category": "other",
+  "drawn": true,
+  "lot": 0
+ },
+ {
+  "name": "smile",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "snowflake",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "square",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "stethoscope",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "sticker",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "sun",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "table",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "target",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "terminal",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "thermometer",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "ticket",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "tornado",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "umbrella",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "upload",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "usb",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "wifi",
+  "sets": 4,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "activity",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "ad",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "airplay",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "alarm",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "album",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "align-center",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "align-left",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "align-right",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "angle",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "aperture",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "app-window",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "armchair",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "atom",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "avocado",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "axe",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "badge",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "balloon",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "binary",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "binoculars",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "biohazard",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "blender",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "bone",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "bookmarks",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "brain",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "bug",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "bus",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "cannabis",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "car",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "cards",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "carrot",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "cast",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "cat",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "certificate",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "chart-line",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "chart-scatter",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "cheese",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "chevron-down",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "chevron-up",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "church",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "clover",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "coins",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "command",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "compass",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "contrast",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "copy",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "copyleft",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "cross",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "crosshair",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "cylinder",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "desk",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "device-tablet",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "devices",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "disc",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "dna",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "dog",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "ear",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "eject",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "elevator",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "engine",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "equal",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "eraser",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 2
+ },
+ {
+  "name": "factory",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "fast-forward",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "feather",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "fence",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "file-text",
+  "sets": 3,
+  "category": "other",
+  "drawn": true,
+  "lot": 0
+ },
+ {
+  "name": "fingerprint",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "fire-extinguisher",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "fish",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "flower",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "folders",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "forklift",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "forward",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "function",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "gauge",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "ghost",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "git-branch",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "git-fork",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "git-merge",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "git-pull-request",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "hammer",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "handshake",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "hard-drive",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "hash",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "headset",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "helicopter",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "hospital",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "infinity",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "italic",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "joystick",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "lamp",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "lasso",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "leaf",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "lifebuoy",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "luggage",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "magnet",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "mailbox",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "map-pin",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "maximize",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "medal",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "megaphone",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "menu",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "metronome",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "microscope",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "microwave",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "minimize",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "more-horizontal",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "navigation",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "network",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "nfc",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "notebook",
+  "sets": 3,
+  "category": "other",
+  "drawn": true,
+  "lot": 0
+ },
+ {
+  "name": "numbers",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "nut",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "octagon",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "opacity",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "option",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "orbit",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "park",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "password",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "percent",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "piano",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "pin",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "pizza",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "planet",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "plug",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "podium",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "poker-chip",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "presentation",
+  "sets": 3,
+  "category": "other",
+  "drawn": true,
+  "lot": 0
+ },
+ {
+  "name": "radar",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "rainbow",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "rectangle",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "recycle",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "resize",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "road",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "robot",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "route",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "router",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "ruler",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "sailboat",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "satellite",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "screen-share",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "shapes",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "shovel",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "shuffle",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "signpost",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "siren",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "skip-back",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "skip-forward",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "slash",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "slideshow",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "snail",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "solar-panel",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "spade",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "sparkle",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "sparkles",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "stack",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "stairs",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "stop",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "strikethrough",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "subscript",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "subtitles",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "superscript",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "sword",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "swords",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 3
+ },
+ {
+  "name": "syringe",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "tabs",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "tent",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "timeline",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "timer",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "toggle-left",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "toggle-right",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "tractor",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "traffic-cone",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "train",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "trending-down",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "trending-up",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "triangle",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "trolley",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "tv",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "underline",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "variable",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "vault",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "vignette",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "virus",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "voicemail",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "wallpaper",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "warehouse",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "watch",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "waves",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "webhook",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "weight",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "wheat",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "wind",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "window",
+  "sets": 3,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "abc",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "accessibility",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "accessible",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "acorn",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "address-book",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "air-traffic-control",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "alert-circle",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "alien",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "ampersand",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "antenna",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "api",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "apple",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "apps",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "area-chart",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-back",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-big-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-big-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-big-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-big-up",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-circle-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-circle-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-circle-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-circle-up",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-elbow-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-elbow-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrow-forward",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrows-horizontal",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrows-split",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "arrows-vertical",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "aspect-ratio",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "at",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "automation",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "award",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "baby",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "ban",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "banana",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bandage",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "barbell",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "barrel",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "baseline",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bath",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bathtub",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "battery-charging",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "battery-low",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "battery-plus",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "beer",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bike",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bird",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "blind",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "blinds",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "blocks",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bold",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "books",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-all",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-bottom",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-horizontal",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-inner",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-outer",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-style",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-top",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "border-vertical",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "braces",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "brackets",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bread",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bridge",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "broadcast",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "broom",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "browser",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 4
+ },
+ {
+  "name": "bubble",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "bubbles",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "bulldozer",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "butterfly",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cable",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cactus",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "campfire",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cancel",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "candle",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "candlestick-chart",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "candy",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "capture",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "caravan",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "caret-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "caret-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "caret-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "caret-up",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cassette-tape",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "castle",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "category",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cell-tower",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chair",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chalkboard",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "charging-station",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chart-area",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chart-column",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chart-donut",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chart-radar",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "checklist",
+  "sets": 2,
+  "category": "other",
+  "drawn": true,
+  "lot": 0
+ },
+ {
+  "name": "checks",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cherry",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chess",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chevrons-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chevrons-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chevrons-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "chevrons-up",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cigarette",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "circles",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "clear-all",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "closed-caption",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "club",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "coin",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "columns",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "computer",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cone",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "confetti",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "construction",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "container",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "contract",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cooking-pot",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-down-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-down-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-left-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-left-up",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-right-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-right-up",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-up-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "corner-up-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "crane",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "creative-commons",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "cricket",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "csv",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "currency",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "currency-dollar",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "currency-pound",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "currency-rupee",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "currency-yen",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "dashboard",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "deselect",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "details",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "dialpad",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "directions",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "dock",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "door",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "door-open",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "dot",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "dresser",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "droplet",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "droplets",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "dual-screen",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "dumbbell",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "earbuds",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "equalizer",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "equals",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "escalator",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "euro",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "exclamation-mark",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "expand",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "explicit",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "exposure",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "external-link",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "eyeglasses",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "face-mask",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "fan",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "faucet",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "film",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "fire-hydrant",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "flare",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "flashlight",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "flip-horizontal",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "flip-vertical",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 5
+ },
+ {
+  "name": "flood",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "focus",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "footprints",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "frame",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "fullscreen",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "galaxy",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gamepad",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "garage",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "garden-cart",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gender-female",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gender-male",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gender-transgender",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "git-commit",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "git-compare",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gitlab",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "golf",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gps",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gpu",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "gradient",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "grain",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "grape",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "graph",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "grid-goldenratio",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "guitar",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "hamburger",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "handbag",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "hard-hat",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "haze",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "hd",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "heading",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "heartbeat",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "highlight",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "highlighter",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "history",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "horse",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "hotel",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "html",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "ice-cream",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "ice-skating",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "id-card",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "images",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "indent-decrease",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "indent-increase",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "invoice",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "kanban",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "kayak",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "ladder",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "lambda",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "laptop",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "layers",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "layout",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "lectern",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "lego",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-a",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-b",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-c",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-d",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-e",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-f",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-g",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-h",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-i",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-j",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-k",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-l",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-m",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-n",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-o",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-p",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-q",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-r",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-s",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-spacing",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-t",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-u",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-v",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-w",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-x",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-y",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "letter-z",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "library",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "license",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "lighthouse",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "line-style",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "loader",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "login",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "logout",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "logs",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "lollipop",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "man",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "margin",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "markdown",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "mars",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "martini",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "massage",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "merge",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "meteor",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "milk",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "mist",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "mop",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 6
+ },
+ {
+  "name": "motorbike",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "motorcycle",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "mountain",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "move",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "movie",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "needle",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "news",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "note",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "notes",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "omega",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "outbound",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "outlet",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "oven",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "paint-bucket",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "paint-roller",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "panorama",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "paper-bag",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "parachute",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "parentheses",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "parking-meter",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "paw-print",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "peace",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pentagram",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pepper",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "perspective",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pi",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "picnic-table",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "piggy-bank",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pilcrow",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "ping-pong",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pipette",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "placeholder",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "plane",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "plant",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "playing-cards",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "playlist",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pointer",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "polygon",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pool",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "popcorn",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "popsicle",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "potted-plant",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "prescription",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "pyramid",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "question-mark",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "quote",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "quotes",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "rabbit",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "radical",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "radioactive",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "redo",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "regex",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "reorder",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "replace",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "reply",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "report",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "rewind",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "rocking-chair",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "roller-skating",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "salad",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "save",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "schema",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "scoreboard",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "screencast",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "screenshot",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "scribble",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "script",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "scroll",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "scuba-diving",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sdk",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "section",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "select",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "shadow",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "ship",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "shirt",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "shower",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "shredder",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "shrimp",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sigma",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "signal",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sim-card",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "skateboarding",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "slice",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "snowboarding",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sock",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sofa",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sort-ascending",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sort-descending",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sos",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "soup",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "space",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "speaker",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sphere",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "spiral",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sql",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "stamp",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "stars",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "steering-wheel",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "steps",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "sticky-note",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 7
+ },
+ {
+  "name": "store",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "storefront",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "storm",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "strategy",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "subway",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "sunglasses",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "sunrise",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "sunset",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "swipe",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "switch",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "synagogue",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "tablet",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "tags",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "telescope",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "test-tube",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "text",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "texture",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "theater",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "thumb-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "thumbs-down",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "tilde",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "tip-jar",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "toilet",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "toolbox",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "tooltip",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "trademark",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "tram",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "transform",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "transgender",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "translate",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "treasure-chest",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "tree",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "trees",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "u-turn-left",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "u-turn-right",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "undo",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "ungroup",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "unlink",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "van",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "venus",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "vibrate",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "volcano",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "volleyball",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wall",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wand",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wash",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "washing-machine",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wave-sine",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wave-square",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "waveform",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "webcam",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wheelchair",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "windmill",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wine",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "woman",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "wrap-text",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "x-circle",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "yarn",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "yin-yang",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-aquarius",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-aries",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-cancer",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-capricorn",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-gemini",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-leo",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-libra",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-pisces",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-sagittarius",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-scorpio",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-taurus",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zodiac-virgo",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zoom-in",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ },
+ {
+  "name": "zoom-out",
+  "sets": 2,
+  "category": "other",
+  "drawn": false,
+  "lot": 8
+ }
+]

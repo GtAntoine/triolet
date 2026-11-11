@@ -1,0 +1,73 @@
+{
+  "name": "users",
+  "category": "people",
+  "keywords": ["users", "people", "group", "team", "members", "community", "utilisateurs", "équipe"],
+  "aliases": [],
+  "gesture": "The second person steps closer and the badge pops.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "friend",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 63, "cy": 29, "r": 10, "role": "soft" },
+            { "kind": "path", "d": "M43 74L43 69A20 19 0 0 1 83 69L83 74Z", "role": "soft" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 38, "cy": 32, "r": 12, "role": "main" },
+        { "kind": "path", "d": "M13 78L13 74A25 24 0 0 1 63 74L63 78Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 38, "cy": 65, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "friend": { "box": [43, 19, 40, 55] },
+    "badge": { "box": [33.5, 60.5, 9, 9] }
+  },
+  "motion": [
+    {
+      "part": "friend",
+      "pivot": [63, 46.5],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, -5], [1, 0]] }
+    },
+    {
+      "part": "badge",
+      "pivot": [38, 65],
+      "duration": 400,
+      "delay": 250,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
