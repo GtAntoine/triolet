@@ -1,0 +1,25 @@
+{
+  "name": "triolet-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Triolet: animated three-colour icons for the web, React and React Native",
+  "type": "module",
+  "packageManager": "pnpm@12.10.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "icons": "node tools/build-icons.ts",
+    "build": "pnpm icons && pnpm -r --if-present build",
+    "test": "node --test \"packages/*/test/*.test.ts\" \"tools/test/*.test.ts\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "fidelity": "node tools/fidelity.ts",
+    "spike:web": "node tools/spike-web.ts"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@triolet/core": "workspace:*",
+    "@types/node": "^24.0.0",
+    "typescript": "^7.0.2"
+  }
+}

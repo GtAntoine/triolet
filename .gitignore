@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.expo/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+# Local renders and comparison sheets
+/out/
