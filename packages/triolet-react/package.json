@@ -1,0 +1,28 @@
+{
+  "name": "triolet-react",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Animated icons in three colours, as React components",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+    "./icons/*": { "types": "./dist/icons/*.d.ts", "default": "./dist/icons/*.js" }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "node ../../tools/build-packages.ts triolet-react"
+  },
+  "dependencies": {
+    "triolet": "workspace:^"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

@@ -8,3 +8,4 @@ export * from './relief.ts';
 export * from './compile.ts';
 export * from './svg.ts';
 export * from './css.ts';
+export * from './web.ts';
