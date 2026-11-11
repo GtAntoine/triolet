@@ -14,8 +14,15 @@ import { join } from 'node:path';
 import { baseCss, iconCss, type IconModel } from '@triolet/core';
 import { ROOT, loadIcons } from './lib/icons.ts';
 
-const camel = (name: string) => name.replace(/-([a-z0-9])/g, (_, c: string) => c.toUpperCase());
-const pascal = (name: string) => camel(name).replace(/^./, (c) => c.toUpperCase());
+/** Words that cannot name an export: an icon called `package` is exported as `packageIcon`. */
+const RESERVED = new Set(
+  'break case catch class const continue debugger default delete do else enum export extends false finally for function if implements import in instanceof interface let new null package private protected public return static super switch this throw true try typeof var void while with yield await'.split(
+    ' ',
+  ),
+);
+const camelRaw = (name: string) => name.replace(/-([a-z0-9])/g, (_, c: string) => c.toUpperCase());
+const camel = (name: string) => (RESERVED.has(camelRaw(name)) ? `${camelRaw(name)}Icon` : camelRaw(name));
+const pascal = (name: string) => camelRaw(name).replace(/^./, (c) => c.toUpperCase());
 const header = (name: string) => `// Generated from icons/${name}.ts by tools/build-packages.ts. Do not edit.\n`;
 
 function writeDir(dir: string, files: Map<string, string>): void {
@@ -57,7 +64,8 @@ const builders: Record<string, (icons: IconModel[]) => void> = {
         `${header(model.name)}import data from 'triolet/icons/${model.name}';\nimport { createIcon } from '../icon.ts';\n\n/** ${model.gesture} */\nexport const ${name} = createIcon(data, '${name}');\n\nexport default ${name};\n`,
       );
     }
-    files.set('index.ts', icons.map((m) => `export { ${pascal(m.name)} } from './${m.name}.ts';`).join('\n') + '\n');
+    // Each component also answers to its name followed by `Icon`: `Map` hides a global, `MapIcon` does not.
+    files.set('index.ts', icons.map((m) => `export { ${pascal(m.name)}, ${pascal(m.name)} as ${pascal(m.name)}Icon } from './${m.name}.ts';`).join('\n') + '\n');
     writeDir(join(dir, 'src/icons'), files);
     tsc('triolet-react');
   },
