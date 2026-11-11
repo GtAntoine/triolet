@@ -226,7 +226,7 @@ test('an icon renders with CSS variables by default and literal colours on reque
   assert.match(live, /role="img" aria-label="Sample"/);
   assert.match(live, /fill="var\(--tri-base, #F1F2F4\)"/);
   assert.match(live, /<filter id="tri-r-a1"/);
-  assert.match(live, /<g class="tri-dot" filter="url\(#tri-id-a1\)">/);
+  assert.match(live, /<g class="tri-m tri-dot" filter="url\(#tri-id-a1\)">/);
   assert.match(renderSvg(model), /aria-hidden="true"/);
 
   const still = renderStaticSvg(model, ORIGINAL_THEME);

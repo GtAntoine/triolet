@@ -181,6 +181,9 @@ export function renderBody(model: IconModel, options: RenderOptions = {}): strin
   const uid = options.uid ?? '';
   const filters = options.filters ?? 'own';
   const drawn = new Set(model.motion.filter((m) => m.tracks.draw).map((m) => m.part));
+  const moving = new Set(model.motion.map((m) => m.part));
+  // `tri-m` marks the parts the stylesheet animates (see css.ts).
+  const classOf = (name: string) => (moving.has(name) ? `tri-m ${partClass(name)}` : partClass(name));
   const defs: string[] = [];
   if (filters === 'own') for (const key of usedReliefs(model, tier, small)) defs.push(filterMarkup(key, colors, uid));
   let clips = 0;
@@ -191,7 +194,7 @@ export function renderBody(model: IconModel, options: RenderOptions = {}): strin
     const roles = new Set(layer.shapes.filter((s) => s.fill !== false).map((s) => s.role));
     const shared = roles.size === 1 && layer.shapes.length > 1 ? [...roles][0]! : null;
     const attrs: string[] = [];
-    if (partName) attrs.push(`class="${partClass(partName)}"`);
+    if (partName) attrs.push(`class="${classOf(partName)}"`);
     if (shared) attrs.push(`fill="${paint(shared, colors)}"`);
     if (key) attrs.push(`filter="url(#${filterId(key, filters === 'own' ? uid : '')})"`);
     const inner = layer.shapes.map((s) => shapeMarkup(s, colors, shared, drawable)).join('');
@@ -213,7 +216,7 @@ export function renderBody(model: IconModel, options: RenderOptions = {}): strin
         if (only?.type === 'layer' && !layerHidden(only, tier, small)) {
           return layerMarkup(only, node.name, partDrawable);
         }
-        return `<g class="${partClass(node.name)}">${walk(node.children, partDrawable)}</g>`;
+        return `<g class="${classOf(node.name)}">${walk(node.children, partDrawable)}</g>`;
       })
       .join('');
 
@@ -235,6 +238,7 @@ export function renderSvg(model: IconModel, options: SvgOptions = {}): string {
     `class="${rootClass(model.name, options.class)}"`,
     `data-tier="${options.tier ?? 'relief'}"`,
     'overflow="visible"',
+    ...(model.idle ? ['data-idle=""'] : []),
     ...(options.label ? ['role="img"', `aria-label="${escapeAttr(options.label)}"`] : ['aria-hidden="true"']),
     'focusable="false"',
   ];
