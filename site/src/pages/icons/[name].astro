@@ -1,0 +1,133 @@
+---
+import Code from '../../components/Code.astro';
+import Palette from '../../components/Palette.astro';
+import Base from '../../layouts/Base.astro';
+import { icons, svg, url, type Facts } from '../../lib/icons';
+
+export function getStaticPaths() {
+  return icons.map((icon) => ({ params: { name: icon.name }, props: { icon } }));
+}
+const { icon } = Astro.props as { icon: Facts };
+
+const related = icons.filter((other) => other.category === icon.category && other.name !== icon.name).slice(0, 8);
+const seconds = (ms: number) => `${Math.round(ms / 10) / 100} s`;
+const trackNames: Record<string, string> = {
+  x: 'moves sideways',
+  y: 'moves up and down',
+  rotate: 'turns',
+  scale: 'swells',
+  scaleX: 'stretches across',
+  scaleY: 'stretches up',
+  skewY: 'ripples',
+  opacity: 'fades',
+  draw: 'draws itself',
+};
+const describe = (tracks: string[]) => [...new Set(tracks.map((track) => trackNames[track] ?? track))].join(', ');
+
+const js = `import { createIcons, ${icon.js} } from 'triolet';
+
+createIcons({ icons: { ${icon.js} } });
+// <i data-triolet="${icon.name}" data-size="32"></i>`;
+const react = `import { ${icon.react} } from 'triolet-react';
+
+<${icon.react} size={32} />`;
+const native = `import { ${icon.react} } from 'triolet-react-native';
+
+<${icon.react} size={32} />`;
+---
+
+<Base title={icon.name} description={`${icon.name}: ${icon.gesture}`}>
+  <div class="wrap detail">
+    <div class="panel showcase triolet-trigger">
+      <Fragment set:html={svg(icon.name, { size: 208, label: icon.name, class: 'shown' })} />
+      <button type="button" class="button small" data-play=".shown">Play the gesture</button>
+    </div>
+    <div>
+      <p class="crumbs"><a href={url('/icons/')}>Icons</a> / {icon.category}</p>
+      <h1>{icon.name}</h1>
+      <p class="lede" style="margin-top:0.8rem;max-width:52ch">{icon.gesture}</p>
+      <ul class="tags" aria-label="Keywords">
+        {[...icon.aliases, ...icon.keywords].map((word) => <li>{word}</li>)}
+      </ul>
+
+      <h2>Colours</h2>
+      <Palette />
+
+      <h2>Sizes</h2>
+      <div class="samples">
+        {
+          [96, 64, 48, 32, 24, 16].map((size) => (
+            <figure>
+              <Fragment set:html={svg(icon.name, { size })} />
+              <figcaption>{size}</figcaption>
+            </figure>
+          ))
+        }
+        <figure>
+          <Fragment set:html={svg(icon.name, { size: 64, finish: 'flat' })} />
+          <figcaption>flat</figcaption>
+        </figure>
+      </div>
+
+      <h2>Use it</h2>
+      <div class="tabs" data-tabs role="tablist">
+        <button type="button" role="tab" data-tab="react" aria-selected="true">React</button>
+        <button type="button" role="tab" data-tab="js" aria-selected="false">JavaScript</button>
+        <button type="button" role="tab" data-tab="native" aria-selected="false">React Native</button>
+        <button type="button" role="tab" data-tab="svg" aria-selected="false">SVG</button>
+      </div>
+      <Code code={react} tab="react" />
+      <Code code={js} tab="js" hidden />
+      <Code code={native} tab="native" hidden />
+      <Code code={icon.svg} tab="svg" hidden />
+      <p class="muted" style="margin-top:0.6rem;font-size:0.9rem">
+        The SVG is a still image in the default colours. <a href={url(`/svg/${icon.name}.svg`)} download>Download it</a>.
+      </p>
+
+      <h2>What moves</h2>
+      <dl class="facts">
+        {
+          icon.parts.map((part) => (
+            <>
+              <dt>
+                <code>{part.name}</code>
+              </dt>
+              <dd>
+                {describe(part.tracks)} · {seconds(part.duration)}
+                {part.delay ? `, after ${seconds(part.delay)}` : ''}
+              </dd>
+            </>
+          ))
+        }
+        <dt>Whole gesture</dt>
+        <dd>{icon.duration === null ? 'loops by itself' : seconds(icon.duration)}</dd>
+      </dl>
+
+      <h2>Three colours, measured</h2>
+      <div class="bar" role="img" aria-label={`base ${icon.ratio.base} %, main ${icon.ratio.main} %, accent ${icon.ratio.accent} %`}>
+        <span style={`width:${icon.ratio.base}%`}></span>
+        <span style={`width:${icon.ratio.main}%`}></span>
+        <span style={`width:${icon.ratio.accent}%`}></span>
+      </div>
+      <p class="muted" style="margin-top:0.5rem;font-size:0.9rem">
+        base {icon.ratio.base} % · main {icon.ratio.main} % · accent {icon.ratio.accent} %. The set as a whole aims at 60 · 30 · 10.
+      </p>
+
+      {
+        related.length > 0 && (
+          <>
+            <h2>More in {icon.category}</h2>
+            <div class="grid" style="margin-top:0">
+              {related.map((other) => (
+                <a class="tile triolet-trigger" href={url(`/icons/${other.name}/`)}>
+                  <Fragment set:html={svg(other.name, { size: 48 })} />
+                  <span>{other.name}</span>
+                </a>
+              ))}
+            </div>
+          </>
+        )
+      }
+    </div>
+  </div>
+</Base>

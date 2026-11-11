@@ -1,0 +1,5 @@
+dist/
+.astro/
+# Written by tools/build-site-data.ts
+src/data/icons.json
+public/svg/

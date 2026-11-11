@@ -1,0 +1,12 @@
+---
+/** A block of code with a copy button. */
+interface Props {
+  code: string;
+  /** Marks the block as one tab of a group: only the selected one shows. */
+  tab?: string;
+  hidden?: boolean;
+}
+const { code, tab, hidden } = Astro.props;
+---
+
+<pre class="code" data-tab-panel={tab} hidden={hidden}><button type="button" class="copy" data-copy>Copy</button><code>{code.trim()}</code></pre>

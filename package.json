@@ -20,7 +20,10 @@
     "spike:native:assets": "node tools/spike-native-assets.ts",
     "icon:new": "node tools/icon-new.ts",
     "icon:check": "node tools/icon-check.ts",
-    "icon:sheet": "node tools/icon-sheet.ts"
+    "icon:sheet": "node tools/icon-sheet.ts",
+    "site:data": "node tools/build-site-data.ts",
+    "site:dev": "pnpm site:data && pnpm --filter triolet-site dev",
+    "site:build": "pnpm site:data && pnpm --filter triolet-site build"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

@@ -1,0 +1,40 @@
+---
+import Palette from '../../components/Palette.astro';
+import Base from '../../layouts/Base.astro';
+import { categories, icons, svg, url } from '../../lib/icons';
+---
+
+<Base title="Icons" description={`All ${icons.length} Triolet icons: search, recolour, hover to play.`}>
+  <div class="wrap">
+    <div style="padding-top:clamp(1.5rem,4vw,3rem)">
+      <h1 style="font-size:clamp(2rem,1.5rem + 2.4vw,3.2rem)">Icons</h1>
+      <p class="lede" style="margin-top:0.6rem">Hover an icon to play its gesture. Press <kbd>/</kbd> to search.</p>
+    </div>
+    <div class="toolbar">
+      <div class="search">
+        <input id="q" type="search" placeholder={`Search ${icons.length} icons`} aria-label="Search the icons" autocomplete="off" spellcheck="false" />
+        <output id="count" for="q"></output>
+      </div>
+      <div class="chips" role="group" aria-label="Categories">
+        {categories.map((category) => <button type="button" class="chip" data-category={category} aria-pressed="false">{category}</button>)}
+      </div>
+      <Palette />
+    </div>
+    <div class="grid">
+      {
+        icons.map((icon) => (
+          <a
+            class="tile triolet-trigger"
+            href={url(`/icons/${icon.name}/`)}
+            data-category={icon.category}
+            data-search={[icon.name, ...icon.aliases, ...icon.keywords, icon.category].join(' ').toLowerCase()}
+          >
+            <Fragment set:html={svg(icon.name, { size: 56 })} />
+            <span>{icon.name}</span>
+          </a>
+        ))
+      }
+    </div>
+    <p id="empty" class="empty" hidden>No icon matches. <a href="https://github.com/GtAntoine/triolet/issues">Ask for it</a>, or draw it.</p>
+  </div>
+</Base>

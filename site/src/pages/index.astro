@@ -1,0 +1,177 @@
+---
+import Code from '../components/Code.astro';
+import Palette from '../components/Palette.astro';
+import Base from '../layouts/Base.astro';
+import { icons, svg, url } from '../lib/icons';
+
+const stage = ['bell-ring', 'calendar-clock', 'ballot-box', 'messages', 'sliders', 'life-buoy', 'pin-alert', 'chart-trend', 'folder-open', 'house', 'credit-card', 'file-search'].filter(
+  (name) => icons.some((icon) => icon.name === name),
+);
+const sizes = [96, 64, 48, 40, 32, 24, 20, 16];
+const tier = (size: number) => (size >= 40 ? 'relief' : size >= 24 ? 'compact' : 'flat');
+
+const html = `<i data-triolet="bell-ring" data-size="32"></i>
+
+<script type="module">
+  import { createIcons, bellRing } from 'triolet';
+  createIcons({ icons: { bellRing } });
+</script>`;
+const react = `import { BellRing } from 'triolet-react';
+
+export function Alerts() {
+  return (
+    <button className="triolet-trigger">
+      <BellRing size={32} /> Alerts
+    </button>
+  );
+}`;
+const native = `import { BellRing } from 'triolet-react-native';
+
+export function Alerts() {
+  return <BellRing size={32} label="Alerts" />;   // plays when pressed
+}`;
+---
+
+<Base>
+  <section class="wrap hero">
+    <div>
+      <p class="eyebrow">{icons.length} icons · open source</p>
+      <h1>Icons in three colours. <span>Every one moves.</span></h1>
+      <p class="lede">
+        Triolet is a library of animated icons for the web, React and React Native. You choose three colours; each icon brings its own small gesture.
+      </p>
+      <div class="actions">
+        <a class="button" href={url('/icons/')}>Browse the icons</a>
+        <a class="button quiet" href={url('/docs/')}>Read the docs</a>
+      </div>
+    </div>
+    <div class="stage" data-stage aria-hidden="true">
+      {stage.map((name) => <Fragment set:html={svg(name, { size: 96 })} />)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="intro">
+        <p class="eyebrow">Colour</p>
+        <h2>Three colours, yours</h2>
+        <p>
+          A dominant colour for about 60 % of an icon, a secondary one for 30 %, an accent for 10 %. Set them once for a page, a block or a single icon: the
+          tints and the relief are derived from them. Try it, this whole site follows.
+        </p>
+      </div>
+      <div class="panel">
+        <Palette />
+        <div class="samples" style="margin-top:1.6rem">
+          {['calendar-clock', 'messages', 'chart-trend', 'house', 'sliders'].map((name) => <Fragment set:html={svg(name, { size: 64 })} />)}
+        </div>
+        <Code
+          code={`:root {\n  --triolet-base: BASE;\n  --triolet-main: MAIN;\n  --triolet-accent: ACCENT;\n  --triolet-surface: SURFACE;\n}`}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split flip">
+      <div class="panel" data-inview>
+        <div class="samples">
+          <button class="button quiet triolet-trigger" type="button"><Fragment set:html={svg('ballot-box', { size: 40 })} /> Hover or focus me</button>
+          <button class="button quiet" type="button" data-play=".played"><Fragment set:html={svg('bell-ring', { size: 40, trigger: 'manual', class: 'played' })} /> Play from code</button>
+        </div>
+        <div class="samples" style="margin-top:1.4rem">
+          {['file-text', 'checklist', 'pin-question'].map((name) => <Fragment set:html={svg(name, { size: 72 })} />)}
+        </div>
+      </div>
+      <div class="intro">
+        <p class="eyebrow">Motion</p>
+        <h2>One gesture per icon</h2>
+        <p>
+          The bell rings, the ballot drops into the box, the lines write themselves. Gestures are plain CSS on the web, with no animation library, and run on
+          the UI thread in React Native. They play on hover, on keyboard focus of a parent, when the icon scrolls into view, or when you say so.
+        </p>
+        <p>Nothing moves for people who ask their system to reduce motion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Size</p>
+      <h2>A relief that follows the size</h2>
+      <p>
+        A relief drawn for 96 pixels is thinner than a pixel at 24. Triolet draws the full relief from 40 px, a stronger one on the large shapes only from 24 px,
+        and goes flat under 24 px. A flat finish is there at any size.
+      </p>
+      <div class="panel" style="margin-top:1.6rem">
+        <div class="samples">
+          {
+            sizes.map((size) => (
+              <figure>
+                <Fragment set:html={svg('calendar-clock', { size })} />
+                <figcaption>
+                  {size} · {tier(size)}
+                </figcaption>
+              </figure>
+            ))
+          }
+          <figure>
+            <Fragment set:html={svg('calendar-clock', { size: 96, finish: 'flat' })} />
+            <figcaption>96 · flat finish</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="intro">
+        <p class="eyebrow">Use</p>
+        <h2>Three packages, one set of icons</h2>
+        <p>
+          Plain JavaScript, React components, and React Native components drawn with Skia. Every icon is its own module, so you ship only the ones you use.
+        </p>
+        <p><a href={url('/docs/')}>Installation and options</a></p>
+      </div>
+      <div>
+        <div class="tabs" data-tabs role="tablist">
+          <button type="button" role="tab" data-tab="html" aria-selected="true">HTML</button>
+          <button type="button" role="tab" data-tab="react" aria-selected="false">React</button>
+          <button type="button" role="tab" data-tab="native" aria-selected="false">React Native</button>
+        </div>
+        <Code code={html} tab="html" />
+        <Code code={react} tab="react" hidden />
+        <Code code={native} tab="native" hidden />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split flip">
+      <div>
+        <Code code={`pnpm icon:new umbrella\npnpm icons\npnpm icon:check umbrella\npnpm icon:sheet umbrella`} />
+      </div>
+      <div class="intro">
+        <p class="eyebrow">Contribute</p>
+        <h2>Draw one with us</h2>
+        <p>
+          An icon is one small file: a few shapes on a 96 grid, each with a colour role, and the gesture of its moving parts. The repository checks its colours,
+          its footprint and its legibility, and ships a skill so that an AI assistant can draw it with you.
+        </p>
+        <p><a href={url('/docs/#draw')}>The drawing guide</a></p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // The CSS snippet of the colour section quotes the live values.
+  const code = document.querySelector('.panel .code code');
+  if (code) {
+    const names = { BASE: 'base', MAIN: 'main', ACCENT: 'accent', SURFACE: 'surface' } as const;
+    code.innerHTML = code.textContent!.replace(/BASE|MAIN|ACCENT|SURFACE/g, (word) => `<span data-live="${names[word as keyof typeof names]}"></span>`);
+    const style = getComputedStyle(document.documentElement);
+    for (const span of code.querySelectorAll<HTMLElement>('[data-live]')) span.textContent = style.getPropertyValue(`--triolet-${span.dataset.live}`).trim();
+  }
+</script>

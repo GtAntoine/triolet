@@ -1,0 +1,212 @@
+---
+import Code from '../../components/Code.astro';
+import Base from '../../layouts/Base.astro';
+import { svg } from '../../lib/icons';
+
+const sections = [
+  ['install', 'Install'],
+  ['colours', 'Colours'],
+  ['motion', 'Motion and triggers'],
+  ['sizes', 'Sizes and finishes'],
+  ['accessibility', 'Accessibility'],
+  ['native', 'React Native'],
+  ['draw', 'Drawing an icon'],
+  ['skill', 'The AI skill'],
+];
+---
+
+<Base title="Docs" description="How to install Triolet, set its three colours, trigger its gestures and draw a new icon.">
+  <div class="wrap docs">
+    <aside>
+      <nav aria-label="On this page">
+        {sections.map(([id, label]) => <a href={`#${id}`}>{label}</a>)}
+      </nav>
+    </aside>
+    <article class="prose">
+      <h1 style="font-size:clamp(2rem,1.5rem + 2.4vw,3.2rem)">Docs</h1>
+      <p class="lede" style="max-width:56ch">Everything is one idea: an icon is drawn in three colours you set, and it carries its own gesture.</p>
+
+      <h2 id="install">Install</h2>
+      <p>
+        The packages are not on npm yet. Until they are, clone <a href="https://github.com/GtAntoine/triolet">the repository</a> and run <code>pnpm install</code>
+        then <code>pnpm build</code>: the three packages are built in <code>packages/</code>.
+      </p>
+      <h3>Plain JavaScript</h3>
+      <Code
+        code={`<i data-triolet="bell-ring" data-size="32"></i>
+
+<script type="module">
+  import { createIcons, bellRing } from 'triolet';
+  createIcons({ icons: { bellRing } });
+</script>`}
+      />
+      <p>
+        <code>createIcons</code> replaces every placeholder with an inline SVG and adds the styles the icons need to the page, once. A placeholder may set
+        <code>data-size</code>, <code>data-label</code>, <code>data-finish</code>, <code>data-trigger</code> and the colours <code>data-base</code>,
+        <code>data-main</code>, <code>data-accent</code>, <code>data-surface</code>. To make one icon from code, use <code>createElement(bellRing, options)</code>;
+        on a server, <code>toSvg(bellRing, options)</code> and <code>styles([bellRing])</code> return strings.
+      </p>
+      <h3>React</h3>
+      <Code
+        code={`import { BellRing, TrioletProvider } from 'triolet-react';
+
+<BellRing size={32} label="Alerts" />
+
+<TrioletProvider colors={{ main: '#1f5a3d', accent: '#e8a13a' }} size={24}>
+  <Toolbar />
+</TrioletProvider>`}
+      />
+      <p>
+        Each icon is a component that renders an inline SVG and accepts any SVG attribute. With React 19 its styles are emitted during rendering, on the server
+        too; with React 18 they are added in the browser when the icon mounts.
+      </p>
+
+      <h2 id="colours">Colours</h2>
+      <p>Three colours set the look, a fourth says what the icons sit on:</p>
+      <table>
+        <thead><tr><th>Property</th><th>Role</th><th>Default</th></tr></thead>
+        <tbody>
+          <tr><td><code>--triolet-base</code></td><td>The dominant colour, about 60 % of an icon</td><td><code>#F1F2F4</code></td></tr>
+          <tr><td><code>--triolet-main</code></td><td>The secondary colour, about 30 %</td><td><code>#1D4A68</code></td></tr>
+          <tr><td><code>--triolet-accent</code></td><td>The accent, about 10 %</td><td><code>#EE4B3B</code></td></tr>
+          <tr><td><code>--triolet-surface</code></td><td>What is behind the icons: the colour of the ring that detaches a badge</td><td><code>#FFFFFF</code></td></tr>
+        </tbody>
+      </table>
+      <p>
+        Set them on <code>:root</code>, on any block, or on one icon (<code>&lt;BellRing main="#5B2A6E" /&gt;</code>). Two tints of <code>main</code> in
+        <code>base</code>, a lighter <code>main</code> and the colours of the relief are derived with <code>color-mix()</code>; each can be set by hand
+        (<code>--triolet-soft</code>, <code>--triolet-mid</code>, <code>--triolet-main-light</code>, <code>--triolet-on</code>, <code>--triolet-gap</code>,
+        <code>--triolet-light</code>, <code>--triolet-shade</code>).
+      </p>
+      <p>
+        On a dark surface the relief is a faint glow and a deep shadow: add the class <code>triolet-dark</code> to the block, or set <code>--triolet-light</code>
+        and <code>--triolet-shade</code> yourself. In React Native this is worked out from the surface colour.
+      </p>
+
+      <h2 id="motion">Motion and triggers</h2>
+      <table>
+        <thead><tr><th>Trigger</th><th>What plays the gesture</th></tr></thead>
+        <tbody>
+          <tr><td><code>hover</code> (default)</td><td>The icon is hovered, or an ancestor with the class <code>triolet-trigger</code> is hovered or focused from the keyboard</td></tr>
+          <tr><td><code>inview</code></td><td>The same, and once when the icon scrolls into view</td></tr>
+          <tr><td><code>manual</code></td><td>Only <code>play(svg)</code>, or the <code>playing</code> prop in React</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Put <code>triolet-trigger</code> on the button or link that holds the icon, so the gesture answers the whole control and keyboard users get it too.
+        A few icons loop by themselves (a lost pin floating); most play once and rest.
+      </p>
+
+      <h2 id="sizes">Sizes and finishes</h2>
+      <p>
+        <code>size</code> is the width and height in pixels, 48 by default, and it picks the relief: full from 40 px, compact (stronger, on the large shapes only)
+        from 24 px, flat under 24 px. <code>finish="flat"</code> draws without relief at any size.
+      </p>
+      <p>
+        By default each icon carries its own filters. A page with many icons can share them: <code>filters="shared"</code> in <code>createIcons</code> or on
+        <code>TrioletProvider</code>. Shared filters read the colours of the page, so an icon with colours of its own keeps its own filters.
+      </p>
+
+      <h2 id="accessibility">Accessibility</h2>
+      <ul>
+        <li>Without a <code>label</code> an icon is decorative: it is hidden from assistive technology. Give a label when the icon stands alone.</li>
+        <li>Gestures never start under <code>prefers-reduced-motion: reduce</code>, on the web and in React Native.</li>
+        <li>A gesture never carries information by itself: the icon at rest says the same thing.</li>
+        <li>The three colours are yours, so contrast is too: check <code>main</code> and <code>accent</code> against your surface.</li>
+      </ul>
+
+      <h2 id="native">React Native</h2>
+      <p>
+        <code>triolet-react-native</code> draws the same icons with <a href="https://shopify.github.io/react-native-skia/">React Native Skia</a> and moves them
+        with Reanimated, one canvas per icon. The props are the same as in React; the gesture plays when the icon is pressed, or from a ref.
+      </p>
+      <Code
+        code={`import { BellRing, type TrioletIconHandle } from 'triolet-react-native';
+
+const bell = useRef<TrioletIconHandle>(null);
+
+<BellRing ref={bell} size={32} colors={{ main: '#1f5a3d' }} />
+<Button title="Ring" onPress={() => bell.current?.play()} />`}
+      />
+      <p>It needs <code>@shopify/react-native-skia</code>, <code>react-native-reanimated</code> and <code>react-native-worklets</code>, which Expo Go already includes.</p>
+
+      <h2 id="draw">Drawing an icon</h2>
+      <p>An icon is one file, <code>icons/&lt;name&gt;.ts</code>:</p>
+      <Code
+        code={`import { icon, inset, part, path, pill, raised, reveal, stagger } from '@triolet/core';
+
+export default icon({
+  name: 'file-text',
+  category: 'documents',
+  keywords: ['document', 'file', 'form', 'page'],
+  gesture: 'The two lines write themselves, one after the other.',
+  draw: [
+    raised(path('M31 14H60L80 34V70A13 13 0 0 1 67 83H31A13 13 0 0 1 18 70V27A13 13 0 0 1 31 14Z', 'base')),
+    part('corner', raised.small(path('M60 14L80 34H65A5 5 0 0 1 60 29Z', 'accent'))),
+    part('line-1', inset(pill(30, 50, 26, 9, 'main'))),
+    part('line-2', inset(pill(30, 64, 40, 9, 'main'))),
+  ],
+  motion: {
+    ...stagger(['line-1', 'line-2'], reveal({ duration: 450 }), 120),
+  },
+});`}
+      />
+      <h3>The grid and the keyline shapes</h3>
+      <div class="split" style="align-items:start">
+        <svg class="keylines" viewBox="0 0 96 96" role="img" aria-label="The four keyline shapes on the 96 grid">
+          <rect width="96" height="96" rx="10" fill="var(--raise)" stroke="var(--line)"></rect>
+          <g fill="none" stroke="var(--triolet-accent)" stroke-width="0.7">
+            <circle cx="48" cy="48" r="36"></circle>
+            <rect x="16" y="16" width="64" height="64"></rect>
+            <rect x="20" y="12" width="56" height="72"></rect>
+            <rect x="12" y="20" width="72" height="56"></rect>
+          </g>
+        </svg>
+        <div>
+          <p>
+            Icons are drawn on a 96 × 96 grid, inside four shapes centred on it: a circle 72 across, a square of 64, a tall rectangle of 56 × 72 and a wide one of
+            72 × 56. A round icon may be wider than a square one, because a square fills its corners and looks larger.
+          </p>
+          <p style="margin-top:1rem">
+            A small piece may stick out (a badge, a flag). <code>pnpm icon:check</code> reports an icon that draws more than 3 % of the grid outside the shapes.
+          </p>
+        </div>
+      </div>
+      <h3>Colour roles</h3>
+      <table>
+        <thead><tr><th>Role</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td><code>base</code></td><td>The body of light objects: a sheet, a card, a wall</td></tr>
+          <tr><td><code>main</code></td><td>The body of dark objects, and what must read first</td></tr>
+          <tr><td><code>accent</code></td><td>One thing per icon: what the icon is about</td></tr>
+          <tr><td><code>soft</code>, <code>mid</code></td><td>Recessed details in a light body: a line of text, an empty slot</td></tr>
+          <tr><td><code>mainLight</code></td><td>A face of a dark object that catches the light</td></tr>
+          <tr><td><code>on</code></td><td>Ink on a colour: a check, a clock hand</td></tr>
+          <tr><td><code>gap</code></td><td>The ring that detaches a badge from what is behind it</td></tr>
+        </tbody>
+      </table>
+      <p>
+        The set as a whole aims at 60 % base, 30 % main and 10 % accent. Each icon has an accent, never more than 20 % of it, and never more accent than main.
+      </p>
+      <h3>Relief and motion</h3>
+      <p>
+        <code>raised(…)</code> shapes stand out of the surface, <code>inset(…)</code> shapes are pressed into what is under them, <code>plain(…)</code> shapes
+        are ink. <code>part('name', …)</code> names what moves as one piece; its motion is one of ten gestures (<code>reveal</code>, <code>pop</code>,
+        <code>nudge</code>, <code>bounce</code>, <code>swing</code>, <code>spin</code>, <code>blink</code>, <code>draw</code>, <code>travel</code>,
+        <code>wave</code>) or tracks written by hand.
+      </p>
+      <Code code={`pnpm icon:new umbrella      # a template in icons/umbrella.ts\npnpm icons                  # compile every icon\npnpm icon:check umbrella    # colours, footprint, legibility, gesture, name\npnpm icon:sheet umbrella    # out/sheets/umbrella.png, to look at`} />
+
+      <h2 id="skill">The AI skill</h2>
+      <p>
+        The repository ships a skill, <code>skills/triolet-icon/</code>, for AI assistants that read the <code>SKILL.md</code> format (Claude Code, Codex and
+        others). It walks the assistant through the same path as a person: check the icon does not exist, write its brief, draw it, run the checks, look at the
+        control sheet, fix, then prepare the pull request.
+      </p>
+      <Code code={`# Claude Code, from a clone of the repository\ncp -r skills/triolet-icon ~/.claude/skills/\n\n# then, in the repository:  "Draw an umbrella icon for Triolet"`} />
+      <p class="samples" style="margin-top:2rem" data-inview>
+        {['form-pencil', 'presentation', 'notebook'].map((name) => <Fragment set:html={svg(name, { size: 64 })} />)}
+      </p>
+    </article>
+  </div>
+</Base>

@@ -1,0 +1,44 @@
+---
+/** The three colours, live: sets `--triolet-*` on the page and remembers the choice. */
+const presets = [
+  { name: 'Original', base: '#f1f2f4', main: '#1d4a68', accent: '#ee4b3b', surface: '#f5f6f8' },
+  { name: 'Forest', base: '#eaf0e4', main: '#1f5a3d', accent: '#e8a13a', surface: '#f7f9f3' },
+  { name: 'Plum', base: '#f3ebf2', main: '#5b2a6e', accent: '#f26b8a', surface: '#faf6fa' },
+  { name: 'Sand', base: '#efe6d6', main: '#3b3a36', accent: '#d9562b', surface: '#faf6ee' },
+  { name: 'Ocean', base: '#e3eef2', main: '#0f5c73', accent: '#ffb000', surface: '#f3f8fa' },
+  { name: 'Night', base: '#2b3644', main: '#9fc3e8', accent: '#ff7a59', surface: '#141b24' },
+];
+const roles = [
+  { key: 'base', share: '60' },
+  { key: 'main', share: '30' },
+  { key: 'accent', share: '10' },
+  { key: 'surface', share: '' },
+];
+---
+
+<div class="palette" data-palette>
+  {
+    roles.map((role) => (
+      <label>
+        <input type="color" data-color={role.key} value={presets[0][role.key as 'base']} />
+        <span>
+          {role.key} {role.share && <small>{role.share} %</small>}
+        </span>
+      </label>
+    ))
+  }
+  <div class="presets" role="group" aria-label="Ready-made palettes">
+    {
+      presets.map((preset) => (
+        <button type="button" class="preset" data-preset={JSON.stringify(preset)} aria-pressed="false">
+          <i aria-hidden="true">
+            <b style={`background:${preset.base}`} />
+            <b style={`background:${preset.main}`} />
+            <b style={`background:${preset.accent}`} />
+          </i>
+          {preset.name}
+        </button>
+      ))
+    }
+  </div>
+</div>

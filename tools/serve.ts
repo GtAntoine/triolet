@@ -18,11 +18,21 @@ const TYPES: Record<string, string> = {
   '.woff2': 'font/woff2',
 };
 
-/** Serves `root` on localhost. Resolves once the server listens. */
-export function serve(root: string, port: number): Promise<Server> {
+/**
+ * Serves `root` on localhost. Resolves once the server listens. With `base`, the folder is
+ * served under that path (a site built for https://host/base/).
+ */
+export function serve(root: string, port: number, base = ''): Promise<Server> {
   const folder = resolve(root);
   const server = createServer((req, res) => {
-    const path = decodeURIComponent(new URL(req.url ?? '/', 'http://localhost').pathname);
+    let path = decodeURIComponent(new URL(req.url ?? '/', 'http://localhost').pathname);
+    if (base) {
+      if (!path.startsWith(base)) {
+        res.writeHead(404, { 'content-type': 'text/plain' }).end('Not found');
+        return;
+      }
+      path = path.slice(base.length) || '/';
+    }
     let file = normalize(join(folder, path));
     // Never serve anything outside the folder.
     if (file !== folder && !file.startsWith(folder + sep)) {

@@ -1,0 +1,72 @@
+---
+import { SHARED_DEFS_STYLE, baseCss, sharedFilters } from '@triolet/core';
+import { gesturesCss, icons, svg, url } from '../lib/icons';
+import '../styles/site.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = 'Animated icons in three colours, for the web, React and React Native.' } = Astro.props;
+const fullTitle = title ? `${title} · Triolet` : 'Triolet: animated icons in three colours';
+const path = Astro.url.pathname;
+const nav = [
+  { href: url('/icons/'), label: 'Icons' },
+  { href: url('/docs/'), label: 'Docs' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
+    <style is:inline set:html={baseCss() + gesturesCss}></style>
+    <script is:inline>
+      // The visitor's colours, applied before the first paint.
+      try {
+        const saved = JSON.parse(localStorage.getItem('triolet-colors') || 'null');
+        if (saved) {
+          for (const [key, value] of Object.entries(saved)) document.documentElement.style.setProperty('--triolet-' + key, value);
+          if (saved.dark) document.documentElement.dataset.surface = 'dark';
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <svg class="triolet" aria-hidden="true" style={SHARED_DEFS_STYLE}><defs set:html={sharedFilters()} /></svg>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <a class="brand triolet-trigger" href={url('/')} aria-label="Triolet, home">
+        <Fragment set:html={svg('bell-ring', { size: 32 })} />
+        <span>Triolet</span>
+      </a>
+      <nav aria-label="Main">
+        {
+          nav.map((item) => (
+            <a href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ))
+        }
+        <a href="https://github.com/GtAntoine/triolet" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="foot">
+      <p>
+        {icons.length} icons · MIT licence · <a href="https://github.com/GtAntoine/triolet">GtAntoine/triolet</a>
+      </p>
+    </footer>
+    <script>
+      import '../scripts/site.ts';
+    </script>
+  </body>
+</html>
