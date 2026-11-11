@@ -9,8 +9,8 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "circle", "cx": 24, "cy": 57, "r": 6.5, "role": "soft" },
-        { "kind": "path", "d": "M12 85V81A12 12 0 0 1 36 81V85Z", "role": "soft" }
+        { "kind": "circle", "cx": 25.92, "cy": 56.28, "r": 5.98, "role": "soft" },
+        { "kind": "path", "d": "M14.88 82.04L14.88 78.36A11.04 11.04 0 0 1 36.96 78.36L36.96 82.04Z", "role": "soft" }
       ],
       "weight": "major"
     },
@@ -18,8 +18,8 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "circle", "cx": 72, "cy": 57, "r": 6.5, "role": "soft" },
-        { "kind": "path", "d": "M60 85V81A12 12 0 0 1 84 81V85Z", "role": "soft" }
+        { "kind": "circle", "cx": 70.08, "cy": 56.28, "r": 5.98, "role": "soft" },
+        { "kind": "path", "d": "M59.04 82.04L59.04 78.36A11.04 11.04 0 0 1 81.12 78.36L81.12 82.04Z", "role": "soft" }
       ],
       "weight": "major"
     },
@@ -27,8 +27,8 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "circle", "cx": 48, "cy": 52, "r": 8.5, "role": "main" },
-        { "kind": "path", "d": "M31 86V81A17 17 0 0 1 65 81V86Z", "role": "main" }
+        { "kind": "circle", "cx": 48, "cy": 51.68, "r": 7.82, "role": "main" },
+        { "kind": "path", "d": "M32.36 82.96L32.36 78.36A15.64 15.64 0 0 1 63.64 78.36L63.64 82.96Z", "role": "main" }
       ],
       "weight": "major"
     },
@@ -42,8 +42,8 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M22 10H42A8 8 0 0 1 50 18V26A8 8 0 0 1 42 34H30L22 40V33.6A8 8 0 0 1 14 26V18A8 8 0 0 1 22 10Z",
-              "role": "main"
+              "d": "M24.08 13.04L42.48 13.04A7.36 7.36 0 0 1 49.84 20.4L49.84 27.76A7.36 7.36 0 0 1 42.48 35.12L31.44 35.12L24.08 40.64L24.08 34.75A7.36 7.36 0 0 1 16.72 27.76L16.72 20.4A7.36 7.36 0 0 1 24.08 13.04Z",
+              "role": "base"
             }
           ],
           "weight": "major"
@@ -60,7 +60,7 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M54 12H76A8 8 0 0 1 84 20V30A8 8 0 0 1 76 38H62L54 44V37.6A8 8 0 0 1 46 30V20A8 8 0 0 1 54 12Z",
+              "d": "M59.04 20.77L75.23 20.77A5.89 5.89 0 0 1 81.12 26.66L81.12 34.02A5.89 5.89 0 0 1 75.23 39.9L64.93 39.9L59.04 44.32L59.04 39.61A5.89 5.89 0 0 1 53.15 34.02L53.15 26.66A5.89 5.89 0 0 1 59.04 20.77Z",
               "role": "accent"
             }
           ],
@@ -70,9 +70,9 @@
           "type": "layer",
           "effect": "plain",
           "shapes": [
-            { "kind": "circle", "cx": 57, "cy": 25, "r": 2.6, "role": "on" },
-            { "kind": "circle", "cx": 65, "cy": 25, "r": 2.6, "role": "on" },
-            { "kind": "circle", "cx": 73, "cy": 25, "r": 2.6, "role": "on" }
+            { "kind": "circle", "cx": 61.25, "cy": 30.34, "r": 1.91, "role": "on" },
+            { "kind": "circle", "cx": 67.14, "cy": 30.34, "r": 1.91, "role": "on" },
+            { "kind": "circle", "cx": 73.02, "cy": 30.34, "r": 1.91, "role": "on" }
           ],
           "weight": "minor"
         }
@@ -80,13 +80,13 @@
     }
   ],
   "parts": {
-    "bubble-1": { "box": [14, 10, 36, 30] },
-    "bubble-2": { "box": [46, 12, 38, 32] }
+    "bubble-1": { "box": [16.72, 13.04, 33.12, 27.6] },
+    "bubble-2": { "box": [53.15, 20.77, 27.97, 23.55] }
   },
   "motion": [
     {
       "part": "bubble-1",
-      "pivot": [32, 25],
+      "pivot": [33.28, 26.84],
       "duration": 600,
       "delay": 0,
       "iterations": 1,
@@ -95,7 +95,7 @@
     },
     {
       "part": "bubble-2",
-      "pivot": [65, 28],
+      "pivot": [67.13, 32.55],
       "duration": 600,
       "delay": 180,
       "iterations": 1,

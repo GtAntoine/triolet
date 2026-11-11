@@ -12,7 +12,7 @@ export default icon({
     inset(circle(35, 58, 5, 'base'), rect(32.5, 60, 5, 11, 2.5, 'base')),
     raised(rect(54, 24, 30, 60, 8, 'base')),
     inset(pill(64, 30, 10, 3.5, 'mid')),
-    ([62, 69, 76] as const).map((cx, k) => part(`digit-${k + 1}`, inset(circle(cx, 56, 3.2, k === 2 ? 'accent' : 'main')))),
+    ([62, 69, 76] as const).map((cx, k) => part(`digit-${k + 1}`, inset(circle(cx, 56, 3.2, 'accent')))),
   ],
   motion: {
     shackle: nudge({ y: -6, settle: true, duration: 550 }),

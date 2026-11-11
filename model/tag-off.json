@@ -16,18 +16,27 @@
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "light",
+      "tone": "dark",
       "shapes": [
-        { "kind": "circle", "cx": 62, "cy": 32, "r": 6, "role": "soft" }
+        { "kind": "circle", "cx": 62, "cy": 32, "r": 6, "role": "main" }
       ],
       "weight": "minor"
     },
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "light",
+      "tone": "dark",
       "shapes": [
-        { "kind": "rect", "x": 31, "y": 50, "w": 22, "h": 6, "r": 3, "role": "mid", "rotate": [-45, 42, 53] }
+        { "kind": "rect", "x": 29, "y": 49.5, "w": 26, "h": 7, "r": 3.5, "role": "main", "rotate": [-45, 42, 53] }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 25, "y": 40.5, "w": 18, "h": 7, "r": 3.5, "role": "main", "rotate": [-45, 34, 44] }
       ],
       "weight": "minor"
     },
@@ -39,7 +48,7 @@
           "type": "layer",
           "effect": "plain",
           "shapes": [
-            { "kind": "circle", "cx": 67, "cy": 67, "r": 21, "role": "gap" }
+            { "kind": "circle", "cx": 67, "cy": 67, "r": 18, "role": "gap" }
           ],
           "weight": "major"
         },
@@ -52,17 +61,17 @@
               "kind": "circle",
               "cx": 67,
               "cy": 67,
-              "r": 14.5,
+              "r": 12.5,
               "role": "accent",
               "fill": false,
-              "stroke": { "width": 5.5 }
+              "stroke": { "width": 4 }
             },
             {
               "kind": "path",
-              "d": "M56.7 77.3L77.3 56.7",
+              "d": "M58.2 75.8L75.8 58.2",
               "role": "accent",
               "fill": false,
-              "stroke": { "width": 5.5 }
+              "stroke": { "width": 4 }
             }
           ],
           "weight": "major"
@@ -71,7 +80,7 @@
     }
   ],
   "parts": {
-    "ban": { "box": [46, 46, 42, 42] }
+    "ban": { "box": [49, 49, 36, 36] }
   },
   "motion": [
     {

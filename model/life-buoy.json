@@ -29,7 +29,7 @@
               "r": 25,
               "role": "accent",
               "fill": false,
-              "stroke": { "width": 18, "cap": "butt", "dash": [19.63, 19.63], "dashOffset": 9.82 }
+              "stroke": { "width": 18, "cap": "butt", "dash": [6, 33.27], "dashOffset": 3 }
             }
           ],
           "weight": "major"
@@ -39,9 +39,9 @@
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "light",
+      "tone": "dark",
       "shapes": [
-        { "kind": "circle", "cx": 48, "cy": 48, "r": 13, "role": "soft" }
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 13, "role": "main" }
       ],
       "weight": "major"
     }

@@ -13,7 +13,23 @@ import { compare, png, rasterize } from './lib/raster.ts';
 
 /** Icons changed on purpose since the port, and why: these are not expected to match. */
 export const RETOUCHED: Record<string, string> = {
-  'calendar-clock': 'the clock hand is now two pieces, hour and minute (7 pixels differ where they meet)',
+  'calendar-clock': 'the clock hand is now two pieces, hour and minute',
+  'bell-ring': 'a light bell with a band: the original had no base colour at all',
+  checklist: 'the line of the step that is done takes the main colour (more main than accent)',
+  'chart-trend': 'smaller, to sit inside the keyline shapes',
+  compartments: 'smaller and centred, to sit inside the keyline shapes',
+  'database-backup': 'one ring takes the accent, which the original nearly lacked',
+  'form-pencil': 'a title field in the main colour; smaller, to sit inside the keyline shapes',
+  forum: 'a light bubble and a smaller accent one (accent was 26 %); smaller overall',
+  'life-buoy': 'four narrow accent bands and a dark centre (accent was 42 %, main absent)',
+  neighbours: 'a smaller heart (accent was 30 %); smaller overall',
+  notebook: 'a light cover with a binding in the main colour (base was 4 %)',
+  'pin-question': 'smaller, to sit inside the keyline shapes',
+  'pin-alert': 'smaller and centred, like the other pin',
+  poster: 'smaller, to sit inside the keyline shapes',
+  presentation: 'smaller, to sit inside the keyline shapes',
+  'tag-off': 'the hole and the price in the main colour, a lighter no-entry sign (main was absent)',
+  'two-factor': 'the three digits of the code are the accent',
 };
 
 const SIZE = 96;
@@ -49,8 +65,7 @@ export async function fidelity(): Promise<Fidelity[]> {
 if (import.meta.main) {
   const results = await fidelity();
   for (const r of results) {
-    const why = r.status === 'retouched' ? ` (${RETOUCHED[r.name]})` : '';
-    const detail = r.status === 'new' ? 'no reference' : `${r.differing} px differ, worst gap ${r.worst}/255${why}`;
+    const detail = r.status === 'new' ? 'no reference' : r.status === 'retouched' ? RETOUCHED[r.name]! : `${r.differing} px differ, worst gap ${r.worst}/255`;
     console.log(`${r.status.padEnd(9)} ${r.name.padEnd(26)} ${detail}`);
   }
   if (process.argv.includes('--sheet')) {

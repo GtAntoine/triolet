@@ -27,6 +27,7 @@ import type {
   Shape,
   Weight,
 } from './model.ts';
+import { scalePath } from './geometry.ts';
 import type { MotionSpec } from './gestures.ts';
 
 export interface ShapeOptions {
@@ -192,3 +193,52 @@ export function icon(source: IconSource): IconSource {
 }
 
 export type { Node };
+
+export interface ResizeOptions {
+  /** The point that stays in place (default: the middle of the grid). */
+  about?: readonly [number, number];
+  /** A move applied after the scaling. */
+  move?: readonly [number, number];
+}
+
+/**
+ * A drawing made smaller or larger as a whole, strokes and radii included: to bring an icon
+ * back inside the keyline shapes without redrawing every number. The motion is not touched.
+ */
+export function resize(nodes: NodeArg[], scale: number, options: ResizeOptions = {}): DrawNode[] {
+  const [cx, cy] = options.about ?? [48, 48];
+  const [dx, dy] = options.move ?? [0, 0];
+  const r = (v: number) => Math.round(v * 100) / 100;
+  const x = (v: number) => r(cx + (v - cx) * scale + dx);
+  const y = (v: number) => r(cy + (v - cy) * scale + dy);
+  const shape = (s: Shape): Shape => {
+    let out: Shape;
+    switch (s.kind) {
+      case 'rect':
+        out = { ...s, x: x(s.x), y: y(s.y), w: r(s.w * scale), h: r(s.h * scale), r: r(s.r * scale) };
+        break;
+      case 'circle':
+        out = { ...s, cx: x(s.cx), cy: y(s.cy), r: r(s.r * scale) };
+        break;
+      case 'ellipse':
+        out = { ...s, cx: x(s.cx), cy: y(s.cy), rx: r(s.rx * scale), ry: r(s.ry * scale) };
+        break;
+      case 'path':
+        out = { ...s, d: scalePath(s.d, scale, cx, cy, dx, dy) };
+        break;
+    }
+    if (s.stroke) {
+      out.stroke = { ...s.stroke, width: r(s.stroke.width * scale) };
+      if (s.stroke.dash) out.stroke.dash = [r(s.stroke.dash[0] * scale), r(s.stroke.dash[1] * scale)];
+      if (s.stroke.dashOffset !== undefined) out.stroke.dashOffset = r(s.stroke.dashOffset * scale);
+    }
+    if (s.rotate) out.rotate = [s.rotate[0], x(s.rotate[1]), y(s.rotate[2])];
+    return out;
+  };
+  const node = (n: DrawNode): DrawNode => {
+    if (n.type === 'layer') return { ...n, shapes: n.shapes.map(shape) };
+    if (n.type === 'clip') return { ...n, clip: n.clip.map(shape), children: n.children.map(node) };
+    return { ...n, children: n.children.map(node) };
+  };
+  return nodes.flat().map(node);
+}

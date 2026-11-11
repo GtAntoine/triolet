@@ -9,7 +9,7 @@ export default icon({
   draw: [
     raised(path('M14 26A26 8 0 0 1 66 26V70A26 8 0 0 1 14 70Z', 'base')),
     inset(ellipse(40, 26, 26, 8, 'soft')),
-    plain(stroke('M14 42A26 8 0 0 0 66 42', 'main', 3), stroke('M14 57A26 8 0 0 0 66 57', 'main', 3)),
+    plain(stroke('M14 42A26 8 0 0 0 66 42', 'main', 3), stroke('M14 57A26 8 0 0 0 66 57', 'accent', 3)),
     part(
       'badge',
       plain(circle(69, 68, 19, 'gap')),

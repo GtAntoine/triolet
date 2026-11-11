@@ -9,16 +9,16 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "rect", "x": 10, "y": 10, "w": 54, "h": 76, "r": 8, "role": "base" }
+        { "kind": "rect", "x": 11.3, "y": 13.8, "w": 48.6, "h": 68.4, "r": 7.2, "role": "base" }
       ],
       "weight": "major"
     },
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "light",
+      "tone": "dark",
       "shapes": [
-        { "kind": "rect", "x": 18, "y": 22, "w": 38, "h": 9, "r": 4.5, "role": "soft" }
+        { "kind": "rect", "x": 18.5, "y": 24.6, "w": 34.2, "h": 8.1, "r": 4.05, "role": "main" }
       ],
       "weight": "minor"
     },
@@ -27,7 +27,7 @@
       "effect": "inset",
       "tone": "light",
       "shapes": [
-        { "kind": "rect", "x": 18, "y": 38, "w": 38, "h": 9, "r": 4.5, "role": "soft" }
+        { "kind": "rect", "x": 18.5, "y": 39, "w": 34.2, "h": 8.1, "r": 4.05, "role": "soft" }
       ],
       "weight": "minor"
     },
@@ -36,7 +36,7 @@
       "effect": "inset",
       "tone": "dark",
       "shapes": [
-        { "kind": "rect", "x": 18, "y": 57, "w": 13, "h": 13, "r": 3.5, "role": "main" }
+        { "kind": "rect", "x": 18.5, "y": 56.1, "w": 11.7, "h": 11.7, "r": 3.15, "role": "main" }
       ],
       "weight": "minor"
     },
@@ -50,10 +50,10 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M21.5 63.5L24 66L28 61",
+              "d": "M21.65 61.95L23.9 64.2L27.5 59.7",
               "role": "on",
               "fill": false,
-              "stroke": { "width": 3 }
+              "stroke": { "width": 2.7 }
             }
           ],
           "weight": "minor"
@@ -69,10 +69,10 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "path", "d": "M77.6 30.5L87.0 37.9L66.7 63.9L57.3 56.6Z", "role": "accent" },
-            { "kind": "path", "d": "M81.9 25.0L91.4 32.4L87.0 37.9L77.6 30.5Z", "role": "main" },
-            { "kind": "path", "d": "M57.3 56.6L66.7 63.9L54.6 69.7Z", "role": "base" },
-            { "kind": "path", "d": "M55.6 64.9L59.1 67.6L54.6 69.7Z", "role": "main" }
+            { "kind": "path", "d": "M72.14 32.25L80.6 38.91L62.33 62.31L53.87 55.74Z", "role": "accent" },
+            { "kind": "path", "d": "M76.01 27.3L84.56 33.96L80.6 38.91L72.14 32.25Z", "role": "main" },
+            { "kind": "path", "d": "M53.87 55.74L62.33 62.31L51.44 67.53Z", "role": "base" },
+            { "kind": "path", "d": "M52.34 63.21L55.49 65.64L51.44 67.53Z", "role": "main" }
           ],
           "weight": "major"
         }
@@ -80,13 +80,13 @@
     }
   ],
   "parts": {
-    "check": { "box": [21.5, 61, 6.5, 5] },
-    "pencil": { "box": [54.6, 25, 36.8, 44.7] }
+    "check": { "box": [21.65, 59.7, 5.85, 4.5] },
+    "pencil": { "box": [51.44, 27.3, 33.12, 40.23] }
   },
   "motion": [
     {
       "part": "check",
-      "pivot": [24.75, 63.5],
+      "pivot": [24.58, 61.95],
       "duration": 450,
       "delay": 100,
       "iterations": 1,
@@ -95,7 +95,7 @@
     },
     {
       "part": "pencil",
-      "pivot": [73, 47.35],
+      "pivot": [68, 47.42],
       "duration": 700,
       "delay": 0,
       "iterations": 1,

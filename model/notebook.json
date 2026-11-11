@@ -9,8 +9,8 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "rect", "x": 18, "y": 12, "w": 58, "h": 74, "r": 8, "role": "main" },
-        { "kind": "path", "d": "M26 12H31V86H26Z", "role": "mainLight" }
+        { "kind": "rect", "x": 18, "y": 12, "w": 58, "h": 74, "r": 8, "role": "base" },
+        { "kind": "path", "d": "M26 12H35V86H26A8 8 0 0 1 18 78V20A8 8 0 0 1 26 12Z", "role": "main" }
       ],
       "weight": "major"
     },
@@ -19,16 +19,16 @@
       "effect": "inset",
       "tone": "light",
       "shapes": [
-        { "kind": "rect", "x": 40, "y": 30, "w": 26, "h": 9, "r": 4.5, "role": "base" }
+        { "kind": "rect", "x": 43, "y": 30, "w": 24, "h": 9, "r": 4.5, "role": "soft" }
       ],
       "weight": "minor"
     },
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "dark",
+      "tone": "light",
       "shapes": [
-        { "kind": "rect", "x": 40, "y": 45, "w": 18, "h": 6, "r": 3, "role": "mainLight" }
+        { "kind": "rect", "x": 43, "y": 45, "w": 16, "h": 6, "r": 3, "role": "mid" }
       ],
       "weight": "minor"
     },

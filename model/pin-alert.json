@@ -13,7 +13,11 @@
           "type": "layer",
           "effect": "raised",
           "shapes": [
-            { "kind": "path", "d": "M44 86C38 78 20 60 20 41A24 24 0 0 1 68 41C68 60 50 78 44 86Z", "role": "main" }
+            {
+              "kind": "path",
+              "d": "M41.4 84.2C36 77 19.8 60.8 19.8 43.7A21.6 21.6 0 0 1 63 43.7C63 60.8 46.8 77 41.4 84.2Z",
+              "role": "main"
+            }
           ],
           "weight": "major"
         },
@@ -22,7 +26,7 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "circle", "cx": 44, "cy": 41, "r": 9.5, "role": "base" }
+            { "kind": "circle", "cx": 41.4, "cy": 43.7, "r": 8.55, "role": "base" }
           ],
           "weight": "minor"
         }
@@ -36,7 +40,7 @@
           "type": "layer",
           "effect": "plain",
           "shapes": [
-            { "kind": "circle", "cx": 69, "cy": 21, "r": 16, "role": "gap" }
+            { "kind": "circle", "cx": 63.9, "cy": 25.7, "r": 14.4, "role": "gap" }
           ],
           "weight": "major"
         },
@@ -45,16 +49,16 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "circle", "cx": 69, "cy": 21, "r": 13, "role": "accent" }
+            { "kind": "circle", "cx": 63.9, "cy": 25.7, "r": 11.7, "role": "accent" }
           ],
-          "weight": "major"
+          "weight": "minor"
         },
         {
           "type": "layer",
           "effect": "plain",
           "shapes": [
-            { "kind": "rect", "x": 67.3, "y": 12.5, "w": 3.4, "h": 10.5, "r": 1.7, "role": "on" },
-            { "kind": "circle", "cx": 69, "cy": 27.8, "r": 2, "role": "on" }
+            { "kind": "rect", "x": 62.37, "y": 18.05, "w": 3.06, "h": 9.45, "r": 1.53, "role": "on" },
+            { "kind": "circle", "cx": 63.9, "cy": 31.82, "r": 1.8, "role": "on" }
           ],
           "weight": "minor"
         }
@@ -62,13 +66,13 @@
     }
   ],
   "parts": {
-    "pin": { "box": [20, 17, 48, 69] },
-    "badge": { "box": [53, 5, 32, 32] }
+    "pin": { "box": [19.8, 22.1, 43.2, 62.1] },
+    "badge": { "box": [49.5, 11.3, 28.8, 28.8] }
   },
   "motion": [
     {
       "part": "pin",
-      "pivot": [44, 51.5],
+      "pivot": [41.4, 53.15],
       "duration": 700,
       "delay": 0,
       "iterations": 1,
@@ -77,7 +81,7 @@
     },
     {
       "part": "badge",
-      "pivot": [69, 21],
+      "pivot": [63.9, 25.7],
       "duration": 450,
       "delay": 200,
       "iterations": 1,

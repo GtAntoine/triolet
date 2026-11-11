@@ -13,7 +13,7 @@
           "type": "layer",
           "effect": "raised",
           "shapes": [
-            { "kind": "rect", "x": 14, "y": 8, "w": 50, "h": 68, "r": 7, "role": "base" }
+            { "kind": "rect", "x": 14.38, "y": 12.8, "w": 46.5, "h": 63.24, "r": 6.51, "role": "base" }
           ],
           "weight": "major"
         },
@@ -22,7 +22,7 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "rect", "x": 21, "y": 15, "w": 36, "h": 25, "r": 4, "role": "main" }
+            { "kind": "rect", "x": 20.89, "y": 19.31, "w": 33.48, "h": 23.25, "r": 3.72, "role": "main" }
           ],
           "weight": "major"
         },
@@ -30,8 +30,8 @@
           "type": "layer",
           "effect": "plain",
           "shapes": [
-            { "kind": "path", "d": "M22 39L31 29L37 35L41 31L56 39Z", "role": "base" },
-            { "kind": "circle", "cx": 48, "cy": 22, "r": 3.5, "role": "accent" }
+            { "kind": "path", "d": "M21.82 41.63L30.19 32.33L35.77 37.91L39.49 34.19L53.44 41.63Z", "role": "base" },
+            { "kind": "circle", "cx": 46, "cy": 25.82, "r": 3.26, "role": "accent" }
           ],
           "weight": "major"
         },
@@ -40,7 +40,7 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "rect", "x": 21, "y": 47, "w": 30, "h": 5.5, "r": 2.75, "role": "mid" }
+            { "kind": "rect", "x": 20.89, "y": 49.07, "w": 27.9, "h": 5.12, "r": 2.56, "role": "mid" }
           ],
           "weight": "minor"
         },
@@ -49,7 +49,7 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "rect", "x": 21, "y": 57, "w": 20, "h": 5.5, "r": 2.75, "role": "mid" }
+            { "kind": "rect", "x": 20.89, "y": 58.37, "w": 18.6, "h": 5.12, "r": 2.56, "role": "mid" }
           ],
           "weight": "minor"
         }
@@ -63,7 +63,7 @@
           "type": "layer",
           "effect": "raised",
           "shapes": [
-            { "kind": "rect", "x": 48, "y": 46, "w": 38, "h": 38, "r": 8, "role": "main" }
+            { "kind": "rect", "x": 46, "y": 48.14, "w": 35.34, "h": 35.34, "r": 7.44, "role": "main" }
           ],
           "weight": "major"
         },
@@ -72,7 +72,7 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "rect", "x": 55, "y": 53, "w": 9.5, "h": 9.5, "r": 2.5, "role": "base" }
+            { "kind": "rect", "x": 52.51, "y": 54.65, "w": 8.84, "h": 8.84, "r": 2.33, "role": "base" }
           ],
           "weight": "minor"
         },
@@ -81,7 +81,7 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "rect", "x": 70, "y": 53, "w": 9.5, "h": 9.5, "r": 2.5, "role": "base" }
+            { "kind": "rect", "x": 66.46, "y": 54.65, "w": 8.84, "h": 8.84, "r": 2.33, "role": "base" }
           ],
           "weight": "minor"
         },
@@ -90,7 +90,7 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "rect", "x": 55, "y": 68, "w": 9.5, "h": 9.5, "r": 2.5, "role": "base" }
+            { "kind": "rect", "x": 52.51, "y": 68.6, "w": 8.84, "h": 8.84, "r": 2.33, "role": "base" }
           ],
           "weight": "minor"
         },
@@ -99,7 +99,7 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 74.8, "cy": 72.8, "r": 4.4, "role": "accent" }
+            { "kind": "circle", "cx": 70.92, "cy": 73.06, "r": 4.09, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -107,13 +107,13 @@
     }
   ],
   "parts": {
-    "poster": { "box": [14, 8, 50, 68] },
-    "code": { "box": [48, 46, 38, 38] }
+    "poster": { "box": [14.38, 12.8, 46.5, 63.24] },
+    "code": { "box": [46, 48.14, 35.34, 35.34] }
   },
   "motion": [
     {
       "part": "code",
-      "pivot": [67, 65],
+      "pivot": [63.67, 65.81],
       "duration": 550,
       "delay": 0,
       "iterations": 1,

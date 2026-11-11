@@ -11,7 +11,8 @@ export default icon({
     part('check', plain(stroke('M21.5 26.3l3.2 3.2 6-6.4', 'on', 3))),
     part('dot', inset(circle(26, 48, 10, 'accent'))),
     inset(circle(26, 70, 10, 'base')),
-    [22, 44, 66].map((y, k) => part(`line-${k + 1}`, inset(pill(44, y, 36, 8, 'mid')))),
+    // The step that is done reads darker than the ones to come.
+    [22, 44, 66].map((y, k) => part(`line-${k + 1}`, inset(pill(44, y, 36, 8, k === 0 ? 'main' : 'mid')))),
   ],
   motion: {
     check: draw({ duration: 450, delay: 100 }),

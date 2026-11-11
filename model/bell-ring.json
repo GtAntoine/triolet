@@ -14,15 +14,39 @@
           "effect": "raised",
           "shapes": [
             { "kind": "circle", "cx": 46, "cy": 17, "r": 4.5, "role": "main" },
-            { "kind": "circle", "cx": 46, "cy": 75, "r": 7.5, "role": "main" },
+            { "kind": "circle", "cx": 46, "cy": 75, "r": 7.5, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
             {
               "kind": "path",
               "d": "M46 20C34 20 28 30 28 42V56L20 66V71H72V66L64 56V42C64 30 58 20 46 20Z",
-              "role": "main",
+              "role": "base",
               "stroke": { "width": 3 }
             }
           ],
           "weight": "major"
+        },
+        {
+          "type": "clip",
+          "clip": [
+            { "kind": "path", "d": "M46 20C34 20 28 30 28 42V56L20 66V71H72V66L64 56V42C64 30 58 20 46 20Z", "role": "base" }
+          ],
+          "children": [
+            {
+              "type": "layer",
+              "effect": "inset",
+              "tone": "dark",
+              "shapes": [
+                { "kind": "rect", "x": 14, "y": 58, "w": 64, "h": 8, "r": 0, "role": "main" }
+              ],
+              "weight": "minor"
+            }
+          ]
         }
       ]
     },
@@ -98,7 +122,7 @@
     }
   ],
   "parts": {
-    "bell": { "box": [20, 12.5, 52, 70] },
+    "bell": { "box": [14, 12.5, 64, 70] },
     "waves-left": { "box": [8, 40, 8, 28] },
     "waves-right": { "box": [76, 42, 8, 27] }
   },

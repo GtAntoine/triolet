@@ -343,3 +343,33 @@ export function roundBox(box: Box, digits = 2): Box {
 
 // `NUMBER` is exported for tools that rewrite path data.
 export { NUMBER };
+
+/** Path data scaled by `k` around (cx, cy), then moved by (dx, dy). Numbers keep two decimals. */
+export function scalePath(d: string, k: number, cx: number, cy: number, dx = 0, dy = 0): string {
+  const n = (v: number) => String(Math.round(v * 100) / 100);
+  const px = (x: number) => n(cx + (x - cx) * k + dx);
+  const py = (y: number) => n(cy + (y - cy) * k + dy);
+  let out = '';
+  for (const seg of parsePath(d)) {
+    const a = seg.args;
+    switch (seg.cmd) {
+      case 'M':
+      case 'L':
+        out += `${seg.cmd}${px(a[0]!)} ${py(a[1]!)}`;
+        break;
+      case 'C':
+        out += `C${px(a[0]!)} ${py(a[1]!)} ${px(a[2]!)} ${py(a[3]!)} ${px(a[4]!)} ${py(a[5]!)}`;
+        break;
+      case 'Q':
+        out += `Q${px(a[0]!)} ${py(a[1]!)} ${px(a[2]!)} ${py(a[3]!)}`;
+        break;
+      case 'A':
+        out += `A${n(a[0]! * k)} ${n(a[1]! * k)} ${n(a[2]!)} ${a[3]} ${a[4]} ${px(a[5]!)} ${py(a[6]!)}`;
+        break;
+      case 'Z':
+        out += 'Z';
+        break;
+    }
+  }
+  return out;
+}

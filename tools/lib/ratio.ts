@@ -44,12 +44,17 @@ export function measure(model: IconModel, size = 384): Ratio {
   return { base: share(base), main: share(main), accent: share(accent), coverage: Math.round((total / (size * size)) * 1000) / 10 };
 }
 
-/** Outside these bands a ratio is reported; the icon is still accepted. */
-export const BANDS = { base: [45, 75], main: [15, 40], accent: [4, 15] } as const;
+/**
+ * The rule is on the SET: its icons together aim at 60 % base, 30 % main and 10 % accent.
+ * One icon may lean one way (a bell is mostly `main`, a sheet mostly `base`), within these
+ * bounds: outside them it is reported, and the icon is still accepted.
+ */
+export const BANDS = { base: [15, 88], main: [8, 70], accent: [1, 20] } as const;
 /** Past this share of accent the icon is refused. */
 export const ACCENT_MAX = 20;
 /** The average of the whole set must stay this close to 60 / 30 / 10. */
 export const SET_TOLERANCE = 5;
+export const SET_TARGET = { base: 60, main: 30, accent: 10 } as const;
 
 export interface Verdict {
   warnings: string[];

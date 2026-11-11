@@ -69,7 +69,7 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 62, "cy": 56, "r": 3.2, "role": "main" }
+            { "kind": "circle", "cx": 62, "cy": 56, "r": 3.2, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -84,7 +84,7 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 69, "cy": 56, "r": 3.2, "role": "main" }
+            { "kind": "circle", "cx": 69, "cy": 56, "r": 3.2, "role": "accent" }
           ],
           "weight": "minor"
         }

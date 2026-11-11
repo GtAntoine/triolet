@@ -36,7 +36,7 @@
         {
           "kind": "path",
           "d": "M14 57A26 8 0 0 0 66 57",
-          "role": "main",
+          "role": "accent",
           "fill": false,
           "stroke": { "width": 3 }
         }

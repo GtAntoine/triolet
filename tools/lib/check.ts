@@ -22,10 +22,10 @@ export const LONGEST_GESTURE = 2000;
 export const OVERSHOOT = 8;
 
 /**
- * Icons of the original set whose colours are out of bounds, kept as they are until they are
- * redrawn: their colour errors are reported as warnings. Nothing new may be added here.
+ * Icons allowed to break the colour bounds until they are redrawn: their colour errors are
+ * reported as warnings. It is empty, and should stay so.
  */
-export const KNOWN_COLOUR_FAULTS: readonly string[] = ['forum', 'tag-off', 'neighbours', 'form-pencil', 'checklist', 'life-buoy'];
+export const KNOWN_COLOUR_FAULTS: readonly string[] = [];
 
 function eachLayer(nodes: Node[], visit: (layer: Extract<Node, { type: 'layer' }>, parts: string[]) => void, parts: string[] = []): void {
   for (const node of nodes) {
