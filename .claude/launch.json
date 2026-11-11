@@ -6,6 +6,12 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["tools/serve.ts", "spikes/web", "4173"],
       "port": 4173
+    },
+    {
+      "name": "expo-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "examples/expo", "run", "web", "--", "--port", "8088"],
+      "port": 8088
     }
   ]
 }

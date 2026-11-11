@@ -8,7 +8,7 @@
  */
 import { StatusBar } from 'expo-status-bar';
 import { useCallback, useRef, useState } from 'react';
-import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useFrameCallback, useSharedValue } from 'react-native-reanimated';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 // Reanimated 4 moved "run on the JS thread" to react-native-worklets.
@@ -30,6 +30,10 @@ const REFERENCE = {
   agenda: require('./assets/reference/agenda.png'),
   voter: require('./assets/reference/voter.png'),
 } as const;
+
+// A browser allows about sixteen WebGL contexts and each Skia canvas is one: the web preview,
+// which only exists to look at the renderer without a device, shows fewer icons.
+const WEB = Platform.OS === 'web';
 
 const PALETTES: { name: string; colors: ThemeInput; ink: string }[] = [
   { name: 'Original', colors: { base: '#F1F2F4', main: '#1D4A68', accent: '#EE4B3B', surface: '#FFFFFF' }, ink: '#1C2733' },
@@ -87,7 +91,7 @@ function TwoIcons({ colors, ink }: { colors: ThemeInput; ink: string }) {
         <Image source={REFERENCE.voter} style={{ width: 150, height: 150 }} />
       </View>
       <Text style={[styles.title, { color: ink }]}>Sizes: 96, 64, 48 (relief) · 32, 24 (compact) · 20, 16 (flat)</Text>
-      {[agenda, voter].map((icon) => (
+      {(WEB ? [agenda] : [agenda, voter]).map((icon) => (
         <View key={icon.name} style={[styles.row, { alignItems: 'flex-end', gap: 14 }]}>
           {[96, 64, 48, 32, 24, 20, 16].map((size) => (
             <View key={size}>
@@ -99,13 +103,13 @@ function TwoIcons({ colors, ink }: { colors: ThemeInput; ink: string }) {
       ))}
       <Text style={[styles.title, { color: ink }]}>Flat finish</Text>
       <View style={styles.row}>
-        {ICONS.map((icon) => (
+        {(WEB ? [agenda, voter] : ICONS).map((icon) => (
           <TrioletIcon key={icon.name} icon={icon} size={56} colors={colors} finish="flat" />
         ))}
       </View>
       <Text style={[styles.title, { color: ink }]}>All five</Text>
       <View style={styles.row}>
-        {ICONS.map((icon) => (
+        {(WEB ? ICONS.slice(1, 4) : ICONS).map((icon) => (
           <TrioletIcon key={icon.name} icon={icon} size={56} colors={colors} />
         ))}
       </View>
@@ -128,7 +132,7 @@ function Grid({ colors, ink }: { colors: ThemeInput; ink: string }) {
         {rate.average} fps average · {rate.worst} fps worst frame
       </Text>
       <View style={styles.grid}>
-        {Array.from({ length: 30 }, (_, i) => (
+        {Array.from({ length: WEB ? 10 : 30 }, (_, i) => (
           <TrioletIcon
             key={i}
             ref={(handle) => {

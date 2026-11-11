@@ -1,4 +1,2 @@
-import { registerRootComponent } from 'expo';
-import App from './App';
-
-registerRootComponent(App);
+// `./boot` is `boot.ts` on a device and `boot.web.ts` in a browser.
+import './boot';

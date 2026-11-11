@@ -3,12 +3,14 @@ import { test } from 'node:test';
 import {
   IconError,
   ORIGINAL_THEME,
+  baseCss,
   bezierAt,
   circle,
   compileIcon,
   deriveTheme,
   flattenPath,
   icon,
+  iconCss,
   inset,
   layerRelief,
   mix,
@@ -36,6 +38,7 @@ import {
   tierForSize,
   tracks,
   usedReliefs,
+  wave,
   type IconSource,
 } from '../src/index.ts';
 
@@ -118,6 +121,10 @@ test('colours given by hand win over derived ones, and a dark surface softens th
   const dark = deriveTheme({ surface: '#101820' });
   assert.equal(dark.gap, '#101820');
   assert.ok(parseColor(dark.light)[3] < 0.3, 'the light is faint on a dark surface');
+  // Roles swap tones in a night theme: a dark base is shaded like a dark fill, a light main like a light one.
+  const night = deriveTheme({ base: '#2B3644', main: '#9FC3E8', surface: '#141B24' });
+  assert.equal(night.insetShade, '#0000008C');
+  assert.equal(parseColor(night.insetLightDark)[3] > 0.9, true);
   assert.equal(deriveTheme().light, '#FFFFFF');
 });
 
@@ -254,4 +261,47 @@ test('a drawn line is marked for the draw track', () => {
   );
   assert.match(renderBody(model), /pathLength="1" class="tri-draw"/);
   assert.deepEqual(nodesBox(model.nodes), [10, 10, 60, 60]);
+});
+
+// --- Motion as CSS -------------------------------------------------------------------------
+
+test('a gesture compiles to pivots, animations and keyframes', () => {
+  const model = compileIcon(sample({ motion: { dot: pop({ duration: 450, delay: 300 }) } }));
+  const css = iconCss(model);
+  assert.match(css, /\.triolet-sample \.tri-dot \{ transform-origin: 40px 40px; --tri-a: tri-sample-dot 0\.45s cubic-bezier\(0\.16, 1, 0\.3, 1\) 0\.3s backwards; \}/);
+  assert.match(css, /@keyframes tri-sample-dot \{ from \{ scale: 1 1; \} 45% \{ scale: 1\.35 1\.35; \} to \{ scale: 1 1; \} \}/);
+});
+
+test('tracks with the same rhythm share keyframes, others get their own', () => {
+  const model = compileIcon(
+    sample({
+      motion: {
+        dot: tracks(
+          { duration: 900 },
+          { x: [[0.5, 3], [0.52, -2]], y: [[0.5, 15], [0.52, -6]], opacity: [[0.5, 1], [0.52, 0]], rotate: [[0.3, 20]] },
+        ),
+      },
+    }),
+  );
+  const css = iconCss(model);
+  assert.match(css, /@keyframes tri-sample-dot-1 \{ from \{ translate: 0px 0px; opacity: 1; \} 50% \{ translate: 3px 15px; opacity: 1; \} 52% \{ translate: -2px -6px; opacity: 0; \}/);
+  assert.match(css, /@keyframes tri-sample-dot-2 \{ from \{ rotate: 0deg; \} 30% \{ rotate: 20deg; \} to \{ rotate: 0deg; \} \}/);
+  assert.match(css, /--tri-a: tri-sample-dot-1 0\.9s [^;]+ backwards, tri-sample-dot-2 0\.9s/);
+});
+
+test('parts that move alike reuse one set of keyframes, and skew comes before scale', () => {
+  const twoDots = sample({
+    draw: [raised(rect(10, 10, 60, 60, 8, 'base')), part('a', plain(circle(30, 40, 4, 'accent'))), part('b', plain(circle(50, 40, 4, 'accent')))],
+    motion: stagger(['a', 'b'], pop(), 100),
+  });
+  const css = iconCss(compileIcon(twoDots));
+  assert.equal(css.match(/@keyframes/g)!.length, 1);
+  assert.match(css, /\.tri-b \{[^}]*--tri-a: tri-sample-a 0\.5s [^;]+ 0\.1s backwards/);
+  assert.match(iconCss(compileIcon(sample({ motion: { dot: wave() } }))), /25% \{ transform: skewY\(-9deg\) scale\(0\.92, 1\); \}/);
+});
+
+test('the base sheet plays gestures on hover, focus of a trigger and the play class, never under reduced motion', () => {
+  const css = baseCss();
+  assert.match(css, /@media \(prefers-reduced-motion: no-preference\) \{ :is\(\.triolet:not\(\[data-trigger\]\):hover, \.triolet\.triolet-play, \.triolet\[data-idle\], :is\(\.triolet-trigger:hover, \.triolet-trigger:focus-visible\) \.triolet:not\(\[data-trigger\]\)\) :is\(\.tri-m, \.tri-draw\) \{ animation: var\(--tri-a, none\); \} \}/);
+  assert.equal(css.match(/animation:/g)!.length, 1, 'the only animation rule is the guarded one');
 });

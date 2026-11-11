@@ -23,21 +23,18 @@
 @keyframes tri-alertes-waves-right { from { translate: -4px 0px; opacity: 0; } to { translate: 0px 0px; opacity: 1; } }
 
 .triolet-demarches .tri-line-1 { transform-origin: 30px 54.5px; --tri-a: tri-demarches-line-1 0.45s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
-.triolet-demarches .tri-line-2 { transform-origin: 30px 68.5px; --tri-a: tri-demarches-line-2 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.12s backwards; }
+.triolet-demarches .tri-line-2 { transform-origin: 30px 68.5px; --tri-a: tri-demarches-line-1 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.12s backwards; }
 @keyframes tri-demarches-line-1 { from { scale: 0.12 1; } to { scale: 1 1; } }
-@keyframes tri-demarches-line-2 { from { scale: 0.12 1; } to { scale: 1 1; } }
 
 .triolet-suivi .tri-check { transform-origin: 26.1px 26.3px; --tri-a: none; }
 .triolet-suivi .tri-check .tri-draw { --tri-a: tri-suivi-check-draw 0.45s cubic-bezier(0, 0, 0.58, 1) 0.1s backwards; }
 .triolet-suivi .tri-dot { transform-origin: 26px 48px; --tri-a: tri-suivi-dot 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards; }
 .triolet-suivi .tri-line-1 { transform-origin: 44px 26px; --tri-a: tri-suivi-line-1 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
-.triolet-suivi .tri-line-2 { transform-origin: 44px 48px; --tri-a: tri-suivi-line-2 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards; }
-.triolet-suivi .tri-line-3 { transform-origin: 44px 70px; --tri-a: tri-suivi-line-3 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards; }
+.triolet-suivi .tri-line-2 { transform-origin: 44px 48px; --tri-a: tri-suivi-line-1 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards; }
+.triolet-suivi .tri-line-3 { transform-origin: 44px 70px; --tri-a: tri-suivi-line-1 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards; }
 @keyframes tri-suivi-check-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes tri-suivi-dot { from { scale: 1 1; } 45% { scale: 1.35 1.35; } to { scale: 1 1; } }
 @keyframes tri-suivi-line-1 { from { scale: 0.12 1; } to { scale: 1 1; } }
-@keyframes tri-suivi-line-2 { from { scale: 0.12 1; } to { scale: 1 1; } }
-@keyframes tri-suivi-line-3 { from { scale: 0.12 1; } to { scale: 1 1; } }
 
 .triolet-voter .tri-ballot { transform-origin: 48.01px 30px; --tri-a: tri-voter-ballot 0.9s cubic-bezier(0.42, 0, 0.58, 1) backwards; }
 @keyframes tri-voter-ballot { from { translate: 0px 0px; opacity: 1; } 50% { translate: 3px 15px; opacity: 1; } 51% { translate: 3px 15px; opacity: 0; } 52% { translate: -2px -6px; opacity: 0; } to { translate: 0px 0px; opacity: 1; } }

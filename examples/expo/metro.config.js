@@ -7,8 +7,7 @@ const root = path.resolve(__dirname, '../..');
 const config = getDefaultConfig(__dirname);
 
 config.watchFolders = [path.join(root, 'model'), path.join(root, 'packages')];
-// Everything installed lives here: never pick a package from the workspace above.
+// The files watched above import nothing but each other; packages come from this folder.
 config.resolver.nodeModulesPaths = [path.join(__dirname, 'node_modules')];
-config.resolver.disableHierarchicalLookup = true;
 
 module.exports = config;

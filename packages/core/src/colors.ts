@@ -157,11 +157,17 @@ export function deriveTheme(input: ThemeInput = {}): Theme {
       (dark
         ? withAlpha('#000000', DARK_SURFACE.shade)
         : withAlpha(mix('#000000', mix(main, base, SHADE.main), SHADE.black), SHADE.alpha)),
-    insetLight: input.insetLight ?? withAlpha('#FFFFFF', 0.95),
+    // A recess is shaded for the fill it is cut in: a dark `base` takes the shading meant
+    // for dark fills, a light `main` the one meant for light fills.
+    insetLight: input.insetLight ?? withAlpha('#FFFFFF', isDark(base) ? 0.4 : 0.95),
     insetShade:
-      input.insetShade ?? withAlpha(mix('#000000', mix(main, base, INSET_SHADE.main), INSET_SHADE.black), INSET_SHADE.alpha),
-    insetLightDark: input.insetLightDark ?? withAlpha('#FFFFFF', 0.4),
-    insetShadeDark: input.insetShadeDark ?? withAlpha('#000000', 0.55),
+      input.insetShade ??
+      (isDark(base)
+        ? withAlpha('#000000', 0.55)
+        : withAlpha(mix('#000000', mix(main, base, INSET_SHADE.main), INSET_SHADE.black), INSET_SHADE.alpha)),
+    insetLightDark: input.insetLightDark ?? withAlpha('#FFFFFF', isDark(main) ? 0.4 : 0.95),
+    insetShadeDark:
+      input.insetShadeDark ?? (isDark(main) ? withAlpha('#000000', 0.55) : withAlpha(mix('#000000', main, 0.35), INSET_SHADE.alpha)),
   };
 }
 

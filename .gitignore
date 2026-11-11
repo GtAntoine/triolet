@@ -9,3 +9,4 @@ dist/
 !.env.example
 # Local renders and comparison sheets
 /out/
+*.stackdump

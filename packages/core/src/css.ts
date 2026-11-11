@@ -158,21 +158,29 @@ export function iconCss(model: IconModel): string {
   const root = `.triolet-${model.name}`;
   const rules: string[] = [];
   const frames: string[] = [];
+  // Parts that move alike (three lines written one after the other) share their keyframes.
+  const known = new Map<string, string>();
+  const define = (name: string, value: Frame[]): string => {
+    const body = keyframes('', value);
+    const existing = known.get(body);
+    if (existing) return existing;
+    known.set(body, name);
+    frames.push(keyframes(name, value));
+    return name;
+  };
   for (const motion of model.motion) {
     const part = `${root} .${partClass(motion.part)}`;
     const prefix = `tri-${model.name}-${motion.part}`;
     const groups = mergeFrames(channels(motion).map((c) => framesOf(motion, { props: c.props, declare: (v) => `${c.css}: ${c.value(v)};` })));
-    const names = groups.map((_, i) => (groups.length === 1 ? prefix : `${prefix}-${i + 1}`));
-    groups.forEach((g, i) => frames.push(keyframes(names[i]!, g)));
+    const names = groups.map((g, i) => define(groups.length === 1 ? prefix : `${prefix}-${i + 1}`, g));
     const decls = [`transform-origin: ${num(motion.pivot[0])}px ${num(motion.pivot[1])}px;`];
     if (names.length) decls.push(`--tri-a: ${names.map((n) => timing(motion, n)).join(', ')};`);
     // A part that is only drawn still owns `--tri-a`, so that it does not inherit one.
     else decls.push('--tri-a: none;');
     rules.push(`${part} { ${decls.join(' ')} }`);
     if (motion.tracks.draw) {
-      const name = `${prefix}-draw`;
       const drawn = framesOf(motion, { props: ['draw'], declare: (v) => `stroke-dashoffset: ${num(1 - v.draw)};` });
-      frames.push(keyframes(name, drawn));
+      const name = define(`${prefix}-draw`, drawn);
       rules.push(`${part} .${DRAW_CLASS} { --tri-a: ${timing(motion, name)}; }`);
     }
   }

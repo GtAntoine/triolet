@@ -66,26 +66,24 @@ export interface TrioletIconHandle {
 // --- Shapes --------------------------------------------------------------------------------
 
 function toPath(shape: Shape): SkPath {
-  let path: SkPath;
+  // Paths are immutable in Skia 2: they are assembled by a builder.
+  const builder = Skia.PathBuilder.Make();
   switch (shape.kind) {
     case 'rect': {
       const [rx, ry] = rectRadii(shape);
-      path = Skia.Path.Make();
-      path.addRRect(Skia.RRectXY(Skia.XYWHRect(shape.x, shape.y, shape.w, shape.h), rx, ry));
+      builder.addRRect(Skia.RRectXY(Skia.XYWHRect(shape.x, shape.y, shape.w, shape.h), rx, ry));
       break;
     }
     case 'circle':
-      path = Skia.Path.Make();
-      path.addCircle(shape.cx, shape.cy, shape.r);
+      builder.addCircle(shape.cx, shape.cy, shape.r);
       break;
     case 'ellipse':
-      path = Skia.Path.Make();
-      path.addOval(Skia.XYWHRect(shape.cx - shape.rx, shape.cy - shape.ry, shape.rx * 2, shape.ry * 2));
+      builder.addOval(Skia.XYWHRect(shape.cx - shape.rx, shape.cy - shape.ry, shape.rx * 2, shape.ry * 2));
       break;
     case 'path': {
       const parsed = Skia.Path.MakeFromSVGString(shape.d);
       if (!parsed) throw new Error(`Triolet: unreadable path data "${shape.d}"`);
-      path = parsed;
+      builder.addPath(parsed);
       break;
     }
   }
@@ -95,9 +93,9 @@ function toPath(shape: Shape): SkPath {
     matrix.translate(cx, cy);
     matrix.rotate(degrees * RAD);
     matrix.translate(-cx, -cy);
-    path.transform(matrix);
+    builder.transform(matrix);
   }
-  return path;
+  return builder.build();
 }
 
 interface ShapeViewProps {
@@ -216,9 +214,9 @@ function PartView({ name, scene, children }: { name: string; scene: Scene; child
 
 function ClipView({ clip, children }: { clip: Shape[]; children: ReactNode }) {
   const path = useMemo(() => {
-    const union = Skia.Path.Make();
+    const union = Skia.PathBuilder.Make();
     for (const shape of clip) union.addPath(toPath(shape));
-    return union;
+    return union.build();
   }, [clip]);
   return <Group clip={path}>{children}</Group>;
 }
