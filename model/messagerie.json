@@ -1,0 +1,145 @@
+{
+  "name": "messagerie",
+  "category": "communication",
+  "keywords": ["messages", "chat", "conversation", "reply", "typing", "inbox", "messagerie", "discussion"],
+  "aliases": [],
+  "gesture": "The three dots type, then the unread mark of the answer pops.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "reply",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M60 32H66A18 18 0 0 1 84 50V54A18 18 0 0 1 81 64L83 77L72 71A18 18 0 0 1 66 72H60A18 18 0 0 1 42 54V50A18 18 0 0 1 60 32Z",
+              "role": "base"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "unread",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 58, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M32 16H44A20 20 0 0 1 64 36V38A20 20 0 0 1 44 58H32A20 20 0 0 1 25 56.7L14 64L17 52A20 20 0 0 1 12 38V36A20 20 0 0 1 32 16Z",
+          "role": "main"
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "dot-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 28, "cy": 37, "r": 3.8, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 38, "cy": 37, "r": 3.8, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 37, "r": 3.8, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "reply": { "box": [42, 32, 42, 45] },
+    "unread": { "box": [66, 54, 8, 8] },
+    "dot-1": { "box": [24.2, 33.2, 7.6, 7.6] },
+    "dot-2": { "box": [34.2, 33.2, 7.6, 7.6] },
+    "dot-3": { "box": [44.2, 33.2, 7.6, 7.6] }
+  },
+  "motion": [
+    {
+      "part": "unread",
+      "pivot": [70, 58],
+      "duration": 450,
+      "delay": 350,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "dot-1",
+      "pivot": [28, 37],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    },
+    {
+      "part": "dot-2",
+      "pivot": [38, 37],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    },
+    {
+      "part": "dot-3",
+      "pivot": [48, 37],
+      "duration": 450,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

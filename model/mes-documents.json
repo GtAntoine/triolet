@@ -1,0 +1,78 @@
+{
+  "name": "mes-documents",
+  "category": "documents",
+  "keywords": ["folder", "documents", "files", "archive", "directory", "storage", "dossier", "fichiers"],
+  "aliases": [],
+  "gesture": "The sheet comes out of the folder and slides back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M14 32A6 6 0 0 1 20 26H35L41 32H72A6 6 0 0 1 78 38V76A6 6 0 0 1 72 82H20A6 6 0 0 1 14 76Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sheet",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M35 12H60L70 22V62H29V18A6 6 0 0 1 35 12Z", "role": "base" },
+            { "kind": "path", "d": "M60 12L70 22H63A3 3 0 0 1 60 19Z", "role": "accent" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 35, "y": 27, "w": 20, "h": 5, "r": 2.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 35, "y": 36, "w": 26, "h": 5, "r": 2.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M25 46H81A4 4 0 0 1 84.9 50.9L79 78A6 6 0 0 1 73 82H19A4 4 0 0 1 15.1 77.1L21 50A5 5 0 0 1 25 46Z",
+          "role": "mainLight"
+        }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "sheet": { "box": [29, 12, 41, 50] }
+  },
+  "motion": [
+    {
+      "part": "sheet",
+      "pivot": [49.5, 37],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

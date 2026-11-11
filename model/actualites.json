@@ -1,0 +1,171 @@
+{
+  "name": "actualites",
+  "category": "communication",
+  "keywords": ["news", "newspaper", "article", "press", "feed", "blog", "actualités", "journal"],
+  "aliases": [],
+  "gesture": "The sun rises in the picture and the lines write themselves.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 18, "w": 72, "h": 60, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 26, "w": 30, "h": 27, "r": 4, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "rect", "x": 20, "y": 26, "w": 30, "h": 27, "r": 4, "role": "main" }
+      ],
+      "children": [
+        {
+          "type": "part",
+          "name": "sun",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "plain",
+              "shapes": [
+                { "kind": "circle", "cx": 42, "cy": 33, "r": 4, "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        { "kind": "path", "d": "M21 52L31 40L37.5 46.5L42 42L49 52Z", "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 56, "y": 27, "w": 20, "h": 5.5, "r": 2.75, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 56, "y": 36.5, "w": 20, "h": 5.5, "r": 2.75, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 56, "y": 46, "w": 20, "h": 5.5, "r": 2.75, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 62, "w": 56, "h": 6, "r": 3, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sun": { "box": [38, 29, 8, 8] },
+    "line-1": { "box": [56, 27, 20, 5.5] },
+    "line-2": { "box": [56, 36.5, 20, 5.5] },
+    "line-3": { "box": [56, 46, 20, 5.5] },
+    "line-4": { "box": [20, 62, 56, 6] }
+  },
+  "motion": [
+    {
+      "part": "sun",
+      "pivot": [42, 33],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 11], [1, 0]] }
+    },
+    {
+      "part": "line-1",
+      "pivot": [56, 29.75],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [56, 39.25],
+      "duration": 400,
+      "delay": 70,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-3",
+      "pivot": [56, 48.75],
+      "duration": 400,
+      "delay": 140,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-4",
+      "pivot": [20, 65],
+      "duration": 400,
+      "delay": 210,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,107 @@
+{
+  "name": "agora",
+  "category": "communication",
+  "keywords": ["forum", "discussion", "community", "debate", "people", "chat", "agora", "débat"],
+  "aliases": [],
+  "gesture": "The two speech bubbles answer each other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 24, "cy": 57, "r": 6.5, "role": "soft" },
+        { "kind": "path", "d": "M12 85V81A12 12 0 0 1 36 81V85Z", "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 72, "cy": 57, "r": 6.5, "role": "soft" },
+        { "kind": "path", "d": "M60 85V81A12 12 0 0 1 84 81V85Z", "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 52, "r": 8.5, "role": "main" },
+        { "kind": "path", "d": "M31 86V81A17 17 0 0 1 65 81V86Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "bubble-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 10H42A8 8 0 0 1 50 18V26A8 8 0 0 1 42 34H30L22 40V33.6A8 8 0 0 1 14 26V18A8 8 0 0 1 22 10Z",
+              "role": "main"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bubble-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54 12H76A8 8 0 0 1 84 20V30A8 8 0 0 1 76 38H62L54 44V37.6A8 8 0 0 1 46 30V20A8 8 0 0 1 54 12Z",
+              "role": "accent"
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 57, "cy": 25, "r": 2.6, "role": "on" },
+            { "kind": "circle", "cx": 65, "cy": 25, "r": 2.6, "role": "on" },
+            { "kind": "circle", "cx": 73, "cy": 25, "r": 2.6, "role": "on" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bubble-1": { "box": [14, 10, 36, 30] },
+    "bubble-2": { "box": [46, 12, 38, 32] }
+  },
+  "motion": [
+    {
+      "part": "bubble-1",
+      "pivot": [32, 25],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, -4], [1, 0]] }
+    },
+    {
+      "part": "bubble-2",
+      "pivot": [65, 28],
+      "duration": 600,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

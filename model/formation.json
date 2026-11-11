@@ -1,0 +1,145 @@
+{
+  "name": "formation",
+  "category": "people",
+  "keywords": ["training", "presentation", "board", "easel", "course", "teach", "formation", "tableau"],
+  "aliases": [],
+  "gesture": "The board fills in line by line, then the point pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M30 60L21 87M66 60L75 87M48 62V82",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 14, "w": 76, "h": 52, "r": 8, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 40, "y": 8, "w": 16, "h": 9, "r": 4.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 25, "w": 30, "h": 6.5, "r": 3.25, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 36, "w": 40, "h": 6.5, "r": 3.25, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 47, "w": 22, "h": 6.5, "r": 3.25, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "point",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 71, "cy": 31, "r": 6.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line-1": { "box": [20, 25, 30, 6.5] },
+    "line-2": { "box": [20, 36, 40, 6.5] },
+    "line-3": { "box": [20, 47, 22, 6.5] },
+    "point": { "box": [64.5, 24.5, 13, 13] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [20, 28.25],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [20, 39.25],
+      "duration": 400,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-3",
+      "pivot": [20, 50.25],
+      "duration": 400,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "point",
+      "pivot": [71, 31],
+      "duration": 400,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

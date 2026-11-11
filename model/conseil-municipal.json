@@ -1,0 +1,106 @@
+{
+  "name": "conseil-municipal",
+  "category": "civic",
+  "keywords": ["town hall", "city hall", "council", "government", "institution", "building", "mairie", "conseil"],
+  "aliases": [],
+  "gesture": "The flag ripples on top of the town hall.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 43, "y": 7, "w": 3, "h": 20, "r": 1.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "flag",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M46 7H52V19H46Z", "role": "main" },
+            { "kind": "path", "d": "M52 7H58V19H52Z", "role": "base" },
+            { "kind": "path", "d": "M58 7H62A2 2 0 0 1 64 9V17A2 2 0 0 1 62 19H58Z", "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 19, "y": 40, "w": 58, "h": 38, "r": 3, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 27, "y": 47, "w": 8, "h": 24, "r": 12, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 44, "y": 47, "w": 8, "h": 24, "r": 12, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 61, "y": 47, "w": 8, "h": 24, "r": 12, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M15 40L48 24L81 40Z",
+          "role": "main",
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 13, "y": 76, "w": 70, "h": 9, "r": 4.5, "role": "main" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "flag": { "box": [46, 7, 18, 12] }
+  },
+  "motion": [
+    {
+      "part": "flag",
+      "pivot": [46, 13],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "skewY": [[0, 0], [0.25, -9], [0.6, 6], [1, 0]], "scaleX": [[0, 1], [0.25, 0.92], [0.6, 0.96], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -37,7 +37,9 @@ const shared = (m: IconModel, size: number) => renderSvg(m, { size, filters: 'sh
 
 const SIZES = [96, 64, 48, 40, 39, 32, 24, 23, 20, 16];
 
-const tierRows = icons
+// The tier rows and the trigger buttons are shown for the five icons the spike started with.
+const FIRST = ['agenda', 'voter', 'demarches', 'alertes', 'suivi'].map(get);
+const tierRows = FIRST
   .map((m) => {
     const row = (label: string, pick: (size: number) => Tier) =>
       `<div class="row"><span class="tag">${label}</span>${SIZES.map(
@@ -116,7 +118,7 @@ body.dark .ok { color: #58d68d; } body.dark .ko { color: #ff7a6b; }
   ${icons.map((m) => `<figure>${own(m, 112)}<figcaption>${m.name}</figcaption></figure>`).join('\n  ')}
 </div>
 <p style="margin-top:18px">
-  ${icons.map((m) => `<button type="button" class="triolet-trigger">${own(m, 40)}<span>${m.name}</span></button>`).join('\n  ')}
+  ${FIRST.map((m) => `<button type="button" class="triolet-trigger">${own(m, 40)}<span>${m.name}</span></button>`).join('\n  ')}
 </p>
 
 <h2>2. Colours set on a block: own filters and shared filters</h2>
@@ -147,7 +149,7 @@ ${tierRows}
 <h2>4. A grid of 30</h2>
 <p>Thirty live icons at 48 px with their own filters, for a feel of the cost of filters on a page.</p>
 <div class="grid" style="gap:16px">
-  ${Array.from({ length: 30 }, (_, i) => own(icons[i % icons.length]!, 48)).join('')}
+  ${icons.slice(0, 30).map((m) => own(m, 48)).join('')}
 </div>
 
 <h2>Results</h2>

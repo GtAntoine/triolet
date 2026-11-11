@@ -1,0 +1,114 @@
+{
+  "name": "veille",
+  "category": "data",
+  "keywords": ["watch", "monitor", "search", "magnifier", "review", "inspect", "veille", "loupe"],
+  "aliases": [],
+  "gesture": "The magnifier scans what is published and comes back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 12, "w": 58, "h": 64, "r": 8, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 22, "w": 36, "h": 5, "r": 2.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 31, "w": 26, "h": 5, "r": 2.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 40, "w": 32, "h": 5, "r": 2.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 49, "w": 20, "h": 5, "r": 2.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "magnifier",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 60, "cy": 58, "r": 13.5, "role": "soft" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 60,
+              "cy": 58,
+              "r": 15.5,
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M72.5 70.5L83 81",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 9 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "magnifier": { "box": [44.5, 42.5, 38.5, 38.5] }
+  },
+  "motion": [
+    {
+      "part": "magnifier",
+      "pivot": [63.75, 61.75],
+      "duration": 1100,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.35, -20], [0.65, -6], [1, 0]], "y": [[0, 0], [0.35, -22], [0.65, -12], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,120 @@
+{
+  "name": "perdu",
+  "category": "places",
+  "keywords": ["not found", "lost", "404", "missing", "question", "unknown", "perdu", "introuvable"],
+  "aliases": [],
+  "gesture": "The pin floats, looking for a place to land, and its shadow shrinks under it.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "ground",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "ellipse", "cx": 44, "cy": 89, "rx": 13, "ry": 3.5, "role": "soft" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "pin",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M44 84C38 76 20 58 20 39A24 24 0 0 1 68 39C68 58 50 76 44 84Z", "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 44, "cy": 39, "r": 9.5, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 21, "r": 16, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 21, "r": 13, "role": "accent" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M64.6 17.4A4.6 4.6 0 1 1 71.2 21.4C69.8 22.2 69 23 69 24.8",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 3.2 }
+            },
+            { "kind": "circle", "cx": 69, "cy": 29.6, "r": 2, "role": "on" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "ground": { "box": [31, 85.5, 26, 7] },
+    "pin": { "box": [20, 15, 48, 69] },
+    "badge": { "box": [53, 5, 32, 32] }
+  },
+  "motion": [
+    {
+      "part": "ground",
+      "pivot": [44, 89],
+      "duration": 3200,
+      "delay": 0,
+      "iterations": "infinite",
+      "ease": "inOut",
+      "tracks": { "scaleX": [[0, 1], [0.5, 0.8], [1, 1]], "opacity": [[0, 1], [0.5, 0.7], [1, 1]] }
+    },
+    {
+      "part": "pin",
+      "pivot": [44, 49.5],
+      "duration": 3200,
+      "delay": 0,
+      "iterations": "infinite",
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, -4], [1, 0]] }
+    },
+    {
+      "part": "badge",
+      "pivot": [69, 21],
+      "duration": 3200,
+      "delay": 250,
+      "iterations": "infinite",
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, -4], [1, 0]] }
+    }
+  ],
+  "idle": true
+}

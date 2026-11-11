@@ -1,0 +1,125 @@
+{
+  "name": "sauvegarde",
+  "category": "data",
+  "keywords": ["backup", "database", "night", "storage", "save", "copy", "sauvegarde", "base de données"],
+  "aliases": [],
+  "gesture": "The night passes: the moon tips and the star lights up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M14 26A26 8 0 0 1 66 26V70A26 8 0 0 1 14 70Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "ellipse", "cx": 40, "cy": 26, "rx": 26, "ry": 8, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M14 42A26 8 0 0 0 66 42",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 3 }
+        },
+        {
+          "kind": "path",
+          "d": "M14 57A26 8 0 0 0 66 57",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 68, "r": 19, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 68, "r": 16, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "part",
+          "name": "moon",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "plain",
+              "shapes": [
+                { "kind": "circle", "cx": 68, "cy": 69, "r": 8, "role": "on" },
+                { "kind": "circle", "cx": 72, "cy": 65.5, "r": 7, "role": "main" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        },
+        {
+          "type": "part",
+          "name": "star",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "plain",
+              "shapes": [
+                { "kind": "circle", "cx": 75.5, "cy": 75, "r": 1.8, "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "moon": { "box": [60, 58.5, 19, 18.5] },
+    "star": { "box": [73.7, 73.2, 3.6, 3.6] },
+    "badge": { "box": [50, 49, 38, 38] }
+  },
+  "motion": [
+    {
+      "part": "moon",
+      "pivot": [69.5, 67.75],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, -24], [1, 0]] }
+    },
+    {
+      "part": "star",
+      "pivot": [75.5, 75],
+      "duration": 400,
+      "delay": 350,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
