@@ -1,0 +1,139 @@
+{
+  "name": "tornado",
+  "category": "weather",
+  "keywords": ["tornado", "storm", "twister", "wind", "cyclone", "hurricane", "tornade", "tempête"],
+  "aliases": [],
+  "gesture": "The funnel sways, band after band.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "band-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 12, "r": 6, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "band-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 22, "y": 29, "w": 54, "h": 11, "r": 5.5, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "band-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 43, "w": 40, "h": 11, "r": 5.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "band-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 37, "y": 57, "w": 28, "h": 10, "r": 5, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "band-5",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 43, "y": 70, "w": 17, "h": 10, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "band-1": { "box": [14, 14, 68, 12] },
+    "band-2": { "box": [22, 29, 54, 11] },
+    "band-3": { "box": [30, 43, 40, 11] },
+    "band-4": { "box": [37, 57, 28, 10] },
+    "band-5": { "box": [43, 70, 17, 10] }
+  },
+  "motion": [
+    {
+      "part": "band-1",
+      "pivot": [48, 20],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 4], [1, 0]] }
+    },
+    {
+      "part": "band-2",
+      "pivot": [49, 34.5],
+      "duration": 800,
+      "delay": 60,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, -4], [1, 0]] }
+    },
+    {
+      "part": "band-3",
+      "pivot": [50, 48.5],
+      "duration": 800,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 4], [1, 0]] }
+    },
+    {
+      "part": "band-4",
+      "pivot": [51, 62],
+      "duration": 800,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, -4], [1, 0]] }
+    },
+    {
+      "part": "band-5",
+      "pivot": [51.5, 75],
+      "duration": 800,
+      "delay": 240,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

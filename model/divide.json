@@ -1,0 +1,81 @@
+{
+  "name": "divide",
+  "category": "interface",
+  "keywords": ["divide", "division", "math", "split", "calculate", "operator", "diviser", "calcul"],
+  "aliases": [],
+  "gesture": "The two dots pop on each side of the bar.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 43.5, "w": 40, "h": 9, "r": 4.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "dot-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 30, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 66, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "dot-1": { "box": [42, 24, 12, 12] },
+    "dot-2": { "box": [42, 60, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "dot-1",
+      "pivot": [48, 30],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "dot-2",
+      "pivot": [48, 66],
+      "duration": 400,
+      "delay": 140,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

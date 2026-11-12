@@ -1,0 +1,82 @@
+{
+  "name": "scooter",
+  "category": "places",
+  "keywords": ["scooter", "kick", "ride", "mobility", "urban", "transport", "trottinette", "mobilité"],
+  "aliases": [],
+  "gesture": "The scooter rolls forward and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "scooter",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M70 70L61 22",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 46, "y": 14, "w": 26, "h": 9, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 60, "w": 46, "h": 11, "r": 5.5, "role": "base" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 22, "cy": 74, "r": 10, "role": "main" },
+            { "kind": "circle", "cx": 72, "cy": 74, "r": 10, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 22, "cy": 74, "r": 4, "role": "base" },
+            { "kind": "circle", "cx": 72, "cy": 74, "r": 4, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "scooter": { "box": [12, 14, 70, 70] }
+  },
+  "motion": [
+    {
+      "part": "scooter",
+      "pivot": [47, 49],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

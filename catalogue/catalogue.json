@@ -598,8 +598,8 @@
   "name": "asterisk",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "backpack",
@@ -668,8 +668,8 @@
   "name": "chef-hat",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "chevron-left",
@@ -717,8 +717,8 @@
   "name": "copyright",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "crop",
@@ -745,8 +745,8 @@
   "name": "divide",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "download",
@@ -759,8 +759,8 @@
   "name": "drone",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "egg",
@@ -794,8 +794,8 @@
   "name": "gif",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "hand",
@@ -969,8 +969,8 @@
   "name": "scooter",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "server",
@@ -1039,8 +1039,8 @@
   "name": "sticker",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "sun",
@@ -1088,8 +1088,8 @@
   "name": "tornado",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "umbrella",
@@ -1137,8 +1137,8 @@
   "name": "airplay",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "alarm",
@@ -1151,8 +1151,8 @@
   "name": "album",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "align-center",
@@ -1179,15 +1179,15 @@
   "name": "angle",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "aperture",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "app-window",
@@ -1214,15 +1214,15 @@
   "name": "avocado",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "axe",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "badge",
@@ -1242,8 +1242,8 @@
   "name": "binary",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "binoculars",
@@ -1263,15 +1263,15 @@
   "name": "blender",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bone",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bookmarks",
@@ -1319,8 +1319,8 @@
   "name": "cards",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "carrot",
@@ -1361,8 +1361,8 @@
   "name": "chart-scatter",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "cheese",
@@ -1389,15 +1389,15 @@
   "name": "church",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "clover",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "coins",
@@ -1459,15 +1459,15 @@
   "name": "cylinder",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "desk",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "device-tablet",
@@ -1508,8 +1508,8 @@
   "name": "ear",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "eject",
@@ -1522,8 +1522,8 @@
   "name": "elevator",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "engine",
@@ -1536,8 +1536,8 @@
   "name": "equal",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "eraser",

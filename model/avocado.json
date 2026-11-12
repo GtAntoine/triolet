@@ -1,0 +1,64 @@
+{
+  "name": "avocado",
+  "category": "social",
+  "keywords": ["avocado", "fruit", "food", "healthy", "vegan", "guacamole", "avocat", "noyau"],
+  "aliases": [],
+  "gesture": "The stone of the avocado pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 12C58 12 62 24 64 36C68 44 74 52 74 62A26 24 0 0 1 22 62C22 52 28 44 32 36C34 24 38 12 48 12Z",
+          "role": "main"
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 20C56 20 59.2 29.6 60.8 39.2C64 45.6 68.8 52 68.8 60A20.8 19.2 0 0 1 27.2 60C27.2 52 32 45.6 35.2 39.2C36.8 29.6 40 20 48 20Z",
+          "role": "base"
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "stone",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 60, "r": 11, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "stone": { "box": [37, 49, 22, 22] }
+  },
+  "motion": [
+    {
+      "part": "stone",
+      "pivot": [48, 60],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,111 @@
+{
+  "name": "aperture",
+  "category": "media",
+  "keywords": ["aperture", "camera", "lens", "shutter", "photo", "focus", "diaphragme", "objectif"],
+  "aliases": [],
+  "gesture": "The blades turn by one notch: the aperture closes and opens.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "blades",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48.0 29.0L64.5 38.5L64.5 57.5L48.0 67.0L31.5 57.5L31.5 38.5Z",
+              "role": "base",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48.0 29.0L72.4 28.9",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M64.5 38.5L76.7 59.6",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M64.5 57.5L52.3 78.7",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M48.0 67.0L23.6 67.1",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M31.5 57.5L19.3 36.4",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M31.5 38.5L43.7 17.3",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 7, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "blades": { "box": [19.3, 17.3, 57.4, 61.4] }
+  },
+  "motion": [
+    {
+      "part": "blades",
+      "pivot": [48, 48],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, -60], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

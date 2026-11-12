@@ -1,0 +1,61 @@
+{
+  "name": "cards",
+  "category": "social",
+  "keywords": ["cards", "playing", "game", "poker", "deck", "casino", "cartes", "jeu"],
+  "aliases": [],
+  "gesture": "The card in front fans out, then comes back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 18, "w": 40, "h": 56, "r": 8, "role": "main", "rotate": [-12, 40, 46] }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "front",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 22, "w": 40, "h": 56, "r": 8, "role": "base", "rotate": [9, 56, 50] }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M56 37L66 50L56 63L46 50Z",
+              "role": "accent",
+              "stroke": { "width": 2 },
+              "rotate": [9, 56, 50]
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "front": { "box": [33.03, 20.38, 45.95, 59.25] }
+  },
+  "motion": [
+    {
+      "part": "front",
+      "pivot": [50, 80],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, 10], [0.75, -3], [0.9, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

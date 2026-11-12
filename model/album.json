@@ -1,0 +1,73 @@
+{
+  "name": "album",
+  "category": "media",
+  "keywords": ["album", "record", "music", "vinyl", "sleeve", "cover", "pochette", "disque"],
+  "aliases": [],
+  "gesture": "The record slides out of its sleeve, then back in.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "record",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 58, "cy": 48, "r": 26, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 58, "cy": 48, "r": 8, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 20, "w": 54, "h": 56, "r": 9, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 39, "cy": 48, "r": 15, "role": "mid" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 39, "cy": 48, "r": 6, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "record": { "box": [32, 22, 52, 52] }
+  },
+  "motion": [
+    {
+      "part": "record",
+      "pivot": [58, 48],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

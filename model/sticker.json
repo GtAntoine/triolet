@@ -1,0 +1,71 @@
+{
+  "name": "sticker",
+  "category": "social",
+  "keywords": ["sticker", "label", "emoji", "peel", "decal", "smile", "autocollant", "étiquette"],
+  "aliases": [],
+  "gesture": "The corner of the sticker peels a little.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M27 16H69A11 11 0 0 1 80 27V56L56 80H27A11 11 0 0 1 16 69V27A11 11 0 0 1 27 16Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 36, "cy": 40, "r": 4.5, "role": "main" },
+        { "kind": "circle", "cx": 58, "cy": 40, "r": 4.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M36 53C42 60 52 60 58 53",
+          "role": "accent",
+          "fill": false,
+          "stroke": { "width": 5.5 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "corner",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M80 56L56 80V67A11 11 0 0 1 67 56Z", "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "corner": { "box": [56, 56, 24, 24] }
+  },
+  "motion": [
+    {
+      "part": "corner",
+      "pivot": [68, 68],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, -4], [1, 0]], "y": [[0, 0], [0.5, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

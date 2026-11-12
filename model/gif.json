@@ -1,0 +1,112 @@
+{
+  "name": "gif",
+  "category": "media",
+  "keywords": ["gif", "animation", "image", "loop", "meme", "animated", "boucle", "image animée"],
+  "aliases": [],
+  "gesture": "The three letters pop one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 24, "w": 72, "h": 48, "r": 12, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "g",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M38 41A8.5 8.5 0 1 0 39 54V49H33",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "i",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M49 38V58",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "f",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M59 58V38H69M59 48H66",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "g": { "box": [24.56, 39.43, 14.44, 16.99] },
+    "i": { "box": [49, 38, 0, 20] },
+    "f": { "box": [59, 38, 10, 20] }
+  },
+  "motion": [
+    {
+      "part": "g",
+      "pivot": [31.78, 47.93],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    },
+    {
+      "part": "i",
+      "pivot": [49, 48],
+      "duration": 380,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    },
+    {
+      "part": "f",
+      "pivot": [64, 48],
+      "duration": 380,
+      "delay": 240,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

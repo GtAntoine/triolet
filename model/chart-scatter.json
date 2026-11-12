@@ -1,0 +1,137 @@
+{
+  "name": "chart-scatter",
+  "category": "data",
+  "keywords": ["chart", "scatter", "plot", "points", "data", "statistics", "nuage de points", "graphique"],
+  "aliases": [],
+  "gesture": "The points appear one after the other; the last one is the odd one out.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 14, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M28 26V68H70",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "point-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 40, "cy": 56, "r": 5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "point-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 49, "cy": 44, "r": 5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "point-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 60, "cy": 50, "r": 5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "point-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 64, "cy": 31, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "point-1": { "box": [35, 51, 10, 10] },
+    "point-2": { "box": [44, 39, 10, 10] },
+    "point-3": { "box": [55, 45, 10, 10] },
+    "point-4": { "box": [58, 25, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "point-1",
+      "pivot": [40, 56],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "point-2",
+      "pivot": [49, 44],
+      "duration": 380,
+      "delay": 110,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "point-3",
+      "pivot": [60, 50],
+      "duration": 380,
+      "delay": 220,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "point-4",
+      "pivot": [64, 31],
+      "duration": 380,
+      "delay": 330,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

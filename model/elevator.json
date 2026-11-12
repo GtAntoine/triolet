@@ -1,0 +1,90 @@
+{
+  "name": "elevator",
+  "category": "places",
+  "keywords": ["elevator", "lift", "floor", "building", "access", "doors", "ascenseur", "étage"],
+  "aliases": [],
+  "gesture": "The two doors open, then close.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 12, "w": 60, "h": 72, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 38, "y": 19, "w": 20, "h": 6, "r": 3, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 32, "w": 44, "h": 44, "r": 3, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "door-left",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 26, "y": 32, "w": 21, "h": 44, "r": 3, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "door-right",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 49, "y": 32, "w": 21, "h": 44, "r": 3, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "door-left": { "box": [26, 32, 21, 44] },
+    "door-right": { "box": [49, 32, 21, 44] }
+  },
+  "motion": [
+    {
+      "part": "door-left",
+      "pivot": [26, 54],
+      "duration": 1000,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleX": [[0, 1], [0.3, 0.25], [0.65, 0.25], [1, 1]] }
+    },
+    {
+      "part": "door-right",
+      "pivot": [70, 54],
+      "duration": 1000,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleX": [[0, 1], [0.3, 0.25], [0.65, 0.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

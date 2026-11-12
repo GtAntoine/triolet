@@ -1,0 +1,73 @@
+{
+  "name": "desk",
+  "category": "work",
+  "keywords": ["desk", "office", "table", "workspace", "furniture", "drawer", "bureau", "meuble"],
+  "aliases": [],
+  "gesture": "The handle of the top drawer pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 34, "w": 9, "h": 40, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 48, "y": 32, "w": 34, "h": 42, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "handle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 58, "y": 40, "w": 14, "h": 6, "r": 3, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 58, "y": 57, "w": 14, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 22, "w": 76, "h": 12, "r": 6, "role": "main" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "handle": { "box": [58, 40, 14, 6] }
+  },
+  "motion": [
+    {
+      "part": "handle",
+      "pivot": [65, 43],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

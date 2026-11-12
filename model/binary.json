@@ -1,0 +1,142 @@
+{
+  "name": "binary",
+  "category": "development",
+  "keywords": ["binary", "code", "bits", "data", "digital", "zero", "binaire", "données"],
+  "aliases": [],
+  "gesture": "The four digits flicker one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 14, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "digit-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M35 28V44M31 31L35 28",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "digit-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M52 33A5.5 5.5 0 0 1 63 33V39A5.5 5.5 0 0 1 52 39Z",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "digit-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M30 57A5.5 5.5 0 0 1 41 57V63A5.5 5.5 0 0 1 30 63Z",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "digit-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M58 52V68M54 55L58 52",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "digit-1": { "box": [31, 28, 4, 16] },
+    "digit-2": { "box": [52, 27.5, 11, 17] },
+    "digit-3": { "box": [30, 51.5, 11, 17] },
+    "digit-4": { "box": [54, 52, 4, 16] }
+  },
+  "motion": [
+    {
+      "part": "digit-1",
+      "pivot": [33, 36],
+      "duration": 350,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    },
+    {
+      "part": "digit-2",
+      "pivot": [57.5, 36],
+      "duration": 350,
+      "delay": 110,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    },
+    {
+      "part": "digit-3",
+      "pivot": [35.5, 60],
+      "duration": 350,
+      "delay": 220,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    },
+    {
+      "part": "digit-4",
+      "pivot": [56, 60],
+      "duration": 350,
+      "delay": 330,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

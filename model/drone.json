@@ -1,0 +1,203 @@
+{
+  "name": "drone",
+  "category": "devices",
+  "keywords": ["drone", "quadcopter", "fly", "aerial", "camera", "uav", "quadricoptère", "aérien"],
+  "aliases": [],
+  "gesture": "The four rotors spin.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M40 42L24 26",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        },
+        {
+          "kind": "path",
+          "d": "M56 42L72 26",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        },
+        {
+          "kind": "path",
+          "d": "M40 54L24 70",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        },
+        {
+          "kind": "path",
+          "d": "M56 54L72 70",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "rotor-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 23, "cy": 25, "r": 13, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 13, "y": 22.5, "w": 20, "h": 5, "r": 2.5, "role": "main", "rotate": [35, 23, 25] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "rotor-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 73, "cy": 25, "r": 13, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 63, "y": 22.5, "w": 20, "h": 5, "r": 2.5, "role": "main", "rotate": [35, 73, 25] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "rotor-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 23, "cy": 71, "r": 13, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 13, "y": 68.5, "w": 20, "h": 5, "r": 2.5, "role": "main", "rotate": [35, 23, 71] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "rotor-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 73, "cy": 71, "r": 13, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 63, "y": 68.5, "w": 20, "h": 5, "r": 2.5, "role": "main", "rotate": [35, 73, 71] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 33, "y": 34, "w": 30, "h": 28, "r": 9, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 6, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "rotor-1": { "box": [10, 12, 26, 26] },
+    "rotor-2": { "box": [60, 12, 26, 26] },
+    "rotor-3": { "box": [10, 58, 26, 26] },
+    "rotor-4": { "box": [60, 58, 26, 26] }
+  },
+  "motion": [
+    {
+      "part": "rotor-1",
+      "pivot": [23, 25],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 720]] }
+    },
+    {
+      "part": "rotor-2",
+      "pivot": [73, 25],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 720]] }
+    },
+    {
+      "part": "rotor-3",
+      "pivot": [23, 71],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 720]] }
+    },
+    {
+      "part": "rotor-4",
+      "pivot": [73, 71],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 720]] }
+    }
+  ],
+  "idle": false
+}

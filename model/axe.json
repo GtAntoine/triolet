@@ -1,0 +1,73 @@
+{
+  "name": "axe",
+  "category": "work",
+  "keywords": ["axe", "chop", "wood", "tool", "lumber", "cut", "hache", "bûcheron"],
+  "aliases": [],
+  "gesture": "The axe is raised, then strikes.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "axe",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M19 80L55 28",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M43 24L61 12C75 18 82 32 78 48L57 44Z",
+              "role": "base",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M64 13C76 20 81 33 78 46",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "axe": { "box": [19, 12, 60.1, 68] }
+  },
+  "motion": [
+    {
+      "part": "axe",
+      "pivot": [19, 80],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.35, -16], [0.65, 8], [0.85, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

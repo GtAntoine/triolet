@@ -4,6 +4,12 @@ The three packages (`triolet`, `triolet-react`, `triolet-react-native`) are rele
 and share a version number. Versions follow [semantic versioning](https://semver.org/); while
 the major is 0, a minor version may still change the API.
 
+## Unreleased
+
+- 27 more icons (234): church, chef-hat, drone, scooter, tornado, sticker, axe, bone, cylinder,
+  airplay, album, aperture, chart-scatter, desk, ear, elevator, equal, divide, asterisk,
+  copyright, gif, angle, cards, clover, blender, avocado, binary.
+
 ## 0.1.0
 
 First release.

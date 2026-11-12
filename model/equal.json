@@ -1,0 +1,72 @@
+{
+  "name": "equal",
+  "category": "interface",
+  "keywords": ["equal", "equals", "math", "same", "result", "calculate", "égal", "calcul"],
+  "aliases": [],
+  "gesture": "The two bars draw themselves, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "bar-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 29, "y": 35, "w": 38, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 29, "y": 52, "w": 38, "h": 9, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar-1": { "box": [29, 35, 38, 9] },
+    "bar-2": { "box": [29, 52, 38, 9] }
+  },
+  "motion": [
+    {
+      "part": "bar-1",
+      "pivot": [29, 39.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "bar-2",
+      "pivot": [29, 56.5],
+      "duration": 400,
+      "delay": 140,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

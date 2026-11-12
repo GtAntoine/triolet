@@ -1,0 +1,69 @@
+{
+  "name": "copyright",
+  "category": "documents",
+  "keywords": ["copyright", "rights", "legal", "license", "author", "intellectual", "droits", "auteur"],
+  "aliases": [],
+  "gesture": "The C writes itself in its circle.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 25,
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "letter",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M56.5 41A11 11 0 1 0 56.5 55",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "letter": { "box": [37.01, 37.01, 19.49, 21.98] }
+  },
+  "motion": [
+    {
+      "part": "letter",
+      "pivot": [46.76, 48],
+      "duration": 550,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

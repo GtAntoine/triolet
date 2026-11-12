@@ -1,0 +1,59 @@
+{
+  "name": "chef-hat",
+  "category": "social",
+  "keywords": ["chef", "hat", "cook", "kitchen", "recipe", "restaurant", "toque", "cuisine"],
+  "aliases": [],
+  "gesture": "The top of the hat puffs up.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "top",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 30, "cy": 36, "r": 17, "role": "base" },
+            { "kind": "circle", "cx": 48, "cy": 28, "r": 19, "role": "base" },
+            { "kind": "circle", "cx": 66, "cy": 36, "r": 17, "role": "base" },
+            { "kind": "rect", "x": 27, "y": 36, "w": 42, "h": 30, "r": 4, "role": "base" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 25, "y": 62, "w": 46, "h": 18, "r": 6, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 41, "y": 68, "w": 14, "h": 6, "r": 3, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "top": { "box": [13, 9, 70, 57] }
+  },
+  "motion": [
+    {
+      "part": "top",
+      "pivot": [48, 66],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.08], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,76 @@
+{
+  "name": "asterisk",
+  "category": "interface",
+  "keywords": ["asterisk", "star", "required", "wildcard", "note", "footnote", "astérisque", "obligatoire"],
+  "aliases": [],
+  "gesture": "The asterisk turns by one branch.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "star",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 27V69",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M29.8 37.5L66.2 58.5",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M29.8 58.5L66.2 37.5",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "star": { "box": [29.8, 27, 36.4, 42] }
+  },
+  "motion": [
+    {
+      "part": "star",
+      "pivot": [48, 48],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, -60], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,61 @@
+{
+  "name": "cylinder",
+  "category": "design",
+  "keywords": ["cylinder", "shape", "volume", "tank", "storage", "geometry", "cylindre", "forme"],
+  "aliases": [],
+  "gesture": "The top of the cylinder lifts and settles.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M20 30V68A28 12 0 0 0 76 68V30Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M24 54A24 9 0 0 0 72 54",
+          "role": "accent",
+          "fill": false,
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "top",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "ellipse", "cx": 48, "cy": 28, "rx": 28, "ry": 12, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "top": { "box": [20, 16, 56, 24] }
+  },
+  "motion": [
+    {
+      "part": "top",
+      "pivot": [48, 28],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

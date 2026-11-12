@@ -1,0 +1,64 @@
+{
+  "name": "bone",
+  "category": "social",
+  "keywords": ["bone", "dog", "pet", "treat", "food", "bowl", "os", "gamelle"],
+  "aliases": [],
+  "gesture": "The bone bounces above the bowl.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "bone",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 28, "y": 28, "w": 40, "h": 12, "r": 6, "role": "base", "rotate": [-18, 48, 34] },
+            { "kind": "circle", "cx": 28, "cy": 28, "r": 8, "role": "base", "rotate": [-18, 48, 34] },
+            { "kind": "circle", "cx": 28, "cy": 40, "r": 8, "role": "base", "rotate": [-18, 48, 34] },
+            { "kind": "circle", "cx": 68, "cy": 28, "r": 8, "role": "base", "rotate": [-18, 48, 34] },
+            { "kind": "circle", "cx": 68, "cy": 40, "r": 8, "role": "base", "rotate": [-18, 48, 34] }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M16 56H80L74 78A6 6 0 0 1 68 82H28A6 6 0 0 1 22 78Z",
+          "role": "main",
+          "stroke": { "width": 2 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 33, "y": 65, "w": 30, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "bone": { "box": [19.13, 14.12, 57.74, 39.76] }
+  },
+  "motion": [
+    {
+      "part": "bone",
+      "pivot": [48, 34],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -7], [0.55, 0], [0.75, -2.1875], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

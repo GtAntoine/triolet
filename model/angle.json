@@ -1,0 +1,67 @@
+{
+  "name": "angle",
+  "category": "design",
+  "keywords": ["angle", "degree", "geometry", "measure", "corner", "math", "degré", "géométrie"],
+  "aliases": [],
+  "gesture": "The arc of the angle draws itself.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 14, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M70 66H28L58 28",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arc",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M52 66A24 24 0 0 0 42.9 47.2",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arc": { "box": [42.9, 47.2, 9.1, 18.8] }
+  },
+  "motion": [
+    {
+      "part": "arc",
+      "pivot": [47.45, 56.6],
+      "duration": 500,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

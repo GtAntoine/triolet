@@ -1,0 +1,80 @@
+{
+  "name": "blender",
+  "category": "social",
+  "keywords": ["blender", "mixer", "kitchen", "smoothie", "juice", "cook", "mixeur", "cuisine"],
+  "aliases": [],
+  "gesture": "The jar shakes as it blends.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "jar",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 8, "w": 36, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M28 16H68L63 58H33Z",
+              "role": "base",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "path", "d": "M33 40H63L61.5 54H34.5Z", "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 60, "w": 48, "h": 24, "r": 8, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 72, "r": 5, "role": "base" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "jar": { "box": [28, 8, 40, 50] }
+  },
+  "motion": [
+    {
+      "part": "jar",
+      "pivot": [48, 58],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": {
+        "rotate": [[0, 0], [0.16666666666666666, 3], [0.3333333333333333, -3], [0.5, 3], [0.6666666666666666, -3], [0.8333333333333334, 2], [1, 0]]
+      }
+    }
+  ],
+  "idle": false
+}

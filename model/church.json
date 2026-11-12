@@ -1,0 +1,89 @@
+{
+  "name": "church",
+  "category": "places",
+  "keywords": ["church", "chapel", "religion", "worship", "wedding", "faith", "église", "chapelle"],
+  "aliases": [],
+  "gesture": "The cross shines twice.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "cross",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 12V32",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M41 19H55",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M22 54L48 34L74 54V78A6 6 0 0 1 68 84H28A6 6 0 0 1 22 78Z",
+          "role": "base",
+          "stroke": { "width": 2 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "path", "d": "M40 84V68A8 8 0 0 1 56 68V84Z", "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M19 55L48 33L77 55",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "cross": { "box": [41, 12, 14, 20] }
+  },
+  "motion": [
+    {
+      "part": "cross",
+      "pivot": [48, 22],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
