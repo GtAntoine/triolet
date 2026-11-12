@@ -59,15 +59,31 @@ try {
   check(playing > 0, `a hovered tile plays its gesture (${playing} animations)`);
   await page.mouse.move(0, 0);
   const before = await page.evaluate(() => getComputedStyle(document.querySelector('.tile svg [fill*="--tri-main"]')!).fill);
+  check(!(await page.locator('.preset >> text=Forest').isVisible()), 'the colours are folded away until asked for');
+  await page.click('.colours summary');
   await page.click('.preset >> text=Forest');
   const after = await page.evaluate(() => getComputedStyle(document.querySelector('.tile svg [fill*="--tri-main"]')!).fill);
   check(before !== after, `the Forest palette recolours the icons (${before} to ${after})`);
   await page.reload();
   const kept = await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue('--triolet-main').trim());
   check(kept.toLowerCase() === '#1f5a3d', `the palette is remembered after a reload (${kept})`);
+  await page.click('.colours summary');
   await page.click('.preset >> text=Night');
   await page.screenshot({ path: join(out, 'icons-night.png') });
   check((await page.evaluate(() => document.documentElement.dataset.surface)) === 'dark', 'the Night palette switches the page to a dark surface');
+  // The play button of an icon page starts the gesture again every time, hovered or not.
+  await page.goto(`${origin}/icons/bell-ring/`);
+  await page.evaluate(() => {
+    const svg = document.querySelector('.shown')!;
+    (window as any).__starts = 0;
+    svg.addEventListener('animationstart', () => (window as any).__starts++);
+  });
+  for (let i = 0; i < 3; i++) {
+    await page.click('[data-play]');
+    await page.waitForTimeout(2200);
+  }
+  const starts = await page.evaluate(() => (window as any).__starts as number);
+  check(starts >= 6, `the play button restarts the gesture on every press (${starts} animation starts in 3 presses)`);
   check(errors.length === 0, `no error in the console${errors.length ? `: ${errors.slice(0, 3).join(' | ')}` : ''}`);
 } finally {
   await browser.close();

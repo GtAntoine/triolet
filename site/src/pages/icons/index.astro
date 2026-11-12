@@ -18,8 +18,14 @@ import { categories, icons, svg, url } from '../../lib/icons';
       <div class="chips" role="group" aria-label="Categories">
         {categories.map((category) => <button type="button" class="chip" data-category={category} aria-pressed="false">{category}</button>)}
       </div>
-      <Palette />
     </div>
+    <details class="colours">
+      <summary>
+        <i aria-hidden="true"><b style="background:var(--triolet-base)"></b><b style="background:var(--triolet-main)"></b><b style="background:var(--triolet-accent)"></b></i>
+        Colours
+      </summary>
+      <Palette />
+    </details>
     <div class="grid">
       {
         icons.map((icon) => (

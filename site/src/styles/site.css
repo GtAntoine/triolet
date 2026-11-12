@@ -494,10 +494,18 @@ td code {
 }
 .chips {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.35rem;
+  /* One row that scrolls sideways: twenty categories must not fill a phone screen. */
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-inline: calc(1.25rem * -1);
+  padding-inline: 1.25rem;
+}
+.chips::-webkit-scrollbar {
+  display: none;
 }
 .chip {
+  flex: none;
   font: 550 0.85rem var(--font);
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
@@ -510,6 +518,49 @@ td code {
   background: var(--triolet-main);
   border-color: var(--triolet-main);
   color: var(--triolet-surface);
+}
+.colours {
+  margin-top: 0.3rem;
+}
+/* play() sets this for one frame so that every animation starts again from its first keyframe,
+   even when a hover keeps the icon "playing" already. */
+.triolet.triolet-rewind * {
+  animation: none !important;
+}
+.colours summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.3rem 0;
+  list-style: none;
+}
+.colours summary::-webkit-details-marker {
+  display: none;
+}
+.colours summary::after {
+  content: '▾';
+  color: var(--muted);
+}
+.colours[open] summary::after {
+  content: '▴';
+}
+.colours summary i {
+  display: inline-flex;
+}
+.colours summary b {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--line);
+}
+.colours summary b + b {
+  margin-left: -0.25rem;
+}
+.colours .palette {
+  padding: 0.6rem 0 0.4rem;
 }
 .grid {
   display: grid;

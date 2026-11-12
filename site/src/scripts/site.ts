@@ -56,8 +56,12 @@ sync(current());
 const calm = matchMedia('(prefers-reduced-motion: reduce)');
 
 async function play(svg: Element): Promise<void> {
+  // Hover (or a tap that leaves the pointer "hovering") already runs the animation: stopping it
+  // for one frame is what makes a second press start it again.
   svg.classList.remove('triolet-play');
+  svg.classList.add('triolet-rewind');
   void svg.getBoundingClientRect();
+  svg.classList.remove('triolet-rewind');
   svg.classList.add('triolet-play');
   await Promise.allSettled(svg.getAnimations({ subtree: true }).map((a) => a.finished));
   svg.classList.remove('triolet-play');
