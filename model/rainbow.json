@@ -1,0 +1,127 @@
+{
+  "name": "rainbow",
+  "category": "weather",
+  "keywords": ["rainbow", "colors", "weather", "pride", "sky", "hope", "arc-en-ciel", "couleurs"],
+  "aliases": [],
+  "gesture": "The three arcs draw themselves, from the outside in.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "arc-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M18.56 57.56A29.44 29.44 0 0 1 77.44 57.56",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8.28 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "arc-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M28.68 57.56A19.32 19.32 0 0 1 67.32 57.56",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 8.28 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "arc-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M38.8 57.56A9.2 9.2 0 0 1 57.2 57.56",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 8.28 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 16.72, "cy": 61.24, "r": 8.28, "role": "base" },
+        { "kind": "circle", "cx": 27.76, "cy": 63.08, "r": 7.36, "role": "base" },
+        { "kind": "circle", "cx": 22.24, "cy": 55.72, "r": 6.44, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 79.28, "cy": 61.24, "r": 8.28, "role": "base" },
+        { "kind": "circle", "cx": 68.24, "cy": 63.08, "r": 7.36, "role": "base" },
+        { "kind": "circle", "cx": 73.76, "cy": 55.72, "r": 6.44, "role": "base" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "arc-1": { "box": [18.56, 28.12, 58.88, 29.44] },
+    "arc-2": { "box": [28.68, 38.24, 38.64, 19.32] },
+    "arc-3": { "box": [38.8, 48.36, 18.4, 9.2] }
+  },
+  "motion": [
+    {
+      "part": "arc-1",
+      "pivot": [48, 42.84],
+      "duration": 500,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "arc-2",
+      "pivot": [48, 47.9],
+      "duration": 500,
+      "delay": 230,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "arc-3",
+      "pivot": [48, 52.96],
+      "duration": 500,
+      "delay": 360,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

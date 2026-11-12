@@ -1,0 +1,136 @@
+{
+  "name": "router",
+  "category": "devices",
+  "keywords": ["router", "wifi", "network", "internet", "modem", "box", "routeur", "réseau"],
+  "aliases": [],
+  "gesture": "The signal leaves the router, wave after wave.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M24 52V32",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        },
+        {
+          "kind": "path",
+          "d": "M72 52V32",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 76, "w": 12, "h": 7, "r": 3.5, "role": "main" },
+        { "kind": "rect", "x": 64, "y": 76, "w": 12, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 50, "w": 76, "h": 28, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 25, "cy": 64, "r": 4.5, "role": "main" },
+        { "kind": "circle", "cx": 38, "cy": 64, "r": 4.5, "role": "main" },
+        { "kind": "rect", "x": 52, "y": 60.5, "w": 24, "h": 7, "r": 3.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 40, "r": 4.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "wave-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M39 31A12 12 0 0 1 57 31",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "wave-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M32 22A22 22 0 0 1 64 22",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "wave-1": { "box": [39, 26.94, 18, 4.06] },
+    "wave-2": { "box": [32, 15.1, 32, 6.9] }
+  },
+  "motion": [
+    {
+      "part": "wave-1",
+      "pivot": [48, 28.97],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.1], [1, 1]] }
+    },
+    {
+      "part": "wave-2",
+      "pivot": [48, 18.55],
+      "duration": 500,
+      "delay": 160,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

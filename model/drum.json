@@ -1,0 +1,107 @@
+{
+  "name": "drum",
+  "category": "media",
+  "keywords": ["drum", "music", "percussion", "beat", "rhythm", "band", "tambour", "batterie"],
+  "aliases": [],
+  "gesture": "The two sticks strike the drum, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M18 45L18 71A30 11 0 0 0 78 71L78 45Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M24 61L36 75L48 63L60 75L72 61",
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 4 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "ellipse", "cx": 48, "cy": 45, "rx": 30, "ry": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "stick-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 17L44 41",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "stick-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M74 17L52 41",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "stick-1": { "box": [22, 17, 22, 24] },
+    "stick-2": { "box": [52, 17, 22, 24] }
+  },
+  "motion": [
+    {
+      "part": "stick-1",
+      "pivot": [22, 12],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, -14], [0.7, 0], [1, 0]] }
+    },
+    {
+      "part": "stick-2",
+      "pivot": [74, 12],
+      "duration": 450,
+      "delay": 250,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, 14], [0.7, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

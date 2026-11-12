@@ -1,0 +1,131 @@
+{
+  "name": "paw-print",
+  "category": "social",
+  "keywords": ["paw", "pet", "animal", "dog", "cat", "footprint", "patte", "empreinte"],
+  "aliases": ["paw"],
+  "gesture": "The four toes press down, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "toe-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "ellipse", "cx": 27, "cy": 46, "rx": 6.5, "ry": 8.5, "role": "main", "rotate": [-20, 27, 46] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "toe-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "ellipse", "cx": 40, "cy": 32, "rx": 7, "ry": 9, "role": "main", "rotate": [-8, 40, 32] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "toe-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "ellipse", "cx": 56, "cy": 32, "rx": 7, "ry": 9, "role": "main", "rotate": [8, 56, 32] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "toe-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "ellipse", "cx": 69, "cy": 46, "rx": 6.5, "ry": 8.5, "role": "main", "rotate": [20, 69, 46] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "ellipse", "cx": 48, "cy": 60, "rx": 15, "ry": 12, "role": "accent" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "toe-1": { "box": [20.24, 37.71, 13.53, 16.58] },
+    "toe-2": { "box": [32.96, 23.04, 14.09, 17.93] },
+    "toe-3": { "box": [48.96, 23.04, 14.09, 17.93] },
+    "toe-4": { "box": [62.24, 37.71, 13.53, 16.58] }
+  },
+  "motion": [
+    {
+      "part": "toe-1",
+      "pivot": [27.01, 46],
+      "duration": 360,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    },
+    {
+      "part": "toe-2",
+      "pivot": [40.01, 32],
+      "duration": 360,
+      "delay": 90,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    },
+    {
+      "part": "toe-3",
+      "pivot": [56.01, 32],
+      "duration": 360,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    },
+    {
+      "part": "toe-4",
+      "pivot": [69.01, 46],
+      "duration": 360,
+      "delay": 270,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

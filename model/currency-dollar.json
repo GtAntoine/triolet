@@ -1,0 +1,83 @@
+{
+  "name": "currency-dollar",
+  "category": "finance",
+  "keywords": ["dollar", "money", "price", "usd", "cost", "payment", "argent", "prix"],
+  "aliases": [],
+  "gesture": "The dollar sign pops on its coin.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 28,
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 3.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 24V72",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M58 39C56 35 52 33 48 33C42 33 38 36 38 40.5C38 51 58 45 58 55.5C58 60 54 63 48 63C43 63 39 61 37 57",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sign": { "box": [37, 24, 21, 48] }
+  },
+  "motion": [
+    {
+      "part": "sign",
+      "pivot": [47.5, 48],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

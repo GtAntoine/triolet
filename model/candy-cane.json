@@ -1,0 +1,115 @@
+{
+  "name": "candy-cane",
+  "category": "social",
+  "keywords": ["candy cane", "christmas", "sweet", "holiday", "xmas", "sugar", "sucre d orge", "noël"],
+  "aliases": [],
+  "gesture": "The candy cane swings from its hook.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "cane",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M40 84V34A16 16 0 0 1 72 34V44",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 14 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 76L44 70",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M36 62L44 56",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M36 48L44 42",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M42 27L49 21",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M58 16L62 23",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M68 36H76",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M40 60L26 52V68Z",
+              "role": "main",
+              "stroke": { "width": 3 }
+            },
+            {
+              "kind": "path",
+              "d": "M40 60L54 52V68Z",
+              "role": "main",
+              "stroke": { "width": 3 }
+            },
+            { "kind": "circle", "cx": 40, "cy": 60, "r": 5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "cane": { "box": [26, 16, 50, 68] }
+  },
+  "motion": [
+    {
+      "part": "cane",
+      "pivot": [56, 18],
+      "duration": 850,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 7], [0.4, -6], [0.6, 3], [0.8, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,88 @@
+{
+  "name": "banana",
+  "category": "social",
+  "keywords": ["banana", "fruit", "food", "healthy", "snack", "yellow", "banane", "goûter"],
+  "aliases": [],
+  "gesture": "The banana rocks.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "banana",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 26C20 60 44 80 76 74C82 73 82 65 76 64C56 62 40 48 36 26C35 20 20 20 20 26Z",
+              "role": "main",
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 26C20 60 44 80 76 74C82 73 82 65 76 64C56 62 40 48 36 26C35 20 20 20 20 26Z",
+              "role": "base",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M24 20L32 18",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 9 }
+            },
+            {
+              "kind": "path",
+              "d": "M79 69L83 68",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "ellipse", "cx": 45, "cy": 55, "rx": 8, "ry": 6, "role": "accent", "rotate": [42, 46, 55] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "banana": { "box": [20, 18, 63, 57.05] }
+  },
+  "motion": [
+    {
+      "part": "banana",
+      "pivot": [48, 78],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, -8], [0.4, 6], [0.6, -3], [0.8, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

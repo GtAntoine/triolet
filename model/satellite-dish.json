@@ -1,0 +1,124 @@
+{
+  "name": "satellite-dish",
+  "category": "devices",
+  "keywords": ["satellite", "dish", "antenna", "signal", "broadcast", "reception", "parabole", "antenne"],
+  "aliases": [],
+  "gesture": "The dish receives its signal, wave after wave.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M36.6 63.16L36.6 80.08",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.58 }
+        },
+        { "kind": "rect", "x": 21.56, "y": 78.2, "w": 31.96, "h": 7.52, "r": 3.76, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M14.04 48.12A30.08 30.08 0 0 0 74.2 48.12Z", "role": "base", "rotate": [45, 44.12, 48.12] }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M38.48 53.76L51.64 40.6",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 4.7 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 53.52, "cy": 38.72, "r": 5.64, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "wave-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M61.04 23.68A13.16 13.16 0 0 1 72.32 34.96",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.17 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "wave-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M64.8 13.34A23.5 23.5 0 0 1 82.66 31.2",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.17 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "wave-1": { "box": [61.04, 23.68, 11.28, 11.28] },
+    "wave-2": { "box": [64.8, 13.34, 17.86, 17.86] }
+  },
+  "motion": [
+    {
+      "part": "wave-1",
+      "pivot": [66.68, 29.32],
+      "duration": 500,
+      "delay": 160,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.1], [1, 1]] }
+    },
+    {
+      "part": "wave-2",
+      "pivot": [73.73, 22.27],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

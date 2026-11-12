@@ -1,0 +1,83 @@
+{
+  "name": "currency-rupee",
+  "category": "finance",
+  "keywords": ["rupee", "money", "price", "inr", "india", "payment", "roupie", "argent"],
+  "aliases": [],
+  "gesture": "The rupee sign pops on its coin.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 28,
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 3.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M37 31H60M38 31H46A8.5 8.5 0 0 1 46 48H38L54 66",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M37 40H60",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sign": { "box": [37, 31, 23, 35] }
+  },
+  "motion": [
+    {
+      "part": "sign",
+      "pivot": [48.5, 48.5],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

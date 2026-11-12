@@ -1,0 +1,82 @@
+{
+  "name": "library",
+  "category": "education",
+  "keywords": ["library", "books", "shelf", "reading", "collection", "study", "bibliothèque", "livres"],
+  "aliases": [],
+  "gesture": "The leaning book tips, then leans back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 15, "h": 62, "r": 4, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 19, "y": 24, "w": 9, "h": 5, "r": 2.5, "role": "main" },
+        { "kind": "rect", "x": 19, "y": 66, "w": 9, "h": 5, "r": 2.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 35, "y": 34, "w": 11, "h": 44, "r": 4, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "book",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 54, "y": 20, "w": 15, "h": 58, "r": 4, "role": "base", "rotate": [-13, 64, 78] }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 57, "y": 28, "w": 9, "h": 5, "r": 2.5, "role": "main", "rotate": [-13, 64, 78] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 78, "w": 76, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "book": { "box": [42.01, 21.16, 26.06, 58.29] }
+  },
+  "motion": [
+    {
+      "part": "book",
+      "pivot": [64, 78],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, 8], [0.5, -3], [0.75, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

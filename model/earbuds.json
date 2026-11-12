@@ -1,0 +1,100 @@
+{
+  "name": "earbuds",
+  "category": "devices",
+  "keywords": ["earbuds", "earphones", "wireless", "audio", "music", "listen", "écouteurs", "sans fil"],
+  "aliases": ["device-airpods", "airpods"],
+  "gesture": "The two earbuds tilt towards each other.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "left",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 31, "cy": 30, "r": 15, "role": "base" },
+            { "kind": "rect", "x": 31, "y": 32, "w": 12, "h": 50, "r": 25, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 27, "cy": 30, "r": 7, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 33.5, "y": 62, "w": 7, "h": 15, "r": 7.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "right",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 65, "cy": 30, "r": 15, "role": "base" },
+            { "kind": "rect", "x": 53, "y": 32, "w": 12, "h": 50, "r": 25, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 30, "r": 7, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 55.5, "y": 62, "w": 7, "h": 15, "r": 7.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "left": { "box": [16, 15, 30, 67] },
+    "right": { "box": [50, 15, 30, 67] }
+  },
+  "motion": [
+    {
+      "part": "left",
+      "pivot": [31, 30],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, 8], [0.5, -4], [0.75, 0], [1, 0]] }
+    },
+    {
+      "part": "right",
+      "pivot": [65, 30],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, -8], [0.5, 4], [0.75, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

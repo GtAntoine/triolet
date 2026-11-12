@@ -1,0 +1,62 @@
+{
+  "name": "ghost",
+  "category": "social",
+  "keywords": ["ghost", "spooky", "halloween", "boo", "spirit", "empty", "fantôme", "esprit"],
+  "aliases": [],
+  "gesture": "The ghost floats up and down.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "ghost",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 46A28 30 0 0 1 76 46V82L66.5 74L57.5 82L48 74L38.5 82L29.5 74L20 82Z",
+              "role": "base",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "ellipse", "cx": 37, "cy": 44, "rx": 7.5, "ry": 10.5, "role": "main" },
+            { "kind": "ellipse", "cx": 59, "cy": 44, "rx": 7.5, "ry": 10.5, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "ellipse", "cx": 48, "cy": 62, "rx": 8, "ry": 8.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "ghost": { "box": [20, 16, 56, 66] }
+  },
+  "motion": [
+    {
+      "part": "ghost",
+      "pivot": [48, 49],
+      "duration": 1000,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, -6], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

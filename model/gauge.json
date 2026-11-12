@@ -1,0 +1,92 @@
+{
+  "name": "gauge",
+  "category": "data",
+  "keywords": ["gauge", "speed", "meter", "dashboard", "performance", "level", "jauge", "vitesse"],
+  "aliases": [],
+  "gesture": "The needle climbs and settles.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M27 62A25 25 0 0 1 66 30",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M70 40A25 25 0 0 1 69 62",
+          "role": "accent",
+          "fill": false,
+          "stroke": { "width": 7.5 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "needle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 54L60 40",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 54, "r": 6, "role": "main" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "needle": { "box": [48, 40, 12, 14] }
+  },
+  "motion": [
+    {
+      "part": "needle",
+      "pivot": [48, 54],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, -70], [0.6, 12], [0.8, -6], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,75 @@
+{
+  "name": "washing-machine",
+  "category": "places",
+  "keywords": ["washing machine", "laundry", "clean", "clothes", "appliance", "home", "machine à laver", "lessive"],
+  "aliases": [],
+  "gesture": "The water sloshes behind the door.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 10, "w": 60, "h": 76, "r": 11, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 17, "w": 20, "h": 6, "r": 3, "role": "mid" },
+        { "kind": "circle", "cx": 66, "cy": 20, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 54, "r": 21, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 54, "r": 14, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "water",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "path", "d": "M34 56A14 14 0 0 0 62 56Z", "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "water": { "box": [34, 56, 28, 14] }
+  },
+  "motion": [
+    {
+      "part": "water",
+      "pivot": [48, 54],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 18], [0.4, -14], [0.6, 8], [0.8, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

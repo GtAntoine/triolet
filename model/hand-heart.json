@@ -1,0 +1,61 @@
+{
+  "name": "hand-heart",
+  "category": "social",
+  "keywords": ["hand", "heart", "care", "donate", "charity", "support", "don", "solidarité"],
+  "aliases": [],
+  "gesture": "The heart bounces in the open hand.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "heart",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M50 46.3C41.94 41.34 38.22 37.62 38.22 33.59A5.89 5.89 0 0 1 50 31.42A5.89 5.89 0 0 1 61.78 33.59C61.78 37.62 58.06 41.34 50 46.3Z",
+              "role": "accent"
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 8, "y": 54, "w": 14, "h": 30, "r": 5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 62, "w": 60, "h": 18, "r": 9, "role": "base" },
+        { "kind": "rect", "x": 34, "y": 52, "w": 50, "h": 14, "r": 7, "role": "base" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "heart": { "box": [38.12, 26.52, 23.76, 19.78] }
+  },
+  "motion": [
+    {
+      "part": "heart",
+      "pivot": [50, 36.41],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -7], [0.55, 0], [0.75, -2.1875], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,103 @@
+{
+  "name": "sparkles",
+  "category": "interface",
+  "keywords": ["sparkles", "magic", "ai", "new", "shine", "generate", "étincelles", "magie"],
+  "aliases": [],
+  "gesture": "The three sparkles shine, one after the other.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "big",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M40 22C42.4 40 52 49.6 70 52C52 54.4 42.4 64 40 82C37.6 64 28 54.4 10 52C28 49.6 37.6 40 40 22Z",
+              "role": "base",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "small",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M70 12C70.96 19.2 74.8 23.04 82 24C74.8 24.96 70.96 28.8 70 36C69.04 28.8 65.2 24.96 58 24C65.2 23.04 69.04 19.2 70 12Z",
+              "role": "accent",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "tiny",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M70 52C71.28 61.6 76.4 66.72 86 68C76.4 69.28 71.28 74.4 70 84C68.72 74.4 63.6 69.28 54 68C63.6 66.72 68.72 61.6 70 52Z",
+              "role": "main",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "big": { "box": [10, 22, 60, 60] },
+    "small": { "box": [58, 12, 24, 24] },
+    "tiny": { "box": [54, 52, 32, 32] }
+  },
+  "motion": [
+    {
+      "part": "big",
+      "pivot": [40, 52],
+      "duration": 420,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    },
+    {
+      "part": "small",
+      "pivot": [70, 24],
+      "duration": 420,
+      "delay": 130,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    },
+    {
+      "part": "tiny",
+      "pivot": [70, 68],
+      "duration": 420,
+      "delay": 260,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

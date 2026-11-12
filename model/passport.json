@@ -1,0 +1,97 @@
+{
+  "name": "passport",
+  "category": "documents",
+  "keywords": ["passport", "travel", "identity", "border", "visa", "document", "passeport", "voyage"],
+  "aliases": [],
+  "gesture": "The emblem of the passport pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 10, "w": 56, "h": 76, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 16, "w": 44, "h": 64, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "emblem",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 48,
+              "cy": 40,
+              "r": 13,
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M35 40H61M48 27V53",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 32, "y": 61, "w": 32, "h": 9, "r": 4.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 38, "y": 73, "w": 20, "h": 4, "r": 2, "role": "mid" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "emblem": { "box": [35, 27, 26, 26] }
+  },
+  "motion": [
+    {
+      "part": "emblem",
+      "pivot": [48, 40],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

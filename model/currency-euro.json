@@ -1,0 +1,83 @@
+{
+  "name": "currency-euro",
+  "category": "finance",
+  "keywords": ["euro", "money", "price", "eur", "cost", "payment", "argent", "prix"],
+  "aliases": [],
+  "gesture": "The euro sign pops on its coin.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 28,
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 3.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M60 37A15 16 0 1 0 60 59",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M30 44H50M30 53H48",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sign": { "box": [30, 32, 30, 31.99] }
+  },
+  "motion": [
+    {
+      "part": "sign",
+      "pivot": [45, 48],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

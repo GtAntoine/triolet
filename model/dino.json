@@ -1,0 +1,96 @@
+{
+  "name": "dino",
+  "category": "social",
+  "keywords": ["dino", "dinosaur", "trex", "game", "offline", "fossil", "dinosaure", "jeu"],
+  "aliases": ["dinosaur"],
+  "gesture": "The dino jumps, as in the game.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "dino",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 40, "cy": 22, "r": 7, "role": "accent" },
+            { "kind": "circle", "cx": 29, "cy": 34, "r": 7.5, "role": "accent" },
+            { "kind": "circle", "cx": 24, "cy": 48, "r": 7, "role": "accent" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 68, "w": 10, "h": 18, "r": 4, "role": "main" },
+            { "kind": "rect", "x": 51, "y": 68, "w": 10, "h": 18, "r": 4, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 44, "y": 10, "w": 38, "h": 28, "r": 11, "role": "base" },
+            { "kind": "rect", "x": 28, "y": 30, "w": 36, "h": 44, "r": 16, "role": "base" },
+            {
+              "kind": "path",
+              "d": "M32 50L10 68A4 4 0 0 0 12 74H36Z",
+              "role": "base",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 67, "cy": 21, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M66 31H80",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "path",
+              "d": "M62 48H71",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "dino": { "box": [9.32, 10, 72.68, 76] }
+  },
+  "motion": [
+    {
+      "part": "dino",
+      "pivot": [45.66, 48],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.4, -10], [0.8, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

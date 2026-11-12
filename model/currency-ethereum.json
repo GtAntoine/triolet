@@ -1,0 +1,99 @@
+{
+  "name": "currency-ethereum",
+  "category": "finance",
+  "keywords": ["ethereum", "crypto", "eth", "cryptocurrency", "blockchain", "coin", "cryptomonnaie", "monnaie"],
+  "aliases": ["ethereum"],
+  "gesture": "The two halves of the diamond come apart, then close.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 28,
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 3.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "top",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 22L63 47L48 55L33 47Z",
+              "role": "main",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bottom",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M34 54L48 62L62 54L48 74Z",
+              "role": "accent",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "top": { "box": [33, 22, 30, 33] },
+    "bottom": { "box": [34, 54, 28, 20] }
+  },
+  "motion": [
+    {
+      "part": "top",
+      "pivot": [48, 38.5],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, -3], [1, 0]] }
+    },
+    {
+      "part": "bottom",
+      "pivot": [48, 64],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,83 @@
+{
+  "name": "currency-bitcoin",
+  "category": "finance",
+  "keywords": ["bitcoin", "crypto", "btc", "cryptocurrency", "blockchain", "coin", "cryptomonnaie", "monnaie"],
+  "aliases": ["coin-bitcoin", "bitcoin"],
+  "gesture": "The bitcoin sign pops on its coin.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 28,
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 3.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M44 23V32M53 23V32M44 64V73M53 64V73",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M40 32V64M40 32H51A8 8 0 0 1 51 48H40M40 48H53A8 8 0 0 1 53 64H40",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sign": { "box": [40, 23, 21, 50] }
+  },
+  "motion": [
+    {
+      "part": "sign",
+      "pivot": [50.5, 48],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
