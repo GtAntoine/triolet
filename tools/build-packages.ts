@@ -67,13 +67,15 @@ const builders: Record<string, (icons: IconModel[]) => void> = {
 
 builders['triolet-react-native'] = (icons) => {
   // Shipped as TypeScript sources, which Metro compiles: only the icon modules are generated.
+  // Imports carry no file extension: a TypeScript app that reads these sources would otherwise
+  // need `allowImportingTsExtensions`.
   const files = new Map<string, string>();
   for (const model of icons) {
     const name = pascal(model.name);
     files.set(
       `${model.name}.ts`,
       `${header(model.name)}import data from 'triolet/icons/${model.name}';
-import { createIcon } from '../context.tsx';
+import { createIcon } from '../context';
 
 /** ${model.gesture} */
 export const ${name} = createIcon(data, '${name}');
@@ -82,7 +84,7 @@ export default ${name};
 `,
     );
   }
-  files.set('index.ts', icons.map((m) => `export { ${pascal(m.name)}, ${pascal(m.name)} as ${pascal(m.name)}Icon } from './${m.name}.ts';`).join('\n') + '\n');
+  files.set('index.ts', icons.map((m) => `export { ${pascal(m.name)}, ${pascal(m.name)} as ${pascal(m.name)}Icon } from './${m.name}';`).join('\n') + '\n');
   writeDir(join(ROOT, 'packages/triolet-react-native/src/icons'), files);
 };
 

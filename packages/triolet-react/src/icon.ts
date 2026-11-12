@@ -2,10 +2,10 @@
 /**
  * Triolet icons as React components.
  *
- *     import { Agenda, TrioletProvider } from 'triolet-react';
- *     <Agenda size={32} label="Agenda" />
- *     <button className="triolet-trigger"><Agenda /> Agenda</button>   // plays on hover and focus
- *     <Agenda main="#5B2A6E" accent="#F26B8A" />                       // colours of this icon alone
+ *     import { CalendarClock, TrioletProvider } from 'triolet-react';
+ *     <CalendarClock size={32} label="Calendar" />
+ *     <button className="triolet-trigger"><CalendarClock /> Calendar</button>   // plays on hover and focus
+ *     <CalendarClock main="#5B2A6E" accent="#F26B8A" />                       // colours of this icon alone
  *
  * To colour a page or a block, set `--triolet-base`, `--triolet-main`, `--triolet-accent` and
  * `--triolet-surface` in CSS, or wrap the icons in `<TrioletProvider colors={…}>`.

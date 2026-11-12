@@ -1,11 +1,11 @@
 /**
  * Triolet in a web page, with no framework.
  *
- *     import { createIcons, agenda, voter } from 'triolet';
- *     createIcons({ icons: { agenda, voter } });   // replaces <i data-triolet="agenda"></i>
+ *     import { createIcons, calendarClock, ballotBox } from 'triolet';
+ *     createIcons({ icons: { calendarClock, ballotBox } });   // replaces <i data-triolet="calendar-clock"></i>
  *
  *     import { createElement, play } from 'triolet';
- *     const svg = createElement(agenda, { size: 64, label: 'Agenda' });
+ *     const svg = createElement(calendarClock, { size: 64, label: 'Calendar' });
  *     play(svg);
  *
  * The styles an icon needs (colour derivation, triggers, its keyframes) are added to the page
@@ -125,7 +125,7 @@ export function stop(svg: Element): void {
 }
 
 export interface CreateIconsOptions extends IconOptions {
-  /** The icons the page may use, e.g. `{ agenda, voter }`. */
+  /** The icons the page may use, e.g. `{ calendarClock, ballotBox }`. */
   icons: Record<string, IconData>;
   /** Where to look for placeholders (default: the whole document). */
   root?: ParentNode;
@@ -149,7 +149,7 @@ function optionsOf(el: Element): IconOptions {
 }
 
 /**
- * Replaces every placeholder (`<i data-triolet="agenda" data-size="32"></i>`) with its icon.
+ * Replaces every placeholder (`<i data-triolet="calendar-clock" data-size="32"></i>`) with its icon.
  * A placeholder may set `data-size`, `data-label`, `data-finish`, `data-trigger`,
  * `data-filters` and the colours `data-base`, `data-main`, `data-accent`, `data-surface`;
  * its own classes are kept. Returns the icons created.

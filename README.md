@@ -8,7 +8,13 @@ what the icon is for. The bell rings, the ballot drops into the box, the lines w
 
 **[See the icons →](https://gtantoine.github.io/triolet/)**
 
-> Early days. The packages are not on npm yet; the API may still change.
+> Early days (0.x): the API may still change.
+
+```bash
+npm install triolet            # plain JavaScript and CSS
+npm install triolet-react      # React 18 and 19
+npm install triolet-react-native @shopify/react-native-skia react-native-reanimated
+```
 
 ## What you get
 
@@ -101,4 +107,4 @@ of 64, 56 × 72 and 72 × 56), from a few shapes that each name a colour role. S
 
 ## Licence
 
-[MIT](LICENSE).
+[MIT](LICENSE). Releases: [CHANGELOG](CHANGELOG.md), [how to publish](docs/releasing.md).

@@ -48,8 +48,8 @@ import {
   type ThemeInput,
   type Tier,
 } from 'triolet/core';
-import { TrioletContext } from './context.tsx';
-import { gestureEnd, prepareMotion, propAt, type PartMotion } from './motion.ts';
+import { TrioletContext } from './context';
+import { gestureEnd, prepareMotion, propAt, type PartMotion } from './motion';
 
 const RAD = Math.PI / 180;
 /** Clock value that means "at rest": later than the end of any gesture. */

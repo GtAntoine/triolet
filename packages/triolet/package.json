@@ -1,9 +1,31 @@
 {
   "name": "triolet",
-  "version": "0.0.0",
-  "private": true,
-  "description": "Animated icons in three colours: SVG, CSS motion, no dependency",
+  "version": "0.1.0",
+  "description": "Animated icons in three colours (base, main, accent) with a soft relief: SVG and CSS motion, no dependency.",
+  "keywords": [
+    "icons",
+    "animated-icons",
+    "svg",
+    "css-animation",
+    "neumorphism",
+    "design-system",
+    "three-colours",
+    "theming"
+  ],
+  "license": "MIT",
+  "author": "Antoine Goethals (https://github.com/GtAntoine)",
+  "homepage": "https://gtantoine.github.io/triolet/",
+  "bugs": {
+    "url": "https://github.com/GtAntoine/triolet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GtAntoine/triolet.git",
+    "directory": "packages/triolet"
+  },
   "type": "module",
+  "main": "./dist/triolet/src/index.js",
+  "types": "./dist/triolet/src/index.d.ts",
   "sideEffects": [
     "*.css"
   ],
@@ -29,16 +51,17 @@
   },
   "files": [
     "dist",
-    "svg"
+    "svg",
+    "README.md",
+    "LICENSE"
   ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "node ../../tools/build-packages.ts triolet"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GtAntoine/triolet.git",
-    "directory": "packages/triolet"
-  },
-  "homepage": "https://gtantoine.github.io/triolet/"
+  }
 }

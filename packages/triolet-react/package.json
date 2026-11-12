@@ -1,9 +1,31 @@
 {
   "name": "triolet-react",
-  "version": "0.0.0",
-  "private": true,
-  "description": "Animated icons in three colours, as React components",
+  "version": "0.1.0",
+  "description": "Animated icons in three colours as React components: one component per icon, CSS motion, no animation library.",
+  "keywords": [
+    "react",
+    "icons",
+    "animated-icons",
+    "svg",
+    "css-animation",
+    "neumorphism",
+    "design-system",
+    "three-colours"
+  ],
+  "license": "MIT",
+  "author": "Antoine Goethals (https://github.com/GtAntoine)",
+  "homepage": "https://gtantoine.github.io/triolet/",
+  "bugs": {
+    "url": "https://github.com/GtAntoine/triolet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GtAntoine/triolet.git",
+    "directory": "packages/triolet-react"
+  },
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "exports": {
     ".": {
@@ -16,8 +38,16 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "node ../../tools/build-packages.ts triolet-react"
   },
@@ -25,19 +55,12 @@
     "triolet": "workspace:^"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GtAntoine/triolet.git",
-    "directory": "packages/triolet-react"
-  },
-  "homepage": "https://gtantoine.github.io/triolet/"
+  }
 }

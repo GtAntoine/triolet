@@ -1,7 +1,7 @@
 /** Defaults shared by the icons under a provider: colours, size, finish. */
 import { createContext, createElement, forwardRef, useMemo, type ForwardRefExoticComponent, type ReactNode, type RefAttributes } from 'react';
 import type { IconModel, ThemeInput } from 'triolet/core';
-import { TrioletIcon, type TrioletIconHandle, type TrioletIconProps } from './TrioletIcon.tsx';
+import { TrioletIcon, type TrioletIconHandle, type TrioletIconProps } from './TrioletIcon';
 
 export interface TrioletDefaults {
   /** Default size of the icons inside, in points. */
