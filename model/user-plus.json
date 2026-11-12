@@ -1,0 +1,77 @@
+{
+  "name": "user-plus",
+  "category": "people",
+  "keywords": ["user", "add", "invite", "new", "follow", "member", "utilisateur", "inviter"],
+  "aliases": [],
+  "gesture": "The plus badge pops on the user.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M16 80V76A32 28 0 0 1 80 76V80A5 5 0 0 1 75 85H21A5 5 0 0 1 16 80Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 31, "r": 17, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 66, "r": 17, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 66, "r": 14, "role": "accent" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M63 66H77M70 59V73",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "badge": { "box": [53, 49, 34, 34] }
+  },
+  "motion": [
+    {
+      "part": "badge",
+      "pivot": [70, 66],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,77 @@
+{
+  "name": "accessibility",
+  "category": "people",
+  "keywords": ["accessibility", "a11y", "person", "inclusive", "universal", "access", "accessibilité", "inclusion"],
+  "aliases": [],
+  "gesture": "The figure waves its arms.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 43V57M48 57L39 73M48 57L57 73",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arms",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M29 38C40 43 56 43 67 38",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 26, "r": 8.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "arms": { "box": [29, 38, 38, 3.75] }
+  },
+  "motion": [
+    {
+      "part": "arms",
+      "pivot": [48, 42],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 8], [0.4, -8], [0.6, 4], [0.8, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

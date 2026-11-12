@@ -1,0 +1,82 @@
+{
+  "name": "double-check",
+  "category": "interface",
+  "keywords": ["double check", "read", "delivered", "done", "seen", "confirmed", "lu", "double coche"],
+  "aliases": [],
+  "gesture": "The two checks draw themselves, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "check-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M24 49L34 59L52 38",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "check-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M45 58L47 60L70 36",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "check-1": { "box": [24, 38, 28, 21] },
+    "check-2": { "box": [45, 36, 25, 24] }
+  },
+  "motion": [
+    {
+      "part": "check-1",
+      "pivot": [38, 48.5],
+      "duration": 400,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "check-2",
+      "pivot": [57.5, 48],
+      "duration": 400,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

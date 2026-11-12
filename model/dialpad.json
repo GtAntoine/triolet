@@ -1,0 +1,64 @@
+{
+  "name": "dialpad",
+  "category": "communication",
+  "keywords": ["dialpad", "keypad", "phone", "numbers", "call", "dial", "clavier", "composer"],
+  "aliases": [],
+  "gesture": "The call key pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 10, "w": 56, "h": 76, "r": 15, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 32, "cy": 25, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 25, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 64, "cy": 25, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 32, "cy": 40, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 40, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 64, "cy": 40, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 32, "cy": 55, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 55, "r": 5.5, "role": "main" },
+        { "kind": "circle", "cx": 64, "cy": 55, "r": 5.5, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "call",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 33, "y": 66, "w": 30, "h": 12, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "call": { "box": [33, 66, 30, 12] }
+  },
+  "motion": [
+    {
+      "part": "call",
+      "pivot": [48, 72],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

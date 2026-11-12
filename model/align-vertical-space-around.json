@@ -1,0 +1,57 @@
+{
+  "name": "align-vertical-space-around",
+  "category": "design",
+  "keywords": ["align", "vertical", "space", "distribute", "layout", "center", "répartir", "espacement"],
+  "aliases": [],
+  "gesture": "The block settles between its two lines.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 23, "w": 48, "h": 8, "r": 4, "role": "main" },
+        { "kind": "rect", "x": 24, "y": 65, "w": 48, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "block",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 34, "y": 39, "w": 28, "h": 18, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "block": { "box": [34, 39, 28, 18] }
+  },
+  "motion": [
+    {
+      "part": "block",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

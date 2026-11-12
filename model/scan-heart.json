@@ -1,0 +1,87 @@
+{
+  "name": "scan-heart",
+  "category": "health",
+  "keywords": ["scan", "heart", "health", "pulse", "monitor", "check-up", "santé", "cœur"],
+  "aliases": [],
+  "gesture": "The heart beats twice in the frame.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M16.72 33.28L16.72 25.92A9.2 9.2 0 0 1 25.92 16.72L33.28 16.72",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.44 }
+        },
+        {
+          "kind": "path",
+          "d": "M62.72 16.72L70.08 16.72A9.2 9.2 0 0 1 79.28 25.92L79.28 33.28",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.44 }
+        },
+        {
+          "kind": "path",
+          "d": "M79.28 62.72L79.28 70.08A9.2 9.2 0 0 1 70.08 79.28L62.72 79.28",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.44 }
+        },
+        {
+          "kind": "path",
+          "d": "M33.28 79.28L25.92 79.28A9.2 9.2 0 0 1 16.72 70.08L16.72 62.72",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.44 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 26.84, "y": 26.84, "w": 42.32, "h": 42.32, "r": 8.28, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "heart",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 57.02C39.39 51.72 35.41 47.74 35.41 43.44A6.29 6.29 0 0 1 48 41.12A6.29 6.29 0 0 1 60.59 43.44C60.59 47.74 56.61 51.72 48 57.02Z",
+              "role": "accent"
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "heart": { "box": [35.3, 35.88, 25.39, 21.14] }
+  },
+  "motion": [
+    {
+      "part": "heart",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scale": [[0, 1], [0.2, 1.2], [0.4, 1], [0.6, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

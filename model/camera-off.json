@@ -1,0 +1,94 @@
+{
+  "name": "camera-off",
+  "category": "media",
+  "keywords": ["camera", "off", "disabled", "no photo", "privacy", "blocked", "appareil photo", "désactivé"],
+  "aliases": [],
+  "gesture": "The bar crosses out the camera.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "path", "d": "M33 30L37 21A4 4 0 0 1 41 18H55A4 4 0 0 1 59 21L63 30Z", "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 28, "w": 72, "h": 50, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 54, "r": 17, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 54, "r": 9, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bar",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 86L76 14",
+              "role": "gap",
+              "fill": false,
+              "stroke": { "width": 12 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 86L76 14",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar": { "box": [20, 14, 56, 72] }
+  },
+  "motion": [
+    {
+      "part": "bar",
+      "pivot": [48, 50],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

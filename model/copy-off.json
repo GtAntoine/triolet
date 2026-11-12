@@ -1,0 +1,84 @@
+{
+  "name": "copy-off",
+  "category": "interface",
+  "keywords": ["copy", "off", "disabled", "no copy", "protected", "blocked", "copie", "interdit"],
+  "aliases": [],
+  "gesture": "The bar crosses out the copy.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 34, "y": 14, "w": 48, "h": 48, "r": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 34, "w": 48, "h": 48, "r": 11, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 62, "w": 28, "h": 8, "r": 4, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bar",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M18 80L78 18",
+              "role": "gap",
+              "fill": false,
+              "stroke": { "width": 12 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M18 80L78 18",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar": { "box": [18, 18, 60, 62] }
+  },
+  "motion": [
+    {
+      "part": "bar",
+      "pivot": [48, 49],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

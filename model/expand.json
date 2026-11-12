@@ -1,0 +1,84 @@
+{
+  "name": "expand",
+  "category": "interface",
+  "keywords": ["expand", "maximize", "fullscreen", "enlarge", "resize", "grow", "agrandir", "plein écran"],
+  "aliases": [],
+  "gesture": "The two arrows pull apart, towards the corners.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54 42L69 27M55 27H69V41",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "arrow-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M42 54L27 69M27 55V69H41",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow-1": { "box": [54, 27, 15, 15] },
+    "arrow-2": { "box": [27, 54, 15, 15] }
+  },
+  "motion": [
+    {
+      "part": "arrow-1",
+      "pivot": [61.5, 34.5],
+      "duration": 520,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 4], [0.7, -0.6666666666666666], [1, 0]], "y": [[0, 0], [0.4, -4], [0.7, 0.6666666666666666], [1, 0]] }
+    },
+    {
+      "part": "arrow-2",
+      "pivot": [34.5, 61.5],
+      "duration": 520,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, -4], [0.7, 0.6666666666666666], [1, 0]], "y": [[0, 0], [0.4, 4], [0.7, -0.6666666666666666], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

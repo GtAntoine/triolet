@@ -1,0 +1,61 @@
+{
+  "name": "volume-x",
+  "category": "media",
+  "keywords": ["volume", "mute", "muted", "silent", "sound off", "speaker", "muet", "son coupé"],
+  "aliases": [],
+  "gesture": "The cross pops: the sound is cut.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M28 37L48 21A2 2 0 0 1 51 23V73A2 2 0 0 1 48 75L28 59Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 36, "w": 22, "h": 24, "r": 6, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "cross",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M64 40L80 56M80 40L64 56",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "cross": { "box": [64, 40, 16, 16] }
+  },
+  "motion": [
+    {
+      "part": "cross",
+      "pivot": [72, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

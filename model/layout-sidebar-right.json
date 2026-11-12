@@ -1,0 +1,66 @@
+{
+  "name": "layout-sidebar-right",
+  "category": "interface",
+  "keywords": ["layout", "sidebar", "right", "panel", "drawer", "aside", "barre latérale", "panneau"],
+  "aliases": [],
+  "gesture": "The sidebar slides in from the right.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 16, "w": 72, "h": 64, "r": 12, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 24, "w": 34, "h": 14, "r": 5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 46, "w": 34, "h": 6, "r": 3, "role": "mid" },
+        { "kind": "rect", "x": 20, "y": 58, "w": 24, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sidebar",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 60, "y": 24, "w": 16, "h": 48, "r": 5, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sidebar": { "box": [60, 24, 16, 48] }
+  },
+  "motion": [
+    {
+      "part": "sidebar",
+      "pivot": [76, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

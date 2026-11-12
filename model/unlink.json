@@ -1,0 +1,105 @@
+{
+  "name": "unlink",
+  "category": "interface",
+  "keywords": ["unlink", "broken link", "disconnect", "detach", "remove link", "separate", "délier", "lien rompu"],
+  "aliases": [],
+  "gesture": "The two links pull apart.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "link-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M23 51H43A12 12 0 0 1 43 75H23A12 12 0 0 1 23 51Z",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 },
+              "rotate": [-45, 33, 63]
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "link-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M53 21H73A12 12 0 0 1 73 45H53A12 12 0 0 1 53 21Z",
+              "role": "mid",
+              "fill": false,
+              "stroke": { "width": 8 },
+              "rotate": [-45, 63, 33]
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M39 39L57 57",
+          "role": "gap",
+          "fill": false,
+          "stroke": { "width": 13 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M39 39L57 57",
+          "role": "accent",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "link-1": { "box": [13.93, 43.93, 38.14, 38.14] },
+    "link-2": { "box": [43.93, 13.93, 38.14, 38.14] }
+  },
+  "motion": [
+    {
+      "part": "link-1",
+      "pivot": [33, 63],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, -4], [1, 0]], "y": [[0, 0], [0.5, 4], [1, 0]] }
+    },
+    {
+      "part": "link-2",
+      "pivot": [63, 33],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, 4], [1, 0]], "y": [[0, 0], [0.5, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

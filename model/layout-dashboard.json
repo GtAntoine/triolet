@@ -1,0 +1,122 @@
+{
+  "name": "layout-dashboard",
+  "category": "interface",
+  "keywords": ["dashboard", "layout", "panels", "widgets", "overview", "admin", "tableau de bord", "disposition"],
+  "aliases": [],
+  "gesture": "The four panels pop, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 16, "w": 72, "h": 64, "r": 12, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "panel-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 24, "w": 25, "h": 28, "r": 5, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "panel-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 24, "w": 25, "h": 16, "r": 5, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "panel-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 58, "w": 25, "h": 14, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "panel-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 46, "w": 25, "h": 26, "r": 5, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "panel-1": { "box": [20, 24, 25, 28] },
+    "panel-2": { "box": [51, 24, 25, 16] },
+    "panel-3": { "box": [20, 58, 25, 14] },
+    "panel-4": { "box": [51, 46, 25, 26] }
+  },
+  "motion": [
+    {
+      "part": "panel-1",
+      "pivot": [32.5, 38],
+      "duration": 360,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.1], [1, 1]] }
+    },
+    {
+      "part": "panel-2",
+      "pivot": [63.5, 32],
+      "duration": 360,
+      "delay": 90,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.1], [1, 1]] }
+    },
+    {
+      "part": "panel-3",
+      "pivot": [32.5, 65],
+      "duration": 360,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.1], [1, 1]] }
+    },
+    {
+      "part": "panel-4",
+      "pivot": [63.5, 59],
+      "duration": 360,
+      "delay": 270,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,62 @@
+{
+  "name": "layout-bottombar-collapse",
+  "category": "interface",
+  "keywords": ["layout", "bottom bar", "collapse", "hide", "footer", "panel", "replier", "barre du bas"],
+  "aliases": [],
+  "gesture": "The chevron pushes the bottom bar away.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 16, "w": 72, "h": 64, "r": 12, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 56, "w": 56, "h": 16, "r": 5, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "chevron",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M35 28L48 41L61 28",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "chevron": { "box": [35, 28, 26, 13] }
+  },
+  "motion": [
+    {
+      "part": "chevron",
+      "pivot": [48, 34.5],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

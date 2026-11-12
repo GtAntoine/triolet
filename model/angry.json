@@ -1,0 +1,95 @@
+{
+  "name": "angry",
+  "category": "social",
+  "keywords": ["angry", "mad", "face", "emoji", "upset", "rage", "en colère", "fâché"],
+  "aliases": [],
+  "gesture": "The face shakes with anger.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 28, "cy": 56, "r": 5.5, "role": "accent" },
+        { "kind": "circle", "cx": 68, "cy": 56, "r": 5.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "face",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M29 34L42 40",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M67 34L54 40",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 37, "cy": 46, "r": 5, "role": "main" },
+            { "kind": "circle", "cx": 59, "cy": 46, "r": 5, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 66A13 10 0 0 1 60 66",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "face": { "box": [29, 34, 38, 32] }
+  },
+  "motion": [
+    {
+      "part": "face",
+      "pivot": [48, 48],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": {
+        "rotate": [[0, 0], [0.16666666666666666, 5], [0.3333333333333333, -5], [0.5, 4], [0.6666666666666666, -4], [0.8333333333333334, 2], [1, 0]]
+      }
+    }
+  ],
+  "idle": false
+}

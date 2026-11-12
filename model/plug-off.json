@@ -1,0 +1,103 @@
+{
+  "name": "plug-off",
+  "category": "devices",
+  "keywords": ["plug", "unplugged", "disconnected", "off", "power", "error", "débranché", "déconnecté"],
+  "aliases": ["plug-connected-x"],
+  "gesture": "The cross pops: the plug is disconnected.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 33, "y": 10, "w": 8, "h": 28, "r": 3, "role": "main" },
+        { "kind": "rect", "x": 55, "y": 10, "w": 8, "h": 28, "r": 3, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 34, "w": 52, "h": 36, "r": 14, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 36, "y": 47, "w": 24, "h": 10, "r": 5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 70V86",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 8 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "cross",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 68, "r": 15, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 68, "r": 12, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M61.5 63.5L70.5 72.5M70.5 63.5L61.5 72.5",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "cross": { "box": [51, 53, 30, 30] }
+  },
+  "motion": [
+    {
+      "part": "cross",
+      "pivot": [66, 68],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

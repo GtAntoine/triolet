@@ -1,0 +1,63 @@
+{
+  "name": "brightness-down",
+  "category": "settings",
+  "keywords": ["brightness", "dim", "down", "light", "screen", "low", "luminosité", "baisser"],
+  "aliases": [],
+  "gesture": "The dots turn around the dimmed sun.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "dots",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [0, 48, 48] },
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [45, 48, 48] },
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [90, 48, 48] },
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [135, 48, 48] },
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [180, 48, 48] },
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [225, 48, 48] },
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [270, 48, 48] },
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 4.5, "role": "main", "rotate": [315, 48, 48] }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 19, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 9, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "dots": { "box": [13.5, 13.5, 69, 69] }
+  },
+  "motion": [
+    {
+      "part": "dots",
+      "pivot": [48, 48],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, -45], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

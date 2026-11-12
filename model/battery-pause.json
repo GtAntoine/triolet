@@ -1,0 +1,75 @@
+{
+  "name": "battery-pause",
+  "category": "devices",
+  "keywords": ["battery", "pause", "paused", "charging", "hold", "power", "batterie", "en pause"],
+  "aliases": [],
+  "gesture": "The two bars blink: charging is paused.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 76, "y": 40, "w": 10, "h": 16, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 28, "w": 68, "h": 40, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 17, "y": 35, "w": 54, "h": 26, "r": 5, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 17, "y": 35, "w": 14, "h": 26, "r": 5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bars",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 40, "y": 39, "w": 7, "h": 18, "r": 3, "role": "accent" },
+            { "kind": "rect", "x": 53, "y": 39, "w": 7, "h": 18, "r": 3, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bars": { "box": [40, 39, 20, 18] }
+  },
+  "motion": [
+    {
+      "part": "bars",
+      "pivot": [50, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

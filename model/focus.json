@@ -1,0 +1,83 @@
+{
+  "name": "focus",
+  "category": "interface",
+  "keywords": ["focus", "center", "target", "frame", "autofocus", "attention", "mise au point", "cadrer"],
+  "aliases": [],
+  "gesture": "The frame closes on its point.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "frame",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M16.72 33.28L16.72 25.92A9.2 9.2 0 0 1 25.92 16.72L33.28 16.72",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.44 }
+            },
+            {
+              "kind": "path",
+              "d": "M62.72 16.72L70.08 16.72A9.2 9.2 0 0 1 79.28 25.92L79.28 33.28",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.44 }
+            },
+            {
+              "kind": "path",
+              "d": "M79.28 62.72L79.28 70.08A9.2 9.2 0 0 1 70.08 79.28L62.72 79.28",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.44 }
+            },
+            {
+              "kind": "path",
+              "d": "M33.28 79.28L25.92 79.28A9.2 9.2 0 0 1 16.72 70.08L16.72 62.72",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.44 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 21.16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 8.28, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "frame": { "box": [16.72, 16.72, 62.56, 62.56] }
+  },
+  "motion": [
+    {
+      "part": "frame",
+      "pivot": [48, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 0.9], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

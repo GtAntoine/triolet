@@ -1,0 +1,131 @@
+{
+  "name": "alarm-plus",
+  "category": "time",
+  "keywords": ["alarm", "add", "new", "clock", "reminder", "wake", "réveil", "ajouter"],
+  "aliases": ["alarm-clock-plus"],
+  "gesture": "The plus badge pops on the alarm clock.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M30 76L24 85",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        },
+        {
+          "kind": "path",
+          "d": "M62 78L66 85",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 13, "y": 13, "w": 24, "h": 13, "r": 6.5, "role": "main", "rotate": [-38, 25, 19.5] },
+        { "kind": "rect", "x": 59, "y": 13, "w": 24, "h": 13, "r": 6.5, "role": "main", "rotate": [38, 71, 19.5] }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 52, "r": 30, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 52, "r": 24, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 52V38",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        },
+        {
+          "kind": "path",
+          "d": "M48 52L39 57",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 70, "r": 16, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 70, "r": 13, "role": "accent" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M63.5 70H76.5M70 63.5V76.5",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 4.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "badge": { "box": [54, 54, 32, 32] }
+  },
+  "motion": [
+    {
+      "part": "badge",
+      "pivot": [70, 70],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

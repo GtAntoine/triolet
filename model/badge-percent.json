@@ -1,0 +1,71 @@
+{
+  "name": "badge-percent",
+  "category": "commerce",
+  "keywords": ["discount", "percent", "sale", "offer", "promo", "deal", "réduction", "promotion"],
+  "aliases": ["rosette-discount"],
+  "gesture": "The percent sign pops on the badge.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 27, "role": "main" },
+        { "kind": "circle", "cx": 72, "cy": 48, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 65, "cy": 65, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 72, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 31, "cy": 65, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 24, "cy": 48, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 31, "cy": 31, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 24, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 65, "cy": 31, "r": 12, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 24, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M56 38L40 58",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            },
+            { "kind": "circle", "cx": 40, "cy": 40, "r": 4.5, "role": "accent" },
+            { "kind": "circle", "cx": 56, "cy": 56, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sign": { "box": [35.5, 35.5, 25, 25] }
+  },
+  "motion": [
+    {
+      "part": "sign",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

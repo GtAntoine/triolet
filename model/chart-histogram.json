@@ -1,0 +1,156 @@
+{
+  "name": "chart-histogram",
+  "category": "data",
+  "keywords": ["chart", "histogram", "distribution", "bars", "frequency", "statistics", "histogramme", "répartition"],
+  "aliases": [],
+  "gesture": "The bars rise, from left to right.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 70, "w": 52, "h": 4.5, "r": 2.25, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bar-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 25.5, "y": 55, "w": 9, "h": 14, "r": 2.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 34.5, "y": 42, "w": 9, "h": 27, "r": 2.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 43.5, "y": 29, "w": 9, "h": 40, "r": 2.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 52.5, "y": 44, "w": 9, "h": 25, "r": 2.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-5",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 61.5, "y": 57, "w": 9, "h": 12, "r": 2.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar-1": { "box": [25.5, 55, 9, 14] },
+    "bar-2": { "box": [34.5, 42, 9, 27] },
+    "bar-3": { "box": [43.5, 29, 9, 40] },
+    "bar-4": { "box": [52.5, 44, 9, 25] },
+    "bar-5": { "box": [61.5, 57, 9, 12] }
+  },
+  "motion": [
+    {
+      "part": "bar-1",
+      "pivot": [30, 69],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    },
+    {
+      "part": "bar-2",
+      "pivot": [39, 69],
+      "duration": 380,
+      "delay": 80,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    },
+    {
+      "part": "bar-3",
+      "pivot": [48, 69],
+      "duration": 380,
+      "delay": 160,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    },
+    {
+      "part": "bar-4",
+      "pivot": [57, 69],
+      "duration": 380,
+      "delay": 240,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    },
+    {
+      "part": "bar-5",
+      "pivot": [66, 69],
+      "duration": 380,
+      "delay": 320,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

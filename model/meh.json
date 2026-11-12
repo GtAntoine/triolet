@@ -1,0 +1,72 @@
+{
+  "name": "meh",
+  "category": "social",
+  "keywords": ["meh", "neutral", "face", "emoji", "indifferent", "so-so", "bof", "neutre"],
+  "aliases": [],
+  "gesture": "The face blinks, unimpressed.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 28, "cy": 56, "r": 5.5, "role": "accent" },
+        { "kind": "circle", "cx": 68, "cy": 56, "r": 5.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "eyes",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 37, "cy": 42, "r": 6.5, "role": "main" },
+            { "kind": "circle", "cx": 59, "cy": 42, "r": 6.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M35 62H61",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "eyes": { "box": [30.5, 35.5, 35, 13] }
+  },
+  "motion": [
+    {
+      "part": "eyes",
+      "pivot": [48, 42],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleY": [[0, 1], [0.4, 0.15], [0.6, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
