@@ -1,0 +1,62 @@
+{
+  "name": "gavel",
+  "category": "civic",
+  "keywords": ["gavel", "judge", "law", "court", "auction", "justice", "marteau", "tribunal"],
+  "aliases": [],
+  "gesture": "The gavel strikes its block.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 72, "w": 46, "h": 12, "r": 6, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "gavel",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M46 40L77 71",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 19, "y": 17, "w": 46, "h": 24, "r": 7, "role": "base", "rotate": [-45, 42, 29] },
+            { "kind": "rect", "x": 36, "y": 17, "w": 12, "h": 24, "r": 0, "role": "accent", "rotate": [-45, 42, 29] }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "gavel": { "box": [20.15, 7.15, 56.85, 63.85] }
+  },
+  "motion": [
+    {
+      "part": "gavel",
+      "pivot": [77, 71],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.35, 16], [0.6, -10], [0.8, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

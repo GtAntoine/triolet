@@ -1,0 +1,48 @@
+{
+  "name": "pill",
+  "category": "health",
+  "keywords": ["pill", "medicine", "capsule", "drug", "pharmacy", "treatment", "médicament", "gélule"],
+  "aliases": [],
+  "gesture": "The capsule rocks on itself.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "capsule",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 8, "y": 31, "w": 80, "h": 34, "r": 17, "role": "base", "rotate": [-40, 48, 48] },
+            { "kind": "path", "d": "M8 48A17 17 0 0 1 25 31H48V65H25A17 17 0 0 1 8 48Z", "role": "main", "rotate": [-40, 48, 48] }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 57, "y": 43, "w": 20, "h": 10, "r": 5, "role": "accent", "rotate": [-40, 48, 48] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "capsule": { "box": [13.38, 16.28, 69.17, 63.5] }
+  },
+  "motion": [
+    {
+      "part": "capsule",
+      "pivot": [47.97, 48.03],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, -14], [0.4, 10], [0.6, -6], [0.8, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

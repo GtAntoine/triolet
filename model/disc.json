@@ -1,0 +1,78 @@
+{
+  "name": "disc",
+  "category": "media",
+  "keywords": ["disc", "cd", "vinyl", "album", "record", "music", "disque", "vinyle"],
+  "aliases": [],
+  "gesture": "The disc makes one turn.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "disc",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M24 40A26 26 0 0 1 40 24",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 5 }
+            },
+            {
+              "kind": "path",
+              "d": "M72 56A26 26 0 0 1 56 72",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 20, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 8, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "disc": { "box": [12, 12, 72, 72] }
+  },
+  "motion": [
+    {
+      "part": "disc",
+      "pivot": [48, 48],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}

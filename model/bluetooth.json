@@ -1,0 +1,70 @@
+{
+  "name": "bluetooth",
+  "category": "devices",
+  "keywords": ["bluetooth", "wireless", "pair", "connect", "device", "signal", "sans-fil", "appairer"],
+  "aliases": [],
+  "gesture": "The dot pops: a device is paired.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 12, "w": 52, "h": 72, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M36 37L59 58L47 69V27L59 38L36 59",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 22, "r": 12, "role": "gap" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 22, "r": 9, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "dot": { "box": [58, 10, 24, 24] }
+  },
+  "motion": [
+    {
+      "part": "dot",
+      "pivot": [70, 22],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,102 @@
+{
+  "name": "alarm",
+  "category": "time",
+  "keywords": ["alarm", "clock", "wake", "ring", "reminder", "morning", "réveil", "sonnerie"],
+  "aliases": [],
+  "gesture": "The alarm clock shakes as it rings.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "clock",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M30 76L24 85",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            },
+            {
+              "kind": "path",
+              "d": "M66 76L72 85",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 13, "y": 13, "w": 24, "h": 13, "r": 6.5, "role": "accent", "rotate": [-38, 25, 19.5] },
+            { "kind": "rect", "x": 59, "y": 13, "w": 24, "h": 13, "r": 6.5, "role": "accent", "rotate": [38, 71, 19.5] }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 52, "r": 30, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 52, "r": 24, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 52V38",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            },
+            {
+              "kind": "path",
+              "d": "M48 52L58 58",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "clock": { "box": [14.18, 9.63, 67.63, 75.37] }
+  },
+  "motion": [
+    {
+      "part": "clock",
+      "pivot": [48, 85],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": {
+        "rotate": [[0, 0], [0.16666666666666666, 5], [0.3333333333333333, -5], [0.5, 4], [0.6666666666666666, -4], [0.8333333333333334, 2], [1, 0]]
+      }
+    }
+  ],
+  "idle": false
+}

@@ -32,7 +32,7 @@
   "sets": 5,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "bookmark",
@@ -74,7 +74,7 @@
   "sets": 5,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "camera",
@@ -221,7 +221,7 @@
   "sets": 5,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "image",
@@ -571,7 +571,7 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "anchor",
@@ -599,21 +599,21 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "backpack",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "backspace",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "barcode",
@@ -640,15 +640,15 @@
   "name": "bluetooth",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bomb",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "book",
@@ -669,28 +669,28 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "chevron-left",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "chevron-right",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "circle",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "code",
@@ -710,22 +710,22 @@
   "name": "cookie",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "copyright",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "crop",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "crown",
@@ -746,7 +746,7 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "download",
@@ -760,42 +760,42 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "egg",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "file",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "files",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "gavel",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "gif",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "hand",
@@ -823,7 +823,7 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "hourglass",
@@ -879,21 +879,21 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "mosque",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "mouse",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "newspaper",
@@ -907,21 +907,21 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "picture-in-picture",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "pill",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "power",
@@ -948,8 +948,8 @@
   "name": "rss",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "scale",
@@ -962,15 +962,15 @@
   "name": "scan",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "scooter",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "server",
@@ -984,21 +984,21 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "signature",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "skull",
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "sliders",
@@ -1026,7 +1026,7 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "stethoscope",
@@ -1040,7 +1040,7 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "sun",
@@ -1089,7 +1089,7 @@
   "sets": 4,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "umbrella",
@@ -1109,8 +1109,8 @@
   "name": "usb",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "wifi",
@@ -1124,455 +1124,455 @@
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "ad",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "airplay",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "alarm",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "album",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "align-center",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "align-left",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "align-right",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "angle",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "aperture",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "app-window",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "armchair",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "atom",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "avocado",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "axe",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "badge",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "balloon",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "binary",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "binoculars",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "biohazard",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "blender",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "bone",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "bookmarks",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "brain",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bug",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bus",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "cannabis",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "car",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "cards",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "carrot",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "cast",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "cat",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "certificate",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "chart-line",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "chart-scatter",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "cheese",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "chevron-down",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "chevron-up",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "church",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "clover",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "coins",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "command",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "compass",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "contrast",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "copy",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "copyleft",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "cross",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "crosshair",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "cylinder",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "desk",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "device-tablet",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "devices",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "disc",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "dna",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "dog",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 2
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "ear",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "eject",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "elevator",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "engine",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "equal",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 2
+  "lot": 1
  },
  {
   "name": "eraser",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "factory",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "fast-forward",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "feather",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "fence",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "file-text",
@@ -1586,217 +1586,217 @@
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "fire-extinguisher",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "fish",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "flower",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "folders",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "forklift",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "forward",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "function",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "gauge",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "ghost",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "git-branch",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "git-fork",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "git-merge",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "git-pull-request",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "hammer",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "handshake",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "hard-drive",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "hash",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "headset",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "helicopter",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "hospital",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "infinity",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "italic",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "joystick",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "lamp",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "lasso",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "leaf",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "lifebuoy",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "luggage",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "magnet",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "mailbox",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "map-pin",
@@ -1810,84 +1810,84 @@
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "medal",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "megaphone",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "menu",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "metronome",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "microscope",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "microwave",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "minimize",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "more-horizontal",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "navigation",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "network",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "nfc",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "notebook",
@@ -1901,112 +1901,112 @@
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "nut",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "octagon",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "opacity",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "option",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "orbit",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "park",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "password",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "percent",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "piano",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "pin",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "pizza",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "planet",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "plug",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "podium",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "poker-chip",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "presentation",
@@ -2020,1148 +2020,1148 @@
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "rainbow",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "rectangle",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "recycle",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "resize",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "road",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "robot",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "route",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "router",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "ruler",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "sailboat",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "satellite",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "screen-share",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "shapes",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "shovel",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "shuffle",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "signpost",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "siren",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "skip-back",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "skip-forward",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "slash",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "slideshow",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "snail",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "solar-panel",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "spade",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "sparkle",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "sparkles",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "stack",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "stairs",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "stop",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "strikethrough",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "subscript",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "subtitles",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "superscript",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "sword",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "swords",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 3
+  "lot": 1
  },
  {
   "name": "syringe",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "tabs",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "tent",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "timeline",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "timer",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "toggle-left",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "toggle-right",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "tractor",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "traffic-cone",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "train",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "trending-down",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "trending-up",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "triangle",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "trolley",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "tv",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "underline",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "variable",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "vault",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "vignette",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "virus",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "voicemail",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "wallpaper",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "warehouse",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "watch",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "waves",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "webhook",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "weight",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "wheat",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "wind",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "window",
   "sets": 3,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "abc",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "accessibility",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "accessible",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "acorn",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "address-book",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "air-traffic-control",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "alert-circle",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "alien",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "ampersand",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "antenna",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "api",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "apple",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "apps",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "area-chart",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-back",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-big-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-big-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-big-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-big-up",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-circle-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-circle-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-circle-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-circle-up",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-elbow-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-elbow-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrow-forward",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrows-horizontal",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrows-split",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "arrows-vertical",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "aspect-ratio",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "at",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "automation",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "award",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "baby",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "ban",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "banana",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bandage",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "barbell",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "barrel",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "baseline",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bath",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bathtub",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "battery-charging",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "battery-low",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "battery-plus",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "beer",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bike",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bird",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "blind",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "blinds",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "blocks",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bold",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "books",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-all",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-bottom",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-horizontal",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-inner",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-outer",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-style",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-top",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "border-vertical",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "braces",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "brackets",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bread",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bridge",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "broadcast",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "broom",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "browser",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 4
+  "lot": 1
  },
  {
   "name": "bubble",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "bubbles",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "bulldozer",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "butterfly",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cable",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cactus",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "campfire",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cancel",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "candle",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "candlestick-chart",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "candy",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "capture",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "caravan",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "caret-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "caret-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "caret-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "caret-up",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cassette-tape",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "castle",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "category",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cell-tower",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chair",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chalkboard",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "charging-station",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chart-area",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chart-column",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chart-donut",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chart-radar",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "checklist",
@@ -3175,2414 +3175,2414 @@
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cherry",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chess",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chevrons-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chevrons-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chevrons-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "chevrons-up",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cigarette",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "circles",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "clear-all",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "closed-caption",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "club",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "coin",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "columns",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "computer",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cone",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "confetti",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "construction",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "container",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "contract",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cooking-pot",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-down-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-down-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-left-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-left-up",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-right-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-right-up",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-up-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "corner-up-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "crane",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "creative-commons",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "cricket",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "csv",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "currency",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "currency-dollar",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "currency-pound",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "currency-rupee",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "currency-yen",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "dashboard",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "deselect",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "details",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "dialpad",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "directions",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "dock",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "door",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "door-open",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "dot",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "dresser",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "droplet",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "droplets",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "dual-screen",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "dumbbell",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "earbuds",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "equalizer",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "equals",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "escalator",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "euro",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "exclamation-mark",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "expand",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "explicit",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "exposure",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "external-link",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "eyeglasses",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "face-mask",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "fan",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "faucet",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "film",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "fire-hydrant",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "flare",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "flashlight",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "flip-horizontal",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "flip-vertical",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 5
+  "lot": 1
  },
  {
   "name": "flood",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "focus",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "footprints",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "frame",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "fullscreen",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "galaxy",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gamepad",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "garage",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "garden-cart",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gender-female",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gender-male",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gender-transgender",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "git-commit",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "git-compare",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gitlab",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "golf",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gps",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gpu",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "gradient",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "grain",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "grape",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "graph",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "grid-goldenratio",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "guitar",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "hamburger",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "handbag",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "hard-hat",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "haze",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "hd",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "heading",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "heartbeat",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "highlight",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "highlighter",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "history",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "horse",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "hotel",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "html",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "ice-cream",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "ice-skating",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "id-card",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "images",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "indent-decrease",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "indent-increase",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "invoice",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "kanban",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "kayak",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "ladder",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "lambda",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "laptop",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "layers",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "layout",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "lectern",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "lego",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-a",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-b",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-c",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-d",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-e",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-f",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-g",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-h",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-i",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-j",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-k",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-l",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-m",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-n",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-o",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-p",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-q",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-r",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-s",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-spacing",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-t",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-u",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-v",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-w",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-x",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-y",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "letter-z",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "library",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "license",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "lighthouse",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "line-style",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "loader",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "login",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "logout",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "logs",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "lollipop",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "man",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "margin",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "markdown",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "mars",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "martini",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "massage",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "merge",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "meteor",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "milk",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "mist",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "mop",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 6
+  "lot": 1
  },
  {
   "name": "motorbike",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "motorcycle",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "mountain",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "move",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "movie",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "needle",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "news",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "note",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "notes",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "omega",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "outbound",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "outlet",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "oven",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "paint-bucket",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "paint-roller",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "panorama",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "paper-bag",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "parachute",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "parentheses",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "parking-meter",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "paw-print",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "peace",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pentagram",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pepper",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "perspective",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pi",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "picnic-table",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "piggy-bank",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pilcrow",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "ping-pong",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pipette",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "placeholder",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "plane",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "plant",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "playing-cards",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "playlist",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pointer",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "polygon",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pool",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "popcorn",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "popsicle",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "potted-plant",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "prescription",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "pyramid",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "question-mark",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "quote",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "quotes",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "rabbit",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "radical",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "radioactive",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "redo",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "regex",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "reorder",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "replace",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "reply",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "report",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "rewind",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "rocking-chair",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "roller-skating",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "salad",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "save",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "schema",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "scoreboard",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "screencast",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "screenshot",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "scribble",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "script",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "scroll",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "scuba-diving",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sdk",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "section",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "select",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "shadow",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "ship",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "shirt",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "shower",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "shredder",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "shrimp",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sigma",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "signal",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sim-card",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "skateboarding",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "slice",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "snowboarding",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sock",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sofa",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sort-ascending",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sort-descending",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sos",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "soup",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "space",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "speaker",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sphere",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "spiral",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sql",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "stamp",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "stars",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "steering-wheel",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "steps",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "sticky-note",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 7
+  "lot": 1
  },
  {
   "name": "store",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "storefront",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "storm",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "strategy",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "subway",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "sunglasses",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "sunrise",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "sunset",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "swipe",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "switch",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "synagogue",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "tablet",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 8
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "tags",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "telescope",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "test-tube",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "text",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "texture",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "theater",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "thumb-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "thumbs-down",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "tilde",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "tip-jar",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "toilet",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "toolbox",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "tooltip",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "trademark",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "tram",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "transform",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "transgender",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "translate",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "treasure-chest",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "tree",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "trees",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "u-turn-left",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "u-turn-right",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "undo",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "ungroup",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "unlink",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "van",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "venus",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "vibrate",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "volcano",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "volleyball",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wall",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wand",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wash",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "washing-machine",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wave-sine",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wave-square",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "waveform",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "webcam",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wheelchair",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "windmill",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wine",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "woman",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "wrap-text",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "x-circle",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "yarn",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "yin-yang",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-aquarius",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-aries",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-cancer",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-capricorn",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-gemini",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-leo",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-libra",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-pisces",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-sagittarius",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-scorpio",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-taurus",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zodiac-virgo",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zoom-in",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  },
  {
   "name": "zoom-out",
   "sets": 2,
   "category": "other",
   "drawn": false,
-  "lot": 8
+  "lot": 1
  }
 ]

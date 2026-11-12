@@ -1,0 +1,111 @@
+{
+  "name": "brain",
+  "category": "education",
+  "keywords": ["brain", "mind", "think", "idea", "intelligence", "memory", "cerveau", "réflexion"],
+  "aliases": [],
+  "gesture": "One fold of the brain flashes: an idea.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 34, "cy": 32, "r": 15, "role": "base" },
+        { "kind": "circle", "cx": 26, "cy": 48, "r": 15, "role": "base" },
+        { "kind": "circle", "cx": 33, "cy": 64, "r": 15, "role": "base" },
+        { "kind": "circle", "cx": 62, "cy": 32, "r": 15, "role": "base" },
+        { "kind": "circle", "cx": 70, "cy": 48, "r": 15, "role": "base" },
+        { "kind": "circle", "cx": 63, "cy": 64, "r": 15, "role": "base" },
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 22, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 45.5, "y": 20, "w": 5, "h": 56, "r": 28, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M46 37L35 30",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 4.5 }
+        },
+        {
+          "kind": "path",
+          "d": "M50 37L61 30",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 4.5 }
+        },
+        {
+          "kind": "path",
+          "d": "M25 47C30 43 36 44 38 49",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 4.5 }
+        },
+        {
+          "kind": "path",
+          "d": "M46 60C40 58 34 61 32 68",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 4.5 }
+        },
+        {
+          "kind": "path",
+          "d": "M50 60C56 58 62 61 64 68",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 4.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "idea",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M58 49C60 44 66 43 71 47",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "idea": { "box": [58, 44.53, 13, 4.47] }
+  },
+  "motion": [
+    {
+      "part": "idea",
+      "pivot": [64.5, 46.77],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

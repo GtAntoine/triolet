@@ -1,0 +1,91 @@
+{
+  "name": "cat",
+  "category": "social",
+  "keywords": ["cat", "pet", "animal", "kitten", "feline", "meow", "chat", "animal de compagnie"],
+  "aliases": [],
+  "gesture": "The cat blinks.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M20 42L22 18L44 30Z",
+          "role": "main",
+          "stroke": { "width": 4 }
+        },
+        {
+          "kind": "path",
+          "d": "M76 42L74 18L52 30Z",
+          "role": "main",
+          "stroke": { "width": 4 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "ellipse", "cx": 48, "cy": 54, "rx": 33, "ry": 27, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "eyes",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 33, "y": 44, "w": 8, "h": 13, "r": 6.5, "role": "main" },
+            { "kind": "rect", "x": 55, "y": 44, "w": 8, "h": 13, "r": 6.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M43.5 60H52.5L48 65.5Z",
+          "role": "accent",
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 60, "w": 13, "h": 3.5, "r": 1.75, "role": "mid" },
+        { "kind": "rect", "x": 65, "y": 60, "w": 13, "h": 3.5, "r": 1.75, "role": "mid" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "eyes": { "box": [33, 44, 30, 13] }
+  },
+  "motion": [
+    {
+      "part": "eyes",
+      "pivot": [48, 50.5],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleY": [[0, 1], [0.2, 0.1], [0.4, 1], [0.6, 0.1], [0.8, 1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

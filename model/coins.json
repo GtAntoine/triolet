@@ -1,0 +1,97 @@
+{
+  "name": "coins",
+  "category": "finance",
+  "keywords": ["coins", "money", "cash", "change", "payment", "savings", "pièces", "monnaie"],
+  "aliases": [],
+  "gesture": "The coin in front bounces.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 60, "cy": 38, "r": 24, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 60,
+          "cy": 38,
+          "r": 16,
+          "role": "mainLight",
+          "fill": false,
+          "stroke": { "width": 4 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "coin",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 38, "cy": 58, "r": 29, "role": "gap" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 38, "cy": 58, "r": 26, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 38,
+              "cy": 58,
+              "r": 18,
+              "role": "mid",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 38, "cy": 58, "r": 8, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "coin": { "box": [9, 29, 58, 58] }
+  },
+  "motion": [
+    {
+      "part": "coin",
+      "pivot": [38, 58],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -7], [0.55, 0], [0.75, -2.1875], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

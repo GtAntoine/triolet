@@ -1,0 +1,83 @@
+{
+  "name": "scan",
+  "category": "devices",
+  "keywords": ["scan", "scanner", "frame", "capture", "read", "detect", "viseur", "numériser"],
+  "aliases": [],
+  "gesture": "The line sweeps the frame up and down.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M14 32V24A10 10 0 0 1 24 14H32",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        },
+        {
+          "kind": "path",
+          "d": "M64 14H72A10 10 0 0 1 82 24V32",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        },
+        {
+          "kind": "path",
+          "d": "M82 64V72A10 10 0 0 1 72 82H64",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        },
+        {
+          "kind": "path",
+          "d": "M32 82H24A10 10 0 0 1 14 72V64",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 25, "y": 25, "w": 46, "h": 46, "r": 9, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "line",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 44, "w": 34, "h": 8, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line": { "box": [31, 44, 34, 8] }
+  },
+  "motion": [
+    {
+      "part": "line",
+      "pivot": [48, 48],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.3, 0], [0.7, 0], [1, 0]], "y": [[0, 0], [0.3, -11], [0.7, 11], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

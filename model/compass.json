@@ -1,0 +1,77 @@
+{
+  "name": "compass",
+  "category": "places",
+  "keywords": ["compass", "direction", "navigate", "north", "explore", "orientation", "boussole", "nord"],
+  "aliases": [],
+  "gesture": "The needle swings, then finds north again.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 28, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "needle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 25L56 48H40Z",
+              "role": "accent",
+              "stroke": { "width": 2 },
+              "rotate": [40, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M40 48H56L48 71Z",
+              "role": "main",
+              "stroke": { "width": 2 },
+              "rotate": [40, 48, 48]
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 3.5, "role": "on" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "needle": { "box": [33.22, 30.38, 29.57, 35.24] }
+  },
+  "motion": [
+    {
+      "part": "needle",
+      "pivot": [48, 48],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 32], [0.4, -22], [0.6, 12], [0.8, -5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

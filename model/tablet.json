@@ -1,0 +1,140 @@
+{
+  "name": "tablet",
+  "category": "devices",
+  "keywords": ["tablet", "ipad", "device", "screen", "apps", "touch", "tablette", "écran"],
+  "aliases": [],
+  "gesture": "The four apps pop on the screen, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 12, "w": 60, "h": 72, "r": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 18, "w": 48, "h": 54, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "app-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 24, "w": 15, "h": 15, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "app-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 24, "w": 15, "h": 15, "r": 4, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "app-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 45, "w": 15, "h": 15, "r": 4, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "app-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 45, "w": 15, "h": 15, "r": 4, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 42, "y": 76, "w": 12, "h": 4, "r": 2, "role": "mainLight" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "app-1": { "box": [30, 24, 15, 15] },
+    "app-2": { "box": [51, 24, 15, 15] },
+    "app-3": { "box": [30, 45, 15, 15] },
+    "app-4": { "box": [51, 45, 15, 15] }
+  },
+  "motion": [
+    {
+      "part": "app-1",
+      "pivot": [37.5, 31.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    },
+    {
+      "part": "app-2",
+      "pivot": [58.5, 31.5],
+      "duration": 400,
+      "delay": 90,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    },
+    {
+      "part": "app-3",
+      "pivot": [37.5, 52.5],
+      "duration": 400,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    },
+    {
+      "part": "app-4",
+      "pivot": [58.5, 52.5],
+      "duration": 400,
+      "delay": 270,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,74 @@
+{
+  "name": "usb",
+  "category": "devices",
+  "keywords": ["usb", "plug", "key", "drive", "connector", "port", "clé", "brancher"],
+  "aliases": [],
+  "gesture": "The key pushes in, as it is plugged.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "key",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 32, "y": 10, "w": 32, "h": 30, "r": 5, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 38, "y": 18, "w": 7, "h": 9, "r": 2, "role": "main" },
+            { "kind": "rect", "x": 51, "y": 18, "w": 7, "h": 9, "r": 2, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 22, "y": 36, "w": 52, "h": 50, "r": 12, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 46, "w": 34, "h": 30, "r": 7, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 61, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "key": { "box": [22, 10, 52, 76] }
+  },
+  "motion": [
+    {
+      "part": "key",
+      "pivot": [48, 48],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

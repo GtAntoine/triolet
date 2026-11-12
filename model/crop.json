@@ -1,0 +1,93 @@
+{
+  "name": "crop",
+  "category": "design",
+  "keywords": ["crop", "trim", "cut", "frame", "resize", "image", "recadrer", "rogner"],
+  "aliases": [],
+  "gesture": "The two corners of the crop tool close on the part that is kept.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 14, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 41, "y": 41, "w": 14, "h": 14, "r": 3, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "corner-a",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M34 24V56A6 6 0 0 0 40 62H72",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "corner-b",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M24 34H56A6 6 0 0 1 62 40V72",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "corner-a": { "box": [34, 24, 38, 38] },
+    "corner-b": { "box": [24, 34, 38, 38] }
+  },
+  "motion": [
+    {
+      "part": "corner-a",
+      "pivot": [53, 43],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, 3], [1, 0]], "y": [[0, 0], [0.5, -3], [1, 0]] }
+    },
+    {
+      "part": "corner-b",
+      "pivot": [43, 53],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, -3], [1, 0]], "y": [[0, 0], [0.5, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

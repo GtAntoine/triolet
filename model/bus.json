@@ -1,0 +1,79 @@
+{
+  "name": "bus",
+  "category": "places",
+  "keywords": ["bus", "coach", "transport", "public", "transit", "commute", "autobus", "car"],
+  "aliases": [],
+  "gesture": "The bus drives off and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "bus",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 12, "y": 20, "w": 72, "h": 46, "r": 11, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 19, "y": 27, "w": 12, "h": 14, "r": 3, "role": "main" },
+            { "kind": "rect", "x": 34.5, "y": 27, "w": 12, "h": 14, "r": 3, "role": "main" },
+            { "kind": "rect", "x": 50, "y": 27, "w": 12, "h": 14, "r": 3, "role": "main" },
+            { "kind": "rect", "x": 65.5, "y": 27, "w": 12, "h": 14, "r": 3, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 19, "y": 48, "w": 58, "h": 7, "r": 3.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 30, "cy": 68, "r": 9, "role": "main" },
+            { "kind": "circle", "cx": 66, "cy": 68, "r": 9, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 30, "cy": 68, "r": 3.5, "role": "base" },
+            { "kind": "circle", "cx": 66, "cy": 68, "r": 3.5, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bus": { "box": [12, 20, 72, 57] }
+  },
+  "motion": [
+    {
+      "part": "bus",
+      "pivot": [48, 48.5],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

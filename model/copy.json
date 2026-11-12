@@ -1,0 +1,64 @@
+{
+  "name": "copy",
+  "category": "interface",
+  "keywords": ["copy", "duplicate", "clone", "clipboard", "paste", "double", "copier", "dupliquer"],
+  "aliases": [],
+  "gesture": "The copy comes out of the original.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 34, "y": 14, "w": 48, "h": 48, "r": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "copy",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 14, "y": 34, "w": 48, "h": 48, "r": 11, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 24, "y": 48, "w": 20, "h": 8, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 24, "y": 62, "w": 28, "h": 8, "r": 4, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "copy": { "box": [14, 34, 48, 48] }
+  },
+  "motion": [
+    {
+      "part": "copy",
+      "pivot": [38, 58],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 14], [1, 0]], "y": [[0, -14], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

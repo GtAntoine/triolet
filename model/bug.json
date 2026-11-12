@@ -1,0 +1,132 @@
+{
+  "name": "bug",
+  "category": "development",
+  "keywords": ["bug", "insect", "error", "debug", "issue", "defect", "bogue", "insecte"],
+  "aliases": [],
+  "gesture": "The bug wriggles.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "bug",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M32 46L16 38",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M29 58H13",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M32 70L17 79",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M64 46L80 38",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M67 58H83",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M64 70L79 79",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M42 22L36 12",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            },
+            {
+              "kind": "path",
+              "d": "M54 22L60 12",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 29, "r": 12, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "ellipse", "cx": 48, "cy": 58, "rx": 21, "ry": 26, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 46, "y": 36, "w": 4, "h": 46, "r": 23, "role": "mid" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 37, "cy": 52, "r": 5, "role": "accent" },
+            { "kind": "circle", "cx": 59, "cy": 52, "r": 5, "role": "accent" },
+            { "kind": "circle", "cx": 38, "cy": 68, "r": 4, "role": "accent" },
+            { "kind": "circle", "cx": 58, "cy": 68, "r": 4, "role": "accent" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bug": { "box": [13, 12, 70, 72] }
+  },
+  "motion": [
+    {
+      "part": "bug",
+      "pivot": [48, 48],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 7], [0.4, -6], [0.6, 4], [0.8, -2], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

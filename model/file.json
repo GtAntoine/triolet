@@ -1,0 +1,65 @@
+{
+  "name": "file",
+  "category": "documents",
+  "keywords": ["file", "document", "page", "sheet", "paper", "blank", "fichier", "feuille"],
+  "aliases": [],
+  "gesture": "The sheet lifts and settles.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "sheet",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M31 14H58L80 36V70A13 13 0 0 1 67 83H31A13 13 0 0 1 18 70V27A13 13 0 0 1 31 14Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M58 14L80 36H63A5 5 0 0 1 58 31Z", "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 46, "w": 20, "h": 9, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sheet": { "box": [18, 14, 62, 69] }
+  },
+  "motion": [
+    {
+      "part": "sheet",
+      "pivot": [49, 48.5],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}
