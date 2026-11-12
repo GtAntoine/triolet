@@ -1,0 +1,89 @@
+{
+  "name": "truck",
+  "category": "commerce",
+  "keywords": ["truck", "delivery", "shipping", "transport", "logistics", "order", "camion", "livraison"],
+  "aliases": [],
+  "gesture": "The truck drives off and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "truck",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M56 34L69 34L84 48L84 60A3 3 0 0 1 81 63L56 63Z",
+              "role": "main",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "path", "d": "M62 40L68 40L75 48L62 48Z", "role": "soft" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 10, "y": 22, "w": 48, "h": 41, "r": 7, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 18, "y": 32, "w": 24, "h": 8, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 28, "cy": 66, "r": 8.5, "role": "main" },
+            { "kind": "circle", "cx": 68, "cy": 66, "r": 8.5, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "circle", "cx": 28, "cy": 66, "r": 3, "role": "base" },
+            { "kind": "circle", "cx": 68, "cy": 66, "r": 3, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "truck": { "box": [10, 22, 74, 52.5] }
+  },
+  "motion": [
+    {
+      "part": "truck",
+      "pivot": [47, 48.25],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

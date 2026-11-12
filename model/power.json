@@ -1,0 +1,68 @@
+{
+  "name": "power",
+  "category": "interface",
+  "keywords": ["power", "on", "off", "shutdown", "start", "switch", "allumer", "éteindre"],
+  "aliases": [],
+  "gesture": "The switch is pushed in.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M35 35A19 19 0 1 0 61 35",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 8 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "switch",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 26V46",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "switch": { "box": [48, 26, 0, 20] }
+  },
+  "motion": [
+    {
+      "part": "switch",
+      "pivot": [48, 36],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

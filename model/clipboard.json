@@ -1,0 +1,83 @@
+{
+  "name": "clipboard",
+  "category": "documents",
+  "keywords": ["clipboard", "copy", "paste", "tasks", "report", "notes", "presse-papiers", "copier"],
+  "aliases": [],
+  "gesture": "The clip lifts and snaps back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 16, "w": 60, "h": 70, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 25, "y": 25, "w": 46, "h": 53, "r": 5, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 32, "y": 40, "w": 32, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 32, "y": 52, "w": 24, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 32, "y": 64, "w": 28, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "clip",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 34, "y": 10, "w": 28, "h": 15, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "clip": { "box": [34, 10, 28, 15] }
+  },
+  "motion": [
+    {
+      "part": "clip",
+      "pivot": [48, 17.5],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -5], [0.7, 0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

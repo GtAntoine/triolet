@@ -1,0 +1,75 @@
+{
+  "name": "alert-triangle",
+  "category": "notifications",
+  "keywords": ["warning", "alert", "danger", "caution", "error", "attention", "avertissement", "risque"],
+  "aliases": [],
+  "gesture": "The warning sign jolts and its dot pops.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 22L78 74H18Z",
+              "role": "main",
+              "stroke": { "width": 10 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "rect", "x": 44.5, "y": 36, "w": 7, "h": 22, "r": 3.5, "role": "on" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "part",
+          "name": "dot",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "plain",
+              "shapes": [
+                { "kind": "circle", "cx": 48, "cy": 67, "r": 4.5, "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "dot": { "box": [43.5, 62.5, 9, 9] },
+    "sign": { "box": [18, 22, 60, 52] }
+  },
+  "motion": [
+    {
+      "part": "dot",
+      "pivot": [48, 67],
+      "duration": 400,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.5], [1, 1]] }
+    },
+    {
+      "part": "sign",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.08], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

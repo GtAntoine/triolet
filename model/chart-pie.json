@@ -1,0 +1,56 @@
+{
+  "name": "chart-pie",
+  "category": "data",
+  "keywords": ["chart", "pie chart", "share", "proportion", "statistics", "analytics", "camembert", "répartition"],
+  "aliases": [],
+  "gesture": "One slice of the pie pulls out.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 46, "cy": 50, "r": 33, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "path", "d": "M46 50H13A33 33 0 0 0 46 83Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "slice",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M51 45V18A27 27 0 0 1 78 45Z", "role": "accent" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "slice": { "box": [51, 18, 27, 27] }
+  },
+  "motion": [
+    {
+      "part": "slice",
+      "pivot": [64.5, 31.5],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, 4], [1, 0]], "y": [[0, 0], [0.5, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

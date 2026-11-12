@@ -1,0 +1,94 @@
+{
+  "name": "chart-bar",
+  "category": "data",
+  "keywords": ["chart", "bar chart", "statistics", "analytics", "report", "graph", "graphique", "statistiques"],
+  "aliases": [],
+  "gesture": "The bars rise one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 72, "w": 72, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bar-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 19, "y": 46, "w": 16, "h": 28, "r": 5, "role": "base" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 40, "y": 52, "w": 16, "h": 22, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 61, "y": 20, "w": 16, "h": 54, "r": 5, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar-1": { "box": [19, 46, 16, 28] },
+    "bar-2": { "box": [40, 52, 16, 22] },
+    "bar-3": { "box": [61, 20, 16, 54] }
+  },
+  "motion": [
+    {
+      "part": "bar-1",
+      "pivot": [27, 74],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.3], [1, 1]] }
+    },
+    {
+      "part": "bar-2",
+      "pivot": [48, 74],
+      "duration": 500,
+      "delay": 90,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.3], [1, 1]] }
+    },
+    {
+      "part": "bar-3",
+      "pivot": [69, 74],
+      "duration": 500,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.3], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

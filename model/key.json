@@ -1,0 +1,61 @@
+{
+  "name": "key",
+  "category": "security",
+  "keywords": ["key", "password", "access", "unlock", "login", "secret", "clé", "accès"],
+  "aliases": [],
+  "gesture": "The key turns in the lock and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "key",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M44 48H80M67 48V61M79 48V58",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 30, "cy": 48, "r": 19, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 30, "cy": 48, "r": 8, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "key": { "box": [11, 29, 69, 38] }
+  },
+  "motion": [
+    {
+      "part": "key",
+      "pivot": [30, 48],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, -22], [0.75, 6], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,74 @@
+{
+  "name": "inbox",
+  "category": "communication",
+  "keywords": ["inbox", "messages", "mail", "received", "tray", "incoming", "boîte de réception", "courrier"],
+  "aliases": [],
+  "gesture": "A letter drops into the tray.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "letter",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 29, "y": 14, "w": 38, "h": 28, "r": 6, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 22, "w": 16, "h": 5, "r": 2.5, "role": "base" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 58, "cy": 33, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M12 50H30L35 60H61L66 50H84V74A10 10 0 0 1 74 84H22A10 10 0 0 1 12 74Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 69, "w": 36, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "letter": { "box": [29, 14, 38, 28] }
+  },
+  "motion": [
+    {
+      "part": "letter",
+      "pivot": [48, 28],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, 8], [0.7, -1.3333333333333333], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

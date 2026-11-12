@@ -1,0 +1,119 @@
+{
+  "name": "sun",
+  "category": "weather",
+  "keywords": ["sun", "sunny", "day", "light", "weather", "bright", "soleil", "jour"],
+  "aliases": [],
+  "gesture": "The rays turn around the sun.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "rays",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [0, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [45, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [90, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [135, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [180, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [225, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [270, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 14V24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 },
+              "rotate": [315, 48, 48]
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 19, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 10, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "rays": { "box": [14, 14, 68, 68] }
+  },
+  "motion": [
+    {
+      "part": "rays",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, -45], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

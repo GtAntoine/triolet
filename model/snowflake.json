@@ -1,0 +1,79 @@
+{
+  "name": "snowflake",
+  "category": "weather",
+  "keywords": ["snowflake", "snow", "cold", "winter", "freeze", "frost", "flocon", "neige"],
+  "aliases": [],
+  "gesture": "The snowflake turns a sixth of a turn.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "flake",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 22V74M41 27L48 33L55 27M41 69L48 63L55 69",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 },
+              "rotate": [0, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 22V74M41 27L48 33L55 27M41 69L48 63L55 69",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 },
+              "rotate": [60, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M48 22V74M41 27L48 33L55 27M41 69L48 63L55 69",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 },
+              "rotate": [120, 48, 48]
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 5.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "flake": { "box": [25.48, 22, 45.03, 52] }
+  },
+  "motion": [
+    {
+      "part": "flake",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, -60], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

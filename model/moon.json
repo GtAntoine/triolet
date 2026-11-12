@@ -1,0 +1,81 @@
+{
+  "name": "moon",
+  "category": "weather",
+  "keywords": ["moon", "night", "dark", "sleep", "evening", "dark mode", "lune", "nuit"],
+  "aliases": [],
+  "gesture": "The stars twinkle one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "path", "d": "M52 24A25 25 0 1 0 72 56A20 20 0 0 1 52 24Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "star-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 63, "cy": 30, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "star-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 43, "r": 3, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "star-1": { "box": [58.5, 25.5, 9, 9] },
+    "star-2": { "box": [67, 40, 6, 6] }
+  },
+  "motion": [
+    {
+      "part": "star-1",
+      "pivot": [63, 30],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.6], [1, 1]] }
+    },
+    {
+      "part": "star-2",
+      "pivot": [70, 43],
+      "duration": 450,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.6], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

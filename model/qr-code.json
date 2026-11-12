@@ -1,0 +1,112 @@
+{
+  "name": "qr-code",
+  "category": "commerce",
+  "keywords": ["qr code", "scan", "link", "ticket", "payment", "code", "code qr", "scanner"],
+  "aliases": [],
+  "gesture": "One square of the code lights up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 11, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 20, "h": 20, "r": 5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 28.5, "y": 28.5, "w": 7, "h": 7, "r": 2, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 54, "y": 22, "w": 20, "h": 20, "r": 5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 60.5, "y": 28.5, "w": 7, "h": 7, "r": 2, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 54, "w": 20, "h": 20, "r": 5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 28.5, "y": 60.5, "w": 7, "h": 7, "r": 2, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 54, "y": 54, "w": 8, "h": 8, "r": 2.5, "role": "main" },
+        { "kind": "rect", "x": 66, "y": 66, "w": 8, "h": 8, "r": 2.5, "role": "main" },
+        { "kind": "rect", "x": 54, "y": 66, "w": 8, "h": 8, "r": 2.5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "square",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 66, "y": 54, "w": 8, "h": 8, "r": 2.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "square": { "box": [66, 54, 8, 8] }
+  },
+  "motion": [
+    {
+      "part": "square",
+      "pivot": [70, 58],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.5], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

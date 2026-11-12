@@ -1,0 +1,75 @@
+{
+  "name": "flame",
+  "category": "weather",
+  "keywords": ["flame", "fire", "hot", "burn", "trending", "heat", "flamme", "feu"],
+  "aliases": [],
+  "gesture": "The flame flickers.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 76, "w": 52, "h": 10, "r": 5, "role": "base" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "fire",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 10C52 24 68 33 68 53A20 20 0 0 1 28 53C28 45 32 39 36 35C38 41 42 43 44 41C42 31 44 19 48 10Z",
+              "role": "main"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "heart",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "path", "d": "M48 44C52 50 57 55 57 62A9 9 0 0 1 39 62C39 55 44 50 48 44Z", "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "fire": { "box": [28, 10, 40, 63] },
+    "heart": { "box": [39, 44, 18, 27] }
+  },
+  "motion": [
+    {
+      "part": "fire",
+      "pivot": [48, 73],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleY": [[0, 1], [0.3, 1.06], [0.6, 0.96], [1, 1]], "skewY": [[0, 0], [0.3, -3], [0.6, 3], [1, 0]] }
+    },
+    {
+      "part": "heart",
+      "pivot": [48, 71],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleY": [[0, 1], [0.25, 1.25], [0.5, 0.85], [0.75, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

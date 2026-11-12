@@ -1,0 +1,66 @@
+{
+  "name": "shield",
+  "category": "security",
+  "keywords": ["shield", "security", "protection", "safe", "verified", "guard", "bouclier", "sécurité"],
+  "aliases": [],
+  "gesture": "The check draws itself on the shield.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 12L78 23V46C78 64 66 78 48 86C30 78 18 64 18 46V23Z",
+          "role": "base",
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "path", "d": "M48 25L66 32V46C66 58 59 67 48 73C37 67 30 58 30 46V32Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "check",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M39 47L46 54L58 40",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "check": { "box": [39, 40, 19, 14] }
+  },
+  "motion": [
+    {
+      "part": "check",
+      "pivot": [48.5, 47],
+      "duration": 500,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

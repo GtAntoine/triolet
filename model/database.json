@@ -1,0 +1,91 @@
+{
+  "name": "database",
+  "category": "data",
+  "keywords": ["database", "data", "storage", "sql", "records", "server", "base de données", "stockage"],
+  "aliases": [],
+  "gesture": "The layers of data settle one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M16 26A32 10 0 0 1 80 26V70A32 10 0 0 1 16 70Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "ellipse", "cx": 48, "cy": 26, "rx": 32, "ry": 10, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "layer-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M16 43A32 10 0 0 0 80 43",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "layer-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M16 58A32 10 0 0 0 80 58",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "layer-1": { "box": [16, 43, 64, 10] },
+    "layer-2": { "box": [16, 58, 64, 10] }
+  },
+  "motion": [
+    {
+      "part": "layer-1",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, -6], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "layer-2",
+      "pivot": [48, 63],
+      "duration": 450,
+      "delay": 150,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, -6], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,91 @@
+{
+  "name": "map",
+  "category": "places",
+  "keywords": ["map", "route", "directions", "travel", "location", "navigation", "carte", "itinéraire"],
+  "aliases": [],
+  "gesture": "The route draws itself to the pin.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M12 26L36 18L60 26L84 18V70L60 78L36 70L12 78Z",
+          "role": "base",
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "path", "d": "M36 20L60 28V76L36 68Z", "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "route",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 62C30 52 40 62 48 52C55 44 60 48 68 40",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "pin",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 36, "r": 6.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "route": { "box": [22, 40, 46, 22] },
+    "pin": { "box": [63.5, 29.5, 13, 13] }
+  },
+  "motion": [
+    {
+      "part": "route",
+      "pivot": [45, 51],
+      "duration": 600,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "pin",
+      "pivot": [70, 36],
+      "duration": 400,
+      "delay": 550,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

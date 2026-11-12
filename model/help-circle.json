@@ -1,0 +1,86 @@
+{
+  "name": "help-circle",
+  "category": "notifications",
+  "keywords": ["help", "question", "faq", "support", "unknown", "ask", "aide", "interrogation"],
+  "aliases": [],
+  "gesture": "The question mark tilts and its dot pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 29, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M39.5 40A8.5 8.5 0 1 1 52 47.5C49 49.5 48 51.5 48 55",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 66, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [39.5, 31.5, 17, 23.5] },
+    "dot": { "box": [43.5, 61.5, 9, 9] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 55],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.3333333333333333, -10], [0.6666666666666666, 8], [1, 0]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [48, 66],
+      "duration": 400,
+      "delay": 250,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.5], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

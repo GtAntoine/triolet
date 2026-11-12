@@ -1,0 +1,79 @@
+{
+  "name": "thermometer",
+  "category": "weather",
+  "keywords": ["thermometer", "temperature", "heat", "fever", "degrees", "climate", "thermomètre", "température"],
+  "aliases": [],
+  "gesture": "The temperature rises in the tube.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M62 22H70M62 34H70M62 46H70",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 44, "cy": 68, "r": 17, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 34, "y": 10, "w": 20, "h": 62, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 44, "cy": 68, "r": 7.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mercury",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 41.5, "y": 32, "w": 5, "h": 31, "r": 2.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mercury": { "box": [41.5, 32, 5, 31] }
+  },
+  "motion": [
+    {
+      "part": "mercury",
+      "pivot": [44, 63],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

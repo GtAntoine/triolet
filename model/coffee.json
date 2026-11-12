@@ -1,0 +1,117 @@
+{
+  "name": "coffee",
+  "category": "places",
+  "keywords": ["coffee", "cup", "tea", "drink", "break", "cafe", "café", "tasse"],
+  "aliases": [],
+  "gesture": "Steam rises from the cup.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "steam-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M34 28C30 23 38 19 34 13",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "steam-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M50 28C46 23 54 19 50 13",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M62 44H70A9 9 0 0 1 70 62H62",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M18 36H66V60A18 18 0 0 1 48 78H36A18 18 0 0 1 18 60Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 25, "y": 41, "w": 34, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 80, "w": 56, "h": 7, "r": 3.5, "role": "main" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "steam-1": { "box": [32.85, 13, 2.31, 15] },
+    "steam-2": { "box": [48.85, 13, 2.31, 15] }
+  },
+  "motion": [
+    {
+      "part": "steam-1",
+      "pivot": [34.01, 20.5],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 6], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "steam-2",
+      "pivot": [50.01, 20.5],
+      "duration": 600,
+      "delay": 160,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 6], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,55 @@
+{
+  "name": "archive",
+  "category": "documents",
+  "keywords": ["archive", "box", "storage", "store", "history", "backup", "archiver", "carton"],
+  "aliases": [],
+  "gesture": "The lid of the box lifts and closes.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 17, "y": 32, "w": 62, "h": 52, "r": 9, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 37, "y": 50, "w": 22, "h": 8, "r": 4, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "lid",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 11, "y": 18, "w": 74, "h": 18, "r": 7, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "lid": { "box": [11, 18, 74, 18] }
+  },
+  "motion": [
+    {
+      "part": "lid",
+      "pivot": [48, 27],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}
