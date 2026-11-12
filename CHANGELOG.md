@@ -8,7 +8,7 @@ the major is 0, a minor version may still change the API.
 
 First release.
 
-- 180 animated icons, each drawn in three colours (`base` 60 %, `main` 30 %, `accent` 10 %) with
+- 207 animated icons, each drawn in three colours (`base` 60 %, `main` 30 %, `accent` 10 %) with
   a soft relief that follows the size (full from 40 px, simplified from 24 px, flat below) or a
   flat finish on request. Every icon plays one gesture and comes back exactly to rest.
 - `triolet`: plain JavaScript and CSS, no dependency. `createIcons()`, `createElement()`,
