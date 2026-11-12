@@ -66,9 +66,9 @@ Each shape names a role, not a colour: the user picks the colours.
 The set as a whole aims at **60 % base, 30 % main, 10 % accent**. One icon may lean: a bell is
 mostly one colour. But for every icon:
 
-- there is an accent, and it covers **1 to 20 %** of the icon (aim for 5 to 12);
+- there is an accent, and it covers **5 to 18 %** of the icon (aim for 6 to 12; over 20 % is refused);
 - the accent never covers more than `main`;
-- no colour is nearly alone: `base` 15 to 88 %, `main` 8 to 70 %.
+- no colour is nearly alone: `base` 40 to 80 %, `main` 12 to 50 %. `pnpm icon:check` warns outside these bands.
 
 A good default: a `base` body, a `main` part a third of its size, an `accent` detail.
 

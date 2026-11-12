@@ -10,7 +10,7 @@ export default icon({
     part(
       'arrow',
       raised.small(stroke('M63 37A18.5 18.5 0 1 0 66 52', 'main', 8), path('M56 27L68 28L67 40Z', 'main', { outline: 4 })),
-      raised.small(circle(66, 53, 5, 'accent')),
+      raised.small(circle(66, 53, 8, 'accent')),
     ),
   ],
   motion: {

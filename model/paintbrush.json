@@ -18,7 +18,7 @@
               "d": "M18 82C28 78 38 85 50 81",
               "role": "accent",
               "fill": false,
-              "stroke": { "width": 5 }
+              "stroke": { "width": 6 }
             }
           ],
           "weight": "minor"
@@ -66,7 +66,7 @@
             {
               "kind": "path",
               "d": "M38 48L50 58C48 68 40 75 26 76C32 70 30 62 34 54Z",
-              "role": "main",
+              "role": "base",
               "stroke": { "width": 3 }
             }
           ],

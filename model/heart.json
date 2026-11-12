@@ -18,6 +18,19 @@
       "weight": "major"
     },
     {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M44 62C28.4 52.4 21.2 45.2 21.2 37.4A11.4 11.4 0 0 1 44 33.2A11.4 11.4 0 0 1 66.8 37.4C66.8 45.2 59.6 52.4 44 62Z",
+          "role": "base"
+        }
+      ],
+      "weight": "major"
+    },
+    {
       "type": "part",
       "name": "beat",
       "children": [

@@ -39,7 +39,7 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M63 48H67",
+              "d": "M57 48H67",
               "role": "accent",
               "fill": false,
               "stroke": { "width": 9 }

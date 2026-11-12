@@ -8,6 +8,14 @@
     {
       "type": "layer",
       "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
       "size": "small",
       "shapes": [
         {

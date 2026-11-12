@@ -8,7 +8,7 @@ export default icon({
   draw: [
     raised(rect(16, 16, 64, 64, 17, 'base')),
     part('mark', raised.small(stroke('M35 37L59 61M59 37L35 61', 'main', 9))),
-    part('dot', inset(circle(66, 30, 4.5, 'accent'))),
+    part('dot', inset(circle(66, 30, 8, 'accent'))),
   ],
   motion: {
     mark: spin({ from: -90, duration: 500, ease: 'out', pivot: [47, 49] }),

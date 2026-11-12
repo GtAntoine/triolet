@@ -12,7 +12,7 @@ export default icon({
       raised.small(stroke('M28 46V42A9 9 0 0 1 37 33H66M59 26L66 33L59 40', 'main', 6)),
       raised.small(stroke('M68 50V54A9 9 0 0 1 59 63H30M37 56L30 63L37 70', 'main', 6)),
     ),
-    raised.small(circle(48, 48, 5, 'accent')),
+    raised.small(circle(48, 48, 8, 'accent')),
   ],
   motion: {
     arrows: spin({ from: -180, duration: 800, pivot: [48, 48] }),

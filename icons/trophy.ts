@@ -7,12 +7,12 @@ export default icon({
   keywords: ['trophy', 'award', 'winner', 'cup', 'prize', 'champion', 'trophée', 'récompense'],
   gesture: 'The cup jumps and its star turns.',
   draw: [
-    raised(rect(28, 70, 40, 14, 5, 'base')),
+    raised(rect(28, 70, 40, 14, 5, 'main')),
     part(
       'cup',
       raised.small(stroke('M30 22H20V27A12 12 0 0 0 32 39M66 22H76V27A12 12 0 0 1 64 39', 'main', 5), rect(44, 52, 8, 20, 0, 'main')),
-      raised(path('M28 14H68V34A20 20 0 0 1 28 34Z', 'main', { outline: 3 })),
-      part('star', inset(path(starPath(48, 32, 8.5, 4), 'accent', { outline: 2 }))),
+      raised(path('M28 14H68V34A20 20 0 0 1 28 34Z', 'base', { outline: 3 })),
+      part('star', inset(path(starPath(48, 31, 11, 5), 'accent', { outline: 2 }))),
     ),
   ],
   motion: {

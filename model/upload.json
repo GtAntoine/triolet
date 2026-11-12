@@ -48,7 +48,7 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M48 47V51",
+              "d": "M48 41V51",
               "role": "accent",
               "fill": false,
               "stroke": { "width": 8 }

@@ -30,16 +30,16 @@
           "effect": "inset",
           "tone": "light",
           "shapes": [
-            { "kind": "circle", "cx": 48, "cy": 48, "r": 11, "role": "base" }
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 21, "role": "base" }
           ],
-          "weight": "minor"
+          "weight": "major"
         },
         {
           "type": "layer",
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 48, "cy": 48, "r": 4.5, "role": "accent" }
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 9, "role": "accent" }
           ],
           "weight": "minor"
         }

@@ -9,7 +9,7 @@ export default icon({
   gesture: 'The lines write themselves one after the other.',
   draw: [
     raised(rect(14, 16, 68, 64, 11, 'base')),
-    rows.map((y, k) => inset(circle(28, y + 3.5, 4.5, k === 0 ? 'accent' : 'mid'))),
+    rows.map((y, k) => inset(circle(28, y + 3.5, k === 0 ? 7 : 4.5, k === 0 ? 'accent' : 'mid'))),
     rows.map((y, k) => part(`line-${k + 1}`, inset(pill(38, y, k === 1 ? 26 : 34, 7, 'main')))),
   ],
   motion: {

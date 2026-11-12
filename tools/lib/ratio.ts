@@ -49,7 +49,7 @@ export function measure(model: IconModel, size = 384): Ratio {
  * One icon may lean one way (a bell is mostly `main`, a sheet mostly `base`), within these
  * bounds: outside them it is reported, and the icon is still accepted.
  */
-export const BANDS = { base: [15, 88], main: [8, 70], accent: [1, 20] } as const;
+export const BANDS = { base: [40, 80], main: [12, 50], accent: [5, 18] } as const;
 /** Past this share of accent the icon is refused. */
 export const ACCENT_MAX = 20;
 /** The average of the whole set must stay this close to 60 / 30 / 10. */

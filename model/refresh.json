@@ -43,7 +43,7 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "circle", "cx": 66, "cy": 53, "r": 5, "role": "accent" }
+            { "kind": "circle", "cx": 66, "cy": 53, "r": 8, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -51,7 +51,7 @@
     }
   ],
   "parts": {
-    "arrow": { "box": [29.49, 27, 41.51, 39.3] }
+    "arrow": { "box": [29.49, 27, 44.51, 39.3] }
   },
   "motion": [
     {

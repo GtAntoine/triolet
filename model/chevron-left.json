@@ -37,7 +37,7 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "circle", "cx": 63, "cy": 48, "r": 5.5, "role": "accent" }
+            { "kind": "circle", "cx": 63, "cy": 48, "r": 9, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -45,12 +45,12 @@
     }
   ],
   "parts": {
-    "chevron": { "box": [35, 30, 33.5, 36] }
+    "chevron": { "box": [35, 30, 37, 36] }
   },
   "motion": [
     {
       "part": "chevron",
-      "pivot": [51.75, 48],
+      "pivot": [53.5, 48],
       "duration": 500,
       "delay": 0,
       "iterations": 1,

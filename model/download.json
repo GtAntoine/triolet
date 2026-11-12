@@ -48,7 +48,7 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M48 13V17",
+              "d": "M48 13V23",
               "role": "accent",
               "fill": false,
               "stroke": { "width": 8 }

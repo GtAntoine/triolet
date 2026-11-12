@@ -20,10 +20,24 @@
     },
     {
       "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M28.16 37.08L38.08 47L48 32.12L57.92 47L67.84 37.08L64.12 59.4L31.88 59.4Z",
+          "role": "base",
+          "stroke": { "width": 3.1 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
       "effect": "raised",
       "size": "small",
       "shapes": [
-        { "kind": "rect", "x": 18, "y": 66, "w": 60, "h": 12, "r": 6, "role": "base" }
+        { "kind": "rect", "x": 18, "y": 64, "w": 60, "h": 15, "r": 7.5, "role": "main" }
       ],
       "weight": "major"
     },
@@ -34,9 +48,9 @@
         {
           "type": "layer",
           "effect": "inset",
-          "tone": "dark",
+          "tone": "light",
           "shapes": [
-            { "kind": "circle", "cx": 30, "cy": 72, "r": 3.5, "role": "main" }
+            { "kind": "circle", "cx": 30, "cy": 72, "r": 3.5, "role": "base" }
           ],
           "weight": "minor"
         }
@@ -51,7 +65,7 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 48, "cy": 72, "r": 4.5, "role": "accent" }
+            { "kind": "circle", "cx": 48, "cy": 71.5, "r": 6.5, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -64,9 +78,9 @@
         {
           "type": "layer",
           "effect": "inset",
-          "tone": "dark",
+          "tone": "light",
           "shapes": [
-            { "kind": "circle", "cx": 66, "cy": 72, "r": 3.5, "role": "main" }
+            { "kind": "circle", "cx": 66, "cy": 72, "r": 3.5, "role": "base" }
           ],
           "weight": "minor"
         }
@@ -75,7 +89,7 @@
   ],
   "parts": {
     "jewel-1": { "box": [26.5, 68.5, 7, 7] },
-    "jewel-2": { "box": [43.5, 67.5, 9, 9] },
+    "jewel-2": { "box": [41.5, 65, 13, 13] },
     "jewel-3": { "box": [62.5, 68.5, 7, 7] }
   },
   "motion": [
@@ -90,7 +104,7 @@
     },
     {
       "part": "jewel-2",
-      "pivot": [48, 72],
+      "pivot": [48, 71.5],
       "duration": 400,
       "delay": 120,
       "iterations": 1,

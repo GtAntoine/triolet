@@ -6,6 +6,14 @@
   "gesture": "The second person steps closer and the badge pops.",
   "nodes": [
     {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 44, "r": 35, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
       "type": "part",
       "name": "friend",
       "children": [
@@ -38,7 +46,7 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 38, "cy": 65, "r": 4.5, "role": "accent" }
+            { "kind": "circle", "cx": 38, "cy": 64, "r": 9, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -47,7 +55,7 @@
   ],
   "parts": {
     "friend": { "box": [43, 19, 40, 55] },
-    "badge": { "box": [33.5, 60.5, 9, 9] }
+    "badge": { "box": [29, 55, 18, 18] }
   },
   "motion": [
     {
@@ -61,7 +69,7 @@
     },
     {
       "part": "badge",
-      "pivot": [38, 65],
+      "pivot": [38, 64],
       "duration": 400,
       "delay": 250,
       "iterations": 1,

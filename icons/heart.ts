@@ -1,4 +1,4 @@
-import { icon, part, path, plain, raised, resize, tracks } from '@triolet/core';
+import { inset, icon, part, path, plain, raised, resize, tracks } from '@triolet/core';
 import { HEART } from './_shared.ts';
 
 export default icon({
@@ -8,6 +8,7 @@ export default icon({
   gesture: 'The small heart beats twice.',
   draw: [
     resize([raised(path(HEART, 'main'))], 1.75, { about: [48, 23], move: [-4, 21] }),
+    resize([inset(path(HEART, 'base'))], 1.2, { about: [48, 23], move: [-4, 21] }),
     // A second, smaller heart in the accent colour, detached by a ring.
     part(
       'beat',

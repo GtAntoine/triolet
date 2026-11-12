@@ -10,8 +10,8 @@ export default icon({
       'gear',
       // Eight teeth around a disc, all one piece.
       raised(circle(48, 48, 25, 'main'), [0, 45, 90, 135, 180, 225, 270, 315].map((a) => rect(42, 12, 12, 16, 4, 'main', { rotate: [a, 48, 48] }))),
-      inset(circle(48, 48, 11, 'base')),
-      inset(circle(48, 48, 4.5, 'accent')),
+      inset(circle(48, 48, 21, 'base')),
+      inset(circle(48, 48, 9, 'accent')),
     ),
   ],
   motion: {

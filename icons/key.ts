@@ -9,8 +9,9 @@ export default icon({
     part(
       'key',
       raised(stroke('M44 48H80M67 48V61M79 48V58', 'main', 8)),
-      raised(circle(30, 48, 19, 'main')),
-      inset(circle(30, 48, 8, 'accent')),
+      raised(circle(30, 48, 19, 'base')),
+      inset(circle(30, 48, 12, 'main')),
+      inset(circle(30, 48, 6, 'accent')),
     ),
   ],
   motion: {

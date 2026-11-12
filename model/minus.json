@@ -43,7 +43,7 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 70, "cy": 48, "r": 4.5, "role": "accent" }
+            { "kind": "circle", "cx": 70, "cy": 48, "r": 8, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -52,7 +52,7 @@
   ],
   "parts": {
     "mark": { "box": [29, 48, 27, 0] },
-    "dot": { "box": [65.5, 43.5, 9, 9] }
+    "dot": { "box": [62, 40, 16, 16] }
   },
   "motion": [
     {

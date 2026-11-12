@@ -36,7 +36,7 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "circle", "cx": 48, "cy": 82, "r": 5, "role": "accent" }
+            { "kind": "circle", "cx": 48, "cy": 82, "r": 7.5, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -44,7 +44,7 @@
     }
   ],
   "parts": {
-    "drop": { "box": [43, 77, 10, 10] }
+    "drop": { "box": [40.5, 74.5, 15, 15] }
   },
   "motion": [
     {

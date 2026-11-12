@@ -9,6 +9,14 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
         {
           "kind": "path",
           "d": "M24 16V34A17 17 0 0 0 58 34V16M41 51V60A16.5 16.5 0 0 0 74 60V54",
@@ -38,16 +46,16 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "circle", "cx": 74, "cy": 44, "r": 10, "role": "base" }
+            { "kind": "circle", "cx": 74, "cy": 44, "r": 13, "role": "base" }
           ],
-          "weight": "minor"
+          "weight": "major"
         },
         {
           "type": "layer",
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 74, "cy": 44, "r": 5, "role": "accent" }
+            { "kind": "circle", "cx": 74, "cy": 44, "r": 9, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -55,7 +63,7 @@
     }
   ],
   "parts": {
-    "chest": { "box": [64, 34, 20, 20] }
+    "chest": { "box": [61, 31, 26, 26] }
   },
   "motion": [
     {

@@ -8,7 +8,7 @@ export default icon({
   draw: [
     raised(circle(48, 48, 34, 'base')),
     // The tail of the arrow is the accent.
-    part('arrow', raised.small(stroke('M48 30V66M32 52L48 68L64 52', 'main', 9)), raised.small(stroke('M48 29V33', 'accent', 9))),
+    part('arrow', raised.small(stroke('M48 30V66M32 52L48 68L64 52', 'main', 9)), raised.small(stroke('M48 29V39', 'accent', 9))),
   ],
   motion: {
     arrow: nudge({ y: 6, settle: true, duration: 500 }),

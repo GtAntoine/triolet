@@ -1,4 +1,4 @@
-import { circle, icon, part, path, plain, pop, raised, rect } from '@triolet/core';
+import { inset, circle, icon, part, path, plain, pop, raised, rect } from '@triolet/core';
 
 export default icon({
   name: 'alert-triangle',
@@ -9,8 +9,9 @@ export default icon({
     part(
       'sign',
       raised(path('M48 22L78 74H18Z', 'main', { outline: 10 })),
-      plain(rect(44.5, 36, 7, 22, 3.5, 'on')),
-      part('dot', plain(circle(48, 67, 4.5, 'accent'))),
+      inset(path('M48 29L70 69H26Z', 'base', { outline: 3 })),
+      plain(rect(44.5, 40, 7, 15, 3.5, 'main')),
+      part('dot', plain(circle(48, 63, 6, 'accent'))),
     ),
   ],
   motion: {

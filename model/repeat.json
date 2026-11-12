@@ -54,7 +54,7 @@
       "effect": "raised",
       "size": "small",
       "shapes": [
-        { "kind": "circle", "cx": 48, "cy": 48, "r": 5, "role": "accent" }
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 8, "role": "accent" }
       ],
       "weight": "minor"
     }

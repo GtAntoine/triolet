@@ -27,7 +27,7 @@
           "type": "layer",
           "effect": "raised",
           "shapes": [
-            { "kind": "circle", "cx": 30, "cy": 48, "r": 19, "role": "main" }
+            { "kind": "circle", "cx": 30, "cy": 48, "r": 19, "role": "base" }
           ],
           "weight": "major"
         },
@@ -36,7 +36,16 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 30, "cy": 48, "r": 8, "role": "accent" }
+            { "kind": "circle", "cx": 30, "cy": 48, "r": 12, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 30, "cy": 48, "r": 6, "role": "accent" }
           ],
           "weight": "minor"
         }

@@ -35,9 +35,18 @@
         {
           "type": "layer",
           "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "path", "d": "M48 71C42 63 33 55 33 40A15 15 0 0 1 63 40C63 55 54 63 48 71Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "circle", "cx": 48, "cy": 38, "r": 10, "role": "accent" }
+            { "kind": "circle", "cx": 48, "cy": 39, "r": 8, "role": "accent" }
           ],
           "weight": "minor"
         }
