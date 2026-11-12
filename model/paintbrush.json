@@ -1,0 +1,103 @@
+{
+  "name": "paintbrush",
+  "category": "design",
+  "keywords": ["paintbrush", "brush", "paint", "draw", "art", "design", "pinceau", "peindre"],
+  "aliases": [],
+  "gesture": "The brush paints a stroke.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "paint",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M18 82C28 78 38 85 50 81",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "brush",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M76 14L50 44",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 10 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M51 43L44 51",
+              "role": "mid",
+              "fill": false,
+              "stroke": { "width": 13 }
+            }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M38 48L50 58C48 68 40 75 26 76C32 70 30 62 34 54Z",
+              "role": "main",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "paint": { "box": [18, 80.72, 32, 1.56] },
+    "brush": { "box": [26, 14, 50, 62] }
+  },
+  "motion": [
+    {
+      "part": "paint",
+      "pivot": [34, 81.5],
+      "duration": 600,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "brush",
+      "pivot": [76, 14],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.3333333333333333, -7], [0.6666666666666666, 6], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

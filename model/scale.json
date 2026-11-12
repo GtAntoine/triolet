@@ -1,0 +1,93 @@
+{
+  "name": "scale",
+  "category": "civic",
+  "keywords": ["scale", "balance", "justice", "law", "compare", "weigh", "équilibre", "droit"],
+  "aliases": [],
+  "gesture": "The scale tips one way, then the other, and settles.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 22V76",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        },
+        { "kind": "rect", "x": 30, "y": 74, "w": 36, "h": 9, "r": 4.5, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "beam",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 30L13 56M22 30L31 56M74 30L65 56M74 30L83 56",
+              "role": "mid",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 30H76",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M10 54H34A12 11 0 0 1 10 54Z", "role": "base" },
+            { "kind": "path", "d": "M62 54H86A12 11 0 0 1 62 54Z", "role": "base" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 22, "r": 6, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "beam": { "box": [10, 30, 76, 35] }
+  },
+  "motion": [
+    {
+      "part": "beam",
+      "pivot": [48, 30],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, 7], [0.5, -5], [0.75, 2], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

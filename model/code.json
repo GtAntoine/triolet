@@ -1,0 +1,115 @@
+{
+  "name": "code",
+  "category": "development",
+  "keywords": ["code", "developer", "html", "programming", "brackets", "source", "programmation", "développeur"],
+  "aliases": [],
+  "gesture": "The brackets open and the slash blinks.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 18, "w": 76, "h": 60, "r": 13, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "left",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M34 33L20 48L34 63",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "right",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M62 33L76 48L62 63",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "slash",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M53 30L43 66",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "left": { "box": [20, 33, 14, 30] },
+    "right": { "box": [62, 33, 14, 30] },
+    "slash": { "box": [43, 30, 10, 36] }
+  },
+  "motion": [
+    {
+      "part": "left",
+      "pivot": [27, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, -4], [1, 0]] }
+    },
+    {
+      "part": "right",
+      "pivot": [69, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.5, 4], [1, 0]] }
+    },
+    {
+      "part": "slash",
+      "pivot": [48, 48],
+      "duration": 400,
+      "delay": 150,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

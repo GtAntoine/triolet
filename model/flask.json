@@ -1,0 +1,98 @@
+{
+  "name": "flask",
+  "category": "education",
+  "keywords": ["flask", "science", "lab", "experiment", "chemistry", "test", "fiole", "laboratoire"],
+  "aliases": [],
+  "gesture": "Bubbles rise in the flask.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M38 14H58V36L76 70A8 8 0 0 1 69 82H27A8 8 0 0 1 20 70L38 36Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "path", "d": "M38 14H58V36L76 70A8 8 0 0 1 69 82H27A8 8 0 0 1 20 70L38 36Z", "role": "base" }
+      ],
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 14, "y": 60, "w": 68, "h": 28, "r": 0, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 33, "y": 10, "w": 30, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bubble-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 44, "cy": 50, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bubble-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 53, "cy": 40, "r": 3.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bubble-1": { "box": [39.5, 45.5, 9, 9] },
+    "bubble-2": { "box": [49.5, 36.5, 7, 7] }
+  },
+  "motion": [
+    {
+      "part": "bubble-1",
+      "pivot": [44, 50],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 8], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "bubble-2",
+      "pivot": [53, 40],
+      "duration": 500,
+      "delay": 160,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 8], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

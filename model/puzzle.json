@@ -1,0 +1,58 @@
+{
+  "name": "puzzle",
+  "category": "interface",
+  "keywords": ["puzzle", "plugin", "extension", "piece", "module", "addon", "pièce", "greffon"],
+  "aliases": [],
+  "gesture": "The piece clicks into place.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "piece",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 18, "y": 30, "w": 56, "h": 54, "r": 9, "role": "base" },
+            { "kind": "circle", "cx": 46, "cy": 25, "r": 11, "role": "base" },
+            { "kind": "circle", "cx": 78, "cy": 57, "r": 10, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 19, "cy": 57, "r": 11, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 46, "cy": 60, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "piece": { "box": [8, 14, 80, 70] }
+  },
+  "motion": [
+    {
+      "part": "piece",
+      "pivot": [48, 49],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

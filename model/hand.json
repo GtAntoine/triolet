@@ -1,0 +1,61 @@
+{
+  "name": "hand",
+  "category": "social",
+  "keywords": ["hand", "stop", "wave", "hello", "raise", "volunteer", "main", "bonjour"],
+  "aliases": [],
+  "gesture": "The hand waves.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "hand",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 35, "y": 39, "w": 40, "h": 44, "r": 15, "role": "base" },
+            { "kind": "rect", "x": 35, "y": 19, "w": 9.5, "h": 36, "r": 4.75, "role": "base" },
+            { "kind": "rect", "x": 45.2, "y": 12, "w": 9.5, "h": 40, "r": 4.75, "role": "base" },
+            { "kind": "rect", "x": 55.4, "y": 14, "w": 9.5, "h": 38, "r": 4.75, "role": "base" },
+            { "kind": "rect", "x": 65.6, "y": 21, "w": 9.5, "h": 34, "r": 4.75, "role": "base" },
+            { "kind": "rect", "x": 23, "y": 43, "w": 10, "h": 28, "r": 5, "role": "base", "rotate": [-32, 28, 65] }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 55, "cy": 61, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 37, "y": 77, "w": 36, "h": 9, "r": 4, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "hand": { "box": [13.99, 12, 61.11, 74] }
+  },
+  "motion": [
+    {
+      "part": "hand",
+      "pivot": [44.55, 86],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, -10], [0.4, 8], [0.6, -6], [0.8, 4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

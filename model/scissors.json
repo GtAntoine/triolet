@@ -1,0 +1,117 @@
+{
+  "name": "scissors",
+  "category": "design",
+  "keywords": ["scissors", "cut", "trim", "crop", "clip", "snip", "ciseaux", "couper"],
+  "aliases": [],
+  "gesture": "The scissors open and close.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "blade-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M34 62L72 16",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 27,
+              "cy": 70,
+              "r": 9,
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "blade-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54 64L26 16",
+              "role": "base",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 61,
+              "cy": 73,
+              "r": 9,
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 45, "cy": 48, "r": 4.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "blade-1": { "box": [18, 16, 54, 63] },
+    "blade-2": { "box": [26, 16, 44, 66] }
+  },
+  "motion": [
+    {
+      "part": "blade-1",
+      "pivot": [45, 48],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, -10], [0.75, 4], [1, 0]] }
+    },
+    {
+      "part": "blade-2",
+      "pivot": [45, 48],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, 10], [0.75, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

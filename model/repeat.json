@@ -1,0 +1,77 @@
+{
+  "name": "repeat",
+  "category": "arrows",
+  "keywords": ["repeat", "loop", "again", "cycle", "recurring", "replay", "répéter", "boucle"],
+  "aliases": [],
+  "gesture": "The two arrows go half a turn round.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrows",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M28 46V42A9 9 0 0 1 37 33H66M59 26L66 33L59 40",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M68 50V54A9 9 0 0 1 59 63H30M37 56L30 63L37 70",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 5, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "arrows": { "box": [28, 26, 40, 44] }
+  },
+  "motion": [
+    {
+      "part": "arrows",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, -180], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

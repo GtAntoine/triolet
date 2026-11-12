@@ -1,0 +1,74 @@
+{
+  "name": "thumbs-up",
+  "category": "social",
+  "keywords": ["thumbs up", "like", "approve", "good", "agree", "yes", "pouce", "approuver"],
+  "aliases": [],
+  "gesture": "The thumb goes up.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "hand",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 14, "y": 42, "w": 17, "h": 40, "r": 6, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 34, "y": 40, "w": 44, "h": 42, "r": 11, "role": "base" },
+            { "kind": "path", "d": "M38 46L47 20A7.5 7.5 0 0 1 61 24L57 46Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 54, "y": 52, "w": 16, "h": 5, "r": 2.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 54, "y": 62, "w": 16, "h": 5, "r": 2.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 22, "cy": 72, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "hand": { "box": [14, 16.23, 64, 65.77] }
+  },
+  "motion": [
+    {
+      "part": "hand",
+      "pivot": [14, 82],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "rotate": [[0, 0], [0.4, -12], [0.75, 5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

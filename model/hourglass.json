@@ -1,0 +1,86 @@
+{
+  "name": "hourglass",
+  "category": "time",
+  "keywords": ["hourglass", "wait", "loading", "time", "pending", "timer", "sablier", "attente"],
+  "aliases": [],
+  "gesture": "The hourglass rocks and the sand piles up.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "glass",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M28 16H68V30C68 40 56 44 56 48C56 52 68 56 68 66V80H28V66C28 56 40 52 40 48C40 44 28 40 28 30Z",
+              "role": "base"
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "path", "d": "M36 24H60V30C60 35 52 39 48 42C44 39 36 35 36 30Z", "role": "mid" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "part",
+          "name": "sand",
+          "children": [
+            {
+              "type": "layer",
+              "effect": "inset",
+              "tone": "dark",
+              "shapes": [
+                { "kind": "path", "d": "M36 74C36 67 44 64 48 61C52 64 60 67 60 74Z", "role": "accent" }
+              ],
+              "weight": "minor"
+            }
+          ]
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 22, "y": 10, "w": 52, "h": 9, "r": 4.5, "role": "main" },
+            { "kind": "rect", "x": 22, "y": 77, "w": 52, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sand": { "box": [36, 61, 24, 13] },
+    "glass": { "box": [22, 10, 52, 76] }
+  },
+  "motion": [
+    {
+      "part": "sand",
+      "pivot": [48, 74],
+      "duration": 700,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleY": [[0, 0.3], [1, 1]] }
+    },
+    {
+      "part": "glass",
+      "pivot": [48, 48],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.25, 10], [0.5, -7], [0.75, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

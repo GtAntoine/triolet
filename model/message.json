@@ -1,0 +1,109 @@
+{
+  "name": "message",
+  "category": "communication",
+  "keywords": ["message", "chat", "comment", "bubble", "talk", "conversation", "discussion", "commentaire"],
+  "aliases": [],
+  "gesture": "The message writes itself and the unread badge pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M24 20H70A12 12 0 0 1 82 32V54A12 12 0 0 1 70 66H42L26 80V66H24A12 12 0 0 1 12 54V32A12 12 0 0 1 24 20Z",
+          "role": "base"
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 24, "y": 33, "w": 38, "h": 7, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 24, "y": 46, "w": 26, "h": 7, "r": 3.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "badge",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "circle", "cx": 76, "cy": 24, "r": 12, "role": "gap" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 76, "cy": 24, "r": 9, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line-1": { "box": [24, 33, 38, 7] },
+    "line-2": { "box": [24, 46, 26, 7] },
+    "badge": { "box": [64, 12, 24, 24] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [24, 36.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [24, 49.5],
+      "duration": 400,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "badge",
+      "pivot": [76, 24],
+      "duration": 450,
+      "delay": 300,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

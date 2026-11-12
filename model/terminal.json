@@ -1,0 +1,78 @@
+{
+  "name": "terminal",
+  "category": "development",
+  "keywords": ["terminal", "console", "command", "shell", "cli", "prompt", "ligne de commande", "commande"],
+  "aliases": [],
+  "gesture": "The prompt draws itself and the cursor blinks.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 16, "w": 76, "h": 64, "r": 11, "role": "base" },
+        { "kind": "path", "d": "M21 16H75A11 11 0 0 1 86 27V32H10V27A11 11 0 0 1 21 16Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "prompt",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M24 44L36 54L24 64",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "cursor",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 44, "y": 60, "w": 20, "h": 7, "r": 3.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "prompt": { "box": [24, 44, 12, 20] },
+    "cursor": { "box": [44, 60, 20, 7] }
+  },
+  "motion": [
+    {
+      "part": "prompt",
+      "pivot": [30, 54],
+      "duration": 400,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "cursor",
+      "pivot": [54, 63.5],
+      "duration": 400,
+      "delay": 300,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

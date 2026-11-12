@@ -1,0 +1,126 @@
+{
+  "name": "palette",
+  "category": "design",
+  "keywords": ["palette", "colour", "color", "paint", "theme", "design", "nuancier", "couleurs"],
+  "aliases": [],
+  "gesture": "The dabs of paint appear one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 13C70 13 85 28 85 46C85 58 76 62 67 60C59 58 54 63 56 70C58 78 54 84 46 84C26 84 11 68 11 48C11 28 27 13 48 13Z",
+          "role": "base"
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "dab-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 29, "cy": 38, "r": 6.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dab-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 28, "r": 6.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dab-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 67, "cy": 39, "r": 6.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dab-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 27, "cy": 59, "r": 6.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "dab-1": { "box": [22.5, 31.5, 13, 13] },
+    "dab-2": { "box": [41.5, 21.5, 13, 13] },
+    "dab-3": { "box": [60.5, 32.5, 13, 13] },
+    "dab-4": { "box": [20.5, 52.5, 13, 13] }
+  },
+  "motion": [
+    {
+      "part": "dab-1",
+      "pivot": [29, 38],
+      "duration": 400,
+      "delay": 110,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    },
+    {
+      "part": "dab-2",
+      "pivot": [48, 28],
+      "duration": 400,
+      "delay": 220,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    },
+    {
+      "part": "dab-3",
+      "pivot": [67, 39],
+      "duration": 400,
+      "delay": 330,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    },
+    {
+      "part": "dab-4",
+      "pivot": [27, 59],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,77 @@
+{
+  "name": "tool",
+  "category": "work",
+  "keywords": ["tool", "wrench", "repair", "fix", "maintenance", "settings", "outil", "réparer"],
+  "aliases": [],
+  "gesture": "The wrench turns the bolt.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "wrench",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 60L58 38",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 10 }
+            },
+            { "kind": "circle", "cx": 63, "cy": 33, "r": 13, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 62, "y": 17, "w": 9, "h": 15, "r": 2, "role": "base", "rotate": [45, 63, 33] }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M32.0 55.0L39.8 59.5L39.8 68.5L32.0 73.0L24.2 68.5L24.2 59.5Z",
+          "role": "accent",
+          "stroke": { "width": 2 }
+        }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "wrench": { "box": [36, 20, 43.14, 40] }
+  },
+  "motion": [
+    {
+      "part": "wrench",
+      "pivot": [32, 64],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.4, -20], [0.75, 6], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

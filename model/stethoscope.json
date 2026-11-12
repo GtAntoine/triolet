@@ -1,0 +1,72 @@
+{
+  "name": "stethoscope",
+  "category": "health",
+  "keywords": ["stethoscope", "doctor", "health", "medical", "care", "diagnosis", "stéthoscope", "médecin"],
+  "aliases": [],
+  "gesture": "The chest piece beats twice.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M24 16V34A17 17 0 0 0 58 34V16M41 51V60A16.5 16.5 0 0 0 74 60V54",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 24, "cy": 14, "r": 4.5, "role": "main" },
+        { "kind": "circle", "cx": 58, "cy": 14, "r": 4.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "chest",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 74, "cy": 44, "r": 10, "role": "base" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 74, "cy": 44, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "chest": { "box": [64, 34, 20, 20] }
+  },
+  "motion": [
+    {
+      "part": "chest",
+      "pivot": [74, 44],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scale": [[0, 1], [0.2, 1.25], [0.4, 1], [0.6, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
