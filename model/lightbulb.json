@@ -2,7 +2,7 @@
   "name": "lightbulb",
   "category": "work",
   "keywords": ["lightbulb", "idea", "light", "tip", "insight", "innovation", "ampoule", "idée"],
-  "aliases": ["bulb"],
+  "aliases": ["bulb", "bulb-svg"],
   "gesture": "The bulb lights up.",
   "nodes": [
     {

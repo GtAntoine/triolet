@@ -18,7 +18,16 @@
       "effect": "inset",
       "tone": "dark",
       "shapes": [
-        { "kind": "rect", "x": 30, "y": 66, "w": 36, "h": 6.5, "r": 3.25, "role": "accent" }
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
       ],
       "weight": "minor"
     },
@@ -32,10 +41,10 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M36 24V58H44A17 17 0 0 0 44 24Z",
-              "role": "main",
+              "d": "M37.92 27.04L37.92 55.6L44.64 55.6A14.28 14.28 0 0 0 44.64 27.04Z",
+              "role": "on",
               "fill": false,
-              "stroke": { "width": 7.5 }
+              "stroke": { "width": 6.5 }
             }
           ],
           "weight": "major"
@@ -44,12 +53,12 @@
     }
   ],
   "parts": {
-    "letter": { "box": [36, 24, 25, 34] }
+    "letter": { "box": [37.92, 27.04, 21, 28.56] }
   },
   "motion": [
     {
       "part": "letter",
-      "pivot": [48.5, 41],
+      "pivot": [48.42, 41.32],
       "duration": 600,
       "delay": 100,
       "iterations": 1,

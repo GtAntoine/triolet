@@ -18,7 +18,16 @@
       "effect": "inset",
       "tone": "dark",
       "shapes": [
-        { "kind": "rect", "x": 30, "y": 66, "w": 36, "h": 6.5, "r": 3.25, "role": "accent" }
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
       ],
       "weight": "minor"
     },
@@ -32,10 +41,10 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M60 31C58 26 53 24 48 24C41 24 36 28 36 33C36 46 60 37 60 50C60 55 55 58 48 58C42 58 37 55 35 50",
-              "role": "main",
+              "d": "M58.08 32.92C56.4 28.72 52.2 27.04 48 27.04C42.12 27.04 37.92 30.4 37.92 34.6C37.92 45.52 58.08 37.96 58.08 48.88C58.08 53.08 53.88 55.6 48 55.6C42.96 55.6 38.76 53.08 37.08 48.88",
+              "role": "on",
               "fill": false,
-              "stroke": { "width": 7.5 }
+              "stroke": { "width": 6.5 }
             }
           ],
           "weight": "major"
@@ -44,12 +53,12 @@
     }
   ],
   "parts": {
-    "letter": { "box": [35, 24, 25, 34] }
+    "letter": { "box": [37.08, 27.04, 21, 28.56] }
   },
   "motion": [
     {
       "part": "letter",
-      "pivot": [47.5, 41],
+      "pivot": [47.58, 41.32],
       "duration": 600,
       "delay": 100,
       "iterations": 1,
