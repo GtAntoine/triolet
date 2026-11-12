@@ -12,11 +12,17 @@ import { join } from 'node:path';
 import { chromium } from 'playwright';
 import { ROOT } from './lib/icons.ts';
 
-const PORT = 8097;
+const PORT = 8098;
 const out = join(ROOT, 'out/native');
 mkdirSync(out, { recursive: true });
 
-const server = spawn(`npx expo start --web --port ${PORT}`, { cwd: join(ROOT, 'examples/expo'), shell: true, stdio: 'ignore', env: { ...process.env, CI: '1' } });
+// TRIOLET_SKIA_WEB makes the browser load the Skia renderer instead of the SVG components.
+const server = spawn(`npx expo start --web --clear --port ${PORT}`, {
+  cwd: join(ROOT, 'examples/expo'),
+  shell: true,
+  stdio: 'ignore',
+  env: { ...process.env, CI: '1', TRIOLET_SKIA_WEB: '1' },
+});
 const stop = () => {
   // On Windows the shell that started the server has to be ended with its children.
   if (process.platform === 'win32') spawn('taskkill', ['/pid', String(server.pid), '/t', '/f'], { stdio: 'ignore' });
@@ -51,9 +57,11 @@ try {
     const canvases = await page.locator('canvas').count();
     check(canvases >= 8, `Skia canvases are drawn (${canvases})`);
     await page.screenshot({ path: join(out, 'two-icons.png') });
-    await page.getByText('Grid of 30').click();
-    await page.waitForTimeout(1500);
-    await page.getByText('Loop all').click();
+    await page.getByText('Grid of 30', { exact: true }).click();
+    await page.waitForTimeout(2500);
+    if (errors.length) console.log(`page errors: ${errors.slice(0, 3).join(' | ').slice(0, 600)}`);
+    await page.screenshot({ path: join(out, 'grid-before.png') });
+    await page.getByText('Loop all', { exact: true }).click({ timeout: 8000 });
     await page.waitForTimeout(700);
     const first = await page.locator('canvas').first().screenshot();
     await page.waitForTimeout(350);
