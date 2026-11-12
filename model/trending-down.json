@@ -1,0 +1,93 @@
+{
+  "name": "trending-down",
+  "category": "data",
+  "keywords": ["trending", "down", "decline", "decrease", "drop", "stats", "baisse", "déclin"],
+  "aliases": [],
+  "gesture": "The line falls, then its arrow draws itself.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 66, "w": 44, "h": 5, "r": 2.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M25 34L40 50L50 42L68 60",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54 63H69V48",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line": { "box": [25, 34, 43, 26] },
+    "arrow": { "box": [54, 48, 15, 15] }
+  },
+  "motion": [
+    {
+      "part": "line",
+      "pivot": [46.5, 47],
+      "duration": 550,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "arrow",
+      "pivot": [61.5, 55.5],
+      "duration": 300,
+      "delay": 450,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

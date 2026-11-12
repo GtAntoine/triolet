@@ -1,0 +1,61 @@
+{
+  "name": "skip-forward",
+  "category": "media",
+  "keywords": ["skip", "forward", "next", "track", "media", "player", "suivant", "piste"],
+  "aliases": [],
+  "gesture": "The triangle jumps to the bar.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "triangle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M30 33L55 48L30 63Z",
+              "role": "main",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 62, "y": 32, "w": 9, "h": 32, "r": 16, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "triangle": { "box": [30, 33, 25, 30] }
+  },
+  "motion": [
+    {
+      "part": "triangle",
+      "pivot": [42.5, 48],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

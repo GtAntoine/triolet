@@ -1,0 +1,74 @@
+{
+  "name": "save",
+  "category": "interface",
+  "keywords": ["save", "floppy", "disk", "store", "keep", "download", "enregistrer", "disquette"],
+  "aliases": [],
+  "gesture": "The label pops: saved.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 11, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 14, "w": 38, "h": 26, "r": 5, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 54, "y": 20, "w": 7, "h": 14, "r": 7, "role": "mainLight" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 24, "y": 52, "w": 48, "h": 30, "r": 6, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "label",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 62, "w": 34, "h": 9, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "label": { "box": [31, 62, 34, 9] }
+  },
+  "motion": [
+    {
+      "part": "label",
+      "pivot": [48, 66.5],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

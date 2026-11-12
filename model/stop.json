@@ -1,0 +1,64 @@
+{
+  "name": "stop",
+  "category": "media",
+  "keywords": ["stop", "halt", "end", "square", "media", "player", "arrêter", "arrêt"],
+  "aliases": [],
+  "gesture": "The square presses down, and comes back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 28,
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "square",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 36, "w": 24, "h": 24, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "square": { "box": [36, 36, 24, 24] }
+  },
+  "motion": [
+    {
+      "part": "square",
+      "pivot": [48, 48],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.5, 3], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

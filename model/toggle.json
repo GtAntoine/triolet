@@ -1,0 +1,56 @@
+{
+  "name": "toggle",
+  "category": "interface",
+  "keywords": ["toggle", "switch", "on", "off", "setting", "control", "interrupteur", "bascule"],
+  "aliases": [],
+  "gesture": "The knob slides to the other side and back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 28, "w": 76, "h": 40, "r": 20, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "knob",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 64, "cy": 48, "r": 15, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 64, "cy": 48, "r": 7.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "knob": { "box": [49, 33, 30, 30] }
+  },
+  "motion": [
+    {
+      "part": "knob",
+      "pivot": [64, 48],
+      "duration": 760,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "x": [[0, 0], [0.5, -34], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

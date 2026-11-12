@@ -1,0 +1,62 @@
+{
+  "name": "logout",
+  "category": "interface",
+  "keywords": ["logout", "sign out", "exit", "leave", "door", "account", "déconnexion", "quitter"],
+  "aliases": [],
+  "gesture": "The arrow leaves through the door.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 36, "h": 68, "r": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 21, "y": 21, "w": 22, "h": 54, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M40 48H82M70 35L83 48L70 61",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [40, 35, 43, 26] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [61.5, 48],
+      "duration": 520,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 7], [0.7, -1.1666666666666667], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

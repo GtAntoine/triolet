@@ -1557,8 +1557,8 @@
   "name": "fast-forward",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "feather",
@@ -1830,8 +1830,8 @@
   "name": "menu",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "metronome",
@@ -1970,8 +1970,8 @@
   "name": "pin",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "pizza",
@@ -1991,8 +1991,8 @@
   "name": "plug",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "podium",
@@ -2145,15 +2145,15 @@
   "name": "skip-back",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "skip-forward",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "slash",
@@ -2222,8 +2222,8 @@
   "name": "stop",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "strikethrough",
@@ -2299,8 +2299,8 @@
   "name": "timer",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "toggle-left",
@@ -2341,15 +2341,15 @@
   "name": "trending-down",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "trending-up",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "triangle",
@@ -3601,8 +3601,8 @@
   "name": "external-link",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "eyeglasses",
@@ -3909,8 +3909,8 @@
   "name": "history",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "horse",
@@ -3951,8 +3951,8 @@
   "name": "id-card",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "images",
@@ -4273,15 +4273,15 @@
   "name": "login",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "logout",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "logs",
@@ -4728,8 +4728,8 @@
   "name": "redo",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "regex",
@@ -4798,8 +4798,8 @@
   "name": "save",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "schema",
@@ -5078,8 +5078,8 @@
   "name": "store",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "storefront",
@@ -5281,8 +5281,8 @@
   "name": "translate",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "treasure-chest",
@@ -5323,8 +5323,8 @@
   "name": "undo",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "ungroup",
@@ -5575,14 +5575,14 @@
   "name": "zoom-in",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "zoom-out",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  }
 ]

@@ -1,0 +1,72 @@
+{
+  "name": "plug",
+  "category": "devices",
+  "keywords": ["plug", "power", "electric", "connect", "socket", "outlet", "prise", "brancher"],
+  "aliases": [],
+  "gesture": "The plug pushes in, as it is plugged.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "plug",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 33, "y": 10, "w": 8, "h": 28, "r": 3, "role": "main" },
+            { "kind": "rect", "x": 55, "y": 10, "w": 8, "h": 28, "r": 3, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 22, "y": 34, "w": 52, "h": 36, "r": 14, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 47, "w": 24, "h": 10, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 70V86",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "plug": { "box": [22, 10, 52, 76] }
+  },
+  "motion": [
+    {
+      "part": "plug",
+      "pivot": [48, 48],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

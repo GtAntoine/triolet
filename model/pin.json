@@ -1,0 +1,75 @@
+{
+  "name": "pin",
+  "category": "interface",
+  "keywords": ["pin", "thumbtack", "pinned", "attach", "fix", "sticky", "épingle", "épingler"],
+  "aliases": [],
+  "gesture": "The pin tilts and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "pin",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 58V84",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 24H60L64 46C75 51 78 56 78 60H18C18 56 21 51 32 46Z",
+              "role": "base",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 32, "y": 10, "w": 32, "h": 14, "r": 6, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 38, "y": 28, "w": 6, "h": 18, "r": 3, "role": "soft" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "pin": { "box": [18, 10, 60, 74] }
+  },
+  "motion": [
+    {
+      "part": "pin",
+      "pivot": [48, 84],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, -12], [0.4, 8], [0.6, -4], [0.8, 0], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

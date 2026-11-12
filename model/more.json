@@ -1,0 +1,97 @@
+{
+  "name": "more",
+  "category": "interface",
+  "keywords": ["more", "ellipsis", "dots", "options", "overflow", "actions", "plus", "trois points"],
+  "aliases": [],
+  "gesture": "The three dots pop, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 26, "w": 76, "h": 44, "r": 22, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "dot-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 27, "cy": 48, "r": 8.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 9.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 69, "cy": 48, "r": 8.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "dot-1": { "box": [18.5, 39.5, 17, 17] },
+    "dot-2": { "box": [38.5, 38.5, 19, 19] },
+    "dot-3": { "box": [60.5, 39.5, 17, 17] }
+  },
+  "motion": [
+    {
+      "part": "dot-1",
+      "pivot": [27, 48],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    },
+    {
+      "part": "dot-2",
+      "pivot": [48, 48],
+      "duration": 380,
+      "delay": 110,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    },
+    {
+      "part": "dot-3",
+      "pivot": [69, 48],
+      "duration": 380,
+      "delay": 220,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

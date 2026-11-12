@@ -1,0 +1,62 @@
+{
+  "name": "login",
+  "category": "interface",
+  "keywords": ["login", "sign in", "enter", "access", "door", "account", "connexion", "entrer"],
+  "aliases": [],
+  "gesture": "The arrow goes through the door.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 46, "y": 14, "w": 36, "h": 68, "r": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 53, "y": 21, "w": 22, "h": 54, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M14 48H50M38 35L51 48L38 61",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [14, 35, 37, 26] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [32.5, 48],
+      "duration": 520,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 7], [0.7, -1.1666666666666667], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

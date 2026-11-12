@@ -1,0 +1,87 @@
+{
+  "name": "id-card",
+  "category": "people",
+  "keywords": ["id", "card", "identity", "badge", "passport", "profile", "carte", "identité"],
+  "aliases": [],
+  "gesture": "The two lines of the card are written.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M22 20H74A12 12 0 0 1 86 32V64A12 12 0 0 1 74 76H22A12 12 0 0 1 10 64V32A12 12 0 0 1 22 20Z",
+          "role": "base"
+        },
+        { "kind": "path", "d": "M22 20H74A12 12 0 0 1 86 32V38H10V32A12 12 0 0 1 22 20Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 30, "cy": 51, "r": 6.5, "role": "main" },
+        { "kind": "path", "d": "M19 70A11 9 0 0 1 41 70V71H19Z", "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 50, "y": 46, "w": 28, "h": 8, "r": 4, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 50, "y": 59, "w": 28, "h": 6, "r": 3, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line-1": { "box": [50, 46, 28, 8] },
+    "line-2": { "box": [50, 59, 28, 6] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [50, 50],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [50, 62],
+      "duration": 400,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

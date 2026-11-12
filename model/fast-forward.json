@@ -1,0 +1,82 @@
+{
+  "name": "fast-forward",
+  "category": "media",
+  "keywords": ["fast-forward", "forward", "skip", "speed", "media", "player", "avance rapide", "accélérer"],
+  "aliases": [],
+  "gesture": "The two triangles rush forward.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 22, "w": 76, "h": 52, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "first",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M26 35L46 48L26 61Z",
+              "role": "main",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "second",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M52 35L72 48L52 61Z",
+              "role": "accent",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "first": { "box": [26, 35, 20, 26] },
+    "second": { "box": [52, 35, 20, 26] }
+  },
+  "motion": [
+    {
+      "part": "first",
+      "pivot": [36, 48],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    },
+    {
+      "part": "second",
+      "pivot": [62, 48],
+      "duration": 480,
+      "delay": 70,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

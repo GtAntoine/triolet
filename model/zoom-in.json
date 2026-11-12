@@ -1,0 +1,77 @@
+{
+  "name": "zoom-in",
+  "category": "interface",
+  "keywords": ["zoom", "in", "magnify", "scale", "search", "enlarge", "loupe", "agrandir"],
+  "aliases": [],
+  "gesture": "The lens grows a little, and comes back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M62 62L80 80",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 10 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "lens",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 40, "cy": 40, "r": 27, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 40, "cy": 40, "r": 22, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M31 41H49M40 32V50",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "lens": { "box": [13, 13, 54, 54] }
+  },
+  "motion": [
+    {
+      "part": "lens",
+      "pivot": [40, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

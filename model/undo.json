@@ -1,0 +1,68 @@
+{
+  "name": "undo",
+  "category": "interface",
+  "keywords": ["undo", "back", "revert", "cancel", "previous", "edit", "annuler", "retour"],
+  "aliases": [],
+  "gesture": "The arrow pulls back and comes back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M36 44H55A13 13 0 0 1 55 70H40",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 7 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M45 30L31 44L45 58",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [31, 30, 14, 28] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [38, 44],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, -5], [0.7, 0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

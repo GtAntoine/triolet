@@ -1,0 +1,83 @@
+{
+  "name": "history",
+  "category": "time",
+  "keywords": ["history", "recent", "past", "clock", "undo", "previous", "historique", "récent"],
+  "aliases": [],
+  "gesture": "The arrow runs back round the clock.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 32V48L59 55",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 44A28 28 0 1 1 26 66",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 30V44H34",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [20, 20.32, 55.65, 55.95] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [48, 48],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 70], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

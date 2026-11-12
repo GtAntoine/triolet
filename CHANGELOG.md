@@ -6,6 +6,11 @@ the major is 0, a minor version may still change the API.
 
 ## Unreleased
 
+- 24 more everyday icons (258): menu, more, timer, plug, pin, stop, fast-forward, skip-forward,
+  skip-back, trending-up, trending-down, login, logout, history, undo, redo, external-link, save,
+  zoom-in, zoom-out, store, id-card, translate, toggle.
+- Closer to 60 / 30 / 10: the per-icon bounds are tighter (base 40-80, main 12-50, accent 5-18)
+  and 45 icons were retouched.
 - 27 more icons (234): church, chef-hat, drone, scooter, tornado, sticker, axe, bone, cylinder,
   airplay, album, aperture, chart-scatter, desk, ear, elevator, equal, divide, asterisk,
   copyright, gif, angle, cards, clover, blender, avocado, binary.

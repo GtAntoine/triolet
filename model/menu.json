@@ -1,0 +1,97 @@
+{
+  "name": "menu",
+  "category": "interface",
+  "keywords": ["menu", "hamburger", "navigation", "list", "sidebar", "options", "burger", "navigation mobile"],
+  "aliases": [],
+  "gesture": "The three bars write themselves, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "bar-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 28, "y": 28, "w": 40, "h": 9, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 28, "y": 43.5, "w": 40, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 28, "y": 59, "w": 40, "h": 9, "r": 4.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar-1": { "box": [28, 28, 40, 9] },
+    "bar-2": { "box": [28, 43.5, 40, 9] },
+    "bar-3": { "box": [28, 59, 40, 9] }
+  },
+  "motion": [
+    {
+      "part": "bar-1",
+      "pivot": [28, 32.5],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "bar-2",
+      "pivot": [28, 48],
+      "duration": 380,
+      "delay": 90,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "bar-3",
+      "pivot": [28, 63.5],
+      "duration": 380,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
