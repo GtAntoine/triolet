@@ -9,7 +9,7 @@ version. Nothing here is automatic until the one-time setup below is done.
 2. The names are unscoped (`triolet`, `triolet-react`, `triolet-react-native`): no organisation
    is needed. Check that they are still free the day you publish: `npm view triolet` must answer 404.
 3. For the workflow: an npm access token (granular, read and write on these three packages, or
-   an automation token) saved as the repository secret `NPM_TOKEN`
+   an automation token) saved as the repository secret `NPM_ACCESS_TOKEN`
    (GitHub: Settings, Secrets and variables, Actions). The first publish of a new name needs a
    token that may create packages, so use an automation token or a granular token with
    "all packages" for that first release, then narrow it.
@@ -29,7 +29,7 @@ git tag v0.2.0 && git push origin v0.2.0
 
 The tag starts the `Release` workflow: it checks that the tag is on `main`, runs the checks and
 the tests again, then publishes the three packages with `--provenance` (the npm page shows the
-commit and workflow each version came from). It needs the `NPM_TOKEN` secret and fails at once
+commit and workflow each version came from). It needs the `NPM_ACCESS_TOKEN` secret and fails at once
 without it.
 
 ## By hand, without the workflow
@@ -48,8 +48,10 @@ the packed result). Publish `triolet` first: the other two depend on it. The pac
 
 ## If a release stops half way
 
-npm refuses to publish a version twice. Publish the missing packages of the same version by
-hand as above; do not bump the version for that. A published version cannot be replaced, only
+npm refuses to publish a version twice, so the workflow skips a package whose version is
+already on the registry: run the failed workflow again (Actions, Re-run jobs) and it publishes
+only what is missing. By hand, publish the missing packages of the same version as above. Do
+not bump the version for that. A published version cannot be replaced, only
 deprecated (`npm deprecate triolet@0.2.0 "reason"`) and followed by a patch.
 
 ## What `@triolet/core` is
