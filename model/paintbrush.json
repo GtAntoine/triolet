@@ -2,7 +2,7 @@
   "name": "paintbrush",
   "category": "design",
   "keywords": ["paintbrush", "brush", "paint", "draw", "art", "design", "pinceau", "peindre"],
-  "aliases": [],
+  "aliases": ["paint"],
   "gesture": "The brush paints a stroke.",
   "nodes": [
     {

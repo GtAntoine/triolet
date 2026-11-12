@@ -2,7 +2,7 @@
   "name": "help-circle",
   "category": "notifications",
   "keywords": ["help", "question", "faq", "support", "unknown", "ask", "aide", "interrogation"],
-  "aliases": [],
+  "aliases": ["question-mark"],
   "gesture": "The question mark tilts and its dot pops.",
   "nodes": [
     {

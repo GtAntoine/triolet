@@ -2,6 +2,7 @@ import { circle, icon, nudge, part, path, pop, raised, rect } from '@triolet/cor
 
 export default icon({
   name: 'mail',
+  aliases: ['mail-filled'],
   category: 'communication',
   keywords: ['mail', 'email', 'envelope', 'letter', 'message', 'inbox', 'courrier', 'enveloppe'],
   gesture: 'The envelope lifts and its seal pops.',

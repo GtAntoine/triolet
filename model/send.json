@@ -2,7 +2,7 @@
   "name": "send",
   "category": "communication",
   "keywords": ["send", "paper plane", "message", "submit", "deliver", "email", "envoyer", "avion"],
-  "aliases": [],
+  "aliases": ["send-horizontal"],
   "gesture": "The paper plane takes off and its trail follows.",
   "nodes": [
     {

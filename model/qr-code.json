@@ -2,7 +2,7 @@
   "name": "qr-code",
   "category": "commerce",
   "keywords": ["qr code", "scan", "link", "ticket", "payment", "code", "code qr", "scanner"],
-  "aliases": [],
+  "aliases": ["qrcode"],
   "gesture": "One square of the code lights up.",
   "nodes": [
     {

@@ -2,6 +2,7 @@ import { circle, icon, inset, part, raised, rect, spin } from '@triolet/core';
 
 export default icon({
   name: 'settings',
+  aliases: ['gear'],
   category: 'interface',
   keywords: ['settings', 'gear', 'cog', 'preferences', 'options', 'configuration', 'paramètres', 'réglages'],
   gesture: 'The gear turns a quarter of a turn.',

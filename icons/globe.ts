@@ -2,6 +2,7 @@ import { circle, clip, icon, inset, nudge, part, path, pop, raised } from '@trio
 
 export default icon({
   name: 'globe',
+  aliases: ['world'],
   category: 'places',
   keywords: ['globe', 'world', 'earth', 'internet', 'language', 'international', 'monde', 'planète'],
   gesture: 'The globe turns a little and the place lights up.',

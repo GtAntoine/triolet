@@ -4,6 +4,7 @@ const TILT = { rotate: [45, 48, 48] as [number, number, number] };
 
 export default icon({
   name: 'plane',
+  aliases: ['airplane'],
   category: 'places',
   keywords: ['plane', 'airplane', 'flight', 'travel', 'airport', 'trip', 'avion', 'vol'],
   gesture: 'The plane flies off and comes back.',

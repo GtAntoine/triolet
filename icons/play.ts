@@ -2,6 +2,7 @@ import { circle, icon, inset, nudge, part, path, raised } from '@triolet/core';
 
 export default icon({
   name: 'play',
+  aliases: ['player'],
   category: 'media',
   keywords: ['play', 'start', 'video', 'music', 'run', 'launch', 'lecture', 'démarrer'],
   gesture: 'The triangle pushes forward.',

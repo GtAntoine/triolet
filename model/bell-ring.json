@@ -2,7 +2,7 @@
   "name": "bell-ring",
   "category": "notifications",
   "keywords": ["bell", "alert", "notification", "ring", "alarm", "cloche", "alerte", "sonnerie"],
-  "aliases": ["alertes"],
+  "aliases": ["alertes", "bell", "filled-bell"],
   "gesture": "The bell rings from its top and the sound waves leave on both sides.",
   "nodes": [
     {

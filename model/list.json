@@ -2,7 +2,7 @@
   "name": "list",
   "category": "interface",
   "keywords": ["list", "items", "menu", "bullets", "tasks", "lines", "liste", "éléments"],
-  "aliases": [],
+  "aliases": ["unordered-list"],
   "gesture": "The lines write themselves one after the other.",
   "nodes": [
     {

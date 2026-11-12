@@ -2,6 +2,7 @@ import { icon, inset, nudge, part, pill, raised, rect, stroke } from '@triolet/c
 
 export default icon({
   name: 'plug',
+  aliases: ['plug-connected'],
   category: 'devices',
   keywords: ['plug', 'power', 'electric', 'connect', 'socket', 'outlet', 'prise', 'brancher'],
   gesture: 'The plug pushes in, as it is plugged.',

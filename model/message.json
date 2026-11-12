@@ -2,7 +2,7 @@
   "name": "message",
   "category": "communication",
   "keywords": ["message", "chat", "comment", "bubble", "talk", "conversation", "discussion", "commentaire"],
-  "aliases": [],
+  "aliases": ["message-circle"],
   "gesture": "The message writes itself and the unread badge pops.",
   "nodes": [
     {

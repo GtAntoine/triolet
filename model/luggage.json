@@ -2,7 +2,7 @@
   "name": "luggage",
   "category": "places",
   "keywords": ["luggage", "suitcase", "travel", "baggage", "trip", "holiday", "valise", "bagage"],
-  "aliases": [],
+  "aliases": ["travel-bag"],
   "gesture": "The suitcase is lifted, then put down.",
   "nodes": [
     {

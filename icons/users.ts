@@ -2,6 +2,7 @@ import { circle, icon, inset, nudge, part, path, pop, raised, resize } from '@tr
 
 export default icon({
   name: 'users',
+  aliases: ['users-group'],
   category: 'people',
   keywords: ['users', 'people', 'group', 'team', 'members', 'community', 'utilisateurs', 'équipe'],
   gesture: 'The second person steps closer and the badge pops.',

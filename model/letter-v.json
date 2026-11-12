@@ -1,0 +1,61 @@
+{
+  "name": "letter-v",
+  "category": "documents",
+  "keywords": ["letter", "v", "alphabet", "character", "text", "initial", "lettre", "caractère"],
+  "aliases": [],
+  "gesture": "The letter V writes itself above its line.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 66, "w": 36, "h": 6.5, "r": 3.25, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "letter",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M34 24L48 58L62 24",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "letter": { "box": [34, 24, 28, 34] }
+  },
+  "motion": [
+    {
+      "part": "letter",
+      "pivot": [48, 41],
+      "duration": 600,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

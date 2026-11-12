@@ -2,7 +2,7 @@
   "name": "more",
   "category": "interface",
   "keywords": ["more", "ellipsis", "dots", "options", "overflow", "actions", "plus", "trois points"],
-  "aliases": [],
+  "aliases": ["dots-horizontal"],
   "gesture": "The three dots pop, one after the other.",
   "nodes": [
     {

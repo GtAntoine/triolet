@@ -2,7 +2,7 @@
   "name": "house",
   "category": "places",
   "keywords": ["home", "house", "room", "booking", "venue", "hall", "maison", "salle", "réservation"],
-  "aliases": ["reservation"],
+  "aliases": ["reservation", "home"],
   "gesture": "The roof lifts and settles back.",
   "nodes": [
     {

@@ -2,7 +2,7 @@
   "name": "layers",
   "category": "design",
   "keywords": ["layers", "stack", "levels", "overlay", "sheets", "depth", "calques", "couches"],
-  "aliases": [],
+  "aliases": ["stack", "stack-3"],
   "gesture": "The three layers come apart, then stack again.",
   "nodes": [
     {

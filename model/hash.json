@@ -2,7 +2,7 @@
   "name": "hash",
   "category": "communication",
   "keywords": ["hash", "hashtag", "number", "tag", "channel", "pound", "dièse", "mot-dièse"],
-  "aliases": [],
+  "aliases": ["hashtag"],
   "gesture": "The sign pops.",
   "nodes": [
     {

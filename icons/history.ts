@@ -2,6 +2,7 @@ import { circle, icon, part, raised, spin, stroke } from '@triolet/core';
 
 export default icon({
   name: 'history',
+  aliases: ['history-circle'],
   category: 'time',
   keywords: ['history', 'recent', 'past', 'clock', 'undo', 'previous', 'historique', 'récent'],
   gesture: 'The arrow runs back round the clock.',

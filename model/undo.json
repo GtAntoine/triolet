@@ -2,7 +2,7 @@
   "name": "undo",
   "category": "interface",
   "keywords": ["undo", "back", "revert", "cancel", "previous", "edit", "annuler", "retour"],
-  "aliases": [],
+  "aliases": ["arrow-back", "arrow-back-up"],
   "gesture": "The arrow pulls back and comes back.",
   "nodes": [
     {

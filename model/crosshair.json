@@ -2,7 +2,7 @@
   "name": "crosshair",
   "category": "interface",
   "keywords": ["crosshair", "target", "aim", "focus", "locate", "precision", "viseur", "cible"],
-  "aliases": [],
+  "aliases": ["locate"],
   "gesture": "The sight tightens on its point.",
   "nodes": [
     {

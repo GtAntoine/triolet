@@ -2,7 +2,7 @@
   "name": "chevron-right",
   "category": "arrows",
   "keywords": ["chevron", "right", "next", "forward", "caret", "expand", "suivant", "droite"],
-  "aliases": [],
+  "aliases": ["right-chevron"],
   "gesture": "The chevron pushes to the right and comes back.",
   "nodes": [
     {

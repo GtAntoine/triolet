@@ -2,7 +2,7 @@
   "name": "truck",
   "category": "commerce",
   "keywords": ["truck", "delivery", "shipping", "transport", "logistics", "order", "camion", "livraison"],
-  "aliases": [],
+  "aliases": ["truck-electric"],
   "gesture": "The truck drives off and comes back.",
   "nodes": [
     {

@@ -2,6 +2,7 @@ import { circle, icon, inset, part, raised, stroke, travel } from '@triolet/core
 
 export default icon({
   name: 'search',
+  aliases: ['magnifier'],
   category: 'interface',
   keywords: ['search', 'find', 'magnifier', 'magnifying glass', 'look up', 'zoom', 'recherche', 'loupe'],
   gesture: 'The magnifier looks around and comes back.',

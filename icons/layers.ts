@@ -4,6 +4,7 @@ const sheet = (y: number) => `M48 ${14 + y}L82 ${31 + y}L48 ${48 + y}L14 ${31 + 
 
 export default icon({
   name: 'layers',
+  aliases: ['stack', 'stack-3'],
   category: 'design',
   keywords: ['layers', 'stack', 'levels', 'overlay', 'sheets', 'depth', 'calques', 'couches'],
   gesture: 'The three layers come apart, then stack again.',

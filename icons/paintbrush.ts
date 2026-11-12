@@ -2,6 +2,7 @@ import { icon, part, path, plain, raised, stroke, swing, draw } from '@triolet/c
 
 export default icon({
   name: 'paintbrush',
+  aliases: ['paint'],
   category: 'design',
   keywords: ['paintbrush', 'brush', 'paint', 'draw', 'art', 'design', 'pinceau', 'peindre'],
   gesture: 'The brush paints a stroke.',

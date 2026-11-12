@@ -2,6 +2,7 @@ import { icon, part, path, raised, stagger, stroke, travel } from '@triolet/core
 
 export default icon({
   name: 'send',
+  aliases: ['send-horizontal'],
   category: 'communication',
   keywords: ['send', 'paper plane', 'message', 'submit', 'deliver', 'email', 'envoyer', 'avion'],
   gesture: 'The paper plane takes off and its trail follows.',

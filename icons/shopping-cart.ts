@@ -2,6 +2,7 @@ import { circle, icon, inset, nudge, part, path, pill, raised, rect, stroke } fr
 
 export default icon({
   name: 'shopping-cart',
+  aliases: ['cart'],
   category: 'commerce',
   keywords: ['cart', 'shopping', 'buy', 'basket', 'checkout', 'store', 'panier', 'caddie'],
   gesture: 'The cart rolls forward and comes back.',

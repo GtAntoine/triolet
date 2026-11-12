@@ -2,6 +2,7 @@ import { circle, icon, inset, part, pop, raised, rect } from '@triolet/core';
 
 export default icon({
   name: 'lightbulb',
+  aliases: ['bulb'],
   category: 'work',
   keywords: ['lightbulb', 'idea', 'light', 'tip', 'insight', 'innovation', 'ampoule', 'idée'],
   gesture: 'The bulb lights up.',

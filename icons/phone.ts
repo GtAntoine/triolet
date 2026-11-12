@@ -2,6 +2,7 @@ import { circle, icon, part, raised, rect, stagger, stroke, swing, travel } from
 
 export default icon({
   name: 'phone',
+  aliases: ['telephone', 'phone-volume'],
   category: 'communication',
   keywords: ['phone', 'call', 'telephone', 'contact', 'ring', 'dial', 'téléphone', 'appel'],
   gesture: 'The handset rings and the waves leave.',

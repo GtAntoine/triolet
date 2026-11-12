@@ -2,7 +2,7 @@
   "name": "check",
   "category": "interface",
   "keywords": ["check", "done", "ok", "valid", "confirm", "success", "valider", "coche"],
-  "aliases": [],
+  "aliases": ["checked", "simple-checked", "filled-checked"],
   "gesture": "The check draws itself, then the dot pops.",
   "nodes": [
     {

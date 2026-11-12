@@ -2,7 +2,7 @@
   "name": "arrow-right",
   "category": "arrows",
   "keywords": ["arrow", "right", "next", "forward", "continue", "go", "suivant", "droite"],
-  "aliases": [],
+  "aliases": ["arrow-narrow-right"],
   "gesture": "The arrow pushes forward and comes back.",
   "nodes": [
     {

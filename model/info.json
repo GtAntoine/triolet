@@ -2,7 +2,7 @@
   "name": "info",
   "category": "notifications",
   "keywords": ["info", "information", "about", "details", "tip", "note", "renseignement", "détails"],
-  "aliases": [],
+  "aliases": ["info-circle"],
   "gesture": "The dot of the i pops.",
   "nodes": [
     {

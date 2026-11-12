@@ -2,7 +2,7 @@
   "name": "plane",
   "category": "places",
   "keywords": ["plane", "airplane", "flight", "travel", "airport", "trip", "avion", "vol"],
-  "aliases": [],
+  "aliases": ["airplane"],
   "gesture": "The plane flies off and comes back.",
   "nodes": [
     {

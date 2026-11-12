@@ -2,7 +2,7 @@
   "name": "pencil",
   "category": "interface",
   "keywords": ["pencil", "edit", "write", "draw", "compose", "modify", "crayon", "modifier"],
-  "aliases": [],
+  "aliases": ["pen"],
   "gesture": "The pencil writes a line.",
   "nodes": [
     {

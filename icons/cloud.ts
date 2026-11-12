@@ -9,6 +9,7 @@ const cloud = (x: number, y: number, k: number, role: 'base' | 'main') => [
 
 export default icon({
   name: 'cloud',
+  aliases: ['cloud-1', 'cloud-2', 'cloud-3'],
   category: 'weather',
   keywords: ['cloud', 'weather', 'sky', 'storage', 'online', 'sync', 'nuage', 'météo'],
   gesture: 'The sun comes out and the cloud drifts.',

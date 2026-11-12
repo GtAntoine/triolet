@@ -2,7 +2,7 @@
   "name": "shield",
   "category": "security",
   "keywords": ["shield", "security", "protection", "safe", "verified", "guard", "bouclier", "sécurité"],
-  "aliases": [],
+  "aliases": ["shield-check"],
   "gesture": "The check draws itself on the shield.",
   "nodes": [
     {

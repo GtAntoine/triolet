@@ -2,7 +2,7 @@ import { icon, inset, nudge, part, path, raised, stroke } from '@triolet/core';
 
 export default icon({
   name: 'house',
-  aliases: ['reservation'],
+  aliases: ['reservation', 'home'],
   category: 'places',
   keywords: ['home', 'house', 'room', 'booking', 'venue', 'hall', 'maison', 'salle', 'réservation'],
   gesture: 'The roof lifts and settles back.',

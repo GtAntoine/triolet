@@ -8,7 +8,7 @@ const sliders = [
 
 export default icon({
   name: 'sliders',
-  aliases: ['parametrage'],
+  aliases: ['parametrage', 'sliders-horizontal'],
   category: 'settings',
   keywords: ['settings', 'sliders', 'adjust', 'preferences', 'controls', 'tune', 'paramètres', 'réglages'],
   gesture: 'The three sliders adjust themselves and come back.',

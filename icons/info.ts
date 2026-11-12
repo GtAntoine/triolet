@@ -2,6 +2,7 @@ import { circle, icon, inset, part, pop, raised, rect } from '@triolet/core';
 
 export default icon({
   name: 'info',
+  aliases: ['info-circle'],
   category: 'notifications',
   keywords: ['info', 'information', 'about', 'details', 'tip', 'note', 'renseignement', 'détails'],
   gesture: 'The dot of the i pops.',

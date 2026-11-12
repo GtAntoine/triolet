@@ -2,6 +2,7 @@ import { circle, icon, part, pill, plain, pop, raised, stroke } from '@triolet/c
 
 export default icon({
   name: 'bluetooth',
+  aliases: ['bluetooth-connected'],
   category: 'devices',
   keywords: ['bluetooth', 'wireless', 'pair', 'connect', 'device', 'signal', 'sans-fil', 'appairer'],
   gesture: 'The dot pops: a device is paired.',

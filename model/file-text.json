@@ -2,7 +2,7 @@
   "name": "file-text",
   "category": "documents",
   "keywords": ["document", "file", "form", "paperwork", "page", "formulaire", "dossier"],
-  "aliases": ["demarches"],
+  "aliases": ["demarches", "file-description"],
   "gesture": "The two lines write themselves, one after the other.",
   "nodes": [
     {

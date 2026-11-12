@@ -2,6 +2,7 @@ import { icon, part, pop, raised, rect, stroke } from '@triolet/core';
 
 export default icon({
   name: 'hash',
+  aliases: ['hashtag'],
   category: 'communication',
   keywords: ['hash', 'hashtag', 'number', 'tag', 'channel', 'pound', 'dièse', 'mot-dièse'],
   gesture: 'The sign pops.',

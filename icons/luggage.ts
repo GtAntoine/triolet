@@ -2,6 +2,7 @@ import { circle, icon, inset, nudge, part, pill, raised, rect, stroke } from '@t
 
 export default icon({
   name: 'luggage',
+  aliases: ['travel-bag'],
   category: 'places',
   keywords: ['luggage', 'suitcase', 'travel', 'baggage', 'trip', 'holiday', 'valise', 'bagage'],
   gesture: 'The suitcase is lifted, then put down.',

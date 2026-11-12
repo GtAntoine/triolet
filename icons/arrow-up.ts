@@ -2,6 +2,7 @@ import { circle, icon, nudge, part, raised, stroke } from '@triolet/core';
 
 export default icon({
   name: 'arrow-up',
+  aliases: ['arrow-narrow-up'],
   category: 'arrows',
   keywords: ['arrow', 'up', 'top', 'rise', 'increase', 'scroll up', 'haut', 'monter'],
   gesture: 'The arrow pushes up and comes back.',

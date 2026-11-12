@@ -2,6 +2,7 @@ import { circle, icon, inset, part, path, pill, plain, pop, raised, reveal, stag
 
 export default icon({
   name: 'message',
+  aliases: ['message-circle'],
   category: 'communication',
   keywords: ['message', 'chat', 'comment', 'bubble', 'talk', 'conversation', 'discussion', 'commentaire'],
   gesture: 'The message writes itself and the unread badge pops.',

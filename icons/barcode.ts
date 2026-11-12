@@ -11,6 +11,7 @@ const bars: [number, number][] = [
 
 export default icon({
   name: 'barcode',
+  aliases: ['scan-barcode'],
   category: 'commerce',
   keywords: ['barcode', 'scan', 'product', 'code', 'stock', 'checkout', 'code-barres', 'scanner'],
   gesture: 'The scanning beam sweeps the bars.',

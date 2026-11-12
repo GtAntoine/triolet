@@ -2,7 +2,7 @@
   "name": "users",
   "category": "people",
   "keywords": ["users", "people", "group", "team", "members", "community", "utilisateurs", "équipe"],
-  "aliases": [],
+  "aliases": ["users-group"],
   "gesture": "The second person steps closer and the badge pops.",
   "nodes": [
     {

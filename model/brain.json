@@ -2,7 +2,7 @@
   "name": "brain",
   "category": "education",
   "keywords": ["brain", "mind", "think", "idea", "intelligence", "memory", "cerveau", "réflexion"],
-  "aliases": [],
+  "aliases": ["brain-circuit"],
   "gesture": "One fold of the brain flashes: an idea.",
   "nodes": [
     {

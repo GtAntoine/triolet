@@ -2,6 +2,7 @@ import { inset, circle, icon, part, path, plain, pop, raised, rect } from '@trio
 
 export default icon({
   name: 'alert-triangle',
+  aliases: ['triangle-alert'],
   category: 'notifications',
   keywords: ['warning', 'alert', 'danger', 'caution', 'error', 'attention', 'avertissement', 'risque'],
   gesture: 'The warning sign jolts and its dot pops.',

@@ -2,7 +2,7 @@ import { icon, inset, part, path, pill, raised, reveal, stagger } from '@triolet
 
 export default icon({
   name: 'file-text',
-  aliases: ['demarches'],
+  aliases: ['demarches', 'file-description'],
   category: 'documents',
   keywords: ['document', 'file', 'form', 'paperwork', 'page', 'formulaire', 'dossier'],
   gesture: 'The two lines write themselves, one after the other.',

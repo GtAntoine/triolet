@@ -1,0 +1,68 @@
+{
+  "name": "arrow-left-dashed",
+  "category": "arrows",
+  "keywords": ["arrow", "dashed", "left", "dotted", "step", "direction", "pointillés", "gauche"],
+  "aliases": ["arrow-narrow-left-dashed"],
+  "gesture": "The arrow pushes left, pulling its dashes along.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 34, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M42 33L27 48L42 63M29 48H39",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 8.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M51 48H55M66 48H68",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 8.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [27, 33, 41, 30] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [47.5, 48],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

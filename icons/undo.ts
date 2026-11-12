@@ -2,6 +2,7 @@ import { circle, icon, nudge, part, raised, stroke } from '@triolet/core';
 
 export default icon({
   name: 'undo',
+  aliases: ['arrow-back', 'arrow-back-up'],
   category: 'interface',
   keywords: ['undo', 'back', 'revert', 'cancel', 'previous', 'edit', 'annuler', 'retour'],
   gesture: 'The arrow pulls back and comes back.',

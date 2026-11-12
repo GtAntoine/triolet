@@ -2,7 +2,7 @@
   "name": "thumbs-up",
   "category": "social",
   "keywords": ["thumbs up", "like", "approve", "good", "agree", "yes", "pouce", "approuver"],
-  "aliases": [],
+  "aliases": ["like"],
   "gesture": "The thumb goes up.",
   "nodes": [
     {

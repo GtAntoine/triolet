@@ -2,7 +2,7 @@
   "name": "mail",
   "category": "communication",
   "keywords": ["mail", "email", "envelope", "letter", "message", "inbox", "courrier", "enveloppe"],
-  "aliases": [],
+  "aliases": ["mail-filled"],
   "gesture": "The envelope lifts and its seal pops.",
   "nodes": [
     {

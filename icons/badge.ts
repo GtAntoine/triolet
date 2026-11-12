@@ -7,6 +7,7 @@ const scallops = Array.from({ length: 8 }, (_, i) => {
 
 export default icon({
   name: 'badge',
+  aliases: ['rosette-discount-check'],
   category: 'security',
   keywords: ['badge', 'verified', 'check', 'certified', 'approved', 'official', 'vérifié', 'certifié'],
   gesture: 'The check draws itself on the badge.',

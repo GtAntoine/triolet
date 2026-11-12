@@ -2,6 +2,7 @@ import { circle, draw, icon, inset, part, pop, raised, rect, stroke } from '@tri
 
 export default icon({
   name: 'check',
+  aliases: ['checked', 'simple-checked', 'filled-checked'],
   category: 'interface',
   keywords: ['check', 'done', 'ok', 'valid', 'confirm', 'success', 'valider', 'coche'],
   gesture: 'The check draws itself, then the dot pops.',

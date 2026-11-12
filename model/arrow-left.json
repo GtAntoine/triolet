@@ -2,7 +2,7 @@
   "name": "arrow-left",
   "category": "arrows",
   "keywords": ["arrow", "left", "back", "previous", "return", "undo", "précédent", "gauche"],
-  "aliases": [],
+  "aliases": ["arrow-narrow-left"],
   "gesture": "The arrow pushes back and comes back.",
   "nodes": [
     {

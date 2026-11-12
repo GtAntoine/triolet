@@ -2,7 +2,7 @@
   "name": "skull",
   "category": "security",
   "keywords": ["skull", "danger", "death", "poison", "toxic", "pirate", "crâne", "mort"],
-  "aliases": [],
+  "aliases": ["skull-emoji"],
   "gesture": "The jaw of the skull chatters twice.",
   "nodes": [
     {

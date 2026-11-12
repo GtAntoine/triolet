@@ -2,7 +2,7 @@
   "name": "arrow-down",
   "category": "arrows",
   "keywords": ["arrow", "down", "bottom", "fall", "decrease", "scroll down", "bas", "descendre"],
-  "aliases": [],
+  "aliases": ["arrow-narrow-down"],
   "gesture": "The arrow pushes down and comes back.",
   "nodes": [
     {

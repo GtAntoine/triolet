@@ -2,7 +2,7 @@
   "name": "volume",
   "category": "media",
   "keywords": ["volume", "sound", "speaker", "audio", "loud", "unmute", "son", "haut-parleur"],
-  "aliases": [],
+  "aliases": ["volume-2"],
   "gesture": "The sound waves leave the speaker one after the other.",
   "nodes": [
     {

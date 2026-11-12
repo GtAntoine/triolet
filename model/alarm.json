@@ -2,7 +2,7 @@
   "name": "alarm",
   "category": "time",
   "keywords": ["alarm", "clock", "wake", "ring", "reminder", "morning", "réveil", "sonnerie"],
-  "aliases": [],
+  "aliases": ["alarm-clock"],
   "gesture": "The alarm clock shakes as it rings.",
   "nodes": [
     {

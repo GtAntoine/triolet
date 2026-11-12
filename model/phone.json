@@ -2,7 +2,7 @@
   "name": "phone",
   "category": "communication",
   "keywords": ["phone", "call", "telephone", "contact", "ring", "dial", "téléphone", "appel"],
-  "aliases": [],
+  "aliases": ["telephone", "phone-volume"],
   "gesture": "The handset rings and the waves leave.",
   "nodes": [
     {

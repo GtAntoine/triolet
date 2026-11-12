@@ -1,0 +1,61 @@
+{
+  "name": "letter-g",
+  "category": "documents",
+  "keywords": ["letter", "g", "alphabet", "character", "text", "initial", "lettre", "caractère"],
+  "aliases": [],
+  "gesture": "The letter G writes itself above its line.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 66, "w": 36, "h": 6.5, "r": 3.25, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "letter",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M61 32A15 17 0 1 0 62 46V42H50",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "letter": { "box": [32.89, 23.27, 29.11, 33.98] }
+  },
+  "motion": [
+    {
+      "part": "letter",
+      "pivot": [47.45, 40.26],
+      "duration": 600,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

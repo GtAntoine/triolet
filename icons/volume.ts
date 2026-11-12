@@ -2,6 +2,7 @@ import { icon, part, path, raised, rect, stagger, stroke, travel } from '@triole
 
 export default icon({
   name: 'volume',
+  aliases: ['volume-2'],
   category: 'media',
   keywords: ['volume', 'sound', 'speaker', 'audio', 'loud', 'unmute', 'son', 'haut-parleur'],
   gesture: 'The sound waves leave the speaker one after the other.',

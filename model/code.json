@@ -2,7 +2,7 @@
   "name": "code",
   "category": "development",
   "keywords": ["code", "developer", "html", "programming", "brackets", "source", "programmation", "développeur"],
-  "aliases": [],
+  "aliases": ["code-xml"],
   "gesture": "The brackets open and the slash blinks.",
   "nodes": [
     {

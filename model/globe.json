@@ -2,7 +2,7 @@
   "name": "globe",
   "category": "places",
   "keywords": ["globe", "world", "earth", "internet", "language", "international", "monde", "planète"],
-  "aliases": [],
+  "aliases": ["world"],
   "gesture": "The globe turns a little and the place lights up.",
   "nodes": [
     {

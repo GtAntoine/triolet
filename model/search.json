@@ -2,7 +2,7 @@
   "name": "search",
   "category": "interface",
   "keywords": ["search", "find", "magnifier", "magnifying glass", "look up", "zoom", "recherche", "loupe"],
-  "aliases": [],
+  "aliases": ["magnifier"],
   "gesture": "The magnifier looks around and comes back.",
   "nodes": [
     {

@@ -2,7 +2,7 @@
   "name": "bluetooth",
   "category": "devices",
   "keywords": ["bluetooth", "wireless", "pair", "connect", "device", "signal", "sans-fil", "appairer"],
-  "aliases": [],
+  "aliases": ["bluetooth-connected"],
   "gesture": "The dot pops: a device is paired.",
   "nodes": [
     {

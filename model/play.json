@@ -2,7 +2,7 @@
   "name": "play",
   "category": "media",
   "keywords": ["play", "start", "video", "music", "run", "launch", "lecture", "démarrer"],
-  "aliases": [],
+  "aliases": ["player"],
   "gesture": "The triangle pushes forward.",
   "nodes": [
     {

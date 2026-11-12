@@ -2,6 +2,7 @@ import { blink, circle, icon, inset, part, pill, raised, stroke } from '@triolet
 
 export default icon({
   name: 'brain',
+  aliases: ['brain-circuit'],
   category: 'education',
   keywords: ['brain', 'mind', 'think', 'idea', 'intelligence', 'memory', 'cerveau', 'réflexion'],
   gesture: 'One fold of the brain flashes: an idea.',

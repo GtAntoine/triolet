@@ -2,6 +2,7 @@ import { circle, ellipse, icon, inset, nudge, part, path, pill, raised, rect } f
 
 export default icon({
   name: 'skull',
+  aliases: ['skull-emoji'],
   category: 'security',
   keywords: ['skull', 'danger', 'death', 'poison', 'toxic', 'pirate', 'crâne', 'mort'],
   gesture: 'The jaw of the skull chatters twice.',

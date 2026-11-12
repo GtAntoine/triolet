@@ -2,7 +2,7 @@
   "name": "settings",
   "category": "interface",
   "keywords": ["settings", "gear", "cog", "preferences", "options", "configuration", "paramètres", "réglages"],
-  "aliases": [],
+  "aliases": ["gear"],
   "gesture": "The gear turns a quarter of a turn.",
   "nodes": [
     {

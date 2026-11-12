@@ -1,0 +1,61 @@
+{
+  "name": "letter-b",
+  "category": "documents",
+  "keywords": ["letter", "b", "alphabet", "character", "text", "initial", "lettre", "caractère"],
+  "aliases": [],
+  "gesture": "The letter B writes itself above its line.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 66, "w": 36, "h": 6.5, "r": 3.25, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "letter",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 24V58M36 24H50A8.5 8.5 0 0 1 50 41H36M36 41H52A8.5 8.5 0 0 1 52 58H36",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "letter": { "box": [36, 24, 24.5, 34] }
+  },
+  "motion": [
+    {
+      "part": "letter",
+      "pivot": [48.25, 41],
+      "duration": 600,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

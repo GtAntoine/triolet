@@ -2,7 +2,7 @@
   "name": "plug",
   "category": "devices",
   "keywords": ["plug", "power", "electric", "connect", "socket", "outlet", "prise", "brancher"],
-  "aliases": [],
+  "aliases": ["plug-connected"],
   "gesture": "The plug pushes in, as it is plugged.",
   "nodes": [
     {

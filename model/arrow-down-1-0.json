@@ -1,0 +1,81 @@
+{
+  "name": "arrow-down-1-0",
+  "category": "data",
+  "keywords": ["sort", "descending", "numbers", "order", "numeric", "arrow", "trier", "décroissant"],
+  "aliases": [],
+  "gesture": "The arrow points down the order: numbers going down, from 1 to 0.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "arrow",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M33 27V67M24 58L33 68L42 58",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M59 23V41M54 27L59 23M53 41H65",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5.5 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M52 59A6 6 0 0 1 64 59V65A6 6 0 0 1 52 65Z",
+          "role": "accent",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "arrow": { "box": [24, 27, 18, 41] }
+  },
+  "motion": [
+    {
+      "part": "arrow",
+      "pivot": [33, 47.5],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, 5], [0.7, -0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -2,6 +2,7 @@ import { circle, icon, nudge, part, raised, stroke } from '@triolet/core';
 
 export default icon({
   name: 'arrow-right',
+  aliases: ['arrow-narrow-right'],
   category: 'arrows',
   keywords: ['arrow', 'right', 'next', 'forward', 'continue', 'go', 'suivant', 'droite'],
   gesture: 'The arrow pushes forward and comes back.',

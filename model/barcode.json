@@ -2,7 +2,7 @@
   "name": "barcode",
   "category": "commerce",
   "keywords": ["barcode", "scan", "product", "code", "stock", "checkout", "code-barres", "scanner"],
-  "aliases": [],
+  "aliases": ["scan-barcode"],
   "gesture": "The scanning beam sweeps the bars.",
   "nodes": [
     {

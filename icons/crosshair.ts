@@ -2,6 +2,7 @@ import { blink, circle, icon, inset, part, pop, raised, ring, stroke } from '@tr
 
 export default icon({
   name: 'crosshair',
+  aliases: ['locate'],
   category: 'interface',
   keywords: ['crosshair', 'target', 'aim', 'focus', 'locate', 'precision', 'viseur', 'cible'],
   gesture: 'The sight tightens on its point.',

@@ -2,6 +2,7 @@ import { circle, icon, inset, part, plain, pop, raised, stroke, swing } from '@t
 
 export default icon({
   name: 'help-circle',
+  aliases: ['question-mark'],
   category: 'notifications',
   keywords: ['help', 'question', 'faq', 'support', 'unknown', 'ask', 'aide', 'interrogation'],
   gesture: 'The question mark tilts and its dot pops.',

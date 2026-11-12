@@ -5,6 +5,7 @@ const piece = (points: readonly (readonly [number, number])[]) => turned(points,
 
 export default icon({
   name: 'pencil',
+  aliases: ['pen'],
   category: 'interface',
   keywords: ['pencil', 'edit', 'write', 'draw', 'compose', 'modify', 'crayon', 'modifier'],
   gesture: 'The pencil writes a line.',

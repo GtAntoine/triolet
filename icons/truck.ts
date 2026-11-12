@@ -2,6 +2,7 @@ import { circle, icon, inset, nudge, part, path, pill, raised, rect, resize } fr
 
 export default icon({
   name: 'truck',
+  aliases: ['truck-electric'],
   category: 'commerce',
   keywords: ['truck', 'delivery', 'shipping', 'transport', 'logistics', 'order', 'camion', 'livraison'],
   gesture: 'The truck drives off and comes back.',

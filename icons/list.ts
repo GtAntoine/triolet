@@ -4,6 +4,7 @@ const rows = [30, 46, 62];
 
 export default icon({
   name: 'list',
+  aliases: ['unordered-list'],
   category: 'interface',
   keywords: ['list', 'items', 'menu', 'bullets', 'tasks', 'lines', 'liste', 'éléments'],
   gesture: 'The lines write themselves one after the other.',

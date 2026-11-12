@@ -2,6 +2,7 @@ import { circle, icon, nudge, part, raised, stroke } from '@triolet/core';
 
 export default icon({
   name: 'chevron-down',
+  aliases: ['down-chevron'],
   category: 'arrows',
   keywords: ['chevron', 'down', 'expand', 'caret', 'dropdown', 'open', 'bas', 'déplier'],
   gesture: 'The chevron pushes down and comes back.',

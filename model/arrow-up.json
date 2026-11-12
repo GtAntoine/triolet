@@ -2,7 +2,7 @@
   "name": "arrow-up",
   "category": "arrows",
   "keywords": ["arrow", "up", "top", "rise", "increase", "scroll up", "haut", "monter"],
-  "aliases": [],
+  "aliases": ["arrow-narrow-up"],
   "gesture": "The arrow pushes up and comes back.",
   "nodes": [
     {

@@ -2,7 +2,7 @@
   "name": "history",
   "category": "time",
   "keywords": ["history", "recent", "past", "clock", "undo", "previous", "historique", "récent"],
-  "aliases": [],
+  "aliases": ["history-circle"],
   "gesture": "The arrow runs back round the clock.",
   "nodes": [
     {

@@ -2,6 +2,7 @@ import { blink, icon, nudge, part, raised, rect, stroke } from '@triolet/core';
 
 export default icon({
   name: 'code',
+  aliases: ['code-xml'],
   category: 'development',
   keywords: ['code', 'developer', 'html', 'programming', 'brackets', 'source', 'programmation', 'développeur'],
   gesture: 'The brackets open and the slash blinks.',

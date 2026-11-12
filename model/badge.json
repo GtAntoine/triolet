@@ -2,7 +2,7 @@
   "name": "badge",
   "category": "security",
   "keywords": ["badge", "verified", "check", "certified", "approved", "official", "vérifié", "certifié"],
-  "aliases": [],
+  "aliases": ["rosette-discount-check"],
   "gesture": "The check draws itself on the badge.",
   "nodes": [
     {

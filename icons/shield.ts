@@ -2,6 +2,7 @@ import { draw, icon, inset, part, path, plain, raised, stroke } from '@triolet/c
 
 export default icon({
   name: 'shield',
+  aliases: ['shield-check'],
   category: 'security',
   keywords: ['shield', 'security', 'protection', 'safe', 'verified', 'guard', 'bouclier', 'sécurité'],
   gesture: 'The check draws itself on the shield.',

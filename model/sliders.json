@@ -2,7 +2,7 @@
   "name": "sliders",
   "category": "settings",
   "keywords": ["settings", "sliders", "adjust", "preferences", "controls", "tune", "paramètres", "réglages"],
-  "aliases": ["parametrage"],
+  "aliases": ["parametrage", "sliders-horizontal"],
   "gesture": "The three sliders adjust themselves and come back.",
   "nodes": [
     {

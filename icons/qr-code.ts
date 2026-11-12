@@ -8,6 +8,7 @@ const finders: [number, number][] = [
 
 export default icon({
   name: 'qr-code',
+  aliases: ['qrcode'],
   category: 'commerce',
   keywords: ['qr code', 'scan', 'link', 'ticket', 'payment', 'code', 'code qr', 'scanner'],
   gesture: 'One square of the code lights up.',

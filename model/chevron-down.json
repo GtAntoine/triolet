@@ -2,7 +2,7 @@
   "name": "chevron-down",
   "category": "arrows",
   "keywords": ["chevron", "down", "expand", "caret", "dropdown", "open", "bas", "déplier"],
-  "aliases": [],
+  "aliases": ["down-chevron"],
   "gesture": "The chevron pushes down and comes back.",
   "nodes": [
     {

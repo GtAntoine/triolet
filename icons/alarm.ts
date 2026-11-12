@@ -2,6 +2,7 @@ import { circle, icon, inset, part, pill, plain, raised, stroke, swing } from '@
 
 export default icon({
   name: 'alarm',
+  aliases: ['alarm-clock'],
   category: 'time',
   keywords: ['alarm', 'clock', 'wake', 'ring', 'reminder', 'morning', 'réveil', 'sonnerie'],
   gesture: 'The alarm clock shakes as it rings.',

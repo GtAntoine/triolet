@@ -2,7 +2,7 @@
   "name": "cloud",
   "category": "weather",
   "keywords": ["cloud", "weather", "sky", "storage", "online", "sync", "nuage", "météo"],
-  "aliases": [],
+  "aliases": ["cloud-1", "cloud-2", "cloud-3"],
   "gesture": "The sun comes out and the cloud drifts.",
   "nodes": [
     {

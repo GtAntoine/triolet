@@ -2,7 +2,7 @@
   "name": "shopping-cart",
   "category": "commerce",
   "keywords": ["cart", "shopping", "buy", "basket", "checkout", "store", "panier", "caddie"],
-  "aliases": [],
+  "aliases": ["cart"],
   "gesture": "The cart rolls forward and comes back.",
   "nodes": [
     {

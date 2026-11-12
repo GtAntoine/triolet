@@ -2,6 +2,7 @@ import { circle, icon, inset, part, path, pill, raised, rect, swing } from '@tri
 
 export default icon({
   name: 'thumbs-up',
+  aliases: ['like'],
   category: 'social',
   keywords: ['thumbs up', 'like', 'approve', 'good', 'agree', 'yes', 'pouce', 'approuver'],
   gesture: 'The thumb goes up.',

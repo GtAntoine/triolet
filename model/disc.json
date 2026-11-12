@@ -2,7 +2,7 @@
   "name": "disc",
   "category": "media",
   "keywords": ["disc", "cd", "vinyl", "album", "record", "music", "disque", "vinyle"],
-  "aliases": [],
+  "aliases": ["vinyl"],
   "gesture": "The disc makes one turn.",
   "nodes": [
     {

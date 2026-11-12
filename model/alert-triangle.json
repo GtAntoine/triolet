@@ -2,7 +2,7 @@
   "name": "alert-triangle",
   "category": "notifications",
   "keywords": ["warning", "alert", "danger", "caution", "error", "attention", "avertissement", "risque"],
-  "aliases": [],
+  "aliases": ["triangle-alert"],
   "gesture": "The warning sign jolts and its dot pops.",
   "nodes": [
     {

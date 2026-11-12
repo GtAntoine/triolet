@@ -6,7 +6,7 @@ const right = ['M82 42L76 45', 'M84 56H77', 'M82 69L76 66'];
 
 export default icon({
   name: 'bell-ring',
-  aliases: ['alertes'],
+  aliases: ['alertes', 'bell', 'filled-bell'],
   category: 'notifications',
   keywords: ['bell', 'alert', 'notification', 'ring', 'alarm', 'cloche', 'alerte', 'sonnerie'],
   gesture: 'The bell rings from its top and the sound waves leave on both sides.',

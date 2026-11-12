@@ -2,6 +2,7 @@ import { circle, icon, inset, part, raised, spin, stroke } from '@triolet/core';
 
 export default icon({
   name: 'disc',
+  aliases: ['vinyl'],
   category: 'media',
   keywords: ['disc', 'cd', 'vinyl', 'album', 'record', 'music', 'disque', 'vinyle'],
   gesture: 'The disc makes one turn.',
