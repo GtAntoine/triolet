@@ -1,6 +1,6 @@
 {
   "name": "triolet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Animated icons in three colours (base, main, accent) with a soft relief: SVG and CSS motion, no dependency.",
   "keywords": [
     "icons",

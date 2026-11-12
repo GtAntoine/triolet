@@ -1,6 +1,6 @@
 {
   "name": "triolet-react-native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Animated icons in three colours for React Native and Expo, drawn with Skia and moved by Reanimated.",
   "keywords": [
     "react-native",

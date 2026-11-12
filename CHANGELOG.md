@@ -4,19 +4,24 @@ The three packages (`triolet`, `triolet-react`, `triolet-react-native`) are rele
 and share a version number. Versions follow [semantic versioning](https://semver.org/); while
 the major is 0, a minor version may still change the API.
 
-## Unreleased
+## 0.1.1
 
-- 27 more icons (285): eye-off, lock-open, bell-off, wifi-off, at-sign, hash, percent, grid, layers,
-  laptop, tv, watch, battery-charging, plane, train, bike, luggage, tent, tree, leaf, droplet,
-  mountain, pizza, gamepad, megaphone, medal, robot. The skull is redrawn.
-- 24 more everyday icons (258): menu, more, timer, plug, pin, stop, fast-forward, skip-forward,
-  skip-back, trending-up, trending-down, login, logout, history, undo, redo, external-link, save,
-  zoom-in, zoom-out, store, id-card, translate, toggle.
+78 more icons: 285 in all.
+
+- Interface and states: menu, more, toggle, grid, layers, eye-off, lock-open, bell-off, wifi-off,
+  login, logout, history, undo, redo, external-link, save, zoom-in, zoom-out, pin, at-sign, hash,
+  percent, equal, divide, asterisk, copyright, angle, binary.
+- Media and data: stop, fast-forward, skip-forward, skip-back, album, aperture, gif, airplay,
+  trending-up, trending-down, chart-scatter.
+- Devices and places: laptop, tv, watch, battery-charging, gamepad, plug, drone, timer, store,
+  id-card, translate, church, desk, elevator, plane, train, bike, scooter, luggage, tent.
+- Nature, food and the rest: tree, leaf, droplet, mountain, tornado, clover, pizza, avocado,
+  blender, chef-hat, bone, cards, medal, megaphone, robot, sticker, axe, cylinder, ear.
 - Closer to 60 / 30 / 10: the per-icon bounds are tighter (base 40-80, main 12-50, accent 5-18)
-  and 45 icons were retouched.
-- 27 more icons (234): church, chef-hat, drone, scooter, tornado, sticker, axe, bone, cylinder,
-  airplay, album, aperture, chart-scatter, desk, ear, elevator, equal, divide, asterisk,
-  copyright, gif, angle, cards, clover, blender, avocado, binary.
+  and 45 icons were retouched (bigger accents on arrows, chevrons and signs; less `main` on key,
+  heart, settings, map-pin, crown, trophy, umbrella and others).
+- Cat, dog and skull are redrawn.
+- `triolet-react-native` is unchanged apart from the new icons.
 
 ## 0.1.0
 
