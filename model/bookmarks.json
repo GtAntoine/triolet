@@ -1,0 +1,65 @@
+{
+  "name": "bookmarks",
+  "category": "interface",
+  "keywords": ["bookmarks", "saved", "favorites", "collection", "reading-list", "keep", "favoris", "marque-pages"],
+  "aliases": [],
+  "gesture": "The bookmark behind slides up, then back in place.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "back",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M42 10H72A8 8 0 0 1 80 18V70L61 58L42 70Z",
+              "role": "main",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M26 22H58A8 8 0 0 1 66 30V86L42 71L18 86V30A8 8 0 0 1 26 22Z",
+          "role": "base",
+          "stroke": { "width": 2 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 42, "cy": 44, "r": 8, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "back": { "box": [42, 10, 38, 60] }
+  },
+  "motion": [
+    {
+      "part": "back",
+      "pivot": [61, 40],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,67 @@
+{
+  "name": "armchair",
+  "category": "places",
+  "keywords": ["armchair", "sofa", "seat", "furniture", "living-room", "relax", "fauteuil", "salon"],
+  "aliases": [],
+  "gesture": "The cushion bounces on the seat.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 74, "w": 8, "h": 10, "r": 3, "role": "main" },
+        { "kind": "rect", "x": 66, "y": 74, "w": 8, "h": 10, "r": 3, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 14, "w": 52, "h": 46, "r": 14, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "cushion",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 36, "y": 36, "w": 24, "h": 18, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 52, "w": 44, "h": 26, "r": 6, "role": "base" },
+        { "kind": "rect", "x": 10, "y": 40, "w": 22, "h": 38, "r": 10, "role": "base" },
+        { "kind": "rect", "x": 64, "y": 40, "w": 22, "h": 38, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "cushion": { "box": [36, 36, 24, 18] }
+  },
+  "motion": [
+    {
+      "part": "cushion",
+      "pivot": [48, 45],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -6], [0.55, 0], [0.75, -1.875], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

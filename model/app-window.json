@@ -1,0 +1,91 @@
+{
+  "name": "app-window",
+  "category": "interface",
+  "keywords": ["window", "app", "browser", "application", "page", "frame", "fenêtre", "navigateur"],
+  "aliases": [],
+  "gesture": "The content of the window appears, line after line.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 18, "w": 72, "h": 60, "r": 11, "role": "base" },
+        { "kind": "path", "d": "M23 18H73A11 11 0 0 1 84 29V36H12V29A11 11 0 0 1 23 18Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 23, "cy": 27, "r": 4, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 35, "cy": 27, "r": 4, "role": "mainLight" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 22, "y": 45, "w": 36, "h": 7, "r": 3.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "line-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 22, "y": 58, "w": 52, "h": 7, "r": 3.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line-1": { "box": [22, 45, 36, 7] },
+    "line-2": { "box": [22, 58, 52, 7] }
+  },
+  "motion": [
+    {
+      "part": "line-1",
+      "pivot": [22, 48.5],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    },
+    {
+      "part": "line-2",
+      "pivot": [22, 61.5],
+      "duration": 400,
+      "delay": 120,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scaleX": [[0, 0.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

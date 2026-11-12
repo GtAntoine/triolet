@@ -1,0 +1,69 @@
+{
+  "name": "badge",
+  "category": "security",
+  "keywords": ["badge", "verified", "check", "certified", "approved", "official", "vérifié", "certifié"],
+  "aliases": [],
+  "gesture": "The check draws itself on the badge.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 27, "role": "main" },
+        { "kind": "circle", "cx": 72, "cy": 48, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 65, "cy": 65, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 72, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 31, "cy": 65, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 24, "cy": 48, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 31, "cy": 31, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 24, "r": 12, "role": "main" },
+        { "kind": "circle", "cx": 65, "cy": 31, "r": 12, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 20, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "check",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M39 48.5L45.5 55L57.5 42",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "check": { "box": [39, 42, 18.5, 13] }
+  },
+  "motion": [
+    {
+      "part": "check",
+      "pivot": [48.25, 48.5],
+      "duration": 500,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

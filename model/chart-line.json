@@ -1,0 +1,87 @@
+{
+  "name": "chart-line",
+  "category": "data",
+  "keywords": ["chart", "line", "graph", "trend", "statistics", "analytics", "courbe", "graphique"],
+  "aliases": [],
+  "gesture": "The line draws itself from point to point, then the last point pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 14, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 26, "y": 65, "w": 44, "h": 5, "r": 2.5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M27 54L40 41L52 49L68 30",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "point",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 68, "cy": 30, "r": 6.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line": { "box": [27, 30, 41, 24] },
+    "point": { "box": [61.5, 23.5, 13, 13] }
+  },
+  "motion": [
+    {
+      "part": "line",
+      "pivot": [47.5, 42],
+      "duration": 600,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "point",
+      "pivot": [68, 30],
+      "duration": 400,
+      "delay": 550,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

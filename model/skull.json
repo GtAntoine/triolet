@@ -1,0 +1,85 @@
+{
+  "name": "skull",
+  "category": "security",
+  "keywords": ["skull", "danger", "death", "poison", "toxic", "pirate", "crâne", "mort"],
+  "aliases": [],
+  "gesture": "The jaw of the skull chatters twice.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "jaw",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 54, "w": 34, "h": 30, "r": 9, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 40, "y": 70, "w": 4, "h": 11, "r": 5.5, "role": "main" },
+            { "kind": "rect", "x": 46, "y": 70, "w": 4, "h": 11, "r": 5.5, "role": "main" },
+            { "kind": "rect", "x": 52, "y": 70, "w": 4, "h": 11, "r": 5.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 40, "r": 30, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 36, "cy": 42, "r": 8.5, "role": "main" },
+        { "kind": "circle", "cx": 60, "cy": 42, "r": 8.5, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "path", "d": "M48 53L52.5 60H43.5Z", "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 60, "cy": 42, "r": 4, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "jaw": { "box": [31, 54, 34, 30] }
+  },
+  "motion": [
+    {
+      "part": "jaw",
+      "pivot": [48, 69],
+      "duration": 280,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.5, 4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

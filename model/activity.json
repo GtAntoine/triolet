@@ -1,0 +1,78 @@
+{
+  "name": "activity",
+  "category": "health",
+  "keywords": ["activity", "pulse", "heartbeat", "monitor", "health", "vital", "activité", "pouls"],
+  "aliases": [],
+  "gesture": "The pulse draws itself, then its dot beats.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 20, "w": 72, "h": 56, "r": 12, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "pulse",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M21 48H31L38 32L48 64L56 42L60 48H70",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 73, "cy": 48, "r": 5.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "pulse": { "box": [21, 32, 49, 32] },
+    "dot": { "box": [67.5, 42.5, 11, 11] }
+  },
+  "motion": [
+    {
+      "part": "pulse",
+      "pivot": [45.5, 48],
+      "duration": 600,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [73, 48],
+      "duration": 400,
+      "delay": 600,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

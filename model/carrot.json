@@ -1,0 +1,66 @@
+{
+  "name": "carrot",
+  "category": "social",
+  "keywords": ["carrot", "vegetable", "food", "healthy", "vegan", "garden", "carotte", "légume"],
+  "aliases": [],
+  "gesture": "The leaves of the carrot wave.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "leaves",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 10, "w": 10, "h": 28, "r": 14, "role": "main", "rotate": [8, 56, 36] },
+            { "kind": "rect", "x": 51, "y": 10, "w": 10, "h": 28, "r": 14, "role": "main", "rotate": [40, 56, 36] },
+            { "kind": "rect", "x": 51, "y": 10, "w": 10, "h": 28, "r": 14, "role": "main", "rotate": [72, 56, 36] }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M27 39C27 27 57 27 57 39L46 85A4 4 0 0 1 38 85Z",
+          "role": "base",
+          "stroke": { "width": 4 },
+          "rotate": [40, 42, 53]
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 32, "y": 43, "w": 14, "h": 5, "r": 2.5, "role": "accent", "rotate": [40, 42, 53] },
+        { "kind": "rect", "x": 41, "y": 55, "w": 10, "h": 5, "r": 2.5, "role": "accent", "rotate": [40, 42, 53] },
+        { "kind": "rect", "x": 36, "y": 67, "w": 8, "h": 5, "r": 2.5, "role": "accent", "rotate": [40, 42, 53] }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "leaves": { "box": [52.35, 10.25, 28.42, 28.46] }
+  },
+  "motion": [
+    {
+      "part": "leaves",
+      "pivot": [56, 36],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 8], [0.4, -6], [0.6, 4], [0.8, -2], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

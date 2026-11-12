@@ -1,0 +1,77 @@
+{
+  "name": "backspace",
+  "category": "interface",
+  "keywords": ["backspace", "delete", "erase", "remove", "key", "clear", "effacer", "retour arrière"],
+  "aliases": [],
+  "gesture": "The key is pressed, and comes back up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M36 32H76A10 10 0 0 1 86 42V66A10 10 0 0 1 76 76H36L12 54Z",
+          "role": "main",
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "key",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M36 22H76A10 10 0 0 1 86 32V56A10 10 0 0 1 76 66H36L12 44Z",
+              "role": "base",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 35L66 53",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M66 35L48 53",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "key": { "box": [12, 22, 74, 44] }
+  },
+  "motion": [
+    {
+      "part": "key",
+      "pivot": [49, 44],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.5, 5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

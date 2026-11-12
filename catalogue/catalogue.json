@@ -570,8 +570,8 @@
   "name": "ambulance",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "anchor",
@@ -612,8 +612,8 @@
   "name": "backspace",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "barcode",
@@ -766,8 +766,8 @@
   "name": "egg",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "file",
@@ -913,8 +913,8 @@
   "name": "picture-in-picture",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "pill",
@@ -983,22 +983,22 @@
   "name": "shopping-basket",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "signature",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "skull",
   "sets": 4,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "sliders",
@@ -1123,8 +1123,8 @@
   "name": "activity",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "ad",
@@ -1158,22 +1158,22 @@
   "name": "align-center",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "align-left",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "align-right",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "angle",
@@ -1193,22 +1193,22 @@
   "name": "app-window",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "armchair",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "atom",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "avocado",
@@ -1228,15 +1228,15 @@
   "name": "badge",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "balloon",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "binary",
@@ -1249,8 +1249,8 @@
   "name": "binoculars",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "biohazard",
@@ -1277,8 +1277,8 @@
   "name": "bookmarks",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "brain",
@@ -1326,8 +1326,8 @@
   "name": "carrot",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "cast",
@@ -1347,15 +1347,15 @@
   "name": "certificate",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "chart-line",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "chart-scatter",
@@ -1368,8 +1368,8 @@
   "name": "cheese",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "chevron-down",
@@ -1410,8 +1410,8 @@
   "name": "command",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "compass",
@@ -1424,8 +1424,8 @@
   "name": "contrast",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "copy",
@@ -1452,8 +1452,8 @@
   "name": "crosshair",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "cylinder",
@@ -1494,8 +1494,8 @@
   "name": "dna",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "dog",
@@ -1515,8 +1515,8 @@
   "name": "eject",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "elevator",

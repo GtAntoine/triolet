@@ -1,0 +1,87 @@
+{
+  "name": "signature",
+  "category": "documents",
+  "keywords": ["signature", "sign", "autograph", "contract", "handwriting", "approve", "signer", "paraphe"],
+  "aliases": [],
+  "gesture": "The signature writes itself on the line.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 12, "y": 22, "w": 72, "h": 52, "r": 12, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 60, "w": 52, "h": 4, "r": 2, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "line",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M23 52C26 34 37 32 36 44C35 56 44 38 49 42C53 46 50 54 56 50C60 47 63 43 68 45",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 72, "cy": 46, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "line": { "box": [23, 36.44, 45, 15.56] },
+    "dot": { "box": [67, 41, 10, 10] }
+  },
+  "motion": [
+    {
+      "part": "line",
+      "pivot": [45.5, 44.22],
+      "duration": 750,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    },
+    {
+      "part": "dot",
+      "pivot": [72, 46],
+      "duration": 350,
+      "delay": 750,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

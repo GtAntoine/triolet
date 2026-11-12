@@ -1,0 +1,94 @@
+{
+  "name": "dna",
+  "category": "health",
+  "keywords": ["dna", "genetics", "helix", "biology", "gene", "science", "adn", "génétique"],
+  "aliases": [],
+  "gesture": "The rungs of the helix light up from top to bottom.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M64 12C64 30 32 32 32 48C32 64 64 66 64 84",
+          "role": "base",
+          "fill": false,
+          "stroke": { "width": 9 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "rung-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 39, "y": 19, "w": 18, "h": 6, "r": 3, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "rung-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 39, "y": 71, "w": 18, "h": 6, "r": 3, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M32 12C32 30 64 32 64 48C64 64 32 66 32 84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 9 }
+        }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "rung-1": { "box": [39, 19, 18, 6] },
+    "rung-2": { "box": [39, 71, 18, 6] }
+  },
+  "motion": [
+    {
+      "part": "rung-1",
+      "pivot": [48, 22],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    },
+    {
+      "part": "rung-2",
+      "pivot": [48, 74],
+      "duration": 400,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.3], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

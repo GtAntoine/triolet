@@ -1,0 +1,70 @@
+{
+  "name": "cheese",
+  "category": "social",
+  "keywords": ["cheese", "food", "dairy", "wedge", "snack", "mouse", "fromage", "gruyère"],
+  "aliases": [],
+  "gesture": "One hole of the cheese pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M12 46L68 21A11 11 0 0 1 84 31V46Z",
+          "role": "main",
+          "stroke": { "width": 2 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M12 46H84V70A8 8 0 0 1 76 78H20A8 8 0 0 1 12 70Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "circle", "cx": 29, "cy": 62, "r": 7, "role": "mid" },
+        { "kind": "circle", "cx": 69, "cy": 65, "r": 6, "role": "mid" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "hole",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 50, "cy": 59, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "hole": { "box": [44, 53, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "hole",
+      "pivot": [50, 59],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

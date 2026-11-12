@@ -1,0 +1,62 @@
+{
+  "name": "command",
+  "category": "interface",
+  "keywords": ["command", "cmd", "key", "shortcut", "keyboard", "mac", "commande", "raccourci"],
+  "aliases": [],
+  "gesture": "The key is struck: its sign pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 16, "w": 64, "h": 64, "r": 14, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M40 40V34A6.5 6.5 0 1 0 33.5 40H62.5A6.5 6.5 0 1 0 56 34V62A6.5 6.5 0 1 0 62.5 56H33.5A6.5 6.5 0 1 0 40 62Z",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 43, "y": 43, "w": 10, "h": 10, "r": 2.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sign": { "box": [27.02, 27.01, 41.96, 41.99] }
+  },
+  "motion": [
+    {
+      "part": "sign",
+      "pivot": [48, 48.01],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.15], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

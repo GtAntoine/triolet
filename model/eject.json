@@ -1,0 +1,61 @@
+{
+  "name": "eject",
+  "category": "media",
+  "keywords": ["eject", "remove", "disc", "unmount", "release", "out", "éjecter", "retirer"],
+  "aliases": [],
+  "gesture": "The triangle jumps up, as something is ejected.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "triangle",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 27L65 50H31Z",
+              "role": "main",
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 29, "y": 60, "w": 38, "h": 9, "r": 4.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "triangle": { "box": [31, 27, 34, 23] }
+  },
+  "motion": [
+    {
+      "part": "triangle",
+      "pivot": [48, 38.5],
+      "duration": 500,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

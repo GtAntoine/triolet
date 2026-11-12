@@ -1,0 +1,48 @@
+{
+  "name": "contrast",
+  "category": "design",
+  "keywords": ["contrast", "theme", "dark", "light", "brightness", "mode", "contraste", "thème"],
+  "aliases": [],
+  "gesture": "The disc turns: light and dark swap sides, and come back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "disc",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 35, "role": "base" },
+            { "kind": "path", "d": "M48 13A35 35 0 0 1 48 83Z", "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 31, "cy": 48, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "disc": { "box": [13, 13, 70, 70] }
+  },
+  "motion": [
+    {
+      "part": "disc",
+      "pivot": [48, 48],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,78 @@
+{
+  "name": "atom",
+  "category": "education",
+  "keywords": ["atom", "science", "physics", "chemistry", "nucleus", "molecule", "atome", "physique"],
+  "aliases": [],
+  "gesture": "The three orbits make one turn around the nucleus.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "orbits",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M19 48A29 11 0 1 0 77 48A29 11 0 1 0 19 48Z",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "path",
+              "d": "M19 48A29 11 0 1 0 77 48A29 11 0 1 0 19 48Z",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4 },
+              "rotate": [60, 48, 48]
+            },
+            {
+              "kind": "path",
+              "d": "M19 48A29 11 0 1 0 77 48A29 11 0 1 0 19 48Z",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4 },
+              "rotate": [120, 48, 48]
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 7, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "orbits": { "box": [19, 22.29, 58, 51.41] }
+  },
+  "motion": [
+    {
+      "part": "orbits",
+      "pivot": [48, 48],
+      "duration": 1200,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [1, 360]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,61 @@
+{
+  "name": "egg",
+  "category": "social",
+  "keywords": ["egg", "breakfast", "food", "boiled", "cook", "easter", "œuf", "petit-déjeuner"],
+  "aliases": [],
+  "gesture": "The egg wobbles in its cup.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "egg",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M48 10C61 10 71 30 71 46A23 23 0 0 1 25 46C25 30 35 10 48 10Z", "role": "base" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M24 52H72V56A24 24 0 0 1 24 56Z",
+          "role": "main",
+          "stroke": { "width": 2 }
+        },
+        { "kind": "rect", "x": 36, "y": 80, "w": 24, "h": 6, "r": 3, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 32, "y": 58, "w": 32, "h": 6, "r": 3, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "egg": { "box": [25, 10, 46, 59] }
+  },
+  "motion": [
+    {
+      "part": "egg",
+      "pivot": [48, 69],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 7], [0.4, -6], [0.6, 4], [0.8, -2], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

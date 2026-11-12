@@ -1,0 +1,88 @@
+{
+  "name": "shopping-basket",
+  "category": "commerce",
+  "keywords": ["basket", "shopping", "cart", "buy", "groceries", "store", "panier", "courses"],
+  "aliases": [],
+  "gesture": "The basket swings on its handles.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "basket",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M31 42L41 17",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            },
+            {
+              "kind": "path",
+              "d": "M65 42L55 17",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M18 46H78L72 76A8 8 0 0 1 64 82H32A8 8 0 0 1 24 76Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            { "kind": "rect", "x": 33, "y": 56, "w": 6, "h": 17, "r": 8.5, "role": "mid" },
+            { "kind": "rect", "x": 57, "y": 56, "w": 6, "h": 17, "r": 8.5, "role": "mid" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 45, "y": 56, "w": 6, "h": 17, "r": 8.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 10, "y": 38, "w": 76, "h": 12, "r": 6, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "basket": { "box": [10, 17, 76, 65] }
+  },
+  "motion": [
+    {
+      "part": "basket",
+      "pivot": [48, 17],
+      "duration": 800,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 6], [0.4, -5], [0.6, 3], [0.8, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}
