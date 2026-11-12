@@ -12,7 +12,12 @@ what the icon is for. The bell rings, the ballot drops into the box, the lines w
 
 **[See the icons →](https://gtantoine.github.io/triolet/)**
 
-> Early days (0.x): the API may still change.
+[![triolet on npm](https://img.shields.io/npm/v/triolet?label=triolet)](https://www.npmjs.com/package/triolet)
+[![triolet-react on npm](https://img.shields.io/npm/v/triolet-react?label=triolet-react)](https://www.npmjs.com/package/triolet-react)
+[![triolet-react-native on npm](https://img.shields.io/npm/v/triolet-react-native?label=triolet-react-native)](https://www.npmjs.com/package/triolet-react-native)
+
+> Early days (0.x): the API may still change. Icons drawn after a release reach npm with the next
+> one: see the [changelog](CHANGELOG.md).
 
 ```bash
 npm install triolet            # plain JavaScript and CSS

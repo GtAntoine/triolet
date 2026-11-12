@@ -1,18 +1,19 @@
 # Releasing
 
 `triolet`, `triolet-react` and `triolet-react-native` are released together, at the same
-version. Nothing here is automatic until the one-time setup below is done.
+version. They are on npm since 0.1.0 (12 November 2026), published by the `Release` workflow.
 
 ## One-time setup (the maintainer, on npmjs.com)
 
 1. An npm account with two-factor authentication on.
 2. The names are unscoped (`triolet`, `triolet-react`, `triolet-react-native`): no organisation
-   is needed. Check that they are still free the day you publish: `npm view triolet` must answer 404.
-3. For the workflow: an npm access token (granular, read and write on these three packages, or
-   an automation token) saved as the repository secret `NPM_ACCESS_TOKEN`
-   (GitHub: Settings, Secrets and variables, Actions). The first publish of a new name needs a
-   token that may create packages, so use an automation token or a granular token with
-   "all packages" for that first release, then narrow it.
+   is needed.
+3. For the workflow: an npm granular access token (read and write on these three packages) saved
+   as the repository secret `NPM_ACCESS_TOKEN` (GitHub: Settings, Secrets and variables, Actions).
+   Create it with **"Bypass two-factor authentication (2FA)" ticked**: without it the publish
+   step stops with `ERR_PNPM_OTP_NON_INTERACTIVE`, because nobody is there to type a code. That
+   is what happened on the first run of 0.1.0; replacing the secret and re-running the failed
+   job was enough. Tokens expire: renew the secret before a release.
 
 ## A release
 
@@ -30,7 +31,8 @@ git tag v0.2.0 && git push origin v0.2.0
 The tag starts the `Release` workflow: it checks that the tag is on `main`, runs the checks and
 the tests again, then publishes the three packages with `--provenance` (the npm page shows the
 commit and workflow each version came from). It needs the `NPM_ACCESS_TOKEN` secret and fails at once
-without it.
+without it. npm may take several minutes after the workflow ends before `npm view triolet version`
+shows the new version; an install made in between can be retried with `--prefer-online`.
 
 ## By hand, without the workflow
 

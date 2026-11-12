@@ -20,7 +20,7 @@ the major is 0, a minor version may still change the API.
 
 ## 0.1.0
 
-First release.
+First release, 12 November 2026.
 
 - 207 animated icons, each drawn in three colours (`base` 60 %, `main` 30 %, `accent` 10 %) with
   a soft relief that follows the size (full from 40 px, simplified from 24 px, flat below) or a

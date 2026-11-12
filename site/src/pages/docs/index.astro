@@ -28,8 +28,16 @@ const sections = [
 
       <h2 id="install">Install</h2>
       <p>
-        The packages are not on npm yet. Until they are, clone <a href="https://github.com/GtAntoine/triolet">the repository</a> and run <code>pnpm install</code>
-        then <code>pnpm build</code>: the three packages are built in <code>packages/</code>.
+        Three packages on npm, released together: <a href="https://www.npmjs.com/package/triolet"><code>triolet</code></a> for any web page,
+        <a href="https://www.npmjs.com/package/triolet-react"><code>triolet-react</code></a> for React 18 and 19, and
+        <a href="https://www.npmjs.com/package/triolet-react-native"><code>triolet-react-native</code></a> for React Native and Expo.
+      </p>
+      <Code code={`npm install triolet
+npm install triolet-react
+npm install triolet-react-native @shopify/react-native-skia react-native-reanimated`} />
+      <p class="muted" style="font-size:0.9rem">
+        The icons shown here are those of the repository. A few of the newest may not be in the published version yet: the
+        <a href="https://github.com/GtAntoine/triolet/blob/main/CHANGELOG.md">changelog</a> lists what each release holds.
       </p>
       <h3>Plain JavaScript</h3>
       <Code
