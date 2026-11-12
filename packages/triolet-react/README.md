@@ -5,7 +5,11 @@ Animated icons in three colours, as React components. Every icon is drawn in `ba
 says what it is for. The motion is plain CSS, with no animation library, and nothing moves when
 the user asks for reduced motion.
 
-**[Browse the 150+ icons →](https://gtantoine.github.io/triolet/)**
+<p align="center">
+  <a href="https://gtantoine.github.io/triolet/"><img src="https://raw.githubusercontent.com/GtAntoine/triolet/main/docs/assets/icons.svg" alt="Triolet icons playing their gestures" width="560"></a>
+</p>
+
+**[Browse the 200+ icons →](https://gtantoine.github.io/triolet/)**
 
 ## Install
 

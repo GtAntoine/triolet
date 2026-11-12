@@ -6,7 +6,11 @@ Animated icons in three colours for React Native and Expo, drawn with
 is drawn in `base` (about 60 %), `main` (30 %) and `accent` (10 %) with a soft relief, and
 plays one small gesture when pressed. Nothing moves when the system asks for reduced motion.
 
-**[Browse the 150+ icons →](https://gtantoine.github.io/triolet/)**
+<p align="center">
+  <a href="https://gtantoine.github.io/triolet/"><img src="https://raw.githubusercontent.com/GtAntoine/triolet/main/docs/assets/icons.svg" alt="Triolet icons playing their gestures" width="560"></a>
+</p>
+
+**[Browse the 200+ icons →](https://gtantoine.github.io/triolet/)**
 
 ## Install
 

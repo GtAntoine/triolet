@@ -6,6 +6,10 @@ Every Triolet icon is drawn in three colours you choose — `base` (about 60 %),
 and `accent` (10 %) — with a soft relief, and every icon moves: one small gesture that says
 what the icon is for. The bell rings, the ballot drops into the box, the lines write themselves.
 
+<p align="center">
+  <a href="https://gtantoine.github.io/triolet/"><img src="docs/assets/icons.svg" alt="Sixteen Triolet icons playing their gestures: a bell rings, a calendar is checked, a shield, a heart, a camera, a rocket..." width="672"></a>
+</p>
+
 **[See the icons →](https://gtantoine.github.io/triolet/)**
 
 > Early days (0.x): the API may still change.
@@ -17,6 +21,10 @@ npm install triolet-react-native @shopify/react-native-skia react-native-reanima
 ```
 
 ## What you get
+
+<p align="center">
+  <img src="docs/assets/palettes.svg" alt="The same four icons in six palettes, one of them on a dark surface" width="660">
+</p>
 
 - **Three colours, yours.** Set `--triolet-base`, `--triolet-main` and `--triolet-accent`; the
   tints and the colours of the relief are derived from them.

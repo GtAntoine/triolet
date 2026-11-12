@@ -6,7 +6,11 @@ what it is for: the bell rings, the ballot drops into the box, the lines write t
 
 No dependency. The motion is plain CSS. Nothing moves when the user asks for reduced motion.
 
-**[Browse the 150+ icons →](https://gtantoine.github.io/triolet/)**
+<p align="center">
+  <a href="https://gtantoine.github.io/triolet/"><img src="https://raw.githubusercontent.com/GtAntoine/triolet/main/docs/assets/icons.svg" alt="Triolet icons playing their gestures" width="560"></a>
+</p>
+
+**[Browse the 200+ icons →](https://gtantoine.github.io/triolet/)**
 
 For React use [`triolet-react`](https://www.npmjs.com/package/triolet-react), for React Native
 [`triolet-react-native`](https://www.npmjs.com/package/triolet-react-native).

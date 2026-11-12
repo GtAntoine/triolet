@@ -27,7 +27,8 @@
     "native:check": "node tools/native-preview-check.ts",
     "site:check": "node tools/site-check.ts",
     "release:check": "node tools/release.ts check",
-    "release:bump": "node tools/release.ts bump"
+    "release:bump": "node tools/release.ts bump",
+    "readme:assets": "node tools/readme-assets.ts"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
