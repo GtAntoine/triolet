@@ -8,16 +8,17 @@
     {
       "type": "layer",
       "effect": "raised",
+      "size": "small",
       "shapes": [
         {
           "kind": "path",
-          "d": "M20 42L22 18L44 30Z",
+          "d": "M16 46L18 12A4 4 0 0 1 24 9L44 30Z",
           "role": "main",
           "stroke": { "width": 4 }
         },
         {
           "kind": "path",
-          "d": "M76 42L74 18L52 30Z",
+          "d": "M80 46L78 12A4 4 0 0 0 72 9L52 30Z",
           "role": "main",
           "stroke": { "width": 4 }
         }
@@ -28,7 +29,7 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "ellipse", "cx": 48, "cy": 54, "rx": 33, "ry": 27, "role": "base" }
+        { "kind": "rect", "x": 14, "y": 30, "w": 68, "h": 52, "r": 26, "role": "base" }
       ],
       "weight": "major"
     },
@@ -38,15 +39,25 @@
       "children": [
         {
           "type": "layer",
-          "effect": "inset",
-          "tone": "dark",
+          "effect": "plain",
           "shapes": [
-            { "kind": "rect", "x": 33, "y": 44, "w": 8, "h": 13, "r": 6.5, "role": "main" },
-            { "kind": "rect", "x": 55, "y": 44, "w": 8, "h": 13, "r": 6.5, "role": "main" }
+            { "kind": "circle", "cx": 34, "cy": 52, "r": 7.5, "role": "main" },
+            { "kind": "circle", "cx": 62, "cy": 52, "r": 7.5, "role": "main" },
+            { "kind": "circle", "cx": 36, "cy": 50, "r": 2.4, "role": "on" },
+            { "kind": "circle", "cx": 64, "cy": 50, "r": 2.4, "role": "on" }
           ],
-          "weight": "minor"
+          "weight": "major"
         }
       ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "ellipse", "cx": 48, "cy": 68, "rx": 12, "ry": 8.5, "role": "soft" }
+      ],
+      "weight": "minor"
     },
     {
       "type": "layer",
@@ -55,9 +66,9 @@
       "shapes": [
         {
           "kind": "path",
-          "d": "M43.5 60H52.5L48 65.5Z",
+          "d": "M44 62H52L48 67Z",
           "role": "accent",
-          "stroke": { "width": 3 }
+          "stroke": { "width": 2.5 }
         }
       ],
       "weight": "minor"
@@ -65,21 +76,21 @@
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "light",
+      "tone": "dark",
       "shapes": [
-        { "kind": "rect", "x": 18, "y": 60, "w": 13, "h": 3.5, "r": 1.75, "role": "mid" },
-        { "kind": "rect", "x": 65, "y": 60, "w": 13, "h": 3.5, "r": 1.75, "role": "mid" }
+        { "kind": "rect", "x": 16, "y": 66, "w": 13, "h": 3.5, "r": 1.75, "role": "main" },
+        { "kind": "rect", "x": 67, "y": 66, "w": 13, "h": 3.5, "r": 1.75, "role": "main" }
       ],
       "weight": "minor"
     }
   ],
   "parts": {
-    "eyes": { "box": [33, 44, 30, 13] }
+    "eyes": { "box": [26.5, 44.5, 43, 15] }
   },
   "motion": [
     {
       "part": "eyes",
-      "pivot": [48, 50.5],
+      "pivot": [48, 52],
       "duration": 700,
       "delay": 0,
       "iterations": 1,

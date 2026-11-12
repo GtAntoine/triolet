@@ -8,28 +8,39 @@
     {
       "type": "layer",
       "effect": "raised",
+      "size": "small",
       "shapes": [
-        { "kind": "rect", "x": 24, "y": 14, "w": 48, "h": 66, "r": 23, "role": "base" }
+        { "kind": "rect", "x": 14, "y": 18, "w": 22, "h": 44, "r": 11, "role": "main", "rotate": [10, 25, 28] },
+        { "kind": "rect", "x": 60, "y": 18, "w": 22, "h": 44, "r": 11, "role": "main", "rotate": [-10, 71, 28] }
       ],
       "weight": "major"
     },
     {
       "type": "layer",
       "effect": "raised",
-      "size": "small",
       "shapes": [
-        { "kind": "rect", "x": 12, "y": 18, "w": 21, "h": 40, "r": 20, "role": "main", "rotate": [10, 22, 22] },
-        { "kind": "rect", "x": 63, "y": 18, "w": 21, "h": 40, "r": 20, "role": "main", "rotate": [-10, 74, 22] }
+        { "kind": "rect", "x": 20, "y": 16, "w": 56, "h": 62, "r": 26, "role": "base" }
       ],
       "weight": "major"
     },
     {
       "type": "layer",
       "effect": "inset",
-      "tone": "dark",
+      "tone": "light",
       "shapes": [
-        { "kind": "circle", "cx": 39, "cy": 40, "r": 4.5, "role": "main" },
-        { "kind": "circle", "cx": 57, "cy": 40, "r": 4.5, "role": "main" }
+        { "kind": "circle", "cx": 36, "cy": 36, "r": 5, "role": "mid" },
+        { "kind": "circle", "cx": 60, "cy": 36, "r": 5, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "plain",
+      "shapes": [
+        { "kind": "circle", "cx": 36, "cy": 42, "r": 4.5, "role": "main" },
+        { "kind": "circle", "cx": 60, "cy": 42, "r": 4.5, "role": "main" },
+        { "kind": "circle", "cx": 37.5, "cy": 40.5, "r": 1.6, "role": "on" },
+        { "kind": "circle", "cx": 61.5, "cy": 40.5, "r": 1.6, "role": "on" }
       ],
       "weight": "minor"
     },
@@ -42,7 +53,7 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "rect", "x": 42.5, "y": 58, "w": 11, "h": 16, "r": 8, "role": "accent" }
+            { "kind": "path", "d": "M42 66H54V73A6 6 0 0 1 42 73Z", "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -50,21 +61,30 @@
     },
     {
       "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "ellipse", "cx": 48, "cy": 58, "rx": 14, "ry": 10, "role": "soft" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
       "effect": "raised",
       "size": "small",
       "shapes": [
-        { "kind": "ellipse", "cx": 48, "cy": 56, "rx": 8.5, "ry": 6, "role": "main" }
+        { "kind": "ellipse", "cx": 48, "cy": 53, "rx": 7, "ry": 5, "role": "main" }
       ],
       "weight": "minor"
     }
   ],
   "parts": {
-    "tongue": { "box": [42.5, 58, 11, 16] }
+    "tongue": { "box": [42, 66, 12, 13] }
   },
   "motion": [
     {
       "part": "tongue",
-      "pivot": [48, 58],
+      "pivot": [48, 66],
       "duration": 800,
       "delay": 0,
       "iterations": 1,
