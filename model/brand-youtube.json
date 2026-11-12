@@ -1,0 +1,68 @@
+{
+  "name": "brand-youtube",
+  "category": "brands",
+  "keywords": ["youtube", "brand", "logo", "video", "stream", "marque", "logo de marque"],
+  "aliases": ["youtube"],
+  "gesture": "The YouTube mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M62.37 32.73A3.77 3.77 0 0 0 59.72 30.06C57.38 29.43 48 29.43 48 29.43C48 29.43 38.62 29.43 36.28 30.06A3.77 3.77 0 0 0 33.63 32.73C33 35.09 33 40 33 40C33 40 33 44.91 33.63 47.27A3.77 3.77 0 0 0 36.28 49.94C38.62 50.57 48 50.57 48 50.57C48 50.57 57.38 50.57 59.72 49.94A3.77 3.77 0 0 0 62.37 47.27C63 44.91 63 40 63 40C63 40 63 35.09 62.37 32.73ZM44.93 44.46L44.93 35.54L52.77 40L44.93 44.46Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 29.43, 30, 21.14] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

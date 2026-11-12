@@ -1,0 +1,68 @@
+{
+  "name": "brand-windows",
+  "category": "brands",
+  "keywords": ["windows", "brand", "logo", "microsoft", "os", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Windows mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M33 25L47.22 25L47.22 39.22L33 39.22ZM48.78 25L63 25L63 39.22L48.78 39.22ZM33 40.78L47.22 40.78L47.22 55L33 55ZM48.78 40.78L63 40.78L63 55L48.78 55",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 25, 30, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

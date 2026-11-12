@@ -1,0 +1,68 @@
+{
+  "name": "brand-lmstudio",
+  "category": "brands",
+  "keywords": ["lmstudio", "brand", "logo", "ai", "local", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The LM Studio mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M50.53 25C54.9 25 57.08 25 58.75 25.85A7.8 7.8 0 0 1 62.15 29.26C63 30.92 63 33.11 63 37.47L63 42.53C63 46.9 63 49.08 62.15 50.74A7.8 7.8 0 0 1 58.75 54.15C57.08 55 54.89 55 50.53 55L45.47 55C41.1 55 38.92 55 37.26 54.15A7.8 7.8 0 0 1 33.85 50.75C33 49.08 33 46.89 33 42.53L33 37.47C33 33.1 33 30.92 33.85 29.26A7.79 7.79 0 0 1 37.25 25.85C38.92 25 41.11 25 45.47 25ZM42.61 45.39A1.64 1.64 0 0 0 42.61 48.67L57.14 48.67A1.64 1.64 0 0 0 57.14 45.39ZM38.86 40.7A1.64 1.64 0 0 0 38.86 43.98L53.39 43.98A1.64 1.64 0 0 0 53.39 40.7ZM42.61 36.02A1.64 1.64 0 0 0 42.61 39.3L57.14 39.3A1.64 1.64 0 0 0 57.14 36.02ZM38.86 31.33A1.64 1.64 0 0 0 38.86 34.61L53.39 34.61A1.64 1.64 0 0 0 53.39 31.33Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 25, 30, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

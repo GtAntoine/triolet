@@ -1,0 +1,68 @@
+{
+  "name": "brand-anthropic",
+  "category": "brands",
+  "keywords": ["anthropic", "brand", "logo", "ai", "claude", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Anthropic mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54.63 29.43L50.04 29.43L58.41 50.57L63 50.57ZM41.37 29.43L33 50.57L37.68 50.57L39.39 46.13L48.15 46.13L49.86 50.57L54.54 50.57L46.17 29.43ZM40.91 42.21L43.77 34.77L46.63 42.21Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 29.43, 30, 21.14] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

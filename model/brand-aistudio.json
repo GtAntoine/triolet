@@ -1,0 +1,83 @@
+{
+  "name": "brand-aistudio",
+  "category": "brands",
+  "keywords": ["aistudio", "brand", "logo", "ai", "google", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Google AI Studio mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M45 29H40A6 6 0 0 0 34 35V49A6 6 0 0 0 40 55H54A6 6 0 0 0 60 49V45",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M57 21C57.7 25.5 61.5 29.3 66 30C61.5 30.7 57.7 34.5 57 39C56.3 34.5 52.5 30.7 48 30C52.5 29.3 56.3 25.5 57 21Z",
+              "role": "on",
+              "stroke": { "width": 1.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [34, 21, 32, 34] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

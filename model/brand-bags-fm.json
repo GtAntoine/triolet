@@ -1,0 +1,84 @@
+{
+  "name": "brand-bags-fm",
+  "category": "brands",
+  "keywords": ["bags fm", "brand", "logo", "crypto", "money", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Bags mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M41 26H55L52 32H44Z",
+              "role": "on",
+              "stroke": { "width": 2 }
+            },
+            { "kind": "path", "d": "M41 34C35 40 33 45 33 48.5A7 7 0 0 0 40 55.5H56A7 7 0 0 0 63 48.5C63 45 61 40 55 34Z", "role": "on" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M51.5 42C50.5 40.5 49 40 48 40C46 40 44.8 41.2 44.8 42.6C44.8 45.6 51.4 44.4 51.4 47.6C51.4 49 50 50.2 48 50.2C46.4 50.2 45 49.5 44.3 48.2M48 38V52",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 26, 30, 29.5] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

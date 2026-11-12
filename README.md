@@ -118,6 +118,15 @@ An icon is drawn on a 96 × 96 grid, inside four keyline shapes (a circle 72 acr
 of 64, 56 × 72 and 72 × 56), from a few shapes that each name a colour role. See
 [the drawing guide](skills/triolet-icon/references/drawing-guide.md).
 
+## Brand icons
+
+The icons named `brand-*` (GitHub, Google, Stripe, WhatsApp and about fifty others) show the
+marks of companies and products, so that an interface can point to those services. The names
+and logos are trademarks of their owners: the MIT licence of this repository does not cover
+them, and each owner's brand guidelines apply. Most outlines come from
+[Simple Icons](https://simpleicons.org) (CC0); `tools/brands/` holds the data and the script.
+If you do not want them, import the other icons by name: nothing loads a brand icon for you.
+
 ## Licence
 
 [MIT](LICENSE). Releases: [CHANGELOG](CHANGELOG.md), [how to publish](docs/releasing.md).

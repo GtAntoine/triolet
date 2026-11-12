@@ -1,0 +1,68 @@
+{
+  "name": "brand-gitlab",
+  "category": "brands",
+  "keywords": ["gitlab", "brand", "logo", "code", "repository", "marque", "logo de marque"],
+  "aliases": ["gitlab"],
+  "gesture": "The GitLab mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M63 36.94L62.96 36.82L58.73 25.8A1.1 1.1 0 0 0 58.3 25.28A1.13 1.13 0 0 0 57 25.35A1.13 1.13 0 0 0 56.63 25.91L53.78 34.64L42.23 34.64L39.38 25.91A1.11 1.11 0 0 0 39 25.34A1.13 1.13 0 0 0 37.71 25.27A1.11 1.11 0 0 0 37.27 25.8L33.04 36.82L33 36.93A7.84 7.84 0 0 0 35.6 45.99L35.62 46.01L35.66 46.03L42.09 50.85L45.27 53.26L47.21 54.73A1.3 1.3 0 0 0 48.79 54.73L50.73 53.26L53.91 50.85L60.39 46L60.4 45.99A7.85 7.85 0 0 0 63 36.94Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [32.48, 25.1, 31.03, 29.9] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

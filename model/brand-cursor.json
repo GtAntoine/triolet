@@ -1,0 +1,68 @@
+{
+  "name": "brand-cursor",
+  "category": "brands",
+  "keywords": ["cursor", "brand", "logo", "editor", "ai", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Cursor mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M47.37 25L35.22 32.01A1.06 1.06 0 0 0 34.69 32.93L34.69 47.07C34.69 47.45 34.9 47.8 35.22 47.99L47.37 55A1.26 1.26 0 0 0 48.63 55L60.78 47.99A1.06 1.06 0 0 0 61.31 47.07L61.31 32.93A1.06 1.06 0 0 0 60.78 32.01L48.63 25A1.28 1.28 0 0 0 47.37 25M36.19 32.85L59.64 32.85C59.97 32.85 60.18 33.21 60.01 33.5L48.29 53.8C48.21 53.94 48 53.88 48 53.73L48 40.43A0.75 0.75 0 0 0 47.63 39.78L36.11 33.14C35.98 33.06 36.03 32.85 36.19 32.85",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [34.69, 24.83, 26.62, 30.33] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

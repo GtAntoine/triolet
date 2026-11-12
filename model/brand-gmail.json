@@ -1,0 +1,68 @@
+{
+  "name": "brand-gmail",
+  "category": "brands",
+  "keywords": ["gmail", "brand", "logo", "email", "google", "marque", "logo de marque"],
+  "aliases": ["gmail"],
+  "gesture": "The Gmail mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M63 32.27L63 49.66C63 50.79 62.09 51.7 60.95 51.7L56.18 51.7L56.18 40.11L48 46.25L39.82 40.11L39.82 51.7L35.05 51.7A2.04 2.04 0 0 1 33 49.66L33 32.27C33 29.74 35.89 28.3 37.91 29.82L39.82 31.25L48 37.38L56.18 31.25L58.09 29.82C60.11 28.3 63 29.74 63 32.27Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 29.2, 30, 22.5] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

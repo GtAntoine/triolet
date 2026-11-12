@@ -4,6 +4,26 @@ The three packages (`triolet`, `triolet-react`, `triolet-react-native`) are rele
 and share a version number. Versions follow [semantic versioning](https://semver.org/); while
 the major is 0, a minor version may still change the API.
 
+## Unreleased
+
+150 more icons: 435 in all. Every icon of itshover.com/icons now has its counterpart, by name or
+by alias.
+
+- Letters `letter-a` to `letter-z`, drawn as keys.
+- Arrows: `arrow-big-*` (block arrows, plain and with a dash), `arrow-*-dashed`, and the sort
+  arrows `arrow-down-0-1`, `arrow-down-1-0`, `arrow-down-a-z`.
+- Off states and badges: camera-off, copy-off, plug-off, volume-x, battery-pause, alarm-plus,
+  user-check, user-plus, badge-percent, double-check, scan-heart, brightness-down, unlink.
+- Interface: more-vertical, expand, focus, mouse-pointer, keyframes, dialpad, subscript, ampersand,
+  accessibility, align-vertical-space-around, four `layout-*` icons, chart-covariate,
+  chart-histogram, and the faces angry, annoyed, meh.
+- Objects: five `currency-*` coins, banana, candy-cane, earbuds, dino, drum, gauge, ghost,
+  hand-heart, hotel, library, party-popper, passport, paw-print, rainbow, router, satellite-dish,
+  soup, sparkles, washing-machine.
+- 53 brand icons (`brand-*`, category `brands`): see "Brand icons" in the README for what they
+  are and what the licence does not cover.
+- About fifty aliases, so that common names find the icon (`home`, `gear`, `cart`, `pen`, `like`...).
+
 ## 0.1.1
 
 78 more icons: 285 in all.

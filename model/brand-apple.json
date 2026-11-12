@@ -1,0 +1,68 @@
+{
+  "name": "brand-apple",
+  "category": "brands",
+  "keywords": ["apple", "brand", "logo", "ios", "mac", "marque", "logo de marque"],
+  "aliases": ["apple-brand-logo"],
+  "gesture": "The Apple mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48.88 33.6C47.7 33.6 45.87 32.26 43.94 32.3C41.4 32.34 39.07 33.78 37.75 36.06C35.11 40.65 37.07 47.42 39.65 51.15C40.91 52.96 42.4 55 44.38 54.94C46.28 54.86 46.99 53.71 49.29 53.71C51.57 53.71 52.22 54.94 54.23 54.89C56.27 54.86 57.57 53.04 58.81 51.21C60.26 49.1 60.85 47.06 60.89 46.95C60.84 46.93 56.92 45.43 56.87 40.89C56.84 37.1 59.96 35.29 60.11 35.2C58.33 32.6 55.59 32.31 54.63 32.24C52.14 32.05 50.05 33.6 48.88 33.6ZM53.1 29.78C54.15 28.52 54.84 26.75 54.65 25C53.14 25.06 51.33 26 50.24 27.27C49.27 28.39 48.43 30.18 48.66 31.9C50.32 32.03 52.04 31.04 53.1 29.78",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [36.5, 25, 24.39, 29.94] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

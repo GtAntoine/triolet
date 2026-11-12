@@ -1,0 +1,68 @@
+{
+  "name": "brand-qwen",
+  "category": "brands",
+  "keywords": ["qwen", "brand", "logo", "ai", "alibaba", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Qwen mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M62.99 43.2L59.09 36.44L60.94 33.24A0.7 0.7 0 0 0 60.94 32.53L58.89 28.97A0.72 0.72 0 0 0 58.27 28.61L50.46 28.61L48.61 25.41A0.72 0.72 0 0 0 48 25.05L43.89 25.05A0.7 0.7 0 0 0 43.27 25.41L39.37 32.17L35.67 32.17A0.7 0.7 0 0 0 35.05 32.53L33 36.08A0.7 0.7 0 0 0 33 36.8L36.9 43.56L35.05 46.76A0.7 0.7 0 0 0 35.05 47.47L37.11 51.03A0.72 0.72 0 0 0 37.73 51.39L45.53 51.39L47.38 54.59A0.72 0.72 0 0 0 48 54.95L52.11 54.95A0.72 0.72 0 0 0 52.72 54.59L56.63 47.83L60.33 47.83A0.72 0.72 0 0 0 60.94 47.47L63 43.92A0.69 0.69 0 0 0 62.99 43.2M43.89 25.77L45.95 29.32L43.89 32.88L60.33 32.88L58.27 36.44L42.24 36.44L39.99 32.53ZM45.53 50.68L37.73 50.67L39.78 47.11L43.89 47.11L35.67 32.88L39.78 32.88Q43.79 39.82 47.79 46.76ZM58.27 43.56L56.22 40L48 54.23L45.94 50.67C48.62 46.05 51.29 41.43 53.96 36.8L58.48 36.8L62.38 43.56Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [32.9, 25.05, 30.2, 29.9] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,79 @@
+{
+  "name": "brand-midjourney",
+  "category": "brands",
+  "keywords": ["midjourney", "brand", "logo", "ai", "image", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Midjourney mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            { "kind": "path", "d": "M39 23C50 29 56 38 57 49H37C42 41 43 32 39 23Z", "role": "on" },
+            { "kind": "path", "d": "M52 27C59 32 63 40 64 49H61C60 41 57 33 52 27Z", "role": "on" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M33 54C36.5 51.5 40 56.5 44 54C48 51.5 51.5 56.5 55.5 54C59 51.5 62 55 65 53.5",
+              "role": "on",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 23, 32, 31.72] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

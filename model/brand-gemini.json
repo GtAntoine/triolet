@@ -1,0 +1,68 @@
+{
+  "name": "brand-gemini",
+  "category": "brands",
+  "keywords": ["gemini", "brand", "logo", "ai", "google", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Google Gemini mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M46.8 49.15Q48 51.89 48 55Q48 51.89 49.16 49.15Q50.36 46.41 52.39 44.39Q54.41 42.36 57.15 41.2Q59.89 40 63 40Q59.89 40 57.15 38.84A15.38 15.38 0 0 1 52.39 35.61A15.38 15.38 0 0 1 49.16 30.85Q48 28.11 48 25Q48 28.11 46.8 30.85Q45.64 33.59 43.61 35.61A15.38 15.38 0 0 1 38.85 38.84Q36.11 40 33 40Q36.11 40 38.85 41.2Q41.59 42.36 43.61 44.39Q45.64 46.41 46.8 49.15",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 25, 30, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

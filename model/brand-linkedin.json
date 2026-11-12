@@ -1,0 +1,68 @@
+{
+  "name": "brand-linkedin",
+  "category": "brands",
+  "keywords": ["linkedin", "brand", "logo", "social", "work", "marque", "logo de marque"],
+  "aliases": ["linkedin"],
+  "gesture": "The LinkedIn mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M58.56 50.56L54.12 50.56L54.12 43.6C54.12 41.94 54.08 39.81 51.8 39.81C49.48 39.81 49.13 41.61 49.13 43.48L49.13 50.57L44.69 50.57L44.69 36.25L48.96 36.25L48.96 38.2L49.01 38.2C49.61 37.08 51.06 35.89 53.23 35.89C57.73 35.89 58.56 38.85 58.56 42.71L58.56 50.56ZM39.67 34.29C38.24 34.29 37.09 33.13 37.09 31.71C37.09 30.29 38.24 29.13 39.67 29.13C41.1 29.13 42.25 30.29 42.25 31.71C42.25 33.13 41.09 34.29 39.67 34.29ZM41.9 50.56L37.44 50.56L37.44 36.25L41.9 36.25L41.9 50.56ZM60.78 25L35.21 25C33.99 25 33 25.97 33 27.16L33 52.84C33 54.03 33.99 55 35.21 55L60.78 55C62 55 63 54.03 63 52.84L63 27.16C63 25.97 62 25 60.78 25L60.78 25Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 25, 30, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

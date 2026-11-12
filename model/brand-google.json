@@ -1,0 +1,68 @@
+{
+  "name": "brand-google",
+  "category": "brands",
+  "keywords": ["google", "brand", "logo", "search", "sign in", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Google mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48.6 38.65L48.6 42.75L58.4 42.75C58.1 45.05 57.33 46.73 56.17 47.92C54.73 49.35 52.5 50.92 48.6 50.92C42.57 50.92 37.85 46.05 37.85 40.02C37.85 33.98 42.57 29.12 48.6 29.12C51.85 29.12 54.23 30.4 55.98 32.05L58.87 29.17C56.43 26.8 53.17 25 48.6 25C40.33 25 33.38 31.73 33.38 40C33.38 48.27 40.33 55 48.6 55C53.07 55 56.43 53.53 59.07 50.8C61.77 48.1 62.62 44.28 62.62 41.22C62.62 40.27 62.55 39.38 62.4 38.65L48.6 38.65Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33.38, 25, 29.24, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

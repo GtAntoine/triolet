@@ -31,8 +31,8 @@
   "name": "bell",
   "sets": 5,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bookmark",
@@ -220,8 +220,8 @@
   "name": "home",
   "sets": 5,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "image",
@@ -1641,15 +1641,15 @@
   "name": "gauge",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "ghost",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "git-branch",
@@ -2026,8 +2026,8 @@
   "name": "rainbow",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "rectangle",
@@ -2075,8 +2075,8 @@
   "name": "router",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "ruler",
@@ -2201,15 +2201,15 @@
   "name": "sparkles",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "stack",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "stairs",
@@ -2236,8 +2236,8 @@
   "name": "subscript",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "subtitles",
@@ -2488,8 +2488,8 @@
   "name": "accessibility",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "accessible",
@@ -2537,8 +2537,8 @@
   "name": "ampersand",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "antenna",
@@ -2579,36 +2579,36 @@
   "name": "arrow-back",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "arrow-big-down",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "arrow-big-left",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "arrow-big-right",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "arrow-big-up",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "arrow-circle-down",
@@ -2726,8 +2726,8 @@
   "name": "banana",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bandage",
@@ -3412,8 +3412,8 @@
   "name": "currency-dollar",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "currency-pound",
@@ -3426,8 +3426,8 @@
   "name": "currency-rupee",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "currency-yen",
@@ -3461,8 +3461,8 @@
   "name": "dialpad",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "directions",
@@ -3538,8 +3538,8 @@
   "name": "earbuds",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "equalizer",
@@ -3580,8 +3580,8 @@
   "name": "expand",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "explicit",
@@ -3685,8 +3685,8 @@
   "name": "focus",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "footprints",
@@ -3776,8 +3776,8 @@
   "name": "gitlab",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "golf",
@@ -3923,8 +3923,8 @@
   "name": "hotel",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "html",
@@ -4049,134 +4049,134 @@
   "name": "letter-a",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-b",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-c",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-d",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-e",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-f",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-g",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-h",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-i",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-j",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-k",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-l",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-m",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-n",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-o",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-p",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-q",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-r",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-s",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-spacing",
@@ -4189,57 +4189,57 @@
   "name": "letter-t",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-u",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-v",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-w",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-x",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-y",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "letter-z",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "library",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "license",
@@ -4518,8 +4518,8 @@
   "name": "paw-print",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "peace",
@@ -4686,8 +4686,8 @@
   "name": "question-mark",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "quote",
@@ -5001,8 +5001,8 @@
   "name": "soup",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "space",
@@ -5337,8 +5337,8 @@
   "name": "unlink",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "van",
@@ -5400,8 +5400,8 @@
   "name": "washing-machine",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "wave-sine",

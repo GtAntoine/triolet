@@ -1,0 +1,68 @@
+{
+  "name": "brand-nextjs",
+  "category": "brands",
+  "keywords": ["nextjs", "brand", "logo", "framework", "react", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Next.js mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M56.33 52.47C53.95 54.07 51.08 55 48 55C39.72 55 33 48.28 33 40C33 31.72 39.72 25 48 25C56.28 25 63 31.72 63 40C63 44.48 61.03 48.5 57.92 51.25L44.52 34L42 34L42 45.99L44.02 45.99L44.02 36.56L56.33 52.47ZM52.17 41.81L54.17 44.38L54.17 34L52.17 34L52.17 41.81Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [33, 25, 30, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

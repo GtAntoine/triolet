@@ -1,0 +1,68 @@
+{
+  "name": "brand-paypal",
+  "category": "brands",
+  "keywords": ["paypal", "brand", "logo", "payment", "money", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The PayPal mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M52.51 30.82L44.18 30.82L41.31 49.06L35.28 49.06L39.08 25L49.07 25C53.77 25 57.04 27.87 57.16 31.89C56.35 31.29 54.53 30.82 52.51 30.82M60.72 37.75C60.72 42.01 56.96 46.31 52.03 46.31L48.91 46.31L47.49 55L41.43 55L43.73 40.58L48.22 40.58C53.48 40.58 57.41 36.03 57.16 31.89A6.55 6.55 0 0 1 60.72 37.75M45.07 31.93L53.08 31.93C54.21 31.93 55.5 32.21 56.03 32.61C55.79 36.04 52.71 39.46 47.98 39.46L43.89 39.46Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [35.28, 25, 25.44, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,68 @@
+{
+  "name": "brand-twitch",
+  "category": "brands",
+  "keywords": ["twitch", "brand", "logo", "stream", "video", "marque", "logo de marque"],
+  "aliases": [],
+  "gesture": "The Twitch mark pops on its key.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 22, "y": 22, "w": 52, "h": 52, "r": 10, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 30, "y": 62, "w": 36, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "mark",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M47.46 30.89L49.61 30.89L49.61 37.32L47.46 37.32ZM53.36 30.89L55.5 30.89L55.5 37.32L53.36 37.32ZM40.5 25L35.14 30.36L35.14 49.64L41.57 49.64L41.57 55L46.93 49.64L51.21 49.64L60.86 40L60.86 25ZM58.71 38.93L54.43 43.21L50.14 43.21L46.39 46.96L46.39 43.21L41.57 43.21L41.57 27.14L58.71 27.14Z",
+              "role": "on"
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "mark": { "box": [35.14, 25, 25.72, 30] }
+  },
+  "motion": [
+    {
+      "part": "mark",
+      "pivot": [48, 40],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -110,7 +110,8 @@ nest (a badge that pops, with a star inside that pops later). A part with no mot
 
 `arrows`, `civic`, `commerce`, `communication`, `data`, `design`, `development`, `devices`,
 `documents`, `education`, `finance`, `health`, `interface`, `media`, `notifications`, `people`,
-`places`, `security`, `settings`, `social`, `time`, `weather`, `work`. Take the closest one; food
+`places`, `security`, `settings`, `social`, `time`, `weather`, `work`. (`brands` is written by
+`tools/brands/`, not drawn by hand.) Take the closest one; food
 and celebrations go to `social`, tools to `work`. A new category is worth it from five icons.
 
 ## Small sizes
