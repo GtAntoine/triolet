@@ -1,0 +1,62 @@
+{
+  "name": "tree",
+  "category": "places",
+  "keywords": ["tree", "nature", "forest", "park", "plant", "garden", "arbre", "forêt"],
+  "aliases": [],
+  "gesture": "The crown of the tree sways.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 42.5, "y": 54, "w": 11, "h": 28, "r": 3, "role": "main" },
+        { "kind": "rect", "x": 28, "y": 78, "w": 40, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "crown",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 32, "r": 22, "role": "base" },
+            { "kind": "circle", "cx": 31, "cy": 44, "r": 15, "role": "base" },
+            { "kind": "circle", "cx": 65, "cy": 44, "r": 15, "role": "base" },
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 14, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 38, "cy": 30, "r": 5, "role": "accent" },
+            { "kind": "circle", "cx": 58, "cy": 36, "r": 5, "role": "accent" },
+            { "kind": "circle", "cx": 42, "cy": 48, "r": 5, "role": "accent" }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "crown": { "box": [16, 10, 64, 52] }
+  },
+  "motion": [
+    {
+      "part": "crown",
+      "pivot": [48, 62],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 5], [0.4, -4], [0.6, 3], [0.8, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

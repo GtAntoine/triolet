@@ -1,0 +1,99 @@
+{
+  "name": "robot",
+  "category": "development",
+  "keywords": ["robot", "bot", "ai", "assistant", "automation", "android", "ia", "intelligence artificielle"],
+  "aliases": [],
+  "gesture": "The robot blinks, and its antenna lights up.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 31L48 21",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5.5 }
+        },
+        { "kind": "rect", "x": 8, "y": 45, "w": 10, "h": 20, "r": 4, "role": "main" },
+        { "kind": "rect", "x": 78, "y": 45, "w": 10, "h": 20, "r": 4, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "antenna",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 18, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 31, "w": 60, "h": 52, "r": 15, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "eyes",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 36, "cy": 51, "r": 7.5, "role": "main" },
+            { "kind": "circle", "cx": 60, "cy": 51, "r": 7.5, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 35, "y": 66, "w": 26, "h": 7, "r": 3.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    }
+  ],
+  "parts": {
+    "antenna": { "box": [42, 12, 12, 12] },
+    "eyes": { "box": [28.5, 43.5, 39, 15] }
+  },
+  "motion": [
+    {
+      "part": "antenna",
+      "pivot": [48, 18],
+      "duration": 450,
+      "delay": 200,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "eyes",
+      "pivot": [48, 51],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleY": [[0, 1], [0.2, 0.1], [0.4, 1], [0.6, 0.1], [0.8, 1], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

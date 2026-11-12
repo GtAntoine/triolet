@@ -1,0 +1,82 @@
+{
+  "name": "hash",
+  "category": "communication",
+  "keywords": ["hash", "hashtag", "number", "tag", "channel", "pound", "dièse", "mot-dièse"],
+  "aliases": [],
+  "gesture": "The sign pops.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 14, "y": 14, "w": 68, "h": 68, "r": 16, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "sign",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M41 27L36 69",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M60 27L55 69",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            },
+            {
+              "kind": "path",
+              "d": "M28 39H70",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M26 57H68",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "sign": { "box": [26, 27, 44, 42] }
+  },
+  "motion": [
+    {
+      "part": "sign",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

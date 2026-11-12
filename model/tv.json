@@ -1,0 +1,90 @@
+{
+  "name": "tv",
+  "category": "devices",
+  "keywords": ["tv", "television", "screen", "watch", "show", "channel", "télévision", "télé"],
+  "aliases": [],
+  "gesture": "The play triangle pops on the screen.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M36 10L48 23L60 10",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5.5 }
+        },
+        {
+          "kind": "path",
+          "d": "M30 74L26 84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        },
+        {
+          "kind": "path",
+          "d": "M66 74L70 84",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 22, "w": 76, "h": 52, "r": 11, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 16, "y": 28, "w": 64, "h": 40, "r": 6, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "play",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M42 39L57 48L42 57Z",
+              "role": "accent",
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "play": { "box": [42, 39, 15, 18] }
+  },
+  "motion": [
+    {
+      "part": "play",
+      "pivot": [49.5, 48],
+      "duration": 480,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.25], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

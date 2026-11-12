@@ -1,0 +1,84 @@
+{
+  "name": "eye-off",
+  "category": "interface",
+  "keywords": ["eye", "hide", "hidden", "invisible", "password", "private", "masquer", "caché"],
+  "aliases": [],
+  "gesture": "The bar crosses out the eye.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "path", "d": "M10 48C22 30 36 22 48 22C60 22 74 30 86 48C74 66 60 74 48 74C36 74 22 66 10 48Z", "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "path", "d": "M10 48C22 30 36 22 48 22C60 22 74 30 86 48C74 66 60 74 48 74C36 74 22 66 10 48Z", "role": "base" }
+      ],
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 48, "r": 18, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 76L74 20",
+              "role": "gap",
+              "fill": false,
+              "stroke": { "width": 11 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 76L74 20",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar": { "box": [22, 20, 52, 56] }
+  },
+  "motion": [
+    {
+      "part": "bar",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

@@ -1,0 +1,88 @@
+{
+  "name": "medal",
+  "category": "social",
+  "keywords": ["medal", "award", "winner", "prize", "achievement", "rank", "médaille", "récompense"],
+  "aliases": [],
+  "gesture": "The medal swings on its ribbon.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M28 10H44L56 40H40Z",
+          "role": "main",
+          "stroke": { "width": 2 }
+        },
+        {
+          "kind": "path",
+          "d": "M68 10H52L40 40H56Z",
+          "role": "main",
+          "stroke": { "width": 2 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "medal",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 48, "cy": 60, "r": 25, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "light",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 48,
+              "cy": 60,
+              "r": 18,
+              "role": "mid",
+              "fill": false,
+              "stroke": { "width": 3.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48.0 49.0L50.9 56.0L58.5 56.6L52.8 61.5L54.5 68.9L48.0 65.0L41.5 68.9L43.2 61.5L37.5 56.6L45.1 56.0Z",
+              "role": "accent",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "medal": { "box": [23, 35, 50, 50] }
+  },
+  "motion": [
+    {
+      "part": "medal",
+      "pivot": [48, 24],
+      "duration": 850,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 9], [0.4, -7], [0.6, 4], [0.8, -2], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

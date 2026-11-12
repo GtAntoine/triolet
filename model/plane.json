@@ -1,0 +1,67 @@
+{
+  "name": "plane",
+  "category": "places",
+  "keywords": ["plane", "airplane", "flight", "travel", "airport", "trip", "avion", "vol"],
+  "aliases": [],
+  "gesture": "The plane flies off and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "plane",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54 28L92 52L92 60L54 49L16 60L16 52Z",
+              "role": "base",
+              "stroke": { "width": 3 },
+              "rotate": [45, 54, 42]
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M54 62L70 74L70 79L54 74L38 79L38 74Z",
+              "role": "accent",
+              "stroke": { "width": 2 },
+              "rotate": [45, 54, 42]
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 47, "y": 2, "w": 14, "h": 78, "r": 39, "role": "main", "rotate": [45, 54, 42] }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "plane": { "box": [14.4, 13.28, 68.32, 68.32] }
+  },
+  "motion": [
+    {
+      "part": "plane",
+      "pivot": [48.56, 47.44],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]], "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

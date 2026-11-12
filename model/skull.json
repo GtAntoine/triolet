@@ -13,7 +13,7 @@
           "type": "layer",
           "effect": "raised",
           "shapes": [
-            { "kind": "rect", "x": 31, "y": 54, "w": 34, "h": 30, "r": 9, "role": "base" }
+            { "kind": "rect", "x": 29, "y": 52, "w": 38, "h": 32, "r": 11, "role": "base" }
           ],
           "weight": "major"
         },
@@ -22,9 +22,9 @@
           "effect": "inset",
           "tone": "dark",
           "shapes": [
-            { "kind": "rect", "x": 40, "y": 70, "w": 4, "h": 11, "r": 5.5, "role": "main" },
-            { "kind": "rect", "x": 46, "y": 70, "w": 4, "h": 11, "r": 5.5, "role": "main" },
-            { "kind": "rect", "x": 52, "y": 70, "w": 4, "h": 11, "r": 5.5, "role": "main" }
+            { "kind": "rect", "x": 38.5, "y": 70, "w": 4.5, "h": 12, "r": 6, "role": "main" },
+            { "kind": "rect", "x": 45.75, "y": 70, "w": 4.5, "h": 12, "r": 6, "role": "main" },
+            { "kind": "rect", "x": 53, "y": 70, "w": 4.5, "h": 12, "r": 6, "role": "main" }
           ],
           "weight": "minor"
         }
@@ -34,7 +34,11 @@
       "type": "layer",
       "effect": "raised",
       "shapes": [
-        { "kind": "circle", "cx": 48, "cy": 40, "r": 30, "role": "base" }
+        {
+          "kind": "path",
+          "d": "M48 10C27 10 14 25 14 42C14 53 19 60 26 64A5 5 0 0 0 31 68H65A5 5 0 0 0 70 64C77 60 82 53 82 42C82 25 69 10 48 10Z",
+          "role": "base"
+        }
       ],
       "weight": "major"
     },
@@ -43,8 +47,8 @@
       "effect": "inset",
       "tone": "dark",
       "shapes": [
-        { "kind": "circle", "cx": 36, "cy": 42, "r": 8.5, "role": "main" },
-        { "kind": "circle", "cx": 60, "cy": 42, "r": 8.5, "role": "main" }
+        { "kind": "ellipse", "cx": 34, "cy": 43, "rx": 10, "ry": 11, "role": "main", "rotate": [-12, 34, 43] },
+        { "kind": "ellipse", "cx": 62, "cy": 43, "rx": 10, "ry": 11, "role": "main", "rotate": [12, 62, 43] }
       ],
       "weight": "major"
     },
@@ -53,7 +57,8 @@
       "effect": "inset",
       "tone": "dark",
       "shapes": [
-        { "kind": "path", "d": "M48 53L52.5 60H43.5Z", "role": "main" }
+        { "kind": "circle", "cx": 35, "cy": 44, "r": 6, "role": "accent" },
+        { "kind": "circle", "cx": 61, "cy": 44, "r": 6, "role": "accent" }
       ],
       "weight": "minor"
     },
@@ -62,18 +67,23 @@
       "effect": "inset",
       "tone": "dark",
       "shapes": [
-        { "kind": "circle", "cx": 60, "cy": 42, "r": 4, "role": "accent" }
+        {
+          "kind": "path",
+          "d": "M48 54L52.5 62H43.5Z",
+          "role": "main",
+          "stroke": { "width": 2 }
+        }
       ],
       "weight": "minor"
     }
   ],
   "parts": {
-    "jaw": { "box": [31, 54, 34, 30] }
+    "jaw": { "box": [29, 52, 38, 32] }
   },
   "motion": [
     {
       "part": "jaw",
-      "pivot": [48, 69],
+      "pivot": [48, 68],
       "duration": 280,
       "delay": 0,
       "iterations": 2,

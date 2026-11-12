@@ -1,0 +1,110 @@
+{
+  "name": "wifi-off",
+  "category": "devices",
+  "keywords": ["wifi", "offline", "disconnected", "no signal", "network", "internet", "hors ligne", "déconnecté"],
+  "aliases": [],
+  "gesture": "The bar crosses out the signal.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M16 36A45 45 0 0 1 80 36",
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 8 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M27 48A30 30 0 0 1 69 48",
+          "role": "mid",
+          "fill": false,
+          "stroke": { "width": 8 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M38 60A15 15 0 0 1 58 60",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 8 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 72, "r": 7.5, "role": "accent" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bar",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 80L74 18",
+              "role": "gap",
+              "fill": false,
+              "stroke": { "width": 13 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 80L74 18",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar": { "box": [22, 18, 52, 62] }
+  },
+  "motion": [
+    {
+      "part": "bar",
+      "pivot": [48, 49],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

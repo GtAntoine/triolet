@@ -1,0 +1,98 @@
+{
+  "name": "bell-off",
+  "category": "notifications",
+  "keywords": ["bell", "mute", "silent", "notifications off", "quiet", "do not disturb", "silencieux", "muet"],
+  "aliases": [],
+  "gesture": "The bar crosses out the bell.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 17, "r": 4.5, "role": "main" },
+        { "kind": "circle", "cx": 48, "cy": 75, "r": 8.5, "role": "accent" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 20C36 20 30 30 30 42V56L22 66V71H74V66L66 56V42C66 30 60 20 48 20Z",
+          "role": "base",
+          "stroke": { "width": 3 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "clip",
+      "clip": [
+        { "kind": "path", "d": "M48 20C36 20 30 30 30 42V56L22 66V71H74V66L66 56V42C66 30 60 20 48 20Z", "role": "base" }
+      ],
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 16, "y": 58, "w": 64, "h": 8, "r": 0, "role": "main" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "bar",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "plain",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 80L76 16",
+              "role": "gap",
+              "fill": false,
+              "stroke": { "width": 13 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M20 80L76 16",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 7 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bar": { "box": [20, 16, 56, 64] }
+  },
+  "motion": [
+    {
+      "part": "bar",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

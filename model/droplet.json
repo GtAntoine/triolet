@@ -1,0 +1,64 @@
+{
+  "name": "droplet",
+  "category": "weather",
+  "keywords": ["droplet", "water", "drop", "rain", "liquid", "humidity", "goutte", "eau"],
+  "aliases": [],
+  "gesture": "The drop falls and bounces.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "drop",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "path", "d": "M48 10C60 28 74 42 74 58A26 26 0 0 1 22 58C22 42 36 28 48 10Z", "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 29.76C55.44 40.92 64.12 49.6 64.12 59.52A16.12 16.12 0 0 1 31.88 59.52C31.88 49.6 40.56 40.92 48 29.76Z",
+              "role": "main"
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 49.2C51.6 54.6 55.8 58.8 55.8 63.6A7.8 7.8 0 0 1 40.2 63.6C40.2 58.8 44.4 54.6 48 49.2Z",
+              "role": "accent"
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "drop": { "box": [22, 10, 52, 74] }
+  },
+  "motion": [
+    {
+      "part": "drop",
+      "pivot": [48, 47],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "y": [[0, 0], [0.3, -8], [0.55, 0], [0.75, -2.5], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

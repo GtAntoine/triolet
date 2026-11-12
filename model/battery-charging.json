@@ -1,0 +1,79 @@
+{
+  "name": "battery-charging",
+  "category": "devices",
+  "keywords": ["battery", "charging", "charge", "power", "plugged", "energy", "recharge", "batterie"],
+  "aliases": [],
+  "gesture": "The bolt flashes: the battery is charging.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 76, "y": 40, "w": 10, "h": 16, "r": 4, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 28, "w": 68, "h": 40, "r": 10, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 17, "y": 35, "w": 54, "h": 26, "r": 5, "role": "soft" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 17, "y": 35, "w": 20, "h": 26, "r": 5, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "bolt",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M50 32L38 50H47L44 64L58 45H49Z",
+              "role": "accent",
+              "stroke": { "width": 2.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bolt": { "box": [38, 32, 20, 32] }
+  },
+  "motion": [
+    {
+      "part": "bolt",
+      "pivot": [48, 48],
+      "duration": 450,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

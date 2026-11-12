@@ -1704,8 +1704,8 @@
   "name": "hash",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "headset",
@@ -1767,8 +1767,8 @@
   "name": "leaf",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "lifebuoy",
@@ -1781,8 +1781,8 @@
   "name": "luggage",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "magnet",
@@ -1816,15 +1816,15 @@
   "name": "medal",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "megaphone",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "menu",
@@ -1956,8 +1956,8 @@
   "name": "percent",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "piano",
@@ -1977,8 +1977,8 @@
   "name": "pizza",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "planet",
@@ -2061,8 +2061,8 @@
   "name": "robot",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "route",
@@ -2285,8 +2285,8 @@
   "name": "tent",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "timeline",
@@ -2334,8 +2334,8 @@
   "name": "train",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "trending-down",
@@ -2369,8 +2369,8 @@
   "name": "tv",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "underline",
@@ -2432,8 +2432,8 @@
   "name": "watch",
   "sets": 3,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "waves",
@@ -2775,8 +2775,8 @@
   "name": "battery-charging",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "battery-low",
@@ -2803,8 +2803,8 @@
   "name": "bike",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "bird",
@@ -3510,8 +3510,8 @@
   "name": "droplet",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "droplets",
@@ -3720,8 +3720,8 @@
   "name": "gamepad",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "garage",
@@ -4014,15 +4014,15 @@
   "name": "laptop",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "layers",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "layout",
@@ -4392,8 +4392,8 @@
   "name": "mountain",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "move",
@@ -4602,8 +4602,8 @@
   "name": "plane",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "plant",
@@ -5295,8 +5295,8 @@
   "name": "tree",
   "sets": 2,
   "category": "other",
-  "drawn": false,
-  "lot": 1
+  "drawn": true,
+  "lot": 0
  },
  {
   "name": "trees",

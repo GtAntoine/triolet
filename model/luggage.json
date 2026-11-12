@@ -1,0 +1,82 @@
+{
+  "name": "luggage",
+  "category": "places",
+  "keywords": ["luggage", "suitcase", "travel", "baggage", "trip", "holiday", "valise", "bagage"],
+  "aliases": [],
+  "gesture": "The suitcase is lifted, then put down.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "case",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M38 22V15A5 5 0 0 1 43 10H53A5 5 0 0 1 58 15V22",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6 }
+            }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 32, "cy": 82, "r": 5, "role": "main" },
+            { "kind": "circle", "cx": 64, "cy": 82, "r": 5, "role": "main" }
+          ],
+          "weight": "minor"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 20, "y": 22, "w": 56, "h": 58, "r": 11, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 31, "y": 31, "w": 7, "h": 40, "r": 20, "role": "main" },
+            { "kind": "rect", "x": 58, "y": 31, "w": 7, "h": 40, "r": 20, "role": "main" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 27, "y": 46, "w": 42, "h": 9, "r": 4.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "case": { "box": [20, 10, 56, 77] }
+  },
+  "motion": [
+    {
+      "part": "case",
+      "pivot": [48, 48.5],
+      "duration": 600,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -6], [0.7, 1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

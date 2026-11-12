@@ -1,0 +1,74 @@
+{
+  "name": "mountain",
+  "category": "places",
+  "keywords": ["mountain", "peak", "summit", "hike", "landscape", "nature", "montagne", "sommet"],
+  "aliases": [],
+  "gesture": "The sun rises behind the peaks.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "sun",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 70, "cy": 26, "r": 10, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M10 78L38 26L66 78Z",
+          "role": "base",
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "path", "d": "M38 28L48 46L42 43L37 48L31 43L28 47Z", "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M44 78L64 46L84 78Z",
+          "role": "main",
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "sun": { "box": [60, 16, 20, 20] }
+  },
+  "motion": [
+    {
+      "part": "sun",
+      "pivot": [70, 26],
+      "duration": 700,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 14], [1, 0]], "opacity": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

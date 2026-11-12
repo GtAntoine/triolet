@@ -1,0 +1,99 @@
+{
+  "name": "layers",
+  "category": "design",
+  "keywords": ["layers", "stack", "levels", "overlay", "sheets", "depth", "calques", "couches"],
+  "aliases": [],
+  "gesture": "The three layers come apart, then stack again.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "bottom",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 44L82 61L48 78L14 61Z",
+              "role": "main",
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 29L82 46L48 63L14 46Z",
+          "role": "soft",
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "top",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 14L82 31L48 48L14 31Z",
+              "role": "base",
+              "stroke": { "width": 5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M48 21L66 31L48 41L30 31Z",
+              "role": "accent",
+              "stroke": { "width": 2 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bottom": { "box": [14, 44, 68, 34] },
+    "top": { "box": [14, 14, 68, 34] }
+  },
+  "motion": [
+    {
+      "part": "bottom",
+      "pivot": [48, 61],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, 4], [1, 0]] }
+    },
+    {
+      "part": "top",
+      "pivot": [48, 31],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "y": [[0, 0], [0.5, -4], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

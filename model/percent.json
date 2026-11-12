@@ -1,0 +1,87 @@
+{
+  "name": "percent",
+  "category": "finance",
+  "keywords": ["percent", "discount", "rate", "sale", "ratio", "promotion", "pourcentage", "réduction"],
+  "aliases": [],
+  "gesture": "The two dots pop on each side of the bar.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M62 30L34 66",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 10 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "dot-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 34, "cy": 35, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "dot-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "circle", "cx": 62, "cy": 61, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "dot-1": { "box": [27, 28, 14, 14] },
+    "dot-2": { "box": [55, 54, 14, 14] }
+  },
+  "motion": [
+    {
+      "part": "dot-1",
+      "pivot": [34, 35],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    },
+    {
+      "part": "dot-2",
+      "pivot": [62, 61],
+      "duration": 400,
+      "delay": 140,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.35], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

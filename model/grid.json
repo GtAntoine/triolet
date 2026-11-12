@@ -1,0 +1,119 @@
+{
+  "name": "grid",
+  "category": "interface",
+  "keywords": ["grid", "layout", "apps", "tiles", "dashboard", "gallery", "grille", "mosaïque"],
+  "aliases": [],
+  "gesture": "The four tiles pop, one after the other.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "tile-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 13, "y": 13, "w": 32, "h": 32, "r": 10, "role": "main" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "tile-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 13, "w": 32, "h": 32, "r": 10, "role": "base" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "tile-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 13, "y": 51, "w": 32, "h": 32, "r": 10, "role": "base" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "tile-4",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "rect", "x": 51, "y": 51, "w": 32, "h": 32, "r": 10, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "rect", "x": 59, "y": 59, "w": 16, "h": 16, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "tile-1": { "box": [13, 13, 32, 32] },
+    "tile-2": { "box": [51, 13, 32, 32] },
+    "tile-3": { "box": [13, 51, 32, 32] },
+    "tile-4": { "box": [51, 51, 32, 32] }
+  },
+  "motion": [
+    {
+      "part": "tile-1",
+      "pivot": [29, 29],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    },
+    {
+      "part": "tile-2",
+      "pivot": [67, 29],
+      "duration": 380,
+      "delay": 90,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    },
+    {
+      "part": "tile-3",
+      "pivot": [29, 67],
+      "duration": 380,
+      "delay": 180,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    },
+    {
+      "part": "tile-4",
+      "pivot": [67, 67],
+      "duration": 380,
+      "delay": 270,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.12], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

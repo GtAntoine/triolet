@@ -1,0 +1,94 @@
+{
+  "name": "gamepad",
+  "category": "devices",
+  "keywords": ["gamepad", "game", "controller", "play", "console", "joystick", "manette", "jeu vidéo"],
+  "aliases": [],
+  "gesture": "The two buttons are pressed, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 10, "y": 26, "w": 76, "h": 38, "r": 19, "role": "base" },
+        { "kind": "circle", "cx": 25, "cy": 58, "r": 15, "role": "base" },
+        { "kind": "circle", "cx": 71, "cy": 58, "r": 15, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 18, "y": 41, "w": 24, "h": 8, "r": 4, "role": "main" },
+        { "kind": "rect", "x": 26, "y": 33, "w": 8, "h": 24, "r": 12, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "circle", "cx": 57, "cy": 51, "r": 6, "role": "main" },
+        { "kind": "circle", "cx": 75, "cy": 51, "r": 6, "role": "main" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "button-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 40, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "button-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 66, "cy": 62, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "button-1": { "box": [60, 34, 12, 12] },
+    "button-2": { "box": [60, 56, 12, 12] }
+  },
+  "motion": [
+    {
+      "part": "button-1",
+      "pivot": [66, 40],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    },
+    {
+      "part": "button-2",
+      "pivot": [66, 62],
+      "duration": 380,
+      "delay": 160,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

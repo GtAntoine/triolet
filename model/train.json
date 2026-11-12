@@ -1,0 +1,88 @@
+{
+  "name": "train",
+  "category": "places",
+  "keywords": ["train", "rail", "metro", "subway", "station", "transport", "tgv", "gare"],
+  "aliases": [],
+  "gesture": "The two headlights flash.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M33 72L25 86",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        },
+        {
+          "kind": "path",
+          "d": "M63 72L71 86",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 20, "y": 10, "w": 56, "h": 64, "r": 15, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 19, "w": 40, "h": 24, "r": 7, "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "light",
+      "shapes": [
+        { "kind": "rect", "x": 40, "y": 52, "w": 16, "h": 6, "r": 3, "role": "mid" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "part",
+      "name": "lights",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 33, "cy": 59, "r": 6, "role": "accent" },
+            { "kind": "circle", "cx": 63, "cy": 59, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "lights": { "box": [27, 53, 42, 12] }
+  },
+  "motion": [
+    {
+      "part": "lights",
+      "pivot": [48, 59],
+      "duration": 400,
+      "delay": 0,
+      "iterations": 2,
+      "ease": "inOut",
+      "tracks": { "opacity": [[0, 1], [0.5, 0.2], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

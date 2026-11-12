@@ -1,0 +1,67 @@
+{
+  "name": "leaf",
+  "category": "places",
+  "keywords": ["leaf", "nature", "eco", "plant", "green", "organic", "feuille", "écologie"],
+  "aliases": [],
+  "gesture": "The leaf sways on its stem.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "leaf",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M22 74C20 38 42 16 80 16C80 54 58 76 22 74Z",
+              "role": "base",
+              "stroke": { "width": 3 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M18 80L62 34M40 57V40M40 57H57",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 5.5 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 62, "cy": 54, "r": 7, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "leaf": { "box": [18, 16, 62, 64] }
+  },
+  "motion": [
+    {
+      "part": "leaf",
+      "pivot": [18, 80],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "rotate": [[0, 0], [0.2, 6], [0.4, -5], [0.6, 3], [0.8, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

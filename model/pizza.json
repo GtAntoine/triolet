@@ -1,0 +1,117 @@
+{
+  "name": "pizza",
+  "category": "social",
+  "keywords": ["pizza", "food", "slice", "restaurant", "meal", "delivery", "part", "repas"],
+  "aliases": [],
+  "gesture": "The three toppings pop, one after the other.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M14 30C36 16 60 16 82 30L48 86Z",
+          "role": "base",
+          "stroke": { "width": 4 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M14 28C36 14 60 14 82 28",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 9 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "topping-1",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 37, "cy": 39, "r": 6.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "topping-2",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 58, "cy": 43, "r": 6, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    },
+    {
+      "type": "part",
+      "name": "topping-3",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "circle", "cx": 47, "cy": 60, "r": 5.5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "topping-1": { "box": [30.5, 32.5, 13, 13] },
+    "topping-2": { "box": [52, 37, 12, 12] },
+    "topping-3": { "box": [41.5, 54.5, 11, 11] }
+  },
+  "motion": [
+    {
+      "part": "topping-1",
+      "pivot": [37, 39],
+      "duration": 380,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    },
+    {
+      "part": "topping-2",
+      "pivot": [58, 43],
+      "duration": 380,
+      "delay": 110,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    },
+    {
+      "part": "topping-3",
+      "pivot": [47, 60],
+      "duration": 380,
+      "delay": 220,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "scale": [[0, 1], [0.45, 1.4], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

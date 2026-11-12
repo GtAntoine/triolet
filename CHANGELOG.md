@@ -6,6 +6,9 @@ the major is 0, a minor version may still change the API.
 
 ## Unreleased
 
+- 27 more icons (285): eye-off, lock-open, bell-off, wifi-off, at-sign, hash, percent, grid, layers,
+  laptop, tv, watch, battery-charging, plane, train, bike, luggage, tent, tree, leaf, droplet,
+  mountain, pizza, gamepad, megaphone, medal, robot. The skull is redrawn.
 - 24 more everyday icons (258): menu, more, timer, plug, pin, stop, fast-forward, skip-forward,
   skip-back, trending-up, trending-down, login, logout, history, undo, redo, external-link, save,
   zoom-in, zoom-out, store, id-card, translate, toggle.

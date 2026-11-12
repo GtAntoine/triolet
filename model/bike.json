@@ -1,0 +1,102 @@
+{
+  "name": "bike",
+  "category": "places",
+  "keywords": ["bike", "bicycle", "cycle", "ride", "cycling", "mobility", "vélo", "bicyclette"],
+  "aliases": [],
+  "gesture": "The bike rolls forward and comes back.",
+  "nodes": [
+    {
+      "type": "part",
+      "name": "bike",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "shapes": [
+            { "kind": "circle", "cx": 25, "cy": 60, "r": 19, "role": "base" },
+            { "kind": "circle", "cx": 71, "cy": 60, "r": 19, "role": "base" }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "circle",
+              "cx": 25,
+              "cy": 60,
+              "r": 15.5,
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4 }
+            },
+            {
+              "kind": "circle",
+              "cx": 71,
+              "cy": 60,
+              "r": 15.5,
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M25 60L40 37H61L71 60M40 37L50 60H25M61 37L58 27",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 4 }
+            }
+          ],
+          "weight": "major"
+        },
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M33 34H46",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            },
+            {
+              "kind": "path",
+              "d": "M52 26H66",
+              "role": "accent",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "bike": { "box": [6, 26, 84, 53] }
+  },
+  "motion": [
+    {
+      "part": "bike",
+      "pivot": [48, 52.5],
+      "duration": 650,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "x": [[0, 0], [0.4, 6], [0.7, -1], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

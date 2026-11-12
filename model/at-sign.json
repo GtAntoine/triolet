@@ -1,0 +1,70 @@
+{
+  "name": "at-sign",
+  "category": "communication",
+  "keywords": ["at", "email", "mention", "address", "handle", "username", "arobase", "adresse"],
+  "aliases": [],
+  "gesture": "The tail of the sign draws itself around its centre.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "circle", "cx": 48, "cy": 48, "r": 36, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "circle",
+          "cx": 48,
+          "cy": 48,
+          "r": 9,
+          "role": "accent",
+          "fill": false,
+          "stroke": { "width": 6.5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "tail",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            {
+              "kind": "path",
+              "d": "M57 39V52A7 7 0 0 0 71 52V48A23 23 0 1 0 60 67.6",
+              "role": "main",
+              "fill": false,
+              "stroke": { "width": 6.5 }
+            }
+          ],
+          "weight": "major"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "tail": { "box": [25.02, 24.99, 45.98, 45.98] }
+  },
+  "motion": [
+    {
+      "part": "tail",
+      "pivot": [48.01, 47.98],
+      "duration": 700,
+      "delay": 100,
+      "iterations": 1,
+      "ease": "outSoft",
+      "tracks": { "draw": [[0, 0], [1, 1]] }
+    }
+  ],
+  "idle": false
+}

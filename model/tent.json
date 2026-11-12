@@ -1,0 +1,70 @@
+{
+  "name": "tent",
+  "category": "places",
+  "keywords": ["tent", "camping", "camp", "outdoor", "shelter", "nature", "tente", "bivouac"],
+  "aliases": [],
+  "gesture": "The flap of the tent opens, then closes.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M48 16L84 76H12Z",
+          "role": "base",
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "path", "d": "M48 38L66 78H30Z", "role": "main" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "flap",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "inset",
+          "tone": "dark",
+          "shapes": [
+            { "kind": "path", "d": "M48 38V78H30Z", "role": "accent" }
+          ],
+          "weight": "major"
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        { "kind": "rect", "x": 8, "y": 76, "w": 80, "h": 8, "r": 4, "role": "main" }
+      ],
+      "weight": "major"
+    }
+  ],
+  "parts": {
+    "flap": { "box": [30, 38, 18, 40] }
+  },
+  "motion": [
+    {
+      "part": "flap",
+      "pivot": [30, 78],
+      "duration": 900,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "inOut",
+      "tracks": { "scaleX": [[0, 1], [0.35, 0.3], [0.65, 0.3], [1, 1]] }
+    }
+  ],
+  "idle": false
+}
