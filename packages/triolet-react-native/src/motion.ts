@@ -5,7 +5,7 @@
  * derives its transform from that clock, so parts stay in step and nothing is scheduled per
  * property. The arithmetic mirrors `sampleMotion` in @triolet/core.
  */
-import type { Ease, Motion, Prop } from '../../../../packages/core/src/model.ts';
+import type { Ease, Motion, Prop } from 'triolet/core';
 
 type Curve = readonly [number, number, number, number];
 

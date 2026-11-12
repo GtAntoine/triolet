@@ -30,6 +30,14 @@ Every gesture takes `duration` (ms), `delay` (ms), `ease`, `iterations` and `piv
 | `travel({ from, fade })` / `travel({ via })` | arrives from an offset, or visits points and returns | a sun rising, a magnifier scanning, a pencil writing |
 | `wave()` | ripples from its attached side | a flag, a ribbon |
 
+Defaults: `nudge()` moves 6 units up at the middle of 550 ms (`{ y: -6 }`; give `x` or `y` to choose);
+`pop()` swells to 1.35 at 45 % of 500 ms; `reveal()` grows from 12 % of its width in 450 ms;
+`swing()` rocks through 14, -11, 7, -4 degrees in 800 ms; `bounce()` jumps 8 units in 700 ms.
+
+A gesture that ARRIVES (`reveal`, `travel({ from })`, `draw`) starts away from rest: in its first
+frame the part is small, offset or, with `fade: true`, invisible. That is expected; the icon is at
+rest before and after the gesture.
+
 `stagger(['line-1', 'line-2', 'line-3'], reveal({ duration: 400 }), 100)` gives the same gesture
 to several parts, each starting 100 ms after the one before. Spread it in `motion`:
 `motion: { ...stagger(...), dot: pop({ delay: 300 }) }`.
@@ -48,7 +56,9 @@ travel or swing), `'outSoft'`, `'linear'` (a wheel that keeps turning).
 
 ## By hand
 
-When no gesture fits, write the tracks: keys are `[moment from 0 to 1, value]`; a track not
+When no gesture fits, write the tracks. The first argument is the timing, like any gesture
+(`duration` is required; `delay`, `ease`, `iterations` and `pivot` are accepted); keys are
+`[moment from 0 to 1, value]`; a track not
 keyed at 0 or 1 is at rest there; every track must END at rest.
 
 ```ts

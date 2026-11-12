@@ -1,0 +1,35 @@
+{
+  "name": "triolet-react-native",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Animated icons in three colours for React Native, drawn with Skia and moved by Reanimated",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "src/index.ts",
+  "react-native": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": { "browser": "./src/index.web.ts", "default": "./src/index.ts" },
+    "./icons/*": "./src/icons/*.ts"
+  },
+  "files": ["src"],
+  "repository": { "type": "git", "url": "git+https://github.com/GtAntoine/triolet.git", "directory": "packages/triolet-react-native" },
+  "homepage": "https://gtantoine.github.io/triolet/",
+  "scripts": {
+    "build": "node ../../tools/build-packages.ts triolet-react-native"
+  },
+  "dependencies": {
+    "triolet": "workspace:^"
+  },
+  "peerDependencies": {
+    "@shopify/react-native-skia": ">=2.0.0",
+    "react": ">=18",
+    "react-native": ">=0.76",
+    "react-native-reanimated": ">=3.16",
+    "triolet-react": "workspace:^"
+  },
+  "peerDependenciesMeta": {
+    "triolet-react": { "optional": true }
+  }
+}

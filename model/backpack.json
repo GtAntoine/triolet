@@ -1,0 +1,83 @@
+{
+  "name": "backpack",
+  "category": "education",
+  "keywords": ["backpack", "bag", "school", "rucksack", "travel", "hike", "sac à dos", "cartable"],
+  "aliases": [],
+  "gesture": "The flap of the pocket lifts and drops back.",
+  "nodes": [
+    {
+      "type": "layer",
+      "effect": "raised",
+      "size": "small",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M39 28V23.5A9 9 0 0 1 57 23.5V28",
+          "role": "main",
+          "fill": false,
+          "stroke": { "width": 5 }
+        }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        {
+          "kind": "path",
+          "d": "M42 22H54A22 22 0 0 1 76 44V74A10 10 0 0 1 66 84H30A10 10 0 0 1 20 74V44A22 22 0 0 1 42 22Z",
+          "role": "main"
+        }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "layer",
+      "effect": "inset",
+      "tone": "dark",
+      "shapes": [
+        { "kind": "rect", "x": 35, "y": 35, "w": 26, "h": 5, "r": 2.5, "role": "mainLight" }
+      ],
+      "weight": "minor"
+    },
+    {
+      "type": "layer",
+      "effect": "raised",
+      "shapes": [
+        { "kind": "rect", "x": 28, "y": 54, "w": 40, "h": 23, "r": 8, "role": "base" }
+      ],
+      "weight": "major"
+    },
+    {
+      "type": "part",
+      "name": "flap",
+      "children": [
+        {
+          "type": "layer",
+          "effect": "raised",
+          "size": "small",
+          "shapes": [
+            { "kind": "rect", "x": 27, "y": 49, "w": 42, "h": 10, "r": 5, "role": "accent" }
+          ],
+          "weight": "minor"
+        }
+      ]
+    }
+  ],
+  "parts": {
+    "flap": { "box": [27, 49, 42, 10] }
+  },
+  "motion": [
+    {
+      "part": "flap",
+      "pivot": [48, 54],
+      "duration": 550,
+      "delay": 0,
+      "iterations": 1,
+      "ease": "out",
+      "tracks": { "y": [[0, 0], [0.4, -5], [0.7, 0.8333333333333334], [1, 0]] }
+    }
+  ],
+  "idle": false
+}

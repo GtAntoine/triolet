@@ -1,10 +1,13 @@
 /**
- * The Skia spike: is the relief right, and does it stay fluid?
+ * The example app of triolet-react-native.
  *
- * Screen 1 compares two icons drawn live by Skia with the same icons rasterised from the SVG
- * (the reference), then shows the size tiers and the flat finish. Tap an icon to play it.
- * Screen 2 is a grid of thirty live icons with a frame-rate readout: play them all at once,
- * or loop them all, and watch the numbers.
+ * "Two icons" compares two icons drawn live by Skia with the same icons rasterised from the
+ * SVG (the reference), then shows the size tiers and the flat finish. Tap an icon to play it.
+ * "Grid of 30" and "All" show live icons with a frame-rate readout: play them all at once, or
+ * loop them all, and watch the numbers.
+ *
+ * Build the packages first (`pnpm build` at the root of the repository): the app reads them
+ * from `packages/`.
  */
 import { StatusBar } from 'expo-status-bar';
 import { useCallback, useRef, useState } from 'react';
@@ -13,18 +16,16 @@ import { useFrameCallback, useSharedValue } from 'react-native-reanimated';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 // Reanimated 4 moved "run on the JS thread" to react-native-worklets.
 import { scheduleOnRN } from 'react-native-worklets';
-import agendaModel from '../../model/calendar-clock.json';
-import alertesModel from '../../model/bell-ring.json';
-import demarchesModel from '../../model/file-text.json';
-import suiviModel from '../../model/checklist.json';
-import voterModel from '../../model/ballot-box.json';
-import type { ThemeInput } from '../../packages/core/src/colors.ts';
-import type { IconModel } from '../../packages/core/src/model.ts';
-import { TrioletIcon, type TrioletIconHandle } from './src/skia/TrioletIcon';
+import * as Triolet from 'triolet-react-native';
+import { BallotBox, BellRing, CalendarClock, Checklist, FileText, TrioletProvider, type IconComponent, type TrioletIconHandle } from 'triolet-react-native';
 
-const agenda = agendaModel as unknown as IconModel;
-const voter = voterModel as unknown as IconModel;
-const ICONS = [agenda, alertesModel, demarchesModel, suiviModel, voter] as unknown as IconModel[];
+type Colors = NonNullable<Parameters<typeof TrioletProvider>[0]['colors']>;
+
+/** Every icon component of the package, in name order. */
+const ALL: [string, IconComponent][] = Object.entries(Triolet)
+  .filter(([name, value]) => /^[A-Z]/.test(name) && !name.endsWith('Icon') && !name.startsWith('Triolet') && typeof value === 'object')
+  .map(([name, value]) => [name, value as IconComponent]);
+const FIVE = [CalendarClock, BellRing, FileText, Checklist, BallotBox];
 
 const REFERENCE = {
   agenda: require('./assets/reference/calendar-clock.png'),
@@ -35,7 +36,7 @@ const REFERENCE = {
 // which only exists to look at the renderer without a device, shows fewer icons.
 const WEB = Platform.OS === 'web';
 
-const PALETTES: { name: string; colors: ThemeInput; ink: string }[] = [
+const PALETTES: { name: string; colors: Colors; ink: string }[] = [
   { name: 'Original', colors: { base: '#F1F2F4', main: '#1D4A68', accent: '#EE4B3B', surface: '#FFFFFF' }, ink: '#1C2733' },
   { name: 'Forest', colors: { base: '#EEF2EA', main: '#1F5A3D', accent: '#E8A13A', surface: '#FBFCF8' }, ink: '#1C2733' },
   { name: 'Plum', colors: { base: '#F4EEF3', main: '#5B2A6E', accent: '#F26B8A', surface: '#FFFFFF' }, ink: '#1C2733' },
@@ -76,14 +77,14 @@ function Chip({ label, active, onPress, ink }: { label: string; active?: boolean
   );
 }
 
-function TwoIcons({ colors, ink }: { colors: ThemeInput; ink: string }) {
+function TwoIcons({ ink }: { ink: string }) {
   const caption = { color: ink, opacity: 0.7, fontSize: 12, textAlign: 'center' as const, marginTop: 6 };
   return (
     <ScrollView contentContainerStyle={styles.page}>
       <Text style={[styles.title, { color: ink }]}>Skia, live (tap to play)</Text>
       <View style={styles.row}>
-        <TrioletIcon icon={agenda} size={150} colors={colors} label="Agenda" />
-        <TrioletIcon icon={voter} size={150} colors={colors} label="Voter" />
+        <CalendarClock size={150} label="Calendar" />
+        <BallotBox size={150} label="Ballot box" />
       </View>
       <Text style={[styles.title, { color: ink }]}>Reference: the SVG as an image (Original palette)</Text>
       <View style={styles.row}>
@@ -91,11 +92,11 @@ function TwoIcons({ colors, ink }: { colors: ThemeInput; ink: string }) {
         <Image source={REFERENCE.voter} style={{ width: 150, height: 150 }} />
       </View>
       <Text style={[styles.title, { color: ink }]}>Sizes: 96, 64, 48 (relief) · 32, 24 (compact) · 20, 16 (flat)</Text>
-      {(WEB ? [agenda] : [agenda, voter]).map((icon) => (
-        <View key={icon.name} style={[styles.row, { alignItems: 'flex-end', gap: 14 }]}>
+      {(WEB ? [CalendarClock] : [CalendarClock, BallotBox]).map((Icon, i) => (
+        <View key={i} style={[styles.row, { alignItems: 'flex-end', gap: 14 }]}>
           {[96, 64, 48, 32, 24, 20, 16].map((size) => (
             <View key={size}>
-              <TrioletIcon icon={icon} size={size} colors={colors} />
+              <Icon size={size} />
               <Text style={caption}>{size}</Text>
             </View>
           ))}
@@ -103,25 +104,20 @@ function TwoIcons({ colors, ink }: { colors: ThemeInput; ink: string }) {
       ))}
       <Text style={[styles.title, { color: ink }]}>Flat finish</Text>
       <View style={styles.row}>
-        {(WEB ? [agenda, voter] : ICONS).map((icon) => (
-          <TrioletIcon key={icon.name} icon={icon} size={56} colors={colors} finish="flat" />
-        ))}
-      </View>
-      <Text style={[styles.title, { color: ink }]}>All five</Text>
-      <View style={styles.row}>
-        {(WEB ? ICONS.slice(1, 4) : ICONS).map((icon) => (
-          <TrioletIcon key={icon.name} icon={icon} size={56} colors={colors} />
+        {(WEB ? FIVE.slice(0, 2) : FIVE).map((Icon, i) => (
+          <Icon key={i} size={56} finish="flat" />
         ))}
       </View>
     </ScrollView>
   );
 }
 
-function Grid({ colors, ink }: { colors: ThemeInput; ink: string }) {
+function Grid({ ink, count }: { ink: string; count: number }) {
   const [loop, setLoop] = useState(false);
   const refs = useRef<(TrioletIconHandle | null)[]>([]);
   const rate = useFrameRate();
   const playAll = () => refs.current.forEach((icon) => icon?.play());
+  const shown = ALL.slice(0, WEB ? 10 : count);
   return (
     <ScrollView contentContainerStyle={styles.page}>
       <View style={[styles.row, { justifyContent: 'flex-start', gap: 8 }]}>
@@ -132,29 +128,27 @@ function Grid({ colors, ink }: { colors: ThemeInput; ink: string }) {
         {rate.average} fps average · {rate.worst} fps worst frame
       </Text>
       <View style={styles.grid}>
-        {Array.from({ length: WEB ? 10 : 30 }, (_, i) => (
-          <TrioletIcon
-            key={i}
+        {shown.map(([name, Icon], i) => (
+          <Icon
+            key={name}
             ref={(handle) => {
               refs.current[i] = handle;
             }}
-            icon={ICONS[i % ICONS.length]!}
             size={56}
-            colors={colors}
             loop={loop}
           />
         ))}
       </View>
       <Text style={{ color: ink, opacity: 0.7, fontSize: 13, lineHeight: 19 }}>
-        Thirty icons, each its own Skia canvas. Tap one to play it alone. "Loop all" is the worst case: thirty gestures
-        redrawn every frame. Scroll while they play.
+        {shown.length} icons, each its own Skia canvas. Tap one to play it alone. "Loop all" is the worst case: every gesture redrawn every frame. Scroll
+        while they play.
       </Text>
     </ScrollView>
   );
 }
 
 export default function App() {
-  const [screen, setScreen] = useState<'two' | 'grid'>('two');
+  const [screen, setScreen] = useState<'two' | 'grid' | 'all'>('two');
   const [palette, setPalette] = useState(0);
   const { colors, ink } = PALETTES[palette]!;
   return (
@@ -164,13 +158,16 @@ export default function App() {
         <View style={styles.bar}>
           <Chip label="Two icons" active={screen === 'two'} onPress={() => setScreen('two')} ink={ink} />
           <Chip label="Grid of 30" active={screen === 'grid'} onPress={() => setScreen('grid')} ink={ink} />
+          <Chip label={`All ${ALL.length}`} active={screen === 'all'} onPress={() => setScreen('all')} ink={ink} />
         </View>
         <View style={styles.bar}>
           {PALETTES.map((p, i) => (
             <Chip key={p.name} label={p.name} active={i === palette} onPress={() => setPalette(i)} ink={ink} />
           ))}
         </View>
-        {screen === 'two' ? <TwoIcons colors={colors} ink={ink} /> : <Grid colors={colors} ink={ink} />}
+        <TrioletProvider colors={colors}>
+          {screen === 'two' ? <TwoIcons ink={ink} /> : <Grid key={screen} ink={ink} count={screen === 'grid' ? 30 : ALL.length} />}
+        </TrioletProvider>
       </SafeAreaView>
     </SafeAreaProvider>
   );

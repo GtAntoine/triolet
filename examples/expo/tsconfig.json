@@ -6,5 +6,5 @@
     "resolveJsonModule": true,
     "noEmit": true
   },
-  "include": ["index.ts", "boot.ts", "boot.web.ts", "App.tsx", "src"]
+  "include": ["index.ts", "boot.ts", "boot.web.ts", "App.tsx"]
 }

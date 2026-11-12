@@ -7,7 +7,7 @@
  */
 import { existsSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ICONS_DIR, loadIcons } from './lib/icons.ts';
+import { ICONS_DIR, iconNames, loadIcon } from './lib/icons.ts';
 
 const name = process.argv[2];
 if (!name || !/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(name)) {
@@ -19,7 +19,10 @@ if (existsSync(file)) {
   console.error(`icons/${name}.ts already exists.`);
   process.exit(1);
 }
-for (const icon of await loadIcons()) {
+for (const other of iconNames()) {
+  // An icon still being drawn (a template not filled in yet) must not block a new one.
+  const icon = await loadIcon(other).catch(() => null);
+  if (!icon) continue;
   if (icon.aliases.includes(name)) {
     console.error(`"${name}" is already an alias of the icon "${icon.name}". Draw another icon, or improve that one.`);
     process.exit(1);
@@ -31,7 +34,7 @@ const template = `import { circle, icon, inset, part, pop, raised, rect } from '
 
 export default icon({
   name: '${name}',
-  // One of the categories already used in icons/ (see the drawing guide).
+  // One of the categories listed in the drawing guide.
   category: 'TODO',
   // What people type to find it: at least four words, lower case.
   keywords: ['TODO'],
@@ -54,6 +57,6 @@ console.log(`icons/${name}.ts written.
 
 Next:
   1. draw it (the guide is in skills/triolet-icon/references/)
-  2. pnpm icons                  compile it
-  3. pnpm icon:check ${name}     colours, legibility, gesture, name
-  4. pnpm icon:sheet ${name}     look at it at 96, 48 and 24 px, and at its gesture`);
+  2. pnpm icon:check ${name}     colours, footprint, legibility, gesture, name
+  3. pnpm icon:sheet ${name}     look at it at 96, 48 and 24 px, and at its gesture
+  4. pnpm icons                  when it is right: writes model/ and svg/`);

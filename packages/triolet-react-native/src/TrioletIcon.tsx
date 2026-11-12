@@ -6,8 +6,7 @@
  * shapes. An inset layer is drawn once, with two inner shadows. Parts move as Skia groups
  * whose transform is derived, on the UI thread, from the icon's clock.
  *
- * This is the spike of the React Native package: it lives in the example until it has been
- * seen running on a device.
+ * Nothing moves when the system asks for reduced motion.
  */
 import {
   Canvas,
@@ -19,7 +18,7 @@ import {
   Skia,
   type SkPath,
 } from '@shopify/react-native-skia';
-import { forwardRef, memo, useEffect, useImperativeHandle, useMemo, type ReactNode } from 'react';
+import { forwardRef, memo, useContext, useEffect, useImperativeHandle, useMemo, type ReactNode } from 'react';
 import { Pressable, View, type StyleProp, type ViewStyle } from 'react-native';
 import {
   Easing,
@@ -31,11 +30,26 @@ import {
   withTiming,
   type SharedValue,
 } from 'react-native-reanimated';
-import { deriveTheme, type Theme, type ThemeInput } from '../../../../packages/core/src/colors.ts';
-import { rectRadii } from '../../../../packages/core/src/geometry.ts';
-import { GRID, REST, type IconModel, type Layer, type Node, type Shape } from '../../../../packages/core/src/model.ts';
-import { RELIEFS, RELIEF_REACH, layerHidden, layerRelief, tierForSize, type Tier } from '../../../../packages/core/src/relief.ts';
-import { gestureEnd, prepareMotion, propAt, type PartMotion } from './motion';
+import {
+  GRID,
+  RELIEFS,
+  RELIEF_REACH,
+  REST,
+  deriveTheme,
+  layerHidden,
+  layerRelief,
+  rectRadii,
+  tierForSize,
+  type IconModel,
+  type Layer,
+  type Node,
+  type Shape,
+  type Theme,
+  type ThemeInput,
+  type Tier,
+} from 'triolet/core';
+import { TrioletContext } from './context.tsx';
+import { gestureEnd, prepareMotion, propAt, type PartMotion } from './motion.ts';
 
 const RAD = Math.PI / 180;
 /** Clock value that means "at rest": later than the end of any gesture. */
@@ -43,9 +57,9 @@ const RESTING = 1e12;
 
 export interface TrioletIconProps {
   icon: IconModel;
-  /** Width and height, in points. */
+  /** Width and height, in points (default 48). It also picks the relief tier. */
   size?: number;
-  /** The three colours (and anything else of the theme). */
+  /** The three colours (and anything else of the theme), merged over the provider's. */
   colors?: ThemeInput;
   /** `flat` draws without relief at any size. */
   finish?: 'relief' | 'flat';
@@ -248,9 +262,14 @@ function Nodes({ nodes, scene, drawn }: { nodes: Node[]; scene: Scene; drawn?: S
 
 export const TrioletIcon = memo(
   forwardRef<TrioletIconHandle, TrioletIconProps>(function TrioletIcon(
-    { icon, size = 48, colors, finish = 'relief', pressable = true, loop = false, label, style },
+    { icon, size: ownSize, colors: ownColors, finish: ownFinish, pressable = true, loop = false, label, style },
     ref,
   ) {
+    const defaults = useContext(TrioletContext);
+    const size = ownSize ?? defaults.size ?? 48;
+    const finish = ownFinish ?? defaults.finish ?? 'relief';
+    const inherited = defaults.colors;
+    const colors = useMemo(() => (inherited && ownColors ? { ...inherited, ...ownColors } : (ownColors ?? inherited)), [inherited, ownColors]);
     const reduced = useReducedMotion();
     const clock = useSharedValue(RESTING);
     const prepared = useMemo(() => {

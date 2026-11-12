@@ -38,7 +38,7 @@ Four lines, for yourself (they become the `gesture` and guide the drawing):
 pnpm icon:new <name>      # writes icons/<name>.ts from a template
 ```
 
-Then edit the file. Read `references/drawing-guide.md` first (grid, keyline shapes, colour
+Finish one icon before starting the next. Then edit the file. Read `references/drawing-guide.md` first (grid, keyline shapes, colour
 roles, relief, sizes) and `references/gestures.md` (the ten gestures). `references/examples.md`
 shows five icons from brief to file.
 
@@ -48,7 +48,7 @@ shows five icons from brief to file.
 pnpm icon:check <name>
 ```
 
-Fix every **error**. Read every **warning**: colours far from the others, a silhouette outside
+The check reads `icons/<name>.ts` directly: no need to compile first. Fix every **error**. Read every **warning**: colours far from the others, a silhouette outside
 the keyline shapes, a detail too thin for 24 px, a gesture too long. A warning may stand if you
 looked and it is right; an error may not.
 
@@ -65,14 +65,15 @@ Open the image and look at it. Ask, in this order:
 3. Is the **accent** the first thing the eye lands on, and the thing the icon is about?
 4. In the **eight frames of the gesture**, does the part move around the right point, stay
    inside the picture, and end where it started?
-5. Next to the others (`pnpm icon:sheet --all`), is it the **same size and weight**?
+5. Next to the others, is it the **same size and weight**? `pnpm icon:sheet --group <name> bell-ring file-text credit-card`
+   puts it beside three references, at rest, at 24 px and in mid-gesture (`--all` shows the whole set, small).
 
 Fix and repeat steps 4 and 5 until every answer is yes. Two or three rounds are normal.
 
 ## 6. Finish
 
 - **Keywords**: at least four, lower case, what people would type (include a French word or
-  two if natural). **Category**: one already used in `icons/` (`grep -h "category:" icons/*.ts | sort | uniq -c`).
+  two if natural). **Category**: one of the list in the drawing guide; take the closest when none fits exactly.
 - `pnpm icons` compiles every icon into `model/` and `svg/` (commit those generated files).
 - `pnpm test` must pass.
 - One pull request per icon or per small family, with the control sheet attached.

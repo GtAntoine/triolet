@@ -21,7 +21,9 @@ square is smaller. A small piece may stick out of the shape (a badge, a flag, an
 the whole silhouette. Nothing goes closer than 8 units to the edge of the grid, and the middle
 of the drawing sits on the middle of the grid (48, 48), within 4 units.
 
-`pnpm icon:check` measures all this.
+`pnpm icon:check` measures all this: it warns when more than 3 % of the grid is drawn outside the
+shapes (a fraction of a percent is normal), when the drawing is off centre by more than 4 units,
+or when its longest side is under 56.
 
 ## Shapes
 
@@ -40,7 +42,9 @@ Any shape takes `{ rotate: [degrees, cx, cy] }` as last argument. Prefer `rect`,
 `circle` to paths: they are easier to read and to fix. In a path, use whole numbers or halves,
 absolute commands (`M L H V C A Z`), and round the corners with arcs (`A r r 0 0 1 x y`).
 
-**Corners are rounded**, always: 3 to 12 units on bodies, fully round on small pieces.
+**Outer corners are rounded**, always: 3 to 12 units on bodies, fully round on small pieces; a
+path with sharp points takes `{ outline: 3 }` or more to round them. Inner corners are free: a
+bite cut into a shape, or a band that crosses a body and is cut by its outline, may be sharp.
 **Lines are thick**: 3 units at least, usually 4 to 6, up to 12 for a roof or a handle.
 
 ## Colour roles
@@ -86,6 +90,10 @@ plain(shape, …)         // no effect: ink (`on`), the `gap` disc
 - A badge is three layers: `plain(circle(x, y, r + 3, 'gap'))`, `raised.small(circle(x, y, r, 'accent'))`,
   `plain(…ink in 'on'…)`.
 
+- A light detail on a dark body is `inset` (a window, a label, a hole). `raised` in `base` on a
+  `main` body gets a white halo: keep it for a real second object (a sheet coming out of a folder),
+  with `raised.small`. `mainLight` on `main` is a nuance that disappears when the icon is flat.
+
 Do not draw shadows, gradients or highlights yourself: the relief is the only depth.
 
 ## Parts
@@ -97,6 +105,13 @@ clip(shape, …nodes)               // cuts what is inside to a shape (a ballot 
 
 A part's name is kebab-case and says what the piece is (`hand`, `lid`, `line-1`). Parts may
 nest (a badge that pops, with a star inside that pops later). A part with no motion is allowed.
+
+## Categories
+
+`arrows`, `civic`, `commerce`, `communication`, `data`, `design`, `development`, `devices`,
+`documents`, `education`, `finance`, `health`, `interface`, `media`, `notifications`, `people`,
+`places`, `security`, `settings`, `social`, `time`, `weather`, `work`. Take the closest one; food
+and celebrations go to `social`, tools to `work`. A new category is worth it from five icons.
 
 ## Small sizes
 
