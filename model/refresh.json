@@ -24,16 +24,16 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M63 37A18.5 18.5 0 1 0 66 52",
+              "d": "M66.8 54.8A20 20 0 1 1 62.7 34.3",
               "role": "main",
               "fill": false,
               "stroke": { "width": 8 }
             },
             {
               "kind": "path",
-              "d": "M56 27L68 28L67 40Z",
+              "d": "M69.6 28.5L70.4 43.5L55.8 40.1Z",
               "role": "main",
-              "stroke": { "width": 4 }
+              "stroke": { "width": 3 }
             }
           ],
           "weight": "major"
@@ -43,7 +43,7 @@
           "effect": "raised",
           "size": "small",
           "shapes": [
-            { "kind": "circle", "cx": 66, "cy": 53, "r": 8, "role": "accent" }
+            { "kind": "circle", "cx": 66.8, "cy": 54.8, "r": 8, "role": "accent" }
           ],
           "weight": "minor"
         }
@@ -51,7 +51,7 @@
     }
   ],
   "parts": {
-    "arrow": { "box": [29.49, 27, 44.51, 39.3] }
+    "arrow": { "box": [28.03, 27.91, 46.77, 39.97] }
   },
   "motion": [
     {

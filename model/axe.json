@@ -30,9 +30,9 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M43 24L61 12C75 18 82 32 78 48L57 44Z",
+              "d": "M43.9 31.6L51.9 20L60.9 26.3L79.2 28Q84 46 61.6 53.5L53 37.8Z",
               "role": "base",
-              "stroke": { "width": 3 }
+              "stroke": { "width": 2.5 }
             }
           ],
           "weight": "major"
@@ -44,19 +44,19 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M64 13C76 20 81 33 78 46",
+              "d": "M77.6 30.2Q80.8 43.4 62.9 51.3",
               "role": "accent",
               "fill": false,
-              "stroke": { "width": 5.5 }
+              "stroke": { "width": 4.5 }
             }
           ],
-          "weight": "major"
+          "weight": "minor"
         }
       ]
     }
   ],
   "parts": {
-    "axe": { "box": [19, 12, 60.1, 68] }
+    "axe": { "box": [19, 20, 61.04, 60] }
   },
   "motion": [
     {

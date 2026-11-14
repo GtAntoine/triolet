@@ -11,8 +11,8 @@ export default icon({
       'axe',
       raised.small(stroke('M24 80L60 28', 'main', 8)),
       // The head, and its edge: the accent.
-      raised(path('M48 24L66 12C80 18 87 32 83 48L62 44Z', 'base', { outline: 3 })),
-      raised.small(stroke('M69 13C81 20 86 33 83 46', 'accent', 5.5)),
+      raised(path('M48.9 31.6L56.9 20L65.9 26.3L84.2 28Q89 46 66.6 53.5L58 37.8Z', 'base', { outline: 2.5 })),
+      raised.small(stroke('M82.6 30.2Q85.8 43.4 67.9 51.3', 'accent', 4.5)),
     ),
     ],
     1,

@@ -9,8 +9,8 @@ export default icon({
     raised(circle(48, 48, 34, 'base')),
     part(
       'arrow',
-      raised.small(stroke('M63 37A18.5 18.5 0 1 0 66 52', 'main', 8), path('M56 27L68 28L67 40Z', 'main', { outline: 4 })),
-      raised.small(circle(66, 53, 8, 'accent')),
+      raised.small(stroke('M66.8 54.8A20 20 0 1 1 62.7 34.3', 'main', 8), path('M69.6 28.5L70.4 43.5L55.8 40.1Z', 'main', { outline: 3 })),
+      raised.small(circle(66.8, 54.8, 8, 'accent')),
     ),
   ],
   motion: {

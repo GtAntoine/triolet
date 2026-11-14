@@ -6,7 +6,7 @@ const blades = Array.from({ length: 6 }, (_, i) => {
   const from = ((60 * i - 90) * Math.PI) / 180;
   const to = ((60 * i - 90 + 52) * Math.PI) / 180;
   const point = (angle: number, radius: number) => `${(48 + radius * Math.cos(angle)).toFixed(1)} ${(48 + radius * Math.sin(angle)).toFixed(1)}`;
-  return stroke(`M${point(from, 19)}L${point(to, 31)}`, 'base', 3.5);
+  return stroke(`M${point(from, 17.4)}L${point(to, 31)}`, 'base', 3.5);
 });
 
 export default icon({

@@ -38,42 +38,42 @@
           "shapes": [
             {
               "kind": "path",
-              "d": "M48.0 29.0L72.4 28.9",
+              "d": "M48.0 30.6L72.4 28.9",
               "role": "base",
               "fill": false,
               "stroke": { "width": 3.5 }
             },
             {
               "kind": "path",
-              "d": "M64.5 38.5L76.7 59.6",
+              "d": "M63.1 39.3L76.7 59.6",
               "role": "base",
               "fill": false,
               "stroke": { "width": 3.5 }
             },
             {
               "kind": "path",
-              "d": "M64.5 57.5L52.3 78.7",
+              "d": "M63.1 56.7L52.3 78.7",
               "role": "base",
               "fill": false,
               "stroke": { "width": 3.5 }
             },
             {
               "kind": "path",
-              "d": "M48.0 67.0L23.6 67.1",
+              "d": "M48.0 65.4L23.6 67.1",
               "role": "base",
               "fill": false,
               "stroke": { "width": 3.5 }
             },
             {
               "kind": "path",
-              "d": "M31.5 57.5L19.3 36.4",
+              "d": "M32.9 56.7L19.3 36.4",
               "role": "base",
               "fill": false,
               "stroke": { "width": 3.5 }
             },
             {
               "kind": "path",
-              "d": "M31.5 38.5L43.7 17.3",
+              "d": "M32.9 39.3L43.7 17.3",
               "role": "base",
               "fill": false,
               "stroke": { "width": 3.5 }

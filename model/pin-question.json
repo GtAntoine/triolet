@@ -3,7 +3,7 @@
   "category": "places",
   "keywords": ["not found", "lost", "404", "missing", "question", "unknown", "perdu", "introuvable"],
   "aliases": ["perdu"],
-  "gesture": "The pin floats, looking for a place to land, and its shadow shrinks under it.",
+  "gesture": "The pin lifts, looks for a place to land and settles back; its shadow shrinks under it.",
   "nodes": [
     {
       "type": "part",
@@ -95,30 +95,30 @@
     {
       "part": "ground",
       "pivot": [44.4, 84.9],
-      "duration": 3200,
+      "duration": 1100,
       "delay": 0,
-      "iterations": "infinite",
+      "iterations": 1,
       "ease": "inOut",
-      "tracks": { "scaleX": [[0, 1], [0.5, 0.8], [1, 1]], "opacity": [[0, 1], [0.5, 0.7], [1, 1]] }
+      "tracks": { "scaleX": [[0, 1], [0.4, 0.75], [0.7, 1], [1, 1]], "opacity": [[0, 1], [0.4, 0.6], [0.7, 1], [1, 1]] }
     },
     {
       "part": "pin",
       "pivot": [44.4, 49.35],
-      "duration": 3200,
+      "duration": 1100,
       "delay": 0,
-      "iterations": "infinite",
+      "iterations": 1,
       "ease": "inOut",
-      "tracks": { "y": [[0, 0], [0.5, -4], [1, 0]] }
+      "tracks": { "y": [[0, 0], [0.4, -5], [0.7, 0.8333333333333334], [1, 0]] }
     },
     {
       "part": "badge",
       "pivot": [66.9, 23.7],
-      "duration": 3200,
+      "duration": 1100,
       "delay": 250,
-      "iterations": "infinite",
+      "iterations": 1,
       "ease": "inOut",
-      "tracks": { "y": [[0, 0], [0.5, -4], [1, 0]] }
+      "tracks": { "y": [[0, 0], [0.4, -5], [0.7, 0.8333333333333334], [1, 0]] }
     }
   ],
-  "idle": true
+  "idle": false
 }

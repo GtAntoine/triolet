@@ -1,14 +1,13 @@
 import { circle, ellipse, icon, inset, nudge, part, path, plain, raised, resize, stroke, tracks } from '@triolet/core';
 
-const float = { y: -4, duration: 3200, ease: 'inOut', iterations: 'infinite' } as const;
+const float = { y: -5, settle: true, duration: 1100, ease: 'inOut' } as const;
 
 export default icon({
   name: 'pin-question',
   aliases: ['perdu'],
   category: 'places',
   keywords: ['not found', 'lost', '404', 'missing', 'question', 'unknown', 'perdu', 'introuvable'],
-  gesture: 'The pin floats, looking for a place to land, and its shadow shrinks under it.',
-  idle: true,
+  gesture: 'The pin lifts, looks for a place to land and settles back; its shadow shrinks under it.',
   draw: resize(
     [
       part('ground', inset(ellipse(44, 89, 13, 3.5, 'soft'))),
@@ -24,7 +23,7 @@ export default icon({
   ),
   motion: {
     // The shadow on the ground narrows and fades while the pin is up.
-    ground: tracks({ duration: 3200, ease: 'inOut', iterations: 'infinite' }, { scaleX: [[0.5, 0.8]], opacity: [[0.5, 0.7]] }),
+    ground: tracks({ duration: 1100, ease: 'inOut' }, { scaleX: [[0.4, 0.75], [0.7, 1]], opacity: [[0.4, 0.6], [0.7, 1]] }),
     pin: nudge(float),
     badge: nudge({ ...float, delay: 250 }),
   },
