@@ -1,9 +1,10 @@
 # Publishes the three packages to npm when a version tag is pushed (v0.1.0, v0.2.0, ...).
 #
-# It does nothing until the repository has an NPM_ACCESS_TOKEN secret and a tag is pushed: see
-# docs/releasing.md. The token must be an npm automation or granular access token allowed to
-# publish these packages; this workflow never creates it. Third-party actions are pinned by
-# commit hash (the comment names the version).
+# It publishes with npm Trusted Publishing (OIDC): npm trusts this repository and this workflow
+# file for each of the three packages, so no token is needed (see docs/releasing.md for the
+# setting to make on npmjs.com). The NPM_ACCESS_TOKEN secret, if there is one, is only a fallback
+# for a package whose trusted publisher is not set yet. This workflow never creates tokens.
+# Third-party actions are pinned by commit hash (the comment names the version).
 name: Release
 
 on:
@@ -23,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write # npm provenance
+      id-token: write # npm Trusted Publishing and provenance
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
@@ -46,10 +47,11 @@ jobs:
         run: node tools/release.ts check --tag "$GITHUB_REF_NAME"
       - name: Publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+          # Only the fallback. Without a secret a placeholder keeps the .npmrc that setup-node
+          # writes valid, and the OIDC exchange of Trusted Publishing does the authentication.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN || 'trusted-publishing' }}
         run: |
           set -e
-          test -n "$NODE_AUTH_TOKEN" || { echo "The NPM_ACCESS_TOKEN secret is not set."; exit 1; }
           version="${GITHUB_REF_NAME#v}"
           # In order: a package comes after the one it depends on. A version that is already on
           # the registry is skipped, so a run that stopped half way can simply be run again.
