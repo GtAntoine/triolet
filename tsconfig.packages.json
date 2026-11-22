@@ -11,6 +11,6 @@
       "triolet/runtime": ["./packages/triolet/src/runtime.ts"]
     }
   },
-  "include": ["packages/*/src/**/*.ts"],
+  "include": ["packages/*/src/**/*.ts", "packages/triolet-react-native/test/*.ts"],
   "exclude": ["packages/*/src/icons", "packages/*/src/index.ts", "packages/*/src/index.web.ts", "packages/*/src/**/*.tsx"]
 }

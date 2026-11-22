@@ -1,6 +1,6 @@
 {
   "name": "triolet-react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Animated icons in three colours as React components: one component per icon, CSS motion, no animation library.",
   "keywords": [
     "react",

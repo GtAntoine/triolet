@@ -4,6 +4,20 @@ The three packages (`triolet`, `triolet-react`, `triolet-react-native`) are rele
 and share a version number. Versions follow [semantic versioning](https://semver.org/); while
 the major is 0, a minor version may still change the API.
 
+## 0.1.3
+
+`triolet-react-native`:
+
+- Reduced motion follows the system setting while the app runs. Before, the value was read once
+  at start (Reanimated's `useReducedMotion()`), so an app started with "reduce motion" on kept
+  its icons still after the setting was turned off, and the reverse. The icons now listen to
+  `AccessibilityInfo` (`reduceMotionChanged`): turning the setting on stops a running gesture at
+  once, turning it off lets the icons move again. Reanimated's value is still used until the
+  first answer.
+- The README says how to play a gesture for screen-reader users: a pressable icon plays on
+  activation, and the host plays it from its own control with the `ref` (`play()`), because React
+  Native has no cross-platform event for screen-reader focus.
+
 ## 0.1.2
 
 150 more icons: 435 in all. Every icon of itshover.com/icons now has its counterpart, by name or

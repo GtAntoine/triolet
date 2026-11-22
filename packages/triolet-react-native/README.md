@@ -56,6 +56,30 @@ with an `Icon` suffix. One icon per module: `import { Settings } from 'triolet-r
 
 A `ref` gives `{ play() }` to play the gesture from code.
 
+### Reduced motion
+
+Nothing moves when the system setting "reduce motion" is on, and the icons follow the setting
+while the app runs (through `AccessibilityInfo`): turning it on stops a running gesture at once,
+turning it off lets the icons move again, with no restart. `play()` does nothing while it is on.
+
+### Screen readers
+
+A pressable icon plays its gesture when a screen reader activates it (double tap), like a press.
+React Native has no cross-platform event for "the screen reader focus reached this view" (VoiceOver
+and TalkBack accessibility focus fires neither hover nor press), so the gesture cannot start on
+focus by itself. Play it from your own control, with the `ref`, when that control is activated:
+
+```tsx
+const bell = useRef<TrioletIconHandle>(null);
+
+<Pressable accessibilityRole="button" accessibilityLabel="Notifications" onPress={() => { bell.current?.play(); open(); }}>
+  <BellRing ref={bell} pressable={false} />
+</Pressable>
+```
+
+If your control gets a focus event you trust (a keyboard focus, an `onAccessibilityAction`
+handler), call `bell.current?.play()` from it too.
+
 Each icon is its own Skia canvas. Frame rates on real devices have not been measured yet, so
 for a long list render the icons lazily (`FlatList`) like any other row content.
 

@@ -6,7 +6,9 @@
  * shapes. An inset layer is drawn once, with two inner shadows. Parts move as Skia groups
  * whose transform is derived, on the UI thread, from the icon's clock.
  *
- * Nothing moves when the system asks for reduced motion.
+ * Nothing moves when the system asks for reduced motion, and the icon follows that setting
+ * while the app runs: turning it on stops a gesture at once, turning it off lets the icons move
+ * again without a restart.
  */
 import {
   Canvas,
@@ -18,8 +20,8 @@ import {
   Skia,
   type SkPath,
 } from '@shopify/react-native-skia';
-import { forwardRef, memo, useContext, useEffect, useImperativeHandle, useMemo, type ReactNode } from 'react';
-import { Pressable, View, type StyleProp, type ViewStyle } from 'react-native';
+import { forwardRef, memo, useContext, useEffect, useImperativeHandle, useMemo, useState, type ReactNode } from 'react';
+import { AccessibilityInfo, Pressable, View, type StyleProp, type ViewStyle } from 'react-native';
 import {
   Easing,
   cancelAnimation,
@@ -50,6 +52,7 @@ import {
 } from 'triolet/core';
 import { TrioletContext } from './context';
 import { gestureEnd, prepareMotion, propAt, type PartMotion } from './motion';
+import { watchReduceMotion } from './reduceMotion';
 
 const RAD = Math.PI / 180;
 /** Clock value that means "at rest": later than the end of any gesture. */
@@ -75,6 +78,17 @@ export interface TrioletIconProps {
 export interface TrioletIconHandle {
   /** Plays the gesture once from the start. */
   play: () => void;
+}
+
+/**
+ * The system setting "reduce motion", live. Reanimated's `useReducedMotion()` gives the value
+ * at start (right away); `AccessibilityInfo` then takes over and tells about every change.
+ */
+function useReduceMotion(): boolean {
+  const atStart = useReducedMotion();
+  const [live, setLive] = useState<boolean | null>(null);
+  useEffect(() => watchReduceMotion(AccessibilityInfo, setLive), []);
+  return live ?? atStart;
 }
 
 // --- Shapes --------------------------------------------------------------------------------
@@ -270,7 +284,7 @@ export const TrioletIcon = memo(
     const finish = ownFinish ?? defaults.finish ?? 'relief';
     const inherited = defaults.colors;
     const colors = useMemo(() => (inherited && ownColors ? { ...inherited, ...ownColors } : (ownColors ?? inherited)), [inherited, ownColors]);
-    const reduced = useReducedMotion();
+    const reduced = useReduceMotion();
     const clock = useSharedValue(RESTING);
     const prepared = useMemo(() => {
       const motions: Record<string, PartMotion> = {};
@@ -296,6 +310,13 @@ export const TrioletIcon = memo(
       [clock, prepared, reduced],
     );
     useImperativeHandle(ref, () => ({ play }), [play]);
+
+    // The setting is turned on while a gesture runs: it stops where it is and the icon rests.
+    useEffect(() => {
+      if (!reduced) return;
+      cancelAnimation(clock);
+      clock.value = RESTING;
+    }, [reduced, clock]);
 
     const repeating = (loop || icon.idle) && !reduced;
     useEffect(() => {
