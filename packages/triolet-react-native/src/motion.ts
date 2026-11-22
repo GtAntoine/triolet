@@ -81,16 +81,23 @@ export function bezierAt(curve: Curve | null, p: number): number {
 /** The value of a track at progress `p` (0 to 1) through one run. */
 export function trackAt(track: Track, p: number): number {
   'worklet';
-  const n = track.at.length;
-  if (p <= track.at[0]) return track.value[0];
+  const { at, value, curve } = track;
+  const n = at.length;
+  // A track always has as many values and curves as keys; the fallbacks only satisfy the
+  // type checker (`noUncheckedIndexedAccess`) and never change a result.
+  const first = value[0] ?? 0;
+  if (p <= (at[0] ?? 0)) return first;
   for (let i = 1; i < n; i++) {
-    if (p <= track.at[i]) {
-      const span = track.at[i] - track.at[i - 1];
-      const local = span > 0 ? (p - track.at[i - 1]) / span : 1;
-      return track.value[i - 1] + (track.value[i] - track.value[i - 1]) * bezierAt(track.curve[i], local);
+    const to = at[i] ?? 1;
+    if (p <= to) {
+      const from = at[i - 1] ?? 0;
+      const span = to - from;
+      const local = span > 0 ? (p - from) / span : 1;
+      const a = value[i - 1] ?? first;
+      return a + ((value[i] ?? a) - a) * bezierAt(curve[i] ?? null, local);
     }
   }
-  return track.value[n - 1];
+  return value[n - 1] ?? first;
 }
 
 /**
@@ -101,7 +108,7 @@ export function propAt(motion: PartMotion, track: Track | undefined, rest: numbe
   'worklet';
   if (!track || t >= motion.end) return rest;
   const local = t - motion.delay;
-  if (local <= 0) return track.value[0];
+  if (local <= 0) return track.value[0] ?? rest;
   return trackAt(track, (local % motion.duration) / motion.duration);
 }
 

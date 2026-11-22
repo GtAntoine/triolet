@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node"],
+    "rewriteRelativeImportExtensions": false,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "triolet/core": ["./packages/core/src/index.ts"],
+      "triolet/runtime": ["./packages/triolet/src/runtime.ts"]
+    }
+  },
+  "include": ["packages/*/src/**/*.ts"],
+  "exclude": ["packages/*/src/icons", "packages/*/src/index.ts", "packages/*/src/index.web.ts", "packages/*/src/**/*.tsx"]
+}

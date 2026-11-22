@@ -12,7 +12,7 @@
     "icons": "node tools/build-icons.ts",
     "build": "pnpm icons && node tools/build-packages.ts",
     "test": "node --test \"packages/*/test/*.test.ts\" \"tools/test/*.test.ts\"",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.packages.json --noEmit",
     "fidelity": "node tools/fidelity.ts",
     "spike:web": "node tools/spike-web.ts",
     "ratio": "node tools/ratio.ts",

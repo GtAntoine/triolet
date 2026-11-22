@@ -4,7 +4,7 @@ The three packages (`triolet`, `triolet-react`, `triolet-react-native`) are rele
 and share a version number. Versions follow [semantic versioning](https://semver.org/); while
 the major is 0, a minor version may still change the API.
 
-## Unreleased
+## 0.1.2
 
 150 more icons: 435 in all. Every icon of itshover.com/icons now has its counterpart, by name or
 by alias.
@@ -23,6 +23,14 @@ by alias.
 - 53 brand icons (`brand-*`, category `brands`): see "Brand icons" in the README for what they
   are and what the licence does not cover.
 - About fifty aliases, so that common names find the icon (`home`, `gear`, `cart`, `pen`, `like`...).
+
+Fixes:
+
+- `triolet-react-native`: `motion.ts` compiles under `noUncheckedIndexedAccess` (12 type errors in
+  `trackAt` and `propAt` for consumers with that option; no change of behaviour). The repo's
+  `pnpm typecheck` now covers the code of the packages with the option on.
+- Icons: `refresh` has a proper arrowhead, `axe` is redrawn, the blades of `aperture` stay inside
+  the hexagon, and `pin-question` plays on hover like the others instead of looping by itself.
 
 ## 0.1.1
 
