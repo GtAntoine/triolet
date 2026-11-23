@@ -1,9 +1,8 @@
 # Publishes the three packages to npm when a version tag is pushed (v0.1.0, v0.2.0, ...).
 #
 # It publishes with npm Trusted Publishing (OIDC): npm trusts this repository and this workflow
-# file for each of the three packages, so no token is needed (see docs/releasing.md for the
-# setting to make on npmjs.com). The NPM_ACCESS_TOKEN secret, if there is one, is only a fallback
-# for a package whose trusted publisher is not set yet. This workflow never creates tokens.
+# file for each of the three packages, so no token is used or needed (see docs/releasing.md for
+# the setting to make on npmjs.com). This workflow never creates or reads tokens.
 # Third-party actions are pinned by commit hash (the comment names the version).
 name: Release
 
@@ -47,9 +46,9 @@ jobs:
         run: node tools/release.ts check --tag "$GITHUB_REF_NAME"
       - name: Publish
         env:
-          # Only the fallback. Without a secret a placeholder keeps the .npmrc that setup-node
-          # writes valid, and the OIDC exchange of Trusted Publishing does the authentication.
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN || 'trusted-publishing' }}
+          # setup-node writes an .npmrc that reads this variable: a placeholder keeps it valid.
+          # The authentication is the OIDC exchange of Trusted Publishing.
+          NODE_AUTH_TOKEN: trusted-publishing
         run: |
           set -e
           version="${GITHUB_REF_NAME#v}"

@@ -20,11 +20,8 @@ version. They are on npm since 0.1.0 (12 November 2026), published by the `Relea
    `id-token: write`), with provenance, and nothing has to be stored or renewed. Tokens that
    bypass two-factor authentication are being restricted by npm (account changes in August 2026,
    direct publishing revoked in January 2027), which is why this replaces them.
-4. Optional fallback: a granular access token saved as the repository secret `NPM_ACCESS_TOKEN`
-   (GitHub: Settings, Secrets and variables, Actions), used only when the OIDC exchange of a
-   package fails. It needs "Bypass two-factor authentication (2FA)" ticked (without it the
-   publish stops with `ERR_PNPM_OTP_NON_INTERACTIVE`) and it expires. Delete the secret once
-   Trusted Publishing has worked once for all three packages.
+4. No token is stored: the workflow does not read `NPM_ACCESS_TOKEN`. If Trusted Publishing ever
+   fails, publish by hand (below) instead of putting a token back.
 
 ## A release
 
@@ -41,7 +38,7 @@ git tag v0.2.0 && git push origin v0.2.0
 
 The tag starts the `Release` workflow: it checks that the tag is on `main`, runs the checks and
 the tests again, then publishes the three packages with `--provenance` (the npm page shows the
-commit and workflow each version came from). It needs Trusted Publishing to be set on the three packages (or the fallback secret). npm may take several minutes after the workflow ends before `npm view triolet version`
+commit and workflow each version came from). It needs Trusted Publishing to be set on the three packages . npm may take several minutes after the workflow ends before `npm view triolet version`
 shows the new version; an install made in between can be retried with `--prefer-online`.
 
 ## By hand, without the workflow

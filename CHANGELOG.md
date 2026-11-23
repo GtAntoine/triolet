@@ -4,6 +4,11 @@ The three packages (`triolet`, `triolet-react`, `triolet-react-native`) are rele
 and share a version number. Versions follow [semantic versioning](https://semver.org/); while
 the major is 0, a minor version may still change the API.
 
+## 0.1.4
+
+No change to the packages' code. The release workflow publishes with npm Trusted Publishing (OIDC)
+instead of an access token, so the three packages are published without any stored secret.
+
 ## 0.1.3
 
 `triolet-react-native`:
